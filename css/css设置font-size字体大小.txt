@@ -1,0 +1,26 @@
+font-size -- 定义字体的大小
+取值: <absolute-size> | <relative-size> | <length> | <percentage> | inherit
+<absolute-size>:绝对字体尺寸
+取值：xx-small | x-small | small | medium | large | x-large | xx-large
+
+xx-small:最小
+x-small:较小
+small:小
+medium:正常(默认值)，根据字体进行调整
+large:大
+x-large:较大
+xx-large:最大
+
+<relative-size>:相对字体尺寸(相对与其父容器的字体尺寸)
+取值：larger | smaller
+larger:相对于父容器中字体尺寸进行相对增大，使用成比例的em作为单位
+smaller:相对于父容器中字体尺寸进行相对减小，使用成比例的em作为单位
+<length>:CSS长度表示法
+<percentage>:CSS百分比表示法(相对与其父容器的字体尺寸)
+inherit:继承
+引用网址:http://www.dreamdu.com/css/property_font-size/
+初始值: medium(绝对字体尺寸中的一个取值)
+继承性: 是
+适用于: 所有元素
+font：中文"字体"的意思.size：中文"尺寸,大小"的意思.
+small：中文"小"的意思.medium：中文"中"的意思.large：中文"大"的意思.

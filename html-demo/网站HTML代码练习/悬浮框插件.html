@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>悬浮框</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<script src="seajs/sea-debug-2.2.1.js" ></script>
+	<script src="seajs/config_2.1.js"></script>
+	<script src="seajs/plugin-style.js" ></script>
+
+	<!--  visible; -->
+	<!--使用样式控制位置-->
+	<!--宽和高自己填写-->
+	<style type="text/css">
+    .inner{width:121px;height:229px;}
+    .inner a{
+		display: block;
+		cursor: pointer;
+		width: 121px;
+		height: 48px;
+		position: relative;
+		background: url(http://img3.icson.com/template/2014/03/31/139623752040465200_a_15.png) no-repeat -63px 0;	
+    }
+    .inner a.in-1{background-position: 0 0; height: 49px;cursor: default;}
+    .inner a.in-2{background-position: 0 -49px;}
+    .inner a.in-3{background-position: 0 -97px;}
+    .inner a.in-4{background-position: 0 -145px;}
+    .inner a.in-5{background-position: 0 -190px;}
+    .buttom{width:960px;height:40px;background-color:#2cc325;}
+
+    .sup-right-test{display:block !important;}
+    </style>
+
+</head>
+<body>
+
+	<!--▼ F floatBox-->
+	<div class="sup-left" id="supLeft" >
+		<div class="inner">
+			<a class="in-1" href="javascript:void(0)" ></a>
+			<a class="in-2" href="#top_01" ></a>
+			<a class="in-3" href="#top_02" ></a>
+			<a class="in-4" href="#top_03" ></a>
+			<a class="in-5" href="#top" ></a>
+		</div>
+	</div>
+	<div class="sup-right" id="supRight" >
+		<div class="inner">
+			<a class="in-1" href="javascript:void(0)" ></a>
+			<a class="in-2" href="#top_01" ></a>
+			<a class="in-3" href="#top_02" ></a>
+			<a class="in-4" href="#top_03" ></a>
+			<a class="in-5" href="#top" ></a>
+		</div>
+	</div>
+	<div class="sup-bottom" id="supBottom"  >
+		<div class="buttom"></div>
+	</div>
+	<!--▲ F floatBox-->
+
+	<div class="main" style="width:960px; margin:0 auto;">
+		<div style="background-color:#656269; height:280px;" ></div>
+		<div style="background-color:#c1a7f7; height:960px;" name="top_01" id="top_01">1</div>
+		<div style="background-color:#7def78; height:960px;" name="top_02" id="top_02">2</div>
+		<div style="background-color:#eecf8d; height:960px;" name="top_03" id="top_03">3</div>
+	</div>
+
+	<script type="text/jscript">seajs.use("./js/floatingTest.js")</script>
+</body>
+</html>

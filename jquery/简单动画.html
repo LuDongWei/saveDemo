@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+	         var aa=0;
+	   $("#button_01").click(function(){
+		   $("#div1").animate({left:'200px'});
+		   aa=aa+1;
+		   if(aa>1){
+
+		 
+		  $("#div1").animate({left:'0px'});
+		   aa=0;				
+				};
+		   
+		   
+		   
+		   });	   
+	   $("#button_02").click(function(){
+		   $("#div2").animate({
+		   left:'150px',
+		   height:'+=80px',
+		   width:'+=80px',
+		   opacity:'0.5'
+		   });
+		   });
+	    
+		$("#button_03").click(function(){
+			$("#div3").animate({
+			 height:'toggle'
+			});
+			});
+	   
+	    $("#button_04").click(function(){
+			var div=$("#div4");
+			
+			div.animate({left:'120px'});
+			div.animate({fontSize:'3em'});
+		    
+			aa=aa+1;
+			if(aa>1){
+		
+			div.animate({left:'0px'});
+			div.animate({fontSize:'1em'});
+			aa=0;				
+				};
+			});
+	   
+	   
+	   
+	   
+	   
+	   });
+</script>
+<link href="css/reset.css" type="text/css"  rel="stylesheet" />
+</head>
+<body>
+<div style="width:600px; height:30px; border:solid 1px #9C0; margin:20px auto;">
+默认情况下，所有 HTML 元素的位置都是静态的，并且无法移动。如需对位置进行操作，记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute。
+</div>
+
+
+<div style=" width:800px; height:800px; margin: 10px auto; border: solid 2px #000">
+<div style=" width:350px; height:350px; border: solid 2px #000 ; float:left; margin-left:30px; margin-top:35px; text-align:center">
+      <div id="div1" style=" width:100px; height:100px; background:#0C6;  position: relative"></div>
+      <input  id="button_01" type="button" value="往右移动" style="background:#09C; width:60px; height:30px"  />
+     
+</div>
+<div style=" width:350px; height:350px; border: solid 2px #000 ; float:left; margin-top:35px; margin-left:30px; text-align:center">
+       <div id="div2" style=" width:100px; height:100px; background: #963;  position: relative"></div>
+      <input  id="button_02" type="button" value="使用相对值进行移动" style="background:#09C; width:60px; height:30px"  />
+</div>
+<div style=" width:350px; height:350px; border: solid 2px #000 ; float:left; margin-left:30px; margin-top:35px">
+     <div id="div3" style=" width:100px; height:100px; background: #963;  position: relative"></div>
+      <input  id="button_03" type="button" value="使用预定义的值" style="background:#09C; width:60px; height:30px"  />
+</div>
+<div style=" width:350px; height:350px; border: solid 2px #000 ; float:left; margin-top:35px; margin-left:30px">
+     <div id="div4" style=" width:100px; height:100px; background: #963;  position: relative; font-size:12px">我是文字</div>
+      <input  id="button_04" type="button" value="使用预定义的值" style="background:#09C; width:60px; height:30px"  />
+</div>
+</div>
+</body>
+</html>

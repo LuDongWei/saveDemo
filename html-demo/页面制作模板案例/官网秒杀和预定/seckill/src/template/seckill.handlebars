@@ -1,0 +1,59 @@
+<ul class="mbbSeckill">
+     {{#seckill}}
+       <li data-apId={{apId}} >
+          <div class="seckill-item">
+             <div class="s-time">
+             </div>
+             {{#skus}}      
+             <div class="s-pic">
+                   <span>还剩{{stock}}</span>
+                   <a href="http://www.mbaobao.com/item/{{sku}}" target="_blank"><img src={{image}} alt={{name}} /></a>
+             </div>
+             <div class="s-content">
+                <div class="s-inf">
+                    <p class="shoppeP"><del>市场价￥{{shoppePrice}}</del></p>
+                    <p class="sellP">秒杀价<span>￥</span><span>{{sellPrice}}</span></p> 
+                </div>
+                <div class="s-buy">
+                    <span class="s-but">
+                        <i></i> 
+                        <a href="http://cart.mbaobao.com/do/items/add/{{sku}}/1.html" target="_blank">秒</a>
+                    </span> 
+                </div>           
+            </div>
+                {{#if isSellOut}}
+                  <div class="no-stockQty">
+                       已经抢购完
+                  </div>
+                {{/if}}
+            {{/skus}} 
+            {{#if isSeckill}}    
+                <div class="have-begin">
+                     秒杀开始
+                </div>
+                {{else}}
+                <div class="no-begin">
+                     未开始 
+                </div>
+            {{/if}}      
+            {{#if isOverdue}}
+                <div class="no-stockQty">
+                     已经过期
+                </div>
+            {{/if}}
+             
+            {{#if isSeckill}}
+                   {{#skus}}
+                   {{#if isSellOut}}
+                     {{else}}
+                   {{/if}}
+                   {{/skus}}    
+               {{else}}
+                   {{#if isOverdue}} 
+                     {{else}}
+                   {{/if}}  
+            {{/if}} 
+          </div>
+        </li> 
+     {{/seckill}}
+ </ul>

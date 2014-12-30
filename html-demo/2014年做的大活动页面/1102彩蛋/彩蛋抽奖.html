@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>无标题文档</title>
+			<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+			<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+
+<style type="text/css">
+.page_all{}	
+.wrapper{ width:100%;}
+.main{width:960px;margin:0 auto;}
+
+/*---彩蛋---*/
+.mbb-eggs{
+}
+.mbb-eggs .eggs-main{
+}
+.eggs-main .egg-list{overflow:hidden;margin-top:15px;}
+.egg-list li{width:134px;height:175px;background:url(http://cca.mbaobao.com/mkts/201408/12/egg/eggs.png) no-repeat top center;float:left;margin-left:2px;margin-right:1px;background-position:0px 0px;}
+.egg-list li.po{background-position:0px -175px;}
+.mbb-eggs .eggs-top{margin-top:15px;background:url(http://cca.mbaobao.com/mkts/201408/12/egg/eggs_02.jpg) no-repeat top center;width:960px;height:40px;line-height:40px;overflow:hidden;}
+.eggs-top .award-list{width:800px;float:right;margin-right:20px;
+	text-align:left;font-size:13px;}
+.eggs-top .award-list span{color:#d41c4f;}
+.eggs-main .egg-state{height:150px;}
+.egg-state .e-state{display:none; position: relative; }
+
+.egg-state  a.button{display:inline-block;text-decoration: none;
+  font: 24px/1.0em 'Droid Sans', sans-serif;padding:14px 35px 19px 20px;
+  -webkit-border-radius: 8px;-moz-border-radius: 8px; border-radius: 8px; position: absolute;}
+.egg-state a.red{color:#fff600;background:url(http://cca.mbaobao.com/mkts/201408/12/egg/red.jpg) repeat-x;}
+.egg-state a.red:active{ background:#d72846;}
+.egg-state a.blue{color:#ffffff; background:url(http://cca.mbaobao.com/mkts/201408/12/egg/blue.jpg) repeat-x;}
+.egg-state a.blue:active{ background:#029fc1;	}
+.egg-state i{position:absolute;display:block;width:8px;height:12px;top:22px;right:15px;}
+.egg-state .red i{background:url(http://cca.mbaobao.com/mkts/201408/12/egg/red-l.png) no-repeat top center;}
+.egg-state .blue i{background:url(http://cca.mbaobao.com/mkts/201408/12/egg/blue-l.png) no-repeat top center;}
+/*--按钮--*/
+.e-nolog{}
+.e-nolog .red{
+  top:60px;
+  left:285px;
+}
+.e-nolog .blue{
+  top:60px;
+  left:507px;
+}
+.e-noplay{}
+.e-noplay p,.e-haveplay p,.e-finish p{
+  position:absolute;
+  color:#1096b2;
+  font-size:20px;
+  left:0px;
+  top:50px;
+}
+.e-noplay .red,.e-haveplay .red{
+  top:40px;
+  right:149px;
+}
+.e-haveplay{}
+.e-haveplay .red{
+  right:26px;
+}
+.e-finish p{
+  left:40px;  
+  top:20px;
+}
+.e-finish .red{
+  top:70px;
+  right:363px;
+}
+
+#container{
+    position:relative;
+    overflow:hidden;  /*这个东西折腾了很久才弄出来*/
+    width:930px;
+    height:30px;
+    margin:0px 15px 0px 15px; 
+}
+#content{
+    position:absolute;
+    left:0;
+    top:0;
+    white-space:nowrap;  
+}
+</style>
+
+<!--弹出彩蛋-->
+<!-- <div class="pop-eggs" style="width:260px;height:290px;">
+     <img src="http://cca.mbaobao.com/mkts/201408/12/egg/gegg.png" width="260" height="290" border="0" usemap="#Map"  id="nnEgg"  />
+     <map name="Map" id="Map">
+       <area shape="rect" coords="36,237,218,285" href="#" />
+       <area shape="rect" coords="20,5,243,236" href="javascript:void(0)" onclick="$('#nnEgg').hide();$('#mmEgg').show();" />
+     </map>
+     <img src="http://cca.mbaobao.com/mkts/201408/12/egg/geggp.png" width="260" height="290" border="0" usemap="#mmEggMap" id="mmEgg" style="display:none;"   />
+     <map name="mmEggMap" id="mmEggMap">
+       <area shape="rect" coords="18,14,246,276" href="javascript:void(0)" class="xp-close" />
+     </map>
+</div> -->
+
+
+
+<!--彩蛋-->
+<div class="wrapper" style="background-color:#fcc61e;">
+	<div class="main">
+		 <div class="mbb-eggs">
+		 	  <img src="http://cca.mbaobao.com/mkts/201408/12/egg/eggs_01.jpg" width="960" height="168" />  
+              <div class="eggs-main">
+              	   <ul class="egg-list" id="eggList">
+              	   	    <li></li>
+              	   	    <li></li>
+              	   	    <li></li>
+              	   	    <li></li>
+              	   	    <li></li>
+              	   	    <li></li>
+              	   	    <li></li>  
+              	   </ul>
+                   
+                   <div class="egg-state">
+
+                   	  <!--未登陆-->
+                      <div class="e-state e-nolog" id="eNolog">
+                             	    <a href="javascript:void(0)" class="button red" id="logIn"><strong>登陆</strong>寻彩蛋<i></i></a>
+                             	    <a href="" class="button blue"><strong>注册</strong>寻彩蛋<i></i></a>
+                      </div>
+
+                      <!--0数据-->
+                      <div class="e-state e-noplay" id="eNoplay">
+                          <p>Tips：你肿么还没找到彩蛋啊，奖品都要被领完啦~捉急死我了！</p>
+                          <a href="" class="button red">去<strong>真皮馆</strong>找一找<i></i></a>    
+                      </div>
+
+                      <!--有数据-->
+                      <div class="e-state e-haveplay" id="eHaveplay">
+                          <p>Tips：哎哟，你还有<span class="surplus"></span>个彩蛋木有找到啊，奖品都要被领完啦~捉急死我了！</p>
+                          <a href="" class="button red">去<strong>周年庆活动</strong>找一找<i></i></a> 
+                      </div>
+
+                      <!--完成数据 - 抽奖 -->
+                      <div class="e-state e-finish" id="eFinish">
+                          <p>Tips：好棒啊，这么快就搜集齐7个大彩蛋啦，看看你会中什么大家吧！<span class="red">记得明天接着来挑战啊！！！</span></p>
+                          <a href="javascript:void(0)" class="button red" id="mLottery">碰碰运气<strong>抽个大奖</strong><i></i></a> 
+                      </div>
+
+                   </div>
+
+              </div>
+              <div class="eggs-top">
+              	   <div class="award-list" id="awardList">
+                       <div id="container">
+                            <div id="content">
+                            </div>
+                       </div> 
+              	   	  <!--   guniao已通关，获得<span>5元现金券</span>  --> 
+                   </div> 
+              </div>
+		 </div>
+	</div>
+</div>
+<!--彩蛋-->
+
+
+</body>
+</html>
+		

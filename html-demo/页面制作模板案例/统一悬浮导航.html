@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body style="height:1500px">
+
+<!--悬浮框-->
+<div style="z-index:999;width:153px;height:445px;position:fixed;top:100px;right:auto;left:50%; margin-left:-635px; _position:absolute;_top:expression(eval(document.documentElement.scrollTop)+170);" id="xp_ball_bb">
+  <img src="http://cca.mbaobao.com/mkts/201312/11/bc/srg.jpg" width="110" height="199" border="0" usemap="#Map2" style=" display:none;" />
+  <map name="Map2">
+    <area shape="rect" coords="4,36,109,62" href="#s1">
+    <area shape="rect" coords="3,62,114,90" href="#s2">
+    <area shape="rect" coords="5,91,114,116" href="#s3">
+    <area shape="rect" coords="7,117,118,144" href="#s5">
+    <area shape="rect" coords="6,143,114,166" href="#s6">
+    <area shape="rect" coords="6,169,112,200" href="#top">
+  </map>
+</div>
+
+
+<script type="text/javascript">
+seajs.use("jquery", function($){
+    $(window).scroll(function(){
+       var win_top=$(document).scrollTop();
+       if(win_top>=500){
+           $('#xp_ball_bb').find('img').slideDown();
+       }else{
+           $('#xp_ball_bb').find('img').slideUp();
+       }
+    })
+})
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

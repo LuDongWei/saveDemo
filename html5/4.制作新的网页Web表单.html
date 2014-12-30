@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Zookeepwe Form</title>
+	<link href="./css/ZookeeperForm.css" rel="stylesheet">
+	<script  src="js/modernizr-1.7.min.js"></script>
+    <!--[if lt IE 9]>
+   <script src="./js/html5.js"></script>
+   <![endif]-->
+</head>
+
+<body>
+<style type="text/css" >
+input:required:invalid{
+  background-color:lightyellow;
+}
+textarea:required:invalid{
+  background-color:lightyellow;
+}	
+</style>
+
+
+<script type="text/javascript">
+function validateComments(input){
+	if (input.value.length<10) {
+        input.setCustomValidity("要写10多个字奥")
+	}else{
+		//正确
+		 input.setCustomValidity("")
+	}
+}
+
+function validateForm() {
+	if (!Modernizr.input.required) {
+		//不支持required属性，因此必须自己编写代码检测
+
+		//首先，取得包含所有元素的数组
+		var inputElements=document.getElementById("zooKeeperForm").elements;
+
+		//接着，遍历数组，检测每个元素
+		for(var i=0;i<inputElements.length;i++){
+             //检测每个元素是否必填
+             if(inputElements[i].hasAttribute("required")){ 
+                //经测试发现ie7不能完成（hasAtteribute无）（可用getAttribute改写）
+             	//如果是必须填写的，则检测其值是否为空
+             	//如果为空，则表单验证失败，返回false
+             	if(inputElements[i].value=="")
+             		{  
+             		   alert("请确保填写完整")
+             		   return false;
+             		} 
+             }
+		} 
+		     //如果到了这儿，则一切顺利
+             //游览器可以提交表单
+             return true;
+	};      
+}
+
+function RangeWe(rang){
+   var weight_=document.getElementById("weight_");
+       weight_.value=rang.value;	
+}
+
+
+</script>
+
+
+
+
+<h1>Zoo Keeper Application Form</h1>
+
+<form id="zooKeeperForm" action="#" onsubmit="return validateForm()">
+	<p><i>Please complete the form. Mandatory fields are marked with a </i><em>*</em></p>
+
+    <fieldset>
+    	<legend>Contact Details</legend>
+        <label for="name">Name<em>*</em></label>
+        <input type="text" id="name" autofocus required placeholder="Jane Smith"><br>
+        <label for="telephone">Telephone</label>
+        <input id="telephone" placeholder="(xxx)xxx-xxxx" pattern="[a-z]{3}-[a-z]{3}" ><br>
+        <label for="email">Email <em>*</em></label>
+        <input id="email" type="email" required><br>
+    </fieldset>
+
+    <fieldset>
+    	<legend>Personal Information</legend>
+    	<label for="birthDate">Birth Date<em>*</em></label>
+    	<input type="date" id="birthDate" required><br>
+        <label for="age" >Age<em>*</em></label>
+        <input id="age" type="number" required min="0" max="120" step="1" value="20" ><br>
+        <label for="gender">Gender</label>
+        <select  id="gender">
+        	<option value="female">Female</option>
+        	<option value="male">Male</option>
+        </select><br>
+        <label for="comments">When did you first know you wanted to be a zoo-keeper?<em>*</em></label>
+        <textarea  id="comments" cols="30" rows="10" oninput="validateComments(this)" required ></textarea>
+    </fieldset>
+
+    <fieldset>
+    	<legend>Pick Your Favorite Animals</legend>
+    	<label for="zebra"><input id="zebra" type="checkbox">Zebra</label>
+		<label for="cat"><input id="cat" type="checkbox"> Cat</label>
+		<label for="anaconda"><input id="anaconda" type="checkbox"> Anaconda</label>
+		<label for="human"><input id="human" type="checkbox"> Human</label>
+		<label for="elephant"><input id="elephant" type="checkbox"> Elephant</label>
+		<label for="wildebeest"><input id="wildebeest" type="checkbox"> Wildebeest</label>
+		<label for="pigeon"><input id="pigeon" type="checkbox"> Pigeon</label>
+		<label for="crab"><input id="crab" type="checkbox"> Crab</label>
+    </fieldset>
+
+    <p><input type="submit" value="Submit Application"></p>
+
+    <fieldset>
+    	<legend>Html5 Test</legend>
+    	<label for="search">Search</label>
+    	<input type="search" id="search"><br>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone"><br>
+        <label for="weight">Weight(in pounds)</label>
+        50<input type="range" id="weight" min="50" max="1000" value="160"  onChange="RangeWe(this)">1000
+        <input type="text" id="weight_" value="160" style="width:80px; margin-left:20px;">
+        <label for="color">color</label>
+        <input type="color" id="color">
+    </fieldset>
+
+</form>	
+</body>	
+</html>

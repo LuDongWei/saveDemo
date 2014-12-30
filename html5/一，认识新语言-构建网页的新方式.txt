@@ -1,0 +1,179 @@
+测试页：http://www.prosetech.com/html5/
+
+第一章：HTML5简历
+HTML5 标记初体验
+<!DOCTYPE html>                                   //文档类型声明
+<html lang="en">                                  //指明网页的自然语言，也可以写在div中
+  <head>
+   <meta charset="utf-8">                         //字符编码
+   <title>A Tiny HTML Document</title>
+   <link href="styles.css" rel="stylesheet">
+   <script src="script.js"></script>
+  </head>
+  
+  <body>
+     <p>let's rock the browser,HTML5 style.</p>
+  </body>
+</html>
+
+Html5 验证  http://validator.w3.org/
+
+HTML和XHTML的区别：
+XHTML文档必须具有良好完整的排版，是XML引入的一个新的概念。
+
+把HTML5文档转换成XHTML5文档：
+<html lang="en" xmlas="http://www.w3.org/1999/xhtml">
+提示：切换到XHTML模式
+把文件的扩展名改为.xhtml或.xht
+
+了解游览器支持情况：http://caniuse.com/
+了解游览器装机情况：http://gs.statcounter.com/
+自己的站点使用网页跟踪服务：http://www.google.com/analytics/
+
+测试游览器对很多HTML5及其相关功能的支持情况： www.modernizr.com
+使用‘腻子脚本’填补功能缺陷：polyfill
+
+
+第二章：构造网页的新样式
+使用新元素：
+1.容易修改和维护  2.无障碍性  3.搜索引擎优化  4.未来的功能
+
+例：<article>
+           -|<header>
+		           -|<hgroup>     
+				   -|</hgroup>    //主副，标题
+		   -|</header>            //内容摘要，发表日期，作者署名，图片或小标题链接           
+           -|<footer>
+           -|</footer>
+    </article>		   
+“这是一篇包含文头和页脚的文章”
+
+理解<header>
+网页中可以包含多个<header>元素（通常也应该如此），即使相应的区块的页面中的角色
+
+用<nav>标注导航链接
+1:<nav>                   2.<aside>
+    -|此处是链接                -|<nav> 
+	-|<aside>                       -|此处是链接
+	-|<aside>                   -|section
+	                            -|div
+1:可以把侧边栏想象成一个导航区。其他内容可以使用<aside>（其中的内容与侧边栏的主要内容--链接无关）
+2:可以吧整个侧边栏想象成一个独立的多用途区块。
+注意：
+(1)标题(Articles和About Us)使用的是二级标题
+(2)链接以<ul>和<li>元素组成的无序列表来标记
+(3)"About Us"包含在一个<section>中								
+(4)图片广告放在一个<div>里						  
+
+用<figure>添加插图,<figcaption>添加文本，链接小图标
+<figure class="FloatFigure">
+     <img src="">
+	 <figcaption>A human skull lies on the sand</figcaption>
+</figure>
+
+用<aside>添加附注，对文档中提出的某个观点进行解释。
+<aside class="PullQuote">
+   <img src="" alt="">
+     We don't know how....
+   <img src="" alt="">
+</aside>
+
+使用<details>和<summary>的折叠框（目前只有Chrome支持）
+<details>
+    <summary>Section #1</summary>
+	<p>If you see this content,the section is expanded</p>
+</details>
+
+理解<footer>
+<div id="FatFooter">
+    <aside>
+	   <!--"胖"页脚的内容-->
+	   <img onClick="CloseBox()" src="" class="">
+	</aside>
+	<footer>
+	   <!--标准页脚的内容-->
+	   <p>The Views...</p>
+	</footer>
+</div>
+
+理解<section>
+可以放在<section>中的内容有以下几种：
+1.与页面主体内容并列显示的小内容块。例如我们启示录网站中的About Us段落。
+2.独立性内容,但却不能用文章（<article>）来描述，比如客户的购物记录或产品清单。
+3.分组内容————例如，新闻站点中的一组文章。
+4.比较长的文档中的一部分。
+
+如何查看纲要(查看自己的标记，发现其他问题导致的错误)
+在线HTML纲要生成器
+http://gsnedders.html5.org/outliner/
+Chrome扩展
+http://code.google.com/p/h5o
+Opera扩展
+http://tinyurl.com/3k3ecdy
+
+用游览器解决对语义元素的支持情况
+<!--[if lt IE 9]>                  //游览器（IE9及更高版本）就会忽略这行
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+把前面的“超级规则”放到样式表，新元素就能正确地显示为块元素。
+
+提示：要解决语义元素应用样式的问题，还有一个方案：使用Modernizr。
+                   
+                Web Page(布局)
+				  <header>
+      <aside>             <article>
+          -|<nav>              -|<header>    
+          -|<section>           文字内容
+		  -|<div>			    -|<figure>
+		                        -|<aside>
+							   -|<footer>
+							   
+							   
+						   
+							   
+							   
+
+							   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>短信订阅</title>
+	<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+	<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+
+</head>
+
+<body>
+	<style type="text/css">
+/*.sb-content{
+	width:430px;
+	height:173px;
+	background-color:#fdd131;
+}	
+.sb-content .sb-head{
+	width:430px;
+	height:40px;
+	overflow:hidden;
+}
+.sb-head .sb-name{
+	width:358px;
+	height:40px;
+	line-height:40px;
+	font-size:18px;
+	font-weight:bolder;
+	text-align:left;
+    padding-left:12px;
+    float:left;
+    font-family:"微软雅黑";
+	color:#40316a;
+}
+.sb-head .sb-close{
+	width:60px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	float:left;
+}
+.sb-close .cl-i{
+	display:block;
+	width:28px;
+	height:28px;
+	border-radius:14px;
+	margin-left:16px;
+	margin-top:6px; 
+	font-style:normal;
+	text-align:center;
+	cursor:pointer;
+	line-height:28px;
+	font-family:"微软雅黑";
+	background-color:#40316a;
+	color:#ffffff;
+}
+.sb-content .sb-content{
+    width:428px;
+    height:132px;
+    background-color:#ffffff;
+    margin:0 auto;
+    position:relative;	
+}
+.sb-content .sb-main{
+	position:absolute;
+	top:45px;
+	left:55px;
+	height:40px;
+	width:318px;
+	overflow:hidden;
+}
+.sb-main .m-text{
+	width:178px;
+	height:40px;
+	float:left;
+	position:relative;
+}
+.sb-main .m-submit{
+	width:125px;
+	height:40px;
+	margin-left:10px;
+	float:left;
+}
+.sb-main .in-1{
+	width:164px;
+	height:24px;
+	line-height:24px;
+	font-size:18px;
+	text-align:left;
+	padding:7px 6px 7px 6px;
+	border:1px solid #b4b4b4;
+	position:absolute;
+	font-family:"微软雅黑";
+	top:0px;
+	left:0px;
+	z-index:998;
+}
+.sb-main .in-2{
+	width:125px;
+	height:40px;
+	font-size:18px;
+	font-weight:bolder;
+	border:none;
+	text-align:center;
+	cursor:pointer;
+	font-family:"微软雅黑";
+	background-color:#40316a;
+	color:#fdd131;
+}
+.sb-main .in-2:hover{	
+	filter: alpha(opacity=90);opacity:0.9;
+}
+.sb-main .m-text .default{
+    color:#bfbfbf;	
+}
+.sb-main .m-text .warn{
+	color:#e63d3d;
+}
+.m-text .sb-hint{
+	position:absolute;
+	height:24px;
+	line-height:24px;
+	font-family:"微软雅黑";
+	font-size:16px;
+	top:7px;
+	left:9px;
+	z-index:999;
+}
+.simplemodal-overlay{
+	background-color:#000000;
+} */
+</style>
+
+	<input type="submit" value="预定" id="subbb">
+
+	<!-- <div class="sb-content" id="subscibe" style="background-color:#fdd131;" >
+	<div class="sb-head">
+		<div class="sb-name" style="color:#40316a;">秒杀开始提醒</div>
+		<div class="sb-close"> <i class="cl-i" style="background-color:#40316a;">X</i>
+		</div>
+	</div>
+	<div class="sb-content">
+		<div class="sb-main">
+			<div class="m-text">
+				<label for="sb-phone" class="sb-hint default" >请输入手机号码</label>
+				<input type="text" class="in-1" id="sb-phone" autofocus ></div>
+			<div class="m-submit" style="background-color:#fdd131;color:#40316a;">
+				<input type="submit" class="in-2" id="sb-submit" value="开始提醒我"></div>
+		</div>
+	</div>
+</div>
+-->
+<script type="text/javascript">
+    seajs.use(["jquery","mbb/subscibe/1.0.0/subscibe"],function($,SB){
+              $("#subbb").click(function(){
+              	 SB.install({id:"2",
+              	 	         sku:"1404005702",
+              	 	         succeed_:function(aa,bb){
+                                bb.close();
+              	 	         }, 
+              	 	         false_:function(aa,bb){
+                                 
+              	 	         }
+              	 	         });
+              })     
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<script src="./js/jquery-1.9.1.min.js"></script>
+<body>
+  
+  <style>
+  *{ margin:0; padding:0;}
+  #mirrors{ width:100%; height:100%; 
+     -webkit-transition:opacity  0.9s ease-out;
+	-moz-transition:opacity  0.9s ease-out;
+	-ms-transition: opacity 0.9s ease-out;
+	-o-transition:opacity 0.9s ease-out;
+	transition: opacity 0.9s ease-out;  background:#000;  position:fixed !important;position:fixed; left:0; right:0; top:0; *position:absolute ; *top:expression(eval(documentElement.scrollTop +0));background-attachment:fixed;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(style=0,Opacity=60)"; 
+ filter:alpha(opacity=60);  
+ -moz-opacity:0.60; 
+ 60%opacity: 0.60; 
+ opacity: .60; z-index:994; display:none; overflow-y:hidden; }
+ 
+ 
+ #showMore{  width:590px; height:570px; border:2px solid #9C3; position:fixed; margin:0 auto; left:0; right:0;*position:absolute ; z-index:999; *top:expression(eval(documentElement.scrollTop +0));background-attachment:fixed; overflow:hidden; display:none;  padding-bottom:20px; box-shadow:0 0 5px #999999; margin-top:40px;  border:1px solid #ccc;border-radius:5px;  background:#FF3; font-size:18px; z-index:999; }
+ .asd{width:400PX; height:400PX; margin:0 auto; overflow:scroll; border:1px solid #039;}
+  </style> 
+  
+  <script >
+  
+  $(document).ready(function(e) {
+    $('p').click(function(){
+		$('#mirrors').toggle();
+		$('#showMore').toggle();
+		});
+		
+		//弹出框背景禁止触屏 
+	  mirrors=document.getElementById("mirrors");
+	  disablebk(mirrors);
+	 function disablebk(elements){ 
+	 if(document.addEventListener){
+	 elements.addEventListener("touchmove",function(e){
+		// alert('sad');
+		var e = event || window.event || arguments.callee.caller.arguments[0];	
+		e.preventDefault();
+		return false;
+		},false);
+	   }
+	 }
+	 
+	 
+	 
+	  var showMoreUlss=document.getElementById("showMore");
+        showMoreUlss.addEventListener("touchmove", function(e){
+		//disablebk(mirrors);
+	     if(mirrors.style.display='block'){
+			  //disablebk(mirrors);
+			  e.preventDefault();
+			 }
+	}, false);
+
+		
+});
+  </script>
+    <center>
+    <p>要求这里 黄色区域 showMore touchmove时候，背景是不可以滚动  的，</p>
+    <p>要求这里 黄色区域里面的 紫色模块  touchmove时候，背景是不可以滚动  的，</p>
+    <p >点击</p>
+    </center>
+  <div id="mirrors" ></div>
+  <div  id="showMore">黄色这块触摸时候， 背景 id='bk' 不能冒泡影响<DIV class="asd"><div style="height:800px; background:#F6F">父类showMore e.preventDefault导致这里不可以触屏<p>内容 滚动</p><p>内容 滚动</p><p>内容 滚动</p><p>内容 滚动</p><p>内容 滚动</p><p>内容 滚动这里不能用e.preventDefault();加了自己没法滚动</p></div></DIV></div>
+  
+  
+  <div id="bk" style="width:900px; height:1300px; margin:0 auto; border:2px solid #0C9; background:url(../images/1333778674SNEm.jpg) repeat">内容</div>
+</body>
+</html>

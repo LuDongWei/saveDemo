@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
+<script src="seajs/sea-debug_2.1.1.js"></script>
+<script src="seajs/config_2.1.js"></script>
+</head>
+
+<body>
+<div id="moban">
+</div>
+
+
+
+
+<script id='people-temolate'  type="text/x-handlebars-template">
+    {{#people}}
+        <div class='person'>
+	    <p>{{title}}
+		   {{#with author}}    
+			  By{{first_name}} {{last_name}}</p>
+		   {{/with}}  
+		</div>
+	{{/people}}
+</script>
+
+<script type="text/javascript">
+ var data = {
+          people: [
+            { title: "first people: ", author: {first_name: "Alan", last_name: "Johnson"},  },
+            { title: "second people: ", author: {first_name: "Jack", last_name: "een"},  },
+            { title: "third people: ", author: {first_name: "Tom", last_name: "Peter"},  },
+            { title: "fourth people: ", author: {first_name: "Asn", last_name: "Smith"},  },
+          ]
+        };
+</script>
+
+<script type="text/javascript">
+seajs.use("./js/handlebars.js",function(b){
+	b.handlebars();
+	})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<title>Video</title>
+	<style>
+    body{
+    	font-family:Verdana;
+    	font-size:small;
+    }
+    canvas{
+    	cursor:pointer;
+    	border:1px solid black;
+    }
+    div{
+    	margin:15px 0px;
+    }
+    button{
+    	padding:4px 10px;
+    }
+    input[type=number]{
+    	width:50px;
+    	margin-right:15px;
+    }
+    /*----------分割线-----------*/
+	h1 {
+	font-size: x-large;
+	margin: 6px 0px 6px 0px;
+	}
+
+	video {
+	border: double 8px lightgray;
+	}
+
+	.videoContainer {
+	max-width: 445px;
+	}
+
+	#positionBar {
+	height: 30px;
+	color: white;
+	font-weight: bold;
+	background: steelblue;
+	text-align: center;
+	}
+
+	#positionBar span {
+	display: inline-block;
+	margin-top: 7px;
+	}
+
+	#durationBar {
+	border: solid 1px black;
+	width: 100%;
+	margin-bottom: 5px;
+	}
+
+	#bufferBar {
+	background: lightsteelblue;
+	position: absolute;
+	}
+	</style>
+	<script>
+	//这些细节，代表单个球
+	function Ball(x,y,dx,dy,radius){
+        this.x = x;
+		this.y = y;
+		this.dx = dx;
+		this.dy = dy;
+		this.radius = radius;
+		this.strokeColor = "black";
+		this.fillColor = "red";
+
+	}
+
+	//这是一个数组，存在所有的球在画布上
+	var balls=[];
+
+	var canvas;
+	var context;
+
+	window.onload=function(){
+       canvas = document.getElementById("canvas");
+       context = canvas.getContext("2d");
+
+       canvas.onmousedown=canvasClick;
+       //重绘每20毫秒
+       setTimeout('drawFrame()',20);       
+	};
+
+	function addBall(){
+		//得到请求大小
+		var radius=parseFloat(document.getElementById('ballSize').value);
+		//画新的球
+		var ball=new Ball(50,50,1,1,radius);
+		//添加球
+		balls.push(ball);
+		//播放背景音乐
+		document.getElementById('backgroundMusic').play();
+	}
+
+	function clearBalls(){
+		//删除所有球
+		balls=[];
+		document.getElementById('backgroundMusic').pause();
+		document.getElementById('backgroundMusic').currentTime=0;
+	}
+
+	function drawFrame(){
+		// 清晰画布
+		context.clearRect(0, 0, canvas.width, canvas.height);
+
+
+		//注意，您需要调用beginPath(),以确保你不重绘你话之前的一部分
+		context.beginPath();
+
+		//通过所有的球
+		for(var i=0;i<balls.length;i++){
+        //移动着每一个球的新位置
+        var ball=balls[i];
+        ball.x +=ball.dx;
+        ball.y +=ball.dy;
+
+        //加入一个‘重力’效应，使球下落速度
+        if((ball.y)<canvas.height) ball.dy +=0.22;
+
+        //添加一个‘摩擦’效应，降低了球的左右运动。
+        ball.dx=ball.dx*0.998;
+
+        //如果球撞到墙壁，反弹
+        if((ball.x+ball.radius>canvas.width)||(ball.x-ball.radius<0)){
+        boing();
+        ball.dx=-ball.dx;
+        }
+
+        //如果球已经没有退路了，反弹，但稍微慢下来
+        if((ball.y+ball.radius>canvas.height)||(ball.y-ball.radius<0)){
+        boing();	
+        ball.dy=-ball.dy*0.96;
+        }
+        
+        //如果用户想要的线路检查
+        if(!document.getElementById('connectedBalls').checked){
+        context.beginPath();	
+        context.fillStyle=ball.fillColor;
+        }else{
+        context.fillStyle='white';
+        }
+
+        //画出球
+        context.arc(ball.x,ball.y,ball.radius,0,Math.PI*2);
+        context.lineWidth=1;
+        context.fill();
+        context.stroke();
+		}
+        //画下下一秒在20毫秒以后
+        setTimeout("drawFrame()",20);
+	}
+
+		function canvasClick(e){
+			//让点击坐标
+			var clickX = e.pageX-canvas.offsetLeft;
+			var clickY = e.pageY-canvas.offsetTop;
+
+			//寻找点击球
+			for(var i in balls){
+		       var ball = balls[i];
+		       if ((clickX>(ball.x-ball.radius))&&(clickX<(ball.x+ball.radius))){
+		       	 if((clickY>(ball.y-ball.radius))&&(clickY<(ball.y+ball.radius))){
+		       	 	//改变点击球的速度
+		       	 	ball.dx -=2;
+		       	 	ball.dy -=3;
+		       	 	return;
+		       	 }
+		       }
+			}
+		}
+
+		//记录<audio>元素的个数
+		var audioElementCount=3;
+
+		//记录当前播放的<audio>元素
+        var audioElementIndex=1;
+
+        function boing(){
+        	//取得循环列表中的下一个<audio>元素
+        	var audioElementName="audio"+audioElementIndex;
+        	var audio=document.getElementById(audioElementName);
+
+        	//播放音效
+        	audio.currentTime=0;
+        	audio.play();
+
+        	//计数器更新为下一个<audio>元素
+        	if(audioElementIndex==audioElementCount){
+        		audioElementIndex=1;
+        	}else{
+        		audioElementIndex+=1;
+        	}
+        }
+
+    //------------------------我是分割线------------------------------//
+        var video;
+        var display;
+
+        window.onload=function(){
+        	video=document.getElementById('videoPlayer');
+
+        	display=document.getElementById('displayStatus');
+
+        	video.onplaying=function(){
+        		display.innerHTML="Playing...";
+        	}
+
+        	video.onpause=function(){
+        		display.innerHTML="paused";
+        	}
+
+
+        }
+
+        function progressUpdate(){
+        	//动态设置蓝色的positionBar,从0到100%
+        	var positionBar=document.getElementById('positionBar');
+        	positionBar.style.width=(video.currentTime/video.duration*100)+'%';
+        	//显示已经播放的秒数，保留两位小数
+        	display.innerHTML=(Math.round(video.currentTime*100)/100+'sec');
+        }
+
+
+        function play(){
+        	video.play();
+        }
+
+        function pause(){
+        	video.pause();
+        }
+
+        function stop(){
+        	video.pause();
+        	video.currentTime=0;
+        }
+
+        function speedUp(){
+        	video.play();
+        	video.playbackRate=2;
+        }
+
+        function slowDown(){
+        	video.play();
+        	video.playbackRate=0.5;
+        }
+
+        function normalSpeed(){
+        	video.play();
+        	video.playbackRate=1;
+        }
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+    <audio id="audio1">
+    	<source src="./media/boing1.wav" type="audio/wav"></source>
+    	<source src="./media/beep.mp3" type="audio/mp3"></source>
+    </audio>
+
+    <audio id="audio2">
+    	<source src="./media/boing2.wav" type="audio/wav"></source>
+    	<source src="./media/beep.mp3" type="audio/mp3"></source>
+    </audio>
+
+    <audio id="audio3">
+    	<source src="./media/boing3.wav" type="audio/wav"></source>
+    	<source src="./media/beep.mp3" type="audio/mp3"></source>
+    </audio>
+
+    <audio id="backgroundMusic" loop>
+    	<source src="./media/theowlnamedorion.mp3" type="audio/mp3"></source>
+    	<source src="./media/theowlnamedorion.ogg" type="audio/ogg"></source>
+    </audio>
+
+    <canvas id='canvas' width='400' height='300'></canvas>
+	
+	<div>
+	  <button onclick="addBall()">Add Ball</button>
+	  <button onclick="clearBalls()">Clear Canvas</button>
+	</div>
+	<div>
+	Ball Size:
+	<input type="number" id='ballSize' min='0' man='50' value='15'>
+	<input type="checkbox" id="connectedBalls">
+	Connect Balls
+	<br>
+    </div>
+    
+    <p>/*---------------------------我是分割线---------------------------*/</p>
+    <h1>World's Ugliest Video Player</h1> 
+    
+    <div class="videoContainer">
+    	<video id="videoPlayer" ontimeupdate="progressUpdate()">
+    		<source src="./media/butterfly.mp4" type="video/mp4">
+	        <source src="./media/butterfly.ogv" type="video/ogg">
+    	</video>
+    </div>
+
+    <div class="barContainer">
+        <div id="durationBar">
+        	<div id="positionBar">
+        		<span id="displayStatus">
+        			Idle.
+        		</span>
+        	</div>
+        </div>
+    </div>
+
+  <div>
+&nbsp;&nbsp;&nbsp;
+    <button onclick="play()">Play</button>
+    <button onclick="pause()">Pause</button>
+    <button onclick="stop()">Stop</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="speedUp()">Fast</button>
+    <button onclick="slowDown()">Slow</button>
+    <button onclick="normalSpeed()">Normal Speed</button>
+  </div>
+
+
+
+</body>
+</html>

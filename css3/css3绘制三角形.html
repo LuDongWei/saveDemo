@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta content="zh-CN" http-equiv="Content-Language" />
+    <title>css3绘制三角形</title>
+    <meta content="1GdE-bOwtaftzUH2-g1IcuNL7VYPf7t0qkI0vSpSPo0" name="google-site-verification" />
+    <meta property="qc:admins" content="1041326176652172176375" />
+    <link href="http://wsstatic.mbaobao.com/v3/common/image/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/3.0.0/global.css?20140318" media="all" />
+</head>
+
+<body>
+<style type="text/css">
+.border{
+    border: 20px solid;
+    border-top-color:#ff0000;
+    border-right-color:#00ff00;
+    border-bottom-color:#0000ff;
+    border-left-color:#FFFF00;
+    width:100px;
+    height: 100px;
+    background: #272822;
+}
+.ellipse{
+    width: 44px;
+    height: 66px;
+    border: 1px solid #000;
+    border-radius:50% 50%;
+    /*--border-radius:22px / 33px;--*/
+}    
+.triangle{
+    width:0px;
+    height:0px;
+    border-right:20px solid #000000;
+    border-top:20px solid transparent;
+    border-bottom:20px solid transparent;
+    -webkit-transform-origin: top right;
+    -webkit-transform: rotate(-60deg);
+}
+.tail{
+    width:100px;
+    height:70px;
+    border-right:6px solid black;
+    border-bottom-right-radius:60px 50px; 
+}
+</style>
+
+<div class="border">
+</div>
+
+<div class="ellipse">
+</div>    
+
+<!--绘制斜边三角形-->
+<div class="triangle">
+</div>
+
+<!--绘制尾巴-->
+<div class="tail">
+</div>    
+    
+</body>
+</html>

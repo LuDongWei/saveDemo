@@ -1,0 +1,13 @@
+  column
+ 可以帮助你很轻松的实现文字的多列布局。
+ .three-column {
+  padding: 1em;
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  column-count: 3;
+  column-gap: 1em;
+  }
+  column是很新的标准，所以你需要是用前缀，
+  它不被ie9及以下的OperaMini支持。

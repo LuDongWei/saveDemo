@@ -1,0 +1,1426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>无标题文档</title>
+			<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+			<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script><br />
+
+
+
+
+
+</head>
+
+<body>
+
+<style type="text/css">
+.page_all{} 
+.wrapper{ width:100%;}
+.main{width:960px;margin:0 auto;}
+
+.wrapper_mian{position:relative; width:100%; z-index:1;  overflow:hidden;}
+.wrapper_mian .wrapper_mian_bk{ position:absolute; top:0; left:0; z-index:2; width:100%; min-width:960px;}
+.wrapper_mian .wrapper_mian_bk div{ width:100%; height:100px;}
+.main_{ width:960px; margin:0 auto;}
+
+.mbb_mian{width:100; position:relative; z-index:3}
+.mbb_mian .mbb_mian_botton{text-align:center;}
+
+.clearfix:after {content: ".";display: block;
+    height: 0;clear: both; visibility: hidden;}
+.clearfix {zoom: 1;}
+</style>
+
+<style type="text/css">
+.main{width:960px;margin:0 auto;}
+
+/*---评论列表---*/  
+.comment-main{
+   width:980px;
+   overflow:hidden;
+   font-size:12px;
+   font-family:"微软雅黑";  
+}
+.comment-main .comment-item{
+   float:left;
+   width:200px;
+   padding:14px;
+   margin:0px 11px 12px 0px;
+   border:1px solid #e6e6e6;
+   
+}
+.comment-item .com-pic{
+
+}
+.comment-item .com-praise{
+  overflow:hidden;
+  height:28px;
+  margin-top:5px;
+}
+.com-praise .link-count{
+  background:url(http://cca.mbaobao.com/mkts/201409/01/yuang/love.png) no-repeat;
+  background-position:2px 5px;
+  display:block;
+  float:left;
+  height:18px;
+  line-height:23px;
+  padding-left:20px;
+  cursor:pointer;
+  color:#aaaaaa;
+}
+.com-praise a.l-star{
+  background-position:2px -16px;
+}
+.com-praise .link-get{
+  float:right;
+  margin-top:2px;
+  padding:2px 5px 2px 5px;
+  color:#ffffff;
+  background:#4494d0;
+  border-radius:5px;
+}
+.comment-item .com-praise .link-get{
+  margin-top:0px;
+}
+.comment-item .com-int{
+  width:100%;
+  height:0px;
+  border-bottom:1px dashed #bebebe;
+}
+.comment-item .com-inf{
+  height:148px;
+  overflow:hidden;
+}
+.com-inf .account{
+  text-align:left;
+  color:#aaaaaa;
+  margin:4px 0px 4px 0px;
+}
+.com-inf .comment{
+  text-align:left;
+  color:#5c5c5c;
+}
+
+/*--评论弹框--*/
+.comment-pop{
+  font-family:"微软雅黑";
+  width:650px;
+  height:390px;
+  padding:0px 12px 12px 12px;
+  border:1px solid #999999;
+  background-color:#ffffff;
+}
+.comment-pop .pop-head{
+  width:100%;
+  height:50px;
+  line-height:50px;
+  position: relative;
+}
+.pop-head h3{
+  font-size:18px;
+  font-weight:bolder;
+}
+.pop-head a{
+  display:block;
+  font-size:26px;
+  width:32px;
+  height:32px;
+  line-height:32px;
+  border-radius:16px;
+  position:absolute;
+  color:#000000;
+  font-weight:bolder;
+  top:10px;
+  right:10px;
+}
+.comment-pop .pop-main{
+  overflow:hidden;
+}
+.comment-pop .pop-left{
+  float:left;
+}
+.pop-left .pop-item{
+  margin-right:12px;
+}
+.comment-pop .pop-right{
+  float:left;
+}
+/*--留言样式修改--*/
+.r-pop-wrap{
+  width:438px;
+  overflow:hidden;
+}
+.r-pop-post{
+  width:100%;
+}
+.r-pop-post .gb-content-wrap{
+  width:100%;
+}
+.r-pop-post .gb-content-wrap .gb-content{
+  width:99%;
+  height:60px;
+  resize:none;
+}
+.r-pop-post .gb-post-wrap{  
+  overflow:hidden;
+}
+.r-pop-post .gb-count{
+  float:left;
+  line-height:25px;
+  margin-top:2px;
+}
+.r-pop-post .gb-btn-wrap{
+  float:right;
+  line-height:30px;
+}
+.r-pop-post .gb-btn-wrap .bg-btn-link{
+   background:#e03529;
+   color:#ffffff;
+   padding:2px 6px 2px 6px;
+   border-radius:5px;
+}
+.r-pop-list .gb-list-wrap .gb-l-list{   
+  width:100%;
+  height:212px;
+  overflow-y: scroll;
+}
+.r-pop-list .gb-l-list li {
+  padding:5px;
+}
+.r-pop-list .gb-l-list li .gb-l{
+  overflow:hidden;
+  text-align:left;
+}
+.r-pop-list .gb-l-list li .gb-l-content{
+  text-align:left;
+  clear:both;
+}
+.r-pop-list .gb-l-list li .gb-l-head{
+  height:25px;
+  line-height:30px;
+}
+.r-pop-list .gb-l-list li .gb-l-content{
+  line-height:20px;
+}
+.gb-l-list li .gb-l-content .gb-reply{
+  display:none;
+}
+.r-pop-list .gb-list-wrap .gb-l-pager{
+
+}
+
+.gb-list-wrap .pagination span.current{
+  background-color:#ffffff;
+  border-color:#E03529;
+  color:#000000;
+}
+#comPop{
+  display:none;
+}
+.simplemodal-overlay{background-color:#000000;}
+
+/*--订阅弹窗--*/
+#subscibe{background-color: #d31749 !important;}
+.sb-head .sb-name {color: #fff !important;
+    font-weight: normal !important;}
+.sb-close .cl-i {background-color: #fff !important;
+    color: #d41548 !important;}
+.sb-main .in-2 {background-color: #d31749 !important;
+    color: #fff !important;font-weight: normal !important;}
+	
+/*--滚动--*/
+.mbbSlider{
+	width:920px;
+	height:345px;
+	overflow:hidden;
+	width:930px;
+	margin:0 auto;
+}
+.mbbSlider ul.slider{
+  width:920px;
+  margin:0 auto;
+}
+.slider-list{
+  width:920px;
+  overflow:hidden;
+}
+.slider-list li{
+  float:left;
+  margin-left:15px;
+  margin-right:15px;
+  margin-top:25px;
+}
+</style>
+
+<div class="wrapper" style="background-color:#d3184f;">
+     
+     <!--头部-->
+     <div class="wrapper_mian" style="height:1500px;">
+      <div class="mbb_mian">
+        <div class="mbb_mian_botton" style="height:1500px; position:absolute;top:0; left:0;width:100%; padding:0px;">
+          <img src="http://cca.mbaobao.com/mkts/201401/21/bgmain.gif" width="960" height="1500" border="0" usemap="#Map"/>
+                <map name="Map" id="Map">
+                  <area shape="rect" coords="346,505,622,572" href="javaScript:void(0)" id="signIn" />
+                  <area shape="rect" coords="174,1380,412,1446" href="#mbb_top_01" />
+                  <area shape="rect" coords="554,1377,784,1446" href="#mbb_top_02" />
+                </map>
+            </div>
+       </div>
+        
+        <!--签到-->        
+        <div class="mbb_mian_botton" style="position:absolute;top:453px; left:0;width:100%; padding:0px;height:70px;z-index:999;">
+           <div class="main" style="position:relative"> 
+             <div class="sign-in"  style="width:180px; position:absolute; left:451px; font-size:13px; text-align:left;">
+                第<span></span>位麦宝一起过中秋
+             </div>
+           </div>  
+        </div>
+        <!--签到--> 
+
+      <!--模块-->     
+      <div class="mbb_mian_botton" style="position:absolute;top:644px; left:0;width:100%; padding:0px;height:70px;z-index:100;">
+        <div class="main">
+      <!--视频-->             
+      <div class="k-main v_box" style="width:310px;border:4px solid #000;margin-left:64px;">
+        <script language="javascript"> 
+        var swf_height=287;
+        var swf_width=310;
+        var texts = "";
+        var files = "http://cca.mbaobao.com/mkts/201409/02/zqj/tidbits.flv";
+        document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+          document.write('<param name="movie" value="http://cca.mbaobao.com/mkts/201402/18/vcastr.swf"><param name="quality" value="high">');
+          document.write('<param name="menu" value="false"><param name="allowFullScreen" value="true" />');
+          document.write('<param name="FlashVars" value="vcastr_file='+files+'&vcastr_title='+texts+'&IsAutoPlay=1">');
+          document.write('<embed src="http://cca.mbaobao.com/mkts/201402/18/vcastr.swf" allowFullScreen="true" FlashVars="vcastr_file='+files+'&vcastr_title='+texts+'&IsAutoPlay=1" menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>');
+        </script>
+      </div>
+      <!--视频-->
+        </div>
+      </div>
+
+      <!--data-oxlazy-->     
+      <div class="wrapper_mian_bk">
+        <div class="wrapper_mian_bk_01" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_01.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_02" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_02.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_03" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_03.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_04" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_04.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_05" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_05.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_06" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_06.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_07" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_07.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_08" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_08.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_09" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_09.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_10" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_10.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_11" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_11.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_12" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_12.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_13" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_13.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_14" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_14.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+        <div class="wrapper_mian_bk_15" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_15.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+      </div>
+     </div>
+     <!--头部-->
+     
+     
+      <!--评论弹框-->
+      <div class="comment-pop" id="comPop">
+        <div class="pop-head">
+            <h3>那些年，一起逗比的岁月，我们等你回来！</h3>
+            <a href="javascript:void(0)" class="xp-close">X</a>
+        </div>  
+        <div class="pop-main">      
+          <div class="pop-left">
+            <div class="pop-item">
+              <div class="com-pic">
+              </div>
+              <div class="com-praise">
+              </div>
+            </div>
+          </div>
+          <div class="pop-right">
+              <div class="r-pop-wrap">
+                  <div class="r-pop-post">
+        
+                  </div>
+                  <div class="r-pop-list" >
+                        
+                  </div>
+              </div> 
+          </div>
+        </div>
+      </div>
+      <!--评论弹框-->
+
+
+     <!--产品-->
+     <div class="wrapper" style="background:url(http://cca.mbaobao.com/mkts/201409/02/zqj/back.jpg) no-repeat top center; background-position-y:-14px;">
+         <div class="main" style=" background:url(http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_00_02.jpg); " id="b1">
+         
+            <!--滚动-->
+            <div class="mbbSlider">
+                 <ul class="slider">
+                   <li class="mbbsl">
+                     <ul class="slider-list">
+                       <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/03.jpg" width="200" height="300">
+                        </a></li>
+                        <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/04.jpg" width="200" height="300">
+                        </a></li>
+                        <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/05.jpg" width="200" height="300">
+                        </a></li>
+                        <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/06.jpg" width="200" height="300">
+                        </a></li>
+                     </ul>                     
+                   </li>
+
+                   <li class="mbbsl">
+                     <ul class="slider-list">
+                       <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/08.jpg" width="200" height="300">
+                        </a></li>
+                        <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/09.jpg" width="200" height="300">
+                        </a></li>
+                        <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/10.jpg" width="200" height="300">
+                        </a></li>
+                        <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/11.jpg" width="200" height="300">
+                        </a></li>
+                     </ul>                     
+                   </li>  
+
+                   <li class="mbbsl">
+                     <ul class="slider-list">
+                       <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/14.jpg" width="200" height="300">
+                        </a></li>
+                        <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/15.jpg" width="200" height="300">
+                        </a></li>
+                        <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/16.jpg" width="200" height="300">
+                        </a></li>
+                        <li><a href="#b3">
+                        <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/head/17.jpg" width="200" height="300">
+                        </a></li>
+                     </ul>                     
+                   </li>                   
+                 </ul>
+            </div>
+            <!--滚动-->
+         
+            <!--白富美-->
+            <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_00_01.jpg" width="960" height="61" id="mbb_top_01"  />
+            $tUtil.GetToHTML("288_goods_sku_range")
+            <!--高帅富-->
+            <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_00_03.jpg" id="b2" width="960" height="61" />
+            $tUtil.GetToHTML("286_goods_sku_range")
+            <!--点赞-->
+            <div id="b3">
+              <img src="http://cca.mbaobao.com/mkts/201409/02/zqj/zqj_00_04.jpg" width="960" height="61"  id="mbb_top_02"  />
+            </div>
+            <!--评论列表-->
+            <div class="mbb-comment">
+              <div class="main" style="width:952px; margin:0 auto; margin-top:3px;">
+                <div class="comment-main">
+
+                  <div class="comment-item" id="mComment" data-id="4550">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img  src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/01.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4550" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4551">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/02.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4551" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4552">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/03.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4552" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>                 
+                  
+                  <div class="comment-item" id="mComment" data-id="4553">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/04.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4553" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4554">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/05.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4554" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4555">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/06.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4555" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4556">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/07.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4556" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4557">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/08.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4557" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4558">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/09.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4558" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4559">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/10.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4559" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4560">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/11.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4560" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4561">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/12.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4561" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4562">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/13.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4562" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4563">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/14.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4563" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4564">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/15.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4564" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4565">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/16.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4565" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4566">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/17.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4566" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4567">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/18.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4567" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4568">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/19.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4568" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4569">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/20.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4569" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4570">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/21.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4570" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4571">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/22.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4571" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4572">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/23.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4572" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4573">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/24.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4573" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4574">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/25.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4574" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  <div class="comment-item" id="mComment" data-id="4575">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/26.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4575" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  
+                  <div class="comment-item" id="mComment" data-id="4576">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/27.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4576" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4577">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/28.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4577" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4578">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/29.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4578" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4579">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/30.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4579" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4580">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/31.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4580" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  
+                  <div class="comment-item" id="mComment" data-id="4581">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/32.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4581" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4582">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/33.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4582" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4583">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/34.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4583" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4584">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/35.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4584" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  
+                  <div class="comment-item" id="mComment" data-id="4585">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/36.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4585" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  <div class="comment-item" id="mComment" data-id="4586_">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/37.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4586_" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+                  
+                  
+                  <!--新增-->
+                  <div class="comment-item" id="mComment" data-id="4590">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/38.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4590" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4591">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/39.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4591" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4592">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/40.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4592" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4593">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/41.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4593" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4594">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/42.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4594" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4595">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/43.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4595" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4596">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/44.jpg?2014" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4596" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4597">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/45.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4597" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4598">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/46.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4598" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4599">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/47.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4599" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4600">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/48.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4600" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4601">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/49.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4601" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4602">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/50.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4602" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4603">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/51.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4603" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4604">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/52.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4604" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4605">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/53.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4605" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4606">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/54.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4606" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4607">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/55.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4607" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4608">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/56.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4608" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4609">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/57.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4609" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4610">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/58.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4610" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+                  <div class="comment-item" id="mComment" data-id="4611">
+                    <div class="com-pic">
+                      <a href="javascript:void(0)">
+                        <img src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png" data-oxlazy="http://cca.mbaobao.com/mkts/201409/02/zqj/head/59.jpg" width="200" height="300" ></a>
+                    </div>
+                    <div class="com-praise">
+                      <a class="link-count" id="linkCount" data-id="4611" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+                        <span></span>
+                        人点赞
+                      </a>
+                      <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+                    </div>
+                    <div class="com-int"></div>
+                    <div class="com-inf"></div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+      <!--评论列表-->
+            
+            
+         </div>
+     </div>
+     <!--产品--> 
+      
+</div>
+
+<script type=""text/javascript"">
+ var partBar = {
+  barList : ['致白富美', '致高富帅','忆逗逼时光'],
+  barColor: ['#D72F62', '#ce0670'],
+  color: '#fff'
+ }
+ </script>
+
+<script type="text/javascript">
+  seajs.use("gallery/lazyload/2.0.0/lazyLoad")
+</script>
+
+<script type="text/javascript">
+seajs.use("./wait.js?2014090206") 
+</script>
+
+<script type="text/javascript">
+seajs.use(["jquery","bxslider"],function($,bx){
+	  bx($);
+
+      $(".mbbSlider").find(".slider").bxSlider({
+		'displaySlideQty': 1,             //定义显示个数
+		'moveSlideQty': 1,                //移动个数
+		'speed': 1500,                    //速度，单位毫秒
+		'auto': true,                     //自动播放
+		'controls': false,                 //是否显示'previous'和'next'按钮
+		'easing': 'easeOutQuint',         //变化效果
+		'pager': false                    //显示页码
+	 })
+
+})
+</script>
+
+</body>
+</html>
+		

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock</title>
+    <link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+    <style>
+        body{-webkit-transition:background-color 0.3s ease; background-color: #fff}
+        .clock-wrap {margin:20px auto;font-family: 'Anton', sans-serif;line-height: 1.5;font-size:0;}
+        .clock {display: inline-block;padding:10px;}
+        .clock span{margin:0px 3px;}
+        .clock .n, .orderNumber{display: inline-block;padding:3px 10px;background-color: #3a3a3a;box-shadow: 1px 1px 4px #000;color:#fff;border-radius: 4px;font-size:40px;background-image: -webkit-linear-gradient(top, #454545, #000);text-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);width:20px;text-align: center;overflow: hidden;}
+        .clock  b {font-weight: normal;}
+        .clock .p{font-size:40px;color:#333;}
+        .orderNumber {width:auto;position: relative;margin-left:20px;background-image: -webkit-linear-gradient(top, #ff7900, #ff2000);-webkit-transform: scale(1);-webkit-transition: all 0.3s ease 0s;}
+        .alert {-webkit-transform: scale(1.25);-webkit-transition: all 0.3s ease 0s;}
+        .warn {-webkit-transition:background-color 0.3s ease;background-color: red}
+    </style>
+    <script src="http://libs.baidu.com/jquery/1.8.2/jquery.js"></script>
+</head>
+<body>
+    <div class="clock-wrap">
+        <span class="clock">
+        </span>
+        <span class="interval"></span>
+        <span class="orderNumber" style="display:none;"></span>    
+    </div>
+</body>
+<script>
+    var serverTime, _pollData, _pollTime, _pollAlert, _pollWarn, zeroTimes = 0, curOrderCount=0, api = "/data/OrderAlert?mode=1";
+
+    _pollData = setInterval(function(){
+        poll(api, function(data){
+            renderOrder(data.count);
+            serverTime = new Date(data.time).getTime();
+        });
+    }, intervalTime());
+
+    _pollTime = setInterval(function(){
+        if(serverTime){
+            var now = new Date(serverTime);
+            serverTime = serverTime + 1000;
+        } else {
+            var now = new Date();
+        }
+        renderClock(now);
+    }, 1000)
+
+    function poll(api, callback){
+        $.ajax({
+            url : api,
+            type : "GET",
+            dataType : "jsonp",
+            success:function(json){
+
+                var data = {count:0, time:json.time}
+                var serverNow = (new Date(json.time)).getTime();
+                
+                for(var i=0;i<json.order.length;i++){
+                    var nodeTime = (new Date(json.order[i].key)).getTime();
+                    if(nodeTime > serverNow){
+                        var raise = json.order[i].value - curOrderCount;
+                        data.count = (raise > 0) ? raise : 0;
+                        curOrderCount = json.order[i].value;
+                    }
+                }
+
+                callback(data);
+            },
+            error:function(){
+                clearInterval(_pollData);
+                alert("条子，你接口挂了!");
+            }
+        })
+    }
+
+    function intervalTime(){
+        return 1000 * 60;
+    }
+
+    function renderOrder(count){
+        if(count === 0){
+            zeroTimes = zeroTimes + 1;
+            if(zeroTimes >= 2){
+                alerting();
+            }
+            if(zeroTimes >=3){
+                warning();
+            }
+            return;
+        } else {
+            zeroTimes = 0;
+            clearInterval(_pollAlert);
+            clearInterval(_pollWarn);
+        }
+
+        $(".orderNumber").html('<b>' + count + ((zeroTimes >= 2) ? '['+ (zeroTimes - 1) +'分钟]' : '') + '</b>').show();
+    }
+
+    function alerting(){
+         var tag = true;
+        _pollAlert =setInterval(function(){
+            tag ? $(".orderNumber").addClass("alert") : $(".orderNumber").removeClass("alert");
+            tag = !tag;
+        }, 300);
+    }
+
+    function warning(){
+         var tag = true;
+        _pollWarn =setInterval(function(){
+            tag ? $("body").addClass("warn") : $("body").removeClass("warn");
+            tag = !tag;
+        }, 300);
+    }
+
+    function renderClock(now){
+        var h = now.getHours();
+        var m = now.getMinutes();
+        var s = now.getSeconds();
+        var html = createTimeHtml(h) + '<span class="p"><b>:</b></span>' + createTimeHtml(m) + '<span class="p"><b>:</b></span>' +  createTimeHtml(s);
+        $(".clock").html(html);
+    }
+
+    function createTimeHtml(t){
+        var html = "";
+        if(t < 10){
+            html  = html + '<span class="n"><b>0</b></span>';
+            html  = html + '<span class="n"><b>'+t+'</b></span>';
+        } else {
+            var tens = parseInt(t/10, 10);
+            html  = html + '<span class="n"><b>'+tens+'</b></span>';
+            html  = html + '<span class="n"><b>'+(t-tens*10)+'</b></span>';
+        }
+        return html;
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,132 @@
+制作新的网页：http://www.prosetech.com/html5/
+
+第五章：音频与视频
+HTML5音频和视频，如果需要考虑以下事项，那么最好还是用Flash（目前还是要用）
+有许可现在的内容：HTML5视频文件没有任务版本保护措施。
+录制视频和音频：HTML5不支持从一台电脑到另一台电脑传送音频或视频流。
+自适应视频流：根据访客的带宽调整视频质量。
+底延迟，高性能音频：虚拟合成器，音乐观察器，多种音效同时播放的实时游戏。
+动态创建或编辑音频：。。
+
+音频
+<audio></audio>      //必须包含开始和结束标签 
+ 
+属性：controls preload autoplay loop
+preload:告诉游览器如何下载音频，指定值是auto=让游览器下载整个文件        //不同游览器默认值会有所区别            metadata=先获取音频文件的开头模块
+										none=不必预先下载
+autoplay:游览器在加载完音频文件后立即播放
+  ps:去掉controls，加上autoplay，实现背景播放音乐
+loop：告诉游览器在音频到达末尾是，再从头开始重新播放
+
+视频
+<video></video>
+
+属性：除了与<audio>共有的外，还有height，width，poster
+poster：设置替换视频的图片 出现下面情况会使用图片：
+(1).视频第一帧未加载完成
+(2).把proload属性设置为none
+(3).没有找到指定的视频文件
+
+另外的属性：muted和mediagoup
+
+格式和支持情况就不列举了。。。。。。
+
+如何讨好每一个游览器
+主选HTML5，Flase作后备
+<source>游览器会下载它认为自己能够播放的文件
+<video controls width=700 height=400>
+    <soure src='brach.mp4' type='video/mp4'>
+	<soure src='brach.ogv' type='video/ogg'>
+<video>
+type:提供正确的MIME类型信息
+
+以Flash作后备
+flash播放器代码案例：http://blog.sina.com.cn/s/blog_4b69a522010086lh.html
+<video controls width=700 height=400>
+    <soure src='brach.mp4' type='video/mp4'>
+	<soure src='brach.ogv' type='video/ogg'>
+	  <object>
+	     flash播放器代码
+		 <p><img ..提供下载</p>	//都不能播放时，提供图片或者下载
+	  </object>
+<video>
+
+--------------------------------------------------------
+使用JavaScript控制播放器
+1.添加音效
+<audio id="audio1" ontimeUpdate="progressUpdate()">
+    <source src="./media/boing1.wav" type="audio/wav"></source>
+    <source src="./media/beep.mp3" type="audio/mp3"></source>
+</audio>
+  var video=document.getElementById('audio1');
+--video.play();                       //播放
+--video.pause();                      //暂停
+--video.pause();  video.correntTime=0;//停止
+--video.playbackRate=1;               //1正常，0.5慢放，2快放
+
+--progressUpdate(); //在播放过程中，<video>元素会连续触发ontimeUpdate事件
+
+JavaScript媒体播放器
+1.VideoJS  http://videojs.com
+2.jPlayer  http://www.jplayer.org/
+
+字幕。。。。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										
+										
+                                        										
+
+

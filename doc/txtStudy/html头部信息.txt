@@ -1,0 +1,98 @@
+HTML的头部信息  http://blog.sina.com.cn/s/blog_73ad7adc0100ys9d.html
+
+HTML中我们一般把head部分称为网页的头部。头部部分的内容虽然不会在页面中显示，但它能影响到搜索引擎对网页的收录和排序，以及网页的各种全局设置，可以说是至关重要。
+▲知识点一——头部信息里设置网页的基底网址
+基底网址的实质是统一设置超级链接的属性，基底网址标签是</base>，它有两个属性，href和_target。href用于设置基底网址的路径，_target用于设置超级链接的打开方式。
+通过基底网址的添加，页面中所有的相对网站根目录地址可转换成绝对地址。当浏览器浏览页面时，通过<base>标记将相对网站跟目录地址附加在基底网址路径的后面，从而转化成绝对地址。我们首先创建一个base.htm，编写HTML代码如下：
+    <html> 
+    <head> 
+    <title>基底网址的设置</title> 
+    <base href="http://www.google.com" target="_blank" /> 
+    </head> 
+    <body> 
+    </body> 
+    </html> 
+通过以上代码对基底网址的设置。Base.htm页面中的任何超级链接的地址，都将在其前面加上"http://www.google.com",即转换为绝对地址。并且，页面中的超级链接打开方式都是打开新窗口。
+▲知识点二——头部信息的元信息标签
+
+元信息标签是头部信息的基本标签，专业网页代码中都对元信息有详细设置。元信息标签为</meta>，为单标签。Meta元素提供的信息对于浏览用户是不可见的，一般用于定义页面信息的名称，关键字，作者等。在HTML页面中，一个meta标签内就是一个meta内容，而在一个HTML头页面中可以有多个meta元素。
+meta标签属性分两种：页面描述属性（name）和http标题信息（http-equiv）。
+
+ 
+
+★name属性
+name属性主要用于描述网页的内容，用于对搜索引擎的优化，必须重点掌握。正确地设置name属性，以便搜索引擎（比如google，baidu）的搜索机器人查找，分类，搜索引擎一般都会自动查找meta值来给网页分类。name的取值如下：
+
+<1>keywords。即关键字，用于说明网页所包含的关键字等信息，从而提高被搜索引擎搜索到的概率。编写格式为<meta name="keywords" content =“关键字”/>，content属性的值为用户所设置的具体关键字。（一般可设置多个关键字，他们之间用英文半角的逗号分开，搜索引擎都限制关键字的数量，所以关键字内容要简洁精练）
+
+<2>description。中文意思为"描述"，用于描述网页的主要内容、主题等，合理设置也可以提高被搜索引擎搜索到的概率。格式为<meta name="description" content =“对页面的描述”/>，content属性值为用户所设置的页面具体描述的内容，最多容纳1024个字符，但搜索引擎一边只显示约前175个字符。
+
+<3>author。作者，用于设置网站作者的名称，比较专业的网站经常用到。格式为<meta name="author" content =“作者名称”/>
+
+<4>generator。生成器，用于设置网站编辑工具的名称，比较专业的网站页面上经常用到。格式<meta name="generator" content =“网站编辑工具名称”/>
+
+<5>robots。机器人，用于限制页面搜索方式。搜索引擎的搜索机器人，沿着网页上的链接（如http和src链接），不断地检索资料建立自己的数据库。通过这种meta标签可以限制部分内容不被搜索引擎检测到，降低部分信息公开性。编写格式为<meta name=“robots” content="指令组合">。该属性的值包含4个命令，分别是index、noindex、follow、nofollow，根据排列组合，有4种组合。Index和follow组合也可称为all，noindex和nofollow也可称为none。
+
+★http-equiv属性
+http-equiv属性的取值具体如下：
+
+<1>content-type，内容类别，用于设置页面的类别和语言字符集。编写格式<meta http-equiv=“content-type” content=“text/html”；charset=“gb2312”/>，content属性的值代表页面采用HTML代码输出，字符集为gb2312（简体中文），国际化网站开发的话，为了字符统一，建议charset采用utf-8.
+
+<2>refresh。刷新，用于设置多长时间内网页自己刷新一次，或者用一段时间自动跳转到其他页面，第一种编写格式<meta http-equiv=“refresh” content=“30”/>表示隔30秒刷新一次，第二种编写格式<meta http-equiv=“refresh” context=“30；url=www.google.com”/>，表示30秒后页面自动跳转到www.google.com网站
+
+<3>expires，中文意思为“到期”，用于设置页面到期时间。一旦网页过期，必须到服务器上重新调用网页。第一种编写格式为<meta http-equiv=“expires” content=“Wed,10 Mar 2011 12：00：00 GMT”/>，content值代表网页过期的时间，必须使用GMT时间格式。第二种编写格式为<meta http-equiv=“expires” context=“30”/>，表示多少秒后过期。
+
+<4>cache-control，缓存控制。用于禁止在缓存中调用网页，编写格式为<meta http-equiv=“cache-control” content=“no-cache”/>，no-cache代表不允许缓存。
+
+<5>set-cookie，设置cookie，用于设置本页面cookie多久过期，编写格式为<meta http-equiv=“set-cookie” content=“Wed,10 Mar 2011 12：00：00 GMT”/>，代表到这个时间，cookie将被删除。
+▲知识点三——头部信息实现与CSS及JavaScript混编
+CSS负责HTML网页的样式，JaveScript负责HTML网页的动态行为。CSS和JaveScript最常用的融合方式是写入头部信息部分。
+<1>加入CSS只需在头部信息中加入<style type=“text/css”></style>标签对。范例代码如下：
+    <html> 
+    <head> 
+    <title>CSS的设置</title> 
+    <style type=“text/css”> 
+    CSS具体内容 
+    </style> 
+    </head> 
+    <body> 
+    </body> 
+    </html> 
+<2>加入JavaScript只需要在头部信息中加入<script type=“text/javascript”></script>标签对。范例代码如下：
+    <html> 
+    <head> 
+    <title>CSS的设置</title> 
+    <style type=“text/css”> 
+    CSS具体内容 
+    </style> 
+    <script type=“text/javascript”> 
+    JavaScript具体内容 
+    </script> 
+    </head> 
+    <body> 
+    </body> 
+    </html> 
+▲知识点四——常用头部信息功能推荐
+
+<1>页面切换特效，其中一种特效的编写格式如下：
+
+<meta http-equiv=“page-enter” content=“blendtrans（duration=0.5）”/>
+
+http-equiv属性的值为page-enter时表进入该页面时启用特效，http-equiv属性的值为page-exit时代表退出（离开）该页面时启用特效。
+
+Content属性的值代表特效的种类，这种特效也叫动态滤镜。滤镜种类很多，比如blendtrans就是很常见得一种，效果为淡入淡出，duration值表示效果持续的时间（单位为秒）。
+
+另一种滤镜特效编写格式如下：
+
+<meta http-equiv=“page-enter” content=“revealTrans（duration=6）”/>
+
+动态滤镜revealTrans也可用于页面进入与退出效果。Duration表示滤镜特效持续时间（单位为秒），Transition是滤镜类型，表示想使用哪种特效，取值为0~23。
+
+<2>强制页面在当前窗口以独立页面显示，可以防止网页被其他网站框架，编写格式如下：
+<meta http-equiv="window-target" content=“_top">
+
+<3>页面图标设置，编写格式如下：
+
+<link rel="Shortcut Icon" href="/myicon.ico">
+
+href属性的值是ico图标文件的路径，这里采用的是相对根目录路径。

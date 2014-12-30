@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>官网悬浮导航使用jquery</title>
+<link  href="css/reset.css" rel="stylesheet" type="text/css" />
+<link  href="css/navigation.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.10.1.js" type="text/javascript"></script>
+</head>
+<body>
+<!--▼ 头部部分-->
+<div class="head"></div>
+<!--▼ 导航条-->
+<div class="navigation">
+<div class="navigation_shadow"></div>
+    <div class="menu">
+     <div class="main"> 
+       <div  class="m_goods"><a href="#" class="tit">全部商品分类</a>
+           <!--▼ 悬浮导航-->
+              <div class="m_goods_navigation_shadow"></div>
+              <div class="m_goods_navigation">
+           
+               <div class="nav_bags nav_woman_bags">
+                 <div class="nav_min">
+                  <dl>
+                     <dt><a href="#"><i></i><i class="more"></i>时尚女包</a></dt>
+                     <dd><a href="#" class="red">真皮包</a><a class="left" href="#">单肩包</a><a class="left" href="#">斜挎包</a></dd>
+                     <dd><a href="#">日韩风</a><a class="left" href="#">热销精选</a><a class="left" href="#">钱包</a></dd>  
+                  </dl>
+                 </div>
+                  <div class="nav_over_here" >
+                  <!--▼ 隐藏的悬浮-->
+                  <div class="nav_woman_bags_xm_hell"></div>
+                  <div class="nav_woman_bags_xm_lian"></div> 
+                  <div class="nav_woman_bags_xm">                          
+                      <div class="nav_woman_bags_xm_left">
+                           <dl>
+                              <dt><a href="#">热门推荐：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">地图包</a></li><li><a href="#">托特包</a></li><li><a href="#">波士顿包</a></li><li><a href="#">剑桥包</a></li><li><a href="#">水桶包</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           <dl>
+                              <dt><a href="#">款式：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#" class="red">单肩包</a></li><li><a href="#">斜挎包</a></li><li><a href="#" class="red">手提包</a></li><li><a href="#">双肩包</a></li><li><a href="#">手包</a></li><li><a href="#" class="red">钱包</a></li><li><a href="#">多用包</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                           <dl>
+                              <dt><a href="#">大小：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">超大容量（可放14寸笔记本）</a></li><li><a href="#" class="red">大型（可放A4杂志）</a></li><li><a href="#">中型（可放ipad）</a></li><li><a href="#">小型（不可放ipad）</a></li><li><a href="#">mini（可放手机/钱包 /钥匙）</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                             <dl>
+                              <dt><a href="#">材质：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#" class="red">头层牛皮</a></li><li><a href="#">二层牛皮</a></li><li><a href="#">PU</a></li><li><a href="#" class="red">草编</a></li><li><a href="#">帆布</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                             <dl>
+                              <dt><a href="#">适用人群：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">学生</a></li><li><a href="#" class="red">OL</a></li><li><a href="#">森女</a></li><li><a href="#" class="red">轻熟女</a></li><li><a href="#">熟女</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                           <dl>
+                              <dt><a href="#">适用场合：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">上班</a></li><li><a href="#">OL</a></li><li><a href="#">逛街</a></li><li><a href="#">约会</a></li><li><a href="#">出游</a></li> <li><a href="#">校园</a></li> <li><a href="#">婚宴</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                              <dl>
+                              <dt><a href="#">价格：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">99以下</a></li><li><a href="#">100-149元</a></li><li><a href="#">150-199元</a></li><li><a href="#">200-299元</a></li><li><a href="#">300-599元</a></li><li><a href="#">600元以上</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                                 <dl>
+                              <dt><a href="#">颜色：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#" class="red">马卡龙色</a></li><li><a href="#">桔色</a></li><li><a href="#" class="red">玖红色</a></li><li><a href="#">红色</a></li><li><a href="#">亮黄色</a></li> <li><a href="#">蓝色</a></li> <li><a href="#">白色</a></li><li><a href="#">黑色</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                             <dl>
+                              <dt><a href="#">包包风尚：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#" class="red">撞色</a></li><li><a href="#">波点包</a></li><li><a href="#">小清新</a></li><li><a href="#">蛇纹</a></li><li><a href="#" class="red">花夲</a></li> <li><a href="#">丝巾包</a></li> 
+                                 </ul>
+                              </dd>
+                           </dl>                             
+                      </div>
+                      <div class="nav_woman_bags_xm_right">
+                         <dl class="activity">
+                           <dt><a href="#">热门活动</a></dt>
+                           <dd>
+                             <ul>
+                               <li><a href="#">3件229元&nbsp;组合超值购</a></li>
+                               <li><a href="#" class="red">年度孤品特惠&nbsp;9元起售完即止</a></li>
+                               <li><a href="#">购浪美热销爆款赠斜挎包</a></li>
+                             </ul>
+                           </dd>
+                         </dl>
+                         
+                         <dl class="recommend">
+                           <dt><a href="#">推荐品牌</a></dt>
+                           <dd>
+                             <ul>
+                                <li><a href="#"><img src="img/guanwang/dudu.jpg" />嘟嘟</a></li>
+                               <li><a href="#"><img src="img/guanwang/lm.jpg" />浪美</a></li>
+                               <li><a href="#"><img src="img/guanwang/fy.jpg" />飞扬空间</a></li>
+                               <li><a href="#"><img src="img/guanwang/aef.jpg" />阿尔法.阿蒂斯特</a></li>                  
+                             </ul>
+                           </dd>
+                         </dl>
+                         
+                         <dl class="recommend">
+                           <dt><a href="#">更多女包品牌>></a></dt>
+                           <dd>
+                           </dd>
+                         </dl>
+                      </div>
+                  </div>
+                  <!--▲ 隐藏的悬浮-->
+                  </div>
+                 </div>               
+            
+          
+               <div class="nav_bags nav_man_bags">
+                 <div class="nav_min">
+                  <dl>
+                     <dt><a href="#"><i></i><i class="more"></i>精品男包</a></dt>
+                     <dd><a href="#">牛皮包</a><a class="left red" href="#">斜挎包</a><a class="left" href="#">钱包手包</a></dd>
+                     <dd><a href="#" class="red">休闲包</a><a class="left" href="#">商务电脑包</a><a class="left red" href="#">公文包</a></dd>  
+                  </dl>
+                 </div>
+                 <div class="nav_over_here" >
+                  <!--▼ 隐藏的悬浮-->
+                  <div class="nav_man_bags_xm_hell"></div>
+                  <div class="nav_man_bags_xm_lian"></div> 
+                  <div class="nav_man_bags_xm">                          
+                      <div class="nav_woman_bags_xm_left">
+                           <dl>
+                              <dt><a href="#">热门推荐：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#" class="red">巴西牛皮包</a></li><li><a href="#">14寸电脑包</a></li><li><a href="#">潮人男包</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           <dl>
+                              <dt><a href="#">商务款：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#" class="red">手提包</a></li><li><a href="#">手提斜跨包</a></li><li><a href="#" class="red">单肩斜跨包</a></li><li><a href="#">单肩包</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                           <dl>
+                              <dt><a href="#">休闲款：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">斜跨包</a></li><li><a href="#" class="red">双肩包</a></li><li><a href="#">手提斜跨包</a></li><li><a href="#">单肩斜跨包</a></li><li><a href="#">单肩包</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                             <dl>
+                              <dt><a href="#">材质：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#" class="red">头层牛皮</a></li><li><a href="#">二层牛皮</a></li><li><a href="#">PU</a></li><li><a href="#" class="red">草编</a></li><li><a href="#">帆布</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                               <dl>
+                              <dt><a href="#">按价格：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">99以下</a></li><li><a href="#">100-149元</a></li><li><a href="#">150-199元</a></li><li><a href="#">200-299元</a></li><li><a href="#">300以上</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                             <dl>
+                              <dt><a href="#">适用人群：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">学生</a></li><li><a href="#" class="red">OL</a></li><li><a href="#">森女</a></li><li><a href="#" class="red">轻熟女</a></li><li><a href="#">熟女</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                           <dl>
+                              <dt><a href="#">个性潮包：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">艾斯达</a></li><li><a href="#">曼哈顿</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                                                                             
+                      </div>
+                      <div class="nav_woman_bags_xm_right">
+                         <dl class="activity">
+                           <dt><a href="#">热门活动</a></dt>
+                           <dd>
+                             <ul>                             
+                               <li><a href="#" class="red">戈尔本统一价229&nbsp;最高立减370</a></li>
+                             </ul>
+                           </dd>
+                         </dl>
+                         
+                         <dl class="recommend">
+                           <dt><a href="#">推荐品牌</a></dt>
+                           <dd>
+                             <ul>
+                                <li><a href="#"><img  src="img/guanwang/geb.jpg" />戈尔本</a></li>
+                               <li><a href="#"><img src="img/guanwang/asd.jpg" />艾斯达</a></li>                
+                             </ul>
+                           </dd>
+                         </dl>
+                         
+                         <dl class="recommend">
+                           <dt><a href="#">进入男包频道>></a></dt>
+                           <dd>
+                           </dd>
+                         </dl>
+                      </div>
+                  </div>
+                  <!--▲ 隐藏的悬浮-->
+                  </div>
+               </div>
+              
+               <div class="nav_bags nav_box_bags">
+                 <div class="nav_min">
+                  <dl>
+                     <dt><a href="#"><i></i><i class="more"></i>功能箱包</a></dt>
+                     <dd><a href="#" class="red">双肩包</a><a class="left" href="#">电脑包</a><a class="left red" href="#">帆布包</a></dd>
+                     <dd><a href="#">登山风</a><a class="left red" href="#">腰包</a><a class="left" href="#">旅行包</a></dd>  
+                  </dl>
+                 </div>
+                  <div class="nav_over_here" >
+                  <!--▼ 隐藏的悬浮-->
+                  <div class="nav_box_bags_xm_hell"></div>
+                  <div class="nav_box_bags_xm_lian"></div> 
+                  <div class="nav_box_bags_xm">                          
+                      <div class="nav_woman_bags_xm_left">
+                           <dl>
+                              <dt><a href="#">双肩包：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">男款</a></li><li><a href="#">女款</a></li><li><a href="#">情侣款</a></li><li><a href="#">剑桥包</a></li><li><a href="#">水桶包</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           <dl>
+                              <dt><a href="#">电脑：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#" class="red">双肩</a></li><li><a href="#">手提</a></li><li><a href="#" class="red">14寸</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                           <dl>
+                              <dt><a href="#">热门活动：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">曼哈顿2折起</a></li><li><a href="#" class="red">木村景洪5折</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                                                        
+                      </div>
+                      <div class="nav_woman_bags_xm_right">
+                         <dl class="recommend">
+                           <dt><a href="#">推荐品牌</a></dt>
+                           <dd>
+                             <ul>
+                                <li><a href="#"><img  src="img/guanwang/xxbm.jpg" />西夏邦马</a></li>
+                               <li><a href="#"><img src="img/guanwang/mhd.jpg" />曼哈顿</a></li>             
+                             </ul>
+                           </dd>
+                         </dl>
+                         
+                         <dl class="recommend">
+                           <dt><a href="#">进入功能包频道>></a></dt>
+                           <dd>
+                           </dd>
+                         </dl>
+                      </div>
+                  </div>
+                  <!--▲ 隐藏的悬浮-->
+                  </div>
+               </div>
+               
+               <div class="nav_bags nev_new">
+                   <dl>
+                       <dt>             
+                      <a href="#"><i></i><i class="more"></i>新品<span >每周二上新</span></a>
+                       </dt>
+                   </dl>
+                   <div class="nav_over_here" >
+                  <!--▼ 隐藏的悬浮-->
+                  <div class="nav_new_hell"></div>
+                  <div class="nav_new_lian"></div> 
+                  <div class="nav_new_xm">                          
+                      <div class="nav_woman_bags_xm_left">
+                           <dl>
+                              <dt><a href="#">双肩包：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">男款</a></li><li><a href="#">女款</a></li><li><a href="#">情侣款</a></li><li><a href="#">剑桥包</a></li><li><a href="#">水桶包</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           <dl>
+                              <dt><a href="#">电脑：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#" class="red">双肩</a></li><li><a href="#">手提</a></li><li><a href="#" class="red">14寸</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                           <dl>
+                              <dt><a href="#">热门活动：</a></dt>
+                              <dd>
+                                 <ul>
+                                   <li><a href="#">曼哈顿2折起</a></li><li><a href="#" class="red">木村景洪5折</a></li>
+                                 </ul>
+                              </dd>
+                           </dl>
+                           
+                                                        
+                      </div>
+                      <div class="nav_woman_bags_xm_right">
+                         <dl class="recommend">
+                          
+                           <dd>
+                             <ul>
+                                <li><a href="#"><img  src="img/guanwang/xxbm.jpg" />西夏邦马</a></li>
+                               <li><a href="#"><img src="img/guanwang/mhd.jpg" />曼哈顿</a></li>             
+                             </ul>
+                           </dd>
+                         </dl>
+                         
+                         <dl class="recommend">
+                           <dt><a href="#">进入功能包频道>></a></dt>
+                           <dd>
+                           </dd>
+                         </dl>
+                      </div>
+                  </div>
+                  <!--▲ 隐藏的悬浮--> 
+                  </div>  
+               </div>
+               <div class="nav_btn nev_group">
+                   <dl>
+                       <dt>             
+                      <a href="#"><i></i>风云榜<span >热卖排行</span></a>
+                       </dt>
+                   </dl> 
+               </div>
+               <div class="nav_btn nev_allbags">
+                    <dl>
+                       <dt>             
+                      <a href="#" class="red"><i></i>查看所有包包</a>
+                       </dt>
+                   </dl> 
+               </div>
+           <!--▲ 悬浮导航-->
+           </div>
+       </div>
+       <div class="m_channel">
+          <ul>
+             <li class="m_home"><a href="#">首页</a></li>
+             <li class="m_guan m_xuan"><a href="#">逛</a></li>
+             <li class="m_select m_xuan"><a href="#">选包</a></li>
+             <li class="m_show m_xuan"><a  href="#">晒包</a></li>
+          </ul>
+       </div>
+       <div class="m_member"><a href="#">会员俱乐部</a>
+       </div>
+      </div> 
+    </div>
+</div>
+<!--▲ 导航条-->
+<div class="banner"></div>
+
+<script type="text/javascript">
+  $(document).ready(function(){	 	   
+	 $(".nav_bags").mouseover(function(){
+     var  index= $(".nav_bags").index($(this));
+	 $(".nav_over_here").hide();
+	 $(".nav_over_here").eq(index).show(); 	 		      
+	   })
+	  $(".nav_over_here").mouseout(function(){
+		
+		})  
+	   })
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{   
+    "import": true,
+    "ids":false,
+    "star-property-hack":false,
+    "underscore-property-hack":false,
+    "known-properties":false,
+    "box-model":false,
+    "overqualified-elements":false,
+    "duplicate-background-images":false,
+    "duplicate-properties":false,
+    "floats":false,
+    "unique-headings":false,
+    "qualified-headings":false,
+    "font-sizes":false,
+    "zero-units":false,
+    "display-property-grouping":false,
+    "adjoining-classes":false,
+    "text-indent":false,
+    "fallback-colors":false,
+    "outline-none":false,
+    "errors":false
+}

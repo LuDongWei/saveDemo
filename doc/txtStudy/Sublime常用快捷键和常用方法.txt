@@ -1,0 +1,147 @@
+常用快捷键
+ctrl+shift+p  //命令控制面板 set.. pack..
+ctrl+p        //files间的切换 加# 加： 
+
+Ctrl+L 选择整行（按住-继续选择下行）
+Ctrl+Shift+K 删除整行
+
+Ctrl+M 光标移动至括号内开始或结束的位置
+Ctrl+Shift+[ 折叠代码
+Ctrl+Shift+] 展开代码
+
+Ctrl+Shift+UP 与上行互换
+Ctrl+Shift+DOWN 与下行互换
+
+
+Zen Coding 快捷编程
+支持属性和操作符的列表
+E
+元素名称(div, p);
+
+E#id
+使用id的元素(div#content, p#intro, span#error);
+
+E.class
+使用类的元素(div.header, p.error.critial). 你也可以联合使用class和idID: div#content.column.width;
+
+E>N
+子代元素(div>p, div#footer>p>span);
+
+E+N
+兄弟元素(h1+p, div#header+div#content+div#footer);
+
+E*N
+元素倍增(ul#nav>li*5>a);
+
+E$*N
+条目编号 (ul#nav>li.item-$*5);
+
+
+
+定义snippet 
+<snippet>
+    <content><![CDATA[
+	${序号:默认值}       //序号相同的地方光标就会同时停在那可以多处同时编辑
+	                       序号大小就是tabindex，可以用tab切换光标位置
+    //代码内容
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- <tabTrigger>hello</tabTrigger> -->   //快捷方式名字
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->     //规定在什么时候才能使用
+</snippet>
+
+
+scope：填写规则
+ActionScript: source.actionscript.2
+AppleScript: source.applescript
+ASP: source.asp
+Batch FIle: source.dosbatch
+C#: source.cs
+C++: source.c++
+Clojure: source.clojure
+CSS: source.css
+D: source.d
+Diff: source.diff
+Erlang: source.erlang
+Go: source.go
+GraphViz: source.dot
+Groovy: source.groovy
+Haskell: source.haskell
+HTML: text.html(.basic)
+JSP: text.html.jsp
+Java: source.java
+Java Properties: source.java-props
+Java Doc: text.html.javadoc
+JSON: source.json
+Javascript: source.js
+BibTex: source.bibtex
+Latex Log: text.log.latex
+Latex Memoir: text.tex.latex.memoir
+Latex: text.tex.latex
+TeX: text.tex
+Lisp: source.lisp
+Lua: source.lua
+MakeFile: source.makefile
+Markdown: text.html.markdown
+Multi Markdown: text.html.markdown.multimarkdown
+Matlab: source.matlab
+Objective-C: source.objc
+Objective-C++: source.objc++
+OCaml campl4: source.camlp4.ocaml
+OCaml: source.ocaml
+OCamllex: source.ocamllex
+Perl: source.perl
+PHP: source.php
+Regular Expression(python): source.regexp.python
+Python: source.python
+R Console: source.r-console
+R: source.r
+Ruby on Rails: source.ruby.rails
+Ruby HAML: text.haml
+SQL(Ruby): source.sql.ruby
+Regular Expression: source.regexp
+RestructuredText: text.restructuredtext
+Ruby: source.ruby
+Scala: source.scala
+Shell Script: source.shell
+SQL: source.sql
+TCL: source.tcl
+HTML(TCL): text.html.tcl
+Plain text: text.plain
+Textile: text.html.textile
+XML: text.xml
+XSL: text.xml.xsl
+YAML: source.yaml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

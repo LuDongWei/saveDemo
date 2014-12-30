@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>数据存储</title>
+	
+
+	<style>
+body {
+font-family: 'Palatino Linotype', serif;
+max-width: 600px;
+padding: 0px 30px;
+}
+
+fieldset {
+margin-bottom: 15px;
+padding: 10px;
+}
+
+legend {
+padding: 0px 3px;
+font-weight: bold;
+font-variant: small-caps;
+}
+
+label {
+width: 140px;
+display: inline-block;
+vertical-align: top;
+margin: 6px;
+}
+
+input {
+margin-top: 12px;
+width: 300px;
+}
+
+canvas {
+    border: 6px double black;
+    background: white;
+}
+
+img {
+    display: none;
+}
+
+button {
+    padding: 3px;
+}
+
+#dropBox {
+  margin: 15px;
+  width: 300px;
+  height: 300px;
+  border: 5px dashed gray;
+  border-radius: 8px;
+  background: lightyellow;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+ 
+#dropBox div {
+  margin: 100px 70px;
+  color: orange;
+  font-size: 25px;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+</style>
+</head>
+<body>
+	<fieldset>
+		<legend>Web Storage</legend>
+		<label for="localData">本地存储：</label>
+		<input id="localData">
+		<br>
+		<label for="sessionData">会话存储：</label>
+		<input id="sessionData"></fieldset>
+	<div>
+		<button onclick="saveData()">Save Data</button>
+		<button onclick="loadData()">Load Data</button>
+	</div>
+
+	<button onclick="findAllItems()">Dump the contents of Local Storage</button>
+    <ul id="itemList"></ul>
+
+
+    <fieldset>
+        <legend>对象保存</legend>
+		<label for="name_">账户：</label>
+		<input id="name_">
+		<br>
+		<label for="password">密码：</label>
+		<input id="password">
+    </fieldset>
+    <button onclick="objectsave()">保存</button>
+    <span id="use_name"></span>
+
+  <fieldset>
+    <legend>测试响应</legend>
+    <label for="key">Key:</label>
+    <input id="key"><br>
+    <label for="item">Value:</label>
+    <input id="item">
+    <br>
+    <button onclick="addValue()">Add</button>
+  </fieldset>
+
+  <fieldset>
+  	<legend>读取文件</legend>
+    <input id="fileInput" type="file" size="50" onchange="processFiles(this.files)" multiple style="display:none">
+    <button onclick="showFileInput()">选取文件</button>
+    <div id="fileOutput" style="margin-top: 30px; border: solid 1px black;
+     padding: 5px;"></div>
+  </fieldset>
+
+  <fieldset>
+  	<legend>读取图片</legend>
+	<div id="dropBox">
+	<div>Drop your image here...</div>
+	</div>
+
+	<input id="fileInput" type="file" onchange="processFiles2(this.files)">
+	<img id="thumbnail">
+   </fieldset>
+
+	<script type="text/javascript">
+          function saveData(){
+             var localData = document.getElementById("localData").value;
+             var sessionData = document.getElementById("sessionData").value;
+
+             localStorage["localData"]=localData;
+             sessionStorage["sessionData"]=sessionData;
+          }
+
+          function loadData(){
+              var localData=localStorage["localData"];
+              var sessionData=sessionStorage["sessionData"];
+
+			 if (localData != null) {
+			 document.getElementById("localData").value = localData;
+			 }
+			 if (sessionData != null) {
+			 document.getElementById("sessionData").value = sessionData;
+			 }
+          }
+
+          function findAllItems(){
+          	 //取得用于保存数据的<ul>元素
+          	 var itemList = document.getElementById("itemList");
+          	     itemList.innerHTML="";
+
+          	 for (var i = 0; i<localStorage.length; i++) {
+          	     var key = localStorage.key(i);
+                 var item = localStorage[key];
+
+                 var newItem=document.createElement("li");
+                 newItem.innerHTML=key+":"+item;
+                 itemList.appendChild(newItem);	
+          	 };     
+          }
+
+          function objectsave(){
+               //创建user对象
+               function user(a,b){
+               	    this.name_=a;
+               	    this.password=b;
+               }
+
+               var name_ = document.getElementById("name_").value;
+               var password = document.getElementById("password").value;
+               
+               var use=new user(name_,password);
+               //将其保存为方便的JSON格式
+               localStorage["user"]=JSON.stringify(use);
+               
+               //JSON文本转换为原来的对象
+               var use_=JSON.parse(localStorage["user"]);
+
+               //从对象中取出
+               var use_name = document.getElementById("use_name");
+                   use_name.innerHTML=use_.name_;
+
+          }
+
+			function addValue() {
+			// 取得两个文本框中的值
+			var key = document.getElementById("key").value;
+			var item = document.getElementById("item").value;
+
+			//  在本地存储中保存数据项
+			// （如果同名键已经存在，则用新值替换旧值），
+			localStorage[key] = item;
+			}
+
+			function showFileInput(){
+				var fileInput=document.getElementById("fileInput");
+				fileInput.click();
+			}
+
+			function processFiles(files){
+               for(var i=0; i<files.length;i++){
+                   var file=files[i];
+
+                   var reader=new FileReader();
+                   reader.onload=function(e){
+                     //这个事件发生，意味着数据准备好了
+                     //把它复制到页面的<div>元素中
+
+                     var output=document.getElementById("fileOutput");
+                     output.textContent=e.target.result;
+                  }
+                  reader.readAsText(file);
+               }
+			}
+            
+            //图片
+            var dropBox;
+            window.onload=function(){
+                dropBox=document.getElementById("dropBox");
+                dropBox.ondragenter=ignoreDrag; //拖曳开始
+                dropBox.ondragover=ignoreDrag;  //拖曳至
+                dropBox.ondrop=drop;            //放置
+            }
+            
+            function ignoreDrag(e){
+                //应为我们在处理拖放，所以应该
+                //确保没有其他元素会取得这个事件
+                e.stopPropagation();
+                e.preventDefault();
+            }
+
+            function drop(e){
+            	//取消事件传播及默认行为
+                e.stopPropagation();
+                e.preventDefault();
+
+            	//取得拖进来的文件
+            	var data=e.dataTransfer;
+            	var files=data.files;
+
+            	processFiles2(files);
+            }
+
+
+			function processFiles2(files){
+                var file=files[0];
+               
+                //创建FileReader
+                var reader=new FileReader();
+
+                //告诉它在准备好数据URL之后做什么
+                reader.onload=function(e){
+                   //使用图像URL来绘制dropBox的背景
+                   dropBox.style.backgroundImage="url('"+e.target.result+"')"
+                }
+                reader.readAsDataURL(file);
+			}
+            
+			function showFileInput() {
+			var fileInput = document.getElementById("fileInput");
+			fileInput.click();
+			} 
+	</script>
+
+</body>
+</html>

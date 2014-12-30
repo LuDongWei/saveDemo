@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+<style type="text/css">
+.wrapper{ width:100%;}
+.wrapper_mian{position:relative; width:100%; z-index:1; height:7400px; overflow:hidden;}
+.wrapper_mian .wrapper_mian_bk{ position:absolute; top:0; left:0; z-index:2; width:100%; min-width:960px;}
+.wrapper_mian .wrapper_mian_bk div{ width:100%; height:100px;}
+.main_{ width:960px; margin:0 auto;}
+
+.mbb_mian{width:100; position:relative; z-index:3}
+.mbb_mian .mbb_mian_botton{text-align:center;height:7400px;}
+
+.clearfix:after {content: ".";display: block;
+    height: 0;clear: both; visibility: hidden;}
+.clearfix {zoom: 1;}
+
+
+/*--悬浮--*/
+.Suspended{
+	width:218px;
+	height:280px;
+}
+.Suspended a{
+	display:block;
+	width:218px;
+	height:34px;
+	background:url(http://cca.mbaobao.com/mkts/201403/14/sup/suspend.png) no-repeat;
+}
+.Suspended a.s-1{height:42px; background-position:0px 0px;}
+.Suspended a.s-2{ background-position:0px -42px;}
+.Suspended a.s-3{ background-position:0px -76px;}
+.Suspended a.s-4{ background-position:0px -110px;}
+.Suspended a.s-5{ background-position:0px -144px;}
+.Suspended a.s-6{ background-position:0px -178px;}
+.Suspended a.s-7{ background-position:0px -212px;}
+.Suspended a.s-8{ background-position:0px -246px;}
+
+.Suspended a.s-2:hover{ background-position:-218px -42px;}
+.Suspended a.s-3:hover{ background-position:-218px -76px;}
+.Suspended a.s-4:hover{ background-position:-218px -110px;}
+.Suspended a.s-5:hover{ background-position:-218px -144px;}
+.Suspended a.s-6:hover{ background-position:-218px -178px;}
+.Suspended a.s-7:hover{ background-position:-218px -212px;}
+.Suspended a.s-8:hover{ background-position:-218px -246px;}
+
+.Suspended .selected .s-2{ background-position:-218px -42px;}
+.Suspended .selected .s-3{ background-position:-218px -76px;}
+.Suspended .selected .s-4{ background-position:-218px -110px;}
+.Suspended .selected .s-5{ background-position:-218px -144px;}
+.Suspended .selected .s-6{ background-position:-218px -178px;}
+.Suspended .selected .s-7{ background-position:-218px -212px;}
+.Suspended .selected .s-8{ background-position:-218px -246px;}
+
+/*---conversion---*/
+.B_conversion{
+	position: relative;
+}
+.B_conversion ul{
+	font-size:0px;
+	height:1002px;
+	overflow: hidden;
+}
+.B_conversion ul li{
+	width:100%;
+}
+.B_conversion ul li a{
+	display:block;
+}
+.B_conversion ul li.b-1{
+	background:url(http://cca.mbaobao.com/mkts/201403/14/sup/banner/01/v_b.jpg) no-repeat top center;
+}
+.B_conversion ul li.b-2{
+	background:url(http://cca.mbaobao.com/mkts/201403/14/sup/banner/02/s_b.jpg) no-repeat top center;
+}
+.B_conversion ul li.b-3{
+	background:url(http://cca.mbaobao.com/mkts/201403/14/sup/banner/03/m_b.jpg) no-repeat top center;
+}
+.mbb_main{
+	width:960px;
+	font-size:0px;
+	margin:0 auto;
+}
+.B_conversion .B_chuang{
+	position: absolute;
+	top: 290px;
+	left: 0px;
+	width: 120px;
+	left: 50%;
+	margin-left: -473px;
+}
+.B_conversion .B_chuang a{
+	display:block;
+	width:108px;
+	height:108px;
+	border:5px solid #E18496;
+    -moz-border-radius: 59px;
+    -webkit-border-radius: 59px;
+    border-radius: 59px;
+    overflow: hidden;
+    margin-top:10px;
+}
+.B_conversion .B_chuang a.selected{
+    border:5px solid #de2526;
+}
+.B_conversion .B_chuang .mbb_left{
+	width:128px;
+	float:left;
+}
+
+/*--动画效果--*/
+#animation{
+	margin-left:448px;
+-webkit-animation:fadeInDown 1s .2s ease both;
+-moz-animation:fadeInDown 1s .2s ease both;
+animation:fadeInDown 1s .2s ease both;}
+@-webkit-keyframes fadeInDown{
+0%{opacity:0;
+-webkit-transform:translateY(-20px)}
+100%{opacity:1;
+-webkit-transform:translateY(0)}
+}
+@-moz-keyframes fadeInDown{
+0%{opacity:0;
+-moz-transform:translateY(-20px)}
+100%{opacity:1;
+-moz-transform:translateY(0)}
+}
+keyframes fadeInDown{
+0%{opacity:0;
+-moz-transform:translateY(-20px)}
+100%{opacity:1;
+-moz-transform:translateY(0)}
+}
+
+</style>
+
+<!--悬浮框-->
+<div style="z-index:999;width:153px;height:445px;position:fixed;top:100px;right:auto;left:50%; margin-left:480px; _position:absolute;_top:expression(eval(document.documentElement.scrollTop)+170);" id="xp_ball_bb">
+   <div class="Suspended" style="display:none">
+     <a href="javascript:void(0)" class="s-1" ></a>
+     <ul>
+	     <li><a href="javascript:void(0)" class="s-2" data-id="0"></a></li>
+	     <li><a href="javascript:void(0)" class="s-3" data-id="1"></a></li>
+	     <li><a href="javascript:void(0)" class="s-4" data-id="2"></a></li>
+	     <li><a href="javascript:void(0)" class="s-5" data-id="3"></a></li>
+	     <li><a href="javascript:void(0)" class="s-6" data-id="4"></a></li>
+	     <li><a href="javascript:void(0)" class="s-7" data-id="5"></a></li>
+	     <li><a href="javascript:void(0)" class="s-8" data-id="6"></a></li>
+     </ul>
+   </div>
+</div>
+<!--悬浮框-->
+
+<div class="wrapper_mian">
+	<div class="mbb_mian">
+		<div class="mbb_mian_botton" style="position:absolute;top:0; left:0;width:100%; padding:0px;">
+			<img src="http://cca.mbaobao.com/mkts/201401/21/bgmain.gif" width="960" height="7400" border="0" usemap="#Map"/>
+            <map name="Map" id="Map">
+              <area shape="rect" coords="206,17,945,679" href="http://www.mbaobao.com/item/#" target="_blank" />
+              <area shape="rect" coords="158,1926,759,2488" href="http://www.mbaobao.com/item/1412009601" target="_blank" />
+              <area shape="rect" coords="197,2912,794,3489" href="http://www.mbaobao.com/item/1412009201" target="_blank" />
+              <area shape="rect" coords="182,3922,800,4494" href="http://www.mbaobao.com/item/1412009801" target="_blank" />
+              <area shape="rect" coords="185,4881,740,5490" href="http://www.mbaobao.com/item/1412009901" target="_blank" />
+              <area shape="rect" coords="197,5872,746,6489" href="http://www.mbaobao.com/item/1412009501" target="_blank" />
+              <area shape="rect" coords="12,6890,950,7356" href="http://www.mbaobao.com/item/1412010101" target="_blank" />
+            </map>
+        </div>
+	</div>
+    
+    
+    <!--top-->    
+    <div class="mbb_mian_botton" style="position:absolute;top:522px; left:0;width:100%; padding:0px;height:70px;z-index:999;">
+    	<div class="main_">
+	         <a href="#top_01" ><img id="animation" src="http://cca.mbaobao.com/mkts/201403/14/sup/top.png" width="69" height="69" /></a>
+	    </div>  
+    </div>
+
+    <!--banner-->  
+    <div class="mbb_mian_botton" style="position:absolute;top:702px; left:0;width:100%; padding:0px;height:70px;z-index:999;">
+    	<div class="main_" style="width:100%; min-width:960px;">
+
+        <div class="B_conversion">
+     <ul class="banner">
+     	<li id="ban_01" class="b-1">
+            <div class="mbb_main"> 
+                 <a href="http://www.mbaobao.com/item/1412010101" target="_blank"><img src="http://cca.mbaobao.com/mkts/201403/14/sup/banner/01/v_01.jpg" width="960" height="251" /></a>
+                 <a href="http://www.mbaobao.com/item/1412010101" target="_blank"><img src="http://cca.mbaobao.com/mkts/201403/14/sup/banner/01/v_02.jpg" width="960" height="250" /></a> 
+                 <a href="http://www.mbaobao.com/item/1412010101" target="_blank"><img src="http://cca.mbaobao.com/mkts/201403/14/sup/banner/01/v_03.jpg" width="960" height="251" /></a>
+                 <a href="http://www.mbaobao.com/item/1412010101" target="_blank"><img src="http://cca.mbaobao.com/mkts/201403/14/sup/banner/01/v_04.jpg" width="960" height="250" /></a>  
+            </div>
+       </li>
+     	<li id="ban_02" class="b-2">
+            <div class="mbb_main"> 
+                 <a href="http://www.mbaobao.com/item/1412010201" target="_blank"><img data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/banner/02/s_01.jpg" width="960" height="251" /></a>
+                 <a href="http://www.mbaobao.com/item/1412010201" target="_blank"><img data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/banner/02/s_02.jpg" width="960" height="250" /></a>
+                 <a href="http://www.mbaobao.com/item/1412010201" target="_blank"><img data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/banner/02/s_03.jpg" width="960" height="251" /></a>
+                 <a href="http://www.mbaobao.com/item/1412010201" target="_blank"><img data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/banner/02/s_04.jpg" width="960" height="250" /></a>
+            </div>
+       </li>
+     	<li id="ban_03" class="b-3">
+            <div class="mbb_main"> 
+                 <a href="http://www.mbaobao.com/item/1412010001" target="_blank"><img data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/banner/03/m_01.jpg" width="960" height="251" /></a>
+                 <a href="http://www.mbaobao.com/item/1412010001" target="_blank"><img data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/banner/03/m_02.jpg" width="960" height="250" /></a>
+                 <a href="http://www.mbaobao.com/item/1412010001" target="_blank"><img data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/banner/03/m_03.jpg" width="960" height="251" /></a>
+                 <a href="http://www.mbaobao.com/item/1412010001" target="_blank"><img data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/banner/03/m_04.jpg" width="960" height="250" /></a>
+            </div>
+       </li>
+     </ul>
+
+     <div class="B_chuang">
+     	<div class="mbb_main">
+           <div class="mbb_left">
+             <ul> 		
+		       <li><a href="#ban_01"><img src="http://cca.mbaobao.com/mkts/201403/14/sup/banner/g_01.jpg" width="109" height="109" /></a></li>
+		       <li><a href="#ban_02"><img src="http://cca.mbaobao.com/mkts/201403/14/sup/banner/g_02.jpg" width="109" height="109" /></a></li>
+		       <li><a href="#ban_03"><img src="http://cca.mbaobao.com/mkts/201403/14/sup/banner/g_03.jpg" width="109" height="109" /></a></li>
+		     </ul> 
+		  </div>
+		</div> 
+     </div>
+</div>
+
+	    </div>  
+    </div>
+
+    <!--悬浮导航定位-->
+    <!--top_01-->
+     <div class="mbb_mian_botton" style="position:absolute;top:797px; left:0;width:100%; padding:0px;height:0px;z-index:999;">
+    	<div class="main_" id="top_01" name="top_01">	     
+	    </div>  
+    </div> 
+    <!--top_02-->
+     <div class="mbb_mian_botton" style="position:absolute;top:1704px; left:0;width:100%; padding:0px;height:0px;z-index:999;">
+    	<div class="main_" id="top_02" name="top_02">	     
+	    </div>  
+    </div> 
+    <!--top_03-->
+     <div class="mbb_mian_botton" style="position:absolute;top:2706px; left:0;width:100%; padding:0px;height:0px;z-index:999;">
+    	<div class="main_" id="top_03" name="top_03">	     
+	    </div>  
+    </div> 
+    <!--top_04-->
+     <div class="mbb_mian_botton" style="position:absolute;top:3708px; left:0;width:100%; padding:0px;height:0px;z-index:999;">
+    	<div class="main_" id="top_04" name="top_04">	     
+	    </div>  
+    </div> 
+    <!--top_05-->
+     <div class="mbb_mian_botton" style="position:absolute;top:4710px; left:0;width:100%; padding:0px;height:0px;z-index:999;">
+    	<div class="main_" id="top_05" name="top_05">	     
+	    </div>  
+    </div> 
+    <!--top_06-->
+     <div class="mbb_mian_botton" style="position:absolute;top:5712px; left:0;width:100%; padding:0px;height:0px;z-index:999;">
+    	<div class="main_" id="top_06" name="top_06">	     
+	    </div>  
+    </div>  
+    <!--top_07-->
+     <div class="mbb_mian_botton" style="position:absolute;top:6714px; left:0;width:100%; padding:0px;height:0px;z-index:999;">
+    	<div class="main_" id="top_07" name="top_07">	     
+	    </div>  
+    </div>
+    <!--top_08-->
+     <div class="mbb_mian_botton" style="position:absolute;top:7400px; left:0;width:100%; padding:0px;height:0px;z-index:999;">
+    	<div class="main_" id="top_08" name="top_08">	     
+	    </div>  
+    </div>
+	
+   
+
+    <!--data-oxlazy-->
+	<div class="wrapper_mian_bk">
+		<div class="wrapper_mian_bk_01" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_01.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_02" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_02.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_03" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_03.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_04" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_04.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_05" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_05.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_06" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_06.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_07" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_07.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_08" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_08.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_09" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_09.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_10" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_10.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_11" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_11.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_12" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_12.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_13" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_13.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_14" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_14.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_15" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_15.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_16" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_16.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_17" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_17.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_18" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_18.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_19" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_19.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_20" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_20.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_21" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_21.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_22" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_22.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_23" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_23.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_24" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_24.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_25" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_25.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_26" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_26.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_27" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_27.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_28" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_28.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_29" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_29.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_30" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_30.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_31" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_31.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_32" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_32.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_33" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_33.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_34" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_34.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_35" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_35.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_36" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_36.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_37" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_37.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_38" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_38.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_39" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_39.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_40" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_40.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_41" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_41.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_42" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_42.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_43" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_43.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_44" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_44.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_45" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_45.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_46" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_46.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_47" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_47.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_48" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_48.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_49" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_49.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_50" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_50.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_51" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_51.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_52" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_52.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_53" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_53.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_54" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_54.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_55" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_55.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_56" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_56.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_57" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_57.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_58" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_58.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_59" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_59.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_60" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_60.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_61" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_61.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_62" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_62.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_63" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_63.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_64" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_64.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_65" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_65.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_66" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_66.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_67" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_67.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_68" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_68.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_69" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_69.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_70" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_70.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_71" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_71.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_72" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_72.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_73" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_73.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_74" data-oxlazy="http://cca.mbaobao.com/mkts/201403/14/sup/vinhas_74.jpg" style="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+seajs.use("gallery/lazyload/2.0.0/lazyLoad",function(){})
+</script>
+
+<script type="text/javascript">
+seajs.use("jquery", function($){
+    $(window).scroll(function(){
+       var win_top=$(document).scrollTop();
+       if(win_top>=600){
+           $('#xp_ball_bb').find('.Suspended').slideDown();
+       }else{
+           $('#xp_ball_bb').find('.Suspended').slideUp();
+       }
+    })
+})
+</script>
+
+<script type="text/javascript">
+seajs.use("./vinhas.js")	
+</script>
+
+</body>
+</html>

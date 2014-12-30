@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Canvas Test</title>
+
+	<style>
+	  canvas{
+	  	border:1px dashed black;
+	  }
+	</style>
+	<script src="./js/canvasComponent.js" type="text/javascript"></script>
+</head>
+<body>
+    <canvas id="drawingCanvas" width="500" height="1200"></canvas>
+
+    <script>
+       window.onload=function(){
+       	  var canvas = document.getElementById("drawingCanvas");
+       	  var context=canvas.getContext("2d");
+
+       	  //Put your Fabulous drawing code here.
+          //画直线
+          context.lineWidth=10;
+          context.strokeStyle="#cd2828";
+          //绘制一条直线，使用默认的方头        
+          context.moveTo(10,10);
+          context.lineTo(400,20);
+          context.lineCap="butt";
+          context.stroke();
+          //绘制第二条直线，使用圆头
+          context.beginPath();      //重新开始一个新线段的绘制
+          context.moveTo(30,100);
+          context.lineTo(400,100);
+          context.lineCap="round";
+          context.stroke(); 
+          //绘制第三条直线，使用加长方头
+          context.beginPath();
+          context.moveTo(10,150);
+          context.lineTo(450,280);
+          context.lineCap="square";
+          context.stroke();
+          //分割线
+          context.beginPath();
+          context.lineWidth=4;
+          context.strokeStyle="#000000";
+          context.moveTo(0,300);
+          context.lineTo(500,300);
+          context.stroke();
+          //Canvas自定义圆角矩形与虚线
+          if (!canvas.getContext) {         //检测
+                console.log("Canvas not supported. Please install a HTML5 compatible browser.");
+                return;
+          }
+          //矩形
+          context.strokeStyle="red";                  //画笔颜色
+          context.fillStyle="RGBA(100,255,100, 0.5)"; //填充颜色
+          context.roundRect(20,320,200,250,8,true);   //尺寸
+          //线条
+          context.lineWidth=2;
+          context.strokeStyle="blue";
+          for (var i = 0; i <10; i++) {
+          	 var delta=i*20;
+          	 var pattern=i*2+1;
+          	 context.dashedLineTo(230,320+delta,480,320+delta,pattern);
+          };
+          //分割线
+          context.beginPath();
+          context.lineWidth=4;
+          context.strokeStyle="#000000";
+          context.moveTo(0,600);
+          context.lineTo(500,600);
+          context.stroke();
+          //封闭三角形
+          context.beginPath();
+          context.moveTo(150,620);
+          context.lineTo(250,720);
+          context.lineTo(50,720);
+          context.closePath();  //封闭的图形
+          
+          //填充内部
+          context.fillStyle="blue";
+          context.fill();
+          //绘制轮廓
+          context.lineWidth=10;
+          context.strokeStyle="red";
+          context.stroke();
+
+          //填充矩形
+          context.beginPath();
+          context.fillRect(280,620,100,100);
+          //边框矩形
+          context.beginPath();
+          context.strokeRect(390,620,100,100);
+
+          //圆形曲线透明
+          context.beginPath();
+          context.arc(150,850,80,0,2*Math.PI);
+          context.stroke();
+          context.fillStyle="#5a0000"; 
+          context.fill();
+
+          context.beginPath();      //加入三角形
+          context.moveTo(150,750);    
+          context.lineTo(350,950);
+          context.lineTo(150,950);
+          context.closePath();           
+          context.fillStyle="rgba(100,150,185,0.7)";
+          context.fill();
+          context.globalCompositeOperation="xor";    //合成效果
+          context.stroke();
+
+          context.beginPath();     //曲线一
+          context.arc(400,850,80,1.2*Math.PI,1.8*Math.PI);
+          context.stroke();
+          
+          context.beginPath();     //贝赛尔曲线
+          context.moveTo(320,850);
+          context.bezierCurveTo(250,900,450,850,490,1000);
+          context.stroke();
+          
+          //变化 
+          context.beginPath();     
+          context.translate(250,1080); //移动(0,0)点，接下来的围绕新的原点旋转
+          var copies =50;             //画9个正方形
+          context.lineWidth=2;
+          for (var i=0; i<copies; i++) {
+            //绘制正方形    
+            context.rect(0, 0, 80, 80);
+            //旋转一周是2*Math.PI,因此每个正方形的旋转角度取决于绘制的总数
+          	context.rotate(2 * Math.PI * 1/(copies-1));           
+          }
+          context.strokeStyle = "red";
+          context.stroke();
+           
+       }
+    </script>	
+    
+    <!--【】【】保存-->
+    <script type="text/javascript">
+// window.onload=function(){
+//           var canvas = document.getElementById("newsCanvas");
+//           var context=canvas.getContext("2d");
+          
+//           canvas.onmousedown=startDrawing;  
+
+//           var img=new Image();
+//           img.onload=function(){                             
+//               context.beginPath();
+//               // 使用“遮罩”
+//               // context.moveTo(0, 0);  
+//               // context.lineTo(667, 0);  
+//               // context.lineTo(531, 318);  
+//               // context.lineTo(0, 318);  
+//               // context.closePath();
+//               // context.clip();
+//               context.drawImage(img,0,0);
+//               context.moveTo(0, 0);  
+//               context.lineTo(667, 0);  
+//               context.lineTo(531, 318);  
+//               context.lineTo(0, 318);  
+//               context.closePath();
+//               context.globalCompositeOperation="destination-out";
+//               context.fill();
+//               context.stroke();                                 
+//               } 
+//           img.src="http://placehold.it/1198x318"
+           
+          
+//           function startDrawing(e){
+//               var x=e.pageX-canvas.offsetLeft;
+//               var y=e.pageY-canvas.offsetTop;
+//               if(context.isPointInPath(x,y)){
+//                  rightOver();
+//               }else{
+//                  leftOver();
+//               }            
+//           }
+
+//           //左移动
+//           function leftOver(){
+//               context.beginPath();
+//               context.moveTo(0, 0);  
+//               context.lineTo(900, 0);  
+//               context.lineTo(531, 318);  
+//               context.lineTo(0, 318);  
+//               context.closePath();
+//               context.globalCompositeOperation="destination-out";
+//               context.fill();
+//               context.stroke();
+//           }
+
+//           //右移动
+//           function rightOver(){
+              
+//           }
+          
+//         }  
+</script>
+</body>
+</html>
+ 	

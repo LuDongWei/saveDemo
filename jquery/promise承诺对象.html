@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+	<link href="css/reset.css"  type="text/css" rel="stylesheet" />
+	<script  type="text/javascript"  src="js/jquery-1.9.1.min.js" ></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+	//例子1
+	function asyncEvent() {
+    var dfd = new $.Deferred();
+
+    // Resolve after a random interval
+    setTimeout(function() {
+        dfd.resolve("hurray");
+    }, Math.floor(400 + Math.random() * 2000));
+
+    // Reject after a random interval
+    setTimeout(function() {
+        dfd.reject("sorry");
+    }, Math.floor(400 + Math.random() * 2000));
+
+
+    // Show a "working..." message every half-second
+    setTimeout(function working() {
+        if (dfd.state() === "pending") {
+            dfd.notify("working... ");
+            setTimeout(working, 500);
+        }
+    }, 1);
+
+
+    // Return the Promise so caller can't change the Deferred
+    return dfd.promise();
+    }
+    
+    // Attach a done, fail, and progress handler for the asyncEvent
+	$.when(asyncEvent()).then(
+
+	    function(status) {
+	        alert(status + ', things are going well');
+	    },
+
+	    function(status) {
+	        alert(status + ', you fail this time');
+	    },
+
+	    function(status) {
+	        $("body").append(status);
+	    }
+	);
+
+	then('','','')
+
+	on
+	off
+
+	var a = new youObje();
+
+	a.trigger("update", function(*){})
+
+	_.extend(a, event)
+
+
+	//例子2
+    Existing object
+	var obj = {
+		hello: function(name) {
+			alert("Hello " + name);
+		}
+	},
+
+		// Create a Deferred
+		defer = $.Deferred();
+
+	// Set object as a promise
+	defer.promise(obj);
+
+
+
+	// Use the object as a Promise
+	obj.done(function(name) {
+		obj.hello(name); // will alert "Hello John"
+	}).hello("Karl"); // will alert "Hello Karl"
+
+	});
+
+
+	// Resolve the deferred
+	defer.resolve("John");
+
+
+
+	
+  //   function abc(){
+
+  //   	var dfd = new $.Deferred();
+
+  //   	    setTimeout(function working() {
+
+
+  //   			dfd.resolve();
+
+  //   	}, 2000);
+
+  //   	return dfd.promise();
+
+  //   }
+
+  // abc().done(function(){})
+
+
+  // abc().done(function(){})
+</script>
+</head>
+
+<body></body>
+</html>

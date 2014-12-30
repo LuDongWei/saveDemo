@@ -1,0 +1,159 @@
+制作新的网页：http://www.prosetech.com/html5/
+
+第九章：构建数据存储
+
+本地存储：对应localStorage对象，用于长期保存整个网站的数据
+会话存储：对应sessionStorage对象，用于临时保存针对一个窗口（或标签页）的数据。
+（会话存储就算普通的js变量也绝对可以胜任，有何必多此一举呢）
+》》》都与网站的所在的域联系在一起，这些数据也是跟计算机绑定的
+
+一：存储数据
+本地存储：localStorage["user_name"]="Marke Mark"
+会话存储: sessionStorage["lastUpdateTime"]="10:13"
+
+删除数据项
+localStorage.remove("user_uame");
+清空
+sessionStorage.clear();
+查找所有数据项
+for (var i = 0; i<localStorage.length; i++) {
+	 var key = localStorage.key(i);
+	 var item = localStorage[key];
+
+	 var newItem=document.createElement("li");
+	 newItem.innerHTML=key+":"+item;
+	 itemList.appendChild(newItem);	
+};
+
+保存数值和日期：
+在通过localStorage和sessionStorage保存数据时，该数据会自动被转换为文本
+文本转数值：Number()
+日期：先按照既定的格式把日期转换成相应的文本
+
+保存对象：
+var user(a,b){           //定义对象
+    this.name_=a;
+	this.password_=b;
+}
+var use=new user("","") //创建对象
+localStorage["user"]=JSON.stringify(use);
+
+//JSON文本转换为原来的对象
+var use_=JSON.parse(localStorage["user"]);
+
+//从对象中读取数据
+use_.name_
+
+
+响应存储变化
+window.onload=function(){
+  //把onStorage事件与storageChanged()函数联系起来
+  window.addEventListener("storage",storageChanged,false);
+}
+
+function storageChanged(e){
+  //填写代码
+  e.oldValue //原来的值
+  e.newValue //新的值
+  e.key
+  e.url
+}
+
+
+读取文件
+<input type="file" onchange="processFiles(this.files)">
+function processFiles(files){
+    var file=files[0];
+	var reader=new FileReader(); //创建FileReader对象，以便处理
+	
+	reader.onload=function(e){
+	    //这个事件发生，意味着数据准备好了
+        //把它复制到页面的<div>元素中
+		XX.textContext=e.target.result;
+	}
+	reader.readAsText(file); //把文件内容转换成一个长字符串，
+	                           保存在发送给onLoad事件	
+}
+//提供的方法还有：readAsBinaryString() readAsDataURL() readAsArrayBuffer()
+
+替换标准上传控件
+<input id="fileInput" type="file" size="50" onchange="processFiles(this.files)" multiple style="display:none">
+<button onclick="showFileInput()">选取文件</button>
+
+function showFileInput(){
+				var fileInput=document.getElementById("fileInput");
+				fileInput.click();
+}
+
+一次读取多个文件
+for(var i=0;i<files.length;i++){var file=files[i]}
+
+读取图片文件
+var dropBox;
+window.onload=function(){
+	dropBox=document.getElementById("dropBox");
+	dropBox.ondragenter=ignoreDrag; //拖曳开始
+	dropBox.ondragover=ignoreDrag;  //拖曳至
+	dropBox.ondrop=drop;            //放置
+}
+function ignoreDrag(e){
+	//应为我们在处理拖放，所以应该
+	//确保没有其他元素会取得这个事件
+	e.stopPropagation();
+	e.preventDefault();
+}
+function drop(e){
+	//取消事件传播及默认行为
+	e.stopPropagation();
+	e.preventDefault();
+
+	//取得拖进来的文件
+	var data=e.dataTransfer;
+	var files=data.files;
+
+	processFiles2(files);
+}
+function processFiles2(files){
+	var file=files[0];
+   
+	//创建FileReader
+	var reader=new FileReader();
+
+	//告诉它在准备好数据URL之后做什么
+	reader.onload=function(e){
+	   //使用图像URL来绘制dropBox的背景
+	   dropBox.style.backgroundImage="url('"+e.target.result+"')"
+	}
+	reader.readAsDataURL(file);
+}
+function showFileInput() {
+var fileInput = document.getElementById("fileInput");
+fileInput.click();
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link  href="css/reset.css"  type="text/css" rel="stylesheet" />
+<style>
+.bu{
+	width:80px;
+	height:25px;
+	border:1px solid #CCC;
+	background: #333;
+	color:#FFF;
+	cursor:alias;
+	}
+</style>
+
+
+</head>
+<body>
+<div style="text-align:center; width:600px; height:480px; margin:0 auto ; border:2px solid #000" >
+<p style="height:30px; font-size:20px; line-height:25px  ">视频播放器</p>
+<div style="width:500px; height:400px; border:none; margin:0 auto;  " >
+<video   id="video1"  controls="controls"  width="300px"  src="video/feihuang.mp4" autoplay="autoplay"> 
+   你的游览器不能进行HTML5的编辑，请升级。
+</video>
+</div>
+<button onclick="bu_1()" class="bu">播放/暂停</button>
+<button onclick="bu_2()" class="bu">大</button>
+<button onclick="bu_3()" class="bu">中</button>
+<button onclick="bu_4()" class="bu">小</button>
+</div>
+
+<div style="text-align:center; width:600px; height:80px; margin:0 auto ; border:2px solid #000; margin-top:50px" >
+<p style="height:30px; font-size:20px; line-height:25px  ">音乐播放器</p>     
+<audio  controls="controls" loop="loop">
+   <source src="mp3/张学友 - 一千个伤心的理由.mp3" type="audio/mp3" />
+  你的电脑部能识别HTML5
+</div>
+
+
+
+<script type="text/javascript">
+var myvideo=document.getElementById("video1");
+  function bu_1(){
+	if(myvideo.paused){
+		myvideo.play();
+		}else{
+		myvideo.pause();	
+	    };
+    
+  };
+  
+  function bu_2(){
+	 myvideo.width=450;  	
+		};
+   function bu_3(){
+	 myvideo.width=300;
+		};
+	function bu_4(){
+	 myvideo.width=150;
+		};		 	
+</script>
+</body>
+</html>

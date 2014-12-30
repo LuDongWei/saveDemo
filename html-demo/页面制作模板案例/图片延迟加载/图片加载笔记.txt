@@ -1,0 +1,22 @@
+1.jQuery.makeArray(obj)
+  将类数组对象转换为数组对象。
+  
+2. $(window).on("scroll.oxlazy",function (d) {
+                lazy.detect();
+   })
+
+   a.trigger("resize.oxlazy")   
+.oxlazy起到对应关系，下面的触发只有上面的程序才会反应
+
+3. data.getAttribute(this.flag);  
+//获取对应数据的值
+
+4.data.setAttribute("src", h);
+ 设置值
+ 
+5. f.css("background-image", "url(" + h + ")");
+ 改变背景
+
+ 
+6.data.removeAttribute(this.flag);
+ 移除

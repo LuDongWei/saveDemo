@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+  <script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+
+<style type="text/css">
+.main{width:960px;margin:0 auto;}
+
+/*---评论列表---*/  
+.comment-main{
+   width:980px;
+   overflow:hidden;
+   font-size:12px;
+   font-family:"微软雅黑";  
+}
+.comment-main .comment-item{
+   float:left;
+   width:200px;
+   padding:14px;
+   margin:0px 12px 12px 0px;
+   border:1px solid #e6e6e6;
+}
+.comment-item .com-pic{
+
+}
+.comment-item .com-praise{
+  overflow:hidden;
+  height:28px;
+  margin-top:5px;
+}
+.com-praise .link-count{
+  background:url(http://cca.mbaobao.com/mkts/201409/01/yuang/love.png) no-repeat;
+  background-position:2px 5px;
+  display:block;
+  float:left;
+  height:18px;
+  line-height:23px;
+  padding-left:20px;
+  cursor:pointer;
+  color:#aaaaaa;
+}
+.com-praise a.l-star{
+  background-position:2px -16px;
+}
+.com-praise .link-get{
+  float:right;
+  line-height:23px;
+  padding-left:20px;
+}
+.comment-item .com-int{
+  width:100%;
+  height:0px;
+  border-bottom:1px dashed #bebebe;
+}
+.comment-item .com-inf{
+  height:148px;
+  overflow:hidden;
+}
+.com-inf .account{
+  text-align:left;
+  color:#aaaaaa;
+  margin:4px 0px 4px 0px;
+}
+.com-inf .comment{
+  text-align:left;
+  color:#5c5c5c;
+}
+
+/*--评论弹框--*/
+.comment-pop{
+  font-family:"微软雅黑";
+  width:650px;
+  height:390px;
+  padding:0px 12px 12px 12px;
+  border:1px solid #999999;
+  background-color:#ffffff;
+}
+.comment-pop .pop-head{
+  width:100%;
+  height:50px;
+  line-height:50px;
+  position: relative;
+}
+.pop-head h3{
+  font-size:18px;
+  font-weight:bolder;
+}
+.pop-head a{
+  display:block;
+  font-size:26px;
+  width:32px;
+  height:32px;
+  line-height:32px;
+  border-radius:16px;
+  background-color:#db4534;
+  position:absolute;
+  color:#ffffff;
+  top:10px;
+  right:10px;
+}
+.comment-pop .pop-main{
+  overflow:hidden;
+}
+.comment-pop .pop-left{
+  float:left;
+}
+.pop-left .pop-item{
+  margin-right:12px;
+}
+.comment-pop .pop-right{
+  float:left;
+}
+/*--留言样式修改--*/
+.r-pop-wrap{
+  width:438px;
+  overflow:hidden;
+}
+.r-pop-post{
+  width:100%;
+}
+.r-pop-post .gb-content-wrap{
+  width:100%;
+}
+.r-pop-post .gb-content-wrap .gb-content{
+  width:99%;
+  height:60px;
+  resize:none;
+}
+.r-pop-post .gb-post-wrap{  
+  overflow:hidden;
+}
+.r-pop-post .gb-count{
+  float:left;
+  line-height:25px;
+}
+.r-pop-post .gb-btn-wrap{
+  float:right;
+  line-height:30px;
+}
+.r-pop-list .gb-list-wrap .gb-l-list{
+  width:100%;
+}
+.r-pop-list .gb-l-list li {
+  padding:5px;
+}
+.r-pop-list .gb-l-list li .gb-l{
+  height:42px;
+  overflow:hidden;
+  text-align:left;
+}
+.r-pop-list .gb-l-list li .gb-l-content{
+  text-align:left;
+}
+.r-pop-list .gb-l-list li .gb-l-head{
+  height:25px;
+  line-height:30px;
+}
+.r-pop-list .gb-l-list li .gb-l-content{
+  line-height:20px;
+}
+.gb-l-list li .gb-l-content .gb-reply{
+  display:none;
+}
+.r-pop-list .gb-list-wrap .gb-l-pager{
+
+}
+#comPop{
+  display:none;
+}
+.simplemodal-overlay{background-color:#000000;}
+</style>
+
+  <!--评论弹框-->
+  <div class="comment-pop" id="comPop">
+    <div class="pop-head">
+        <h3>你快回来，我依然在此等待</h3>
+        <a href="javascript:void(0)" class="xp-close">X</a>
+    </div>  
+    <div class="pop-main">      
+      <div class="pop-left">
+        <div class="pop-item">
+          <div class="com-pic">
+     <!--        <a href="javascript:void(0)">
+              <img src="http://placehold.it/200x200" width="200px" height="200px" ></a> -->
+          </div>
+          <div class="com-praise">
+            <!-- <a class="link-count l-star" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+              <span>0</span>
+              人点赞
+            </a>
+            <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="pop-right">
+          <div class="r-pop-wrap">
+              <div class="r-pop-post">
+    
+              </div>
+              <div class="r-pop-list" >
+                    
+              </div>
+          </div> 
+      </div>
+    </div>
+  </div>
+  <!--评论弹框-->
+
+  <!--评论列表-->
+  <div class="mbb-comment">
+    <div class="main">
+      <div class="comment-main">
+
+        <div class="comment-item" id="mComment" data-id="4376">
+          <div class="com-pic">
+            <a href="javascript:void(0)">
+              <img src="http://placehold.it/200x200" width="200px" height="200px" ></a>
+          </div>
+          <div class="com-praise">
+            <a class="link-count" id="linkCount" data-id="4376" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+              <span></span>
+              人点赞
+            </a>
+            <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+          </div>
+          <div class="com-int"></div>
+          <div class="com-inf">
+            <!-- <dl>
+              <dt class="account">
+                <div class="acc-r">
+                  <div class="name">WHY</div>
+                  <div class="time">2014-08-17&nbsp;19:10</div>
+                </div>
+              </dt>
+              <dd class="comment">
+                <p>
+                  在驼色和藕粉色之间挣扎，最后还是选择了藕粉，想在年轻的时候再体验一下下粉红色的魅力~~哈哈，结果用着真的有小女生的感觉，就像找回心中的童话~愿自己永远能有这样美好的心情！
+                </p>
+              </dd>
+            </dl> -->
+          </div>
+        </div>
+
+
+        <div class="comment-item" id="mComment" data-id="4023">
+          <div class="com-pic">
+            <a href="javascript:void(0)">
+              <img src="http://placehold.it/200x200" width="200px" height="200px" ></a>
+          </div>
+          <div class="com-praise">
+            <a class="link-count" id="linkCount" data-id="4023" href="javascript:void(0)" title="喜欢就投TA一票吧！">
+              <span></span>
+              人点赞
+            </a>
+            <a class="link-get" href="javascript:vpid(0)">叫他回来认领</a>
+          </div>
+          <div class="com-int"></div>
+          <div class="com-inf">
+            <!--  <dl>
+              <dt class="account">
+                <div class="acc-r">
+                  <div class="name">WHY</div>
+                  <div class="time">2014-08-17&nbsp;19:10</div>
+                </div>
+              </dt>
+              <dd class="comment">
+                <p>
+                  在驼色和藕粉色之间挣扎，最后还是选择了藕粉，想在年轻的时候再体验一下下粉红色的魅力~~哈哈，结果用着真的有小女生的感觉，就像找回心中的童话~愿自己永远能有这样美好的心情！
+                </p>
+              </dd>
+            </dl> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--评论列表-->
+
+
+
+  <script type="text/javascript">
+  seajs.use("http://cca.mbaobao.com/mkts/201409/01/yuang/wait.js?2014") 
+  </script>
+
+
+</body>
+</html>

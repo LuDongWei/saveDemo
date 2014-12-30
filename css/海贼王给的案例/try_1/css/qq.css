@@ -1,0 +1,13 @@
+/* CSS Document */
+
+.QQbox{position:absolute; right:0; top:100px; width:203px; z-index:99;} 
+.QQbox .press {position:absolute; right:0; width:33px; height:153px; cursor:pointer; border-style:none;}
+.QQbox .Qlist {clear:both; width:170px; position:absolute; left:0; background:url(../images/center.png) repeat-y 0 72px;}
+.QQbox .Qlist .t {font-size: 1px; float: right; width: 170px; height:72px; background:url(../images/top.png) no-repeat 0 0;}
+.QQbox .Qlist .b {font-size: 1px; float: right; width: 170px; height: 5px; background:url(../images/bottom.png) no-repeat 0 0;} 
+.QQbox .Qlist .con {BACKGROUND: #ffffff; margin: 0px auto; width:100%; float:left;} 
+.QQbox .Qlist .con UL {min-height:100px; _height:100px;}
+.QQbox .Qlist .con UL LI {PADDING-RIGHT: 0px; PADDING-LEFT: 8px;  BACKGROUND: #ffffff;  PADDING-BOTTOM: 0px; PADDING-TOP: 5px;}
+.QQbox .Qlist .con UL LI.odd {BACKGROUND: #ffffff;}
+
+img{border:0; display:block;}

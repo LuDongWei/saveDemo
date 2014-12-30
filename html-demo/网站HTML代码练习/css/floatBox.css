@@ -1,0 +1,17 @@
+.floatBox{
+	border:1px solid #C30;
+	width:119px;
+	position:absolute;
+	left:30px;
+	top:200px;
+	}
+.float_top_2{
+	display:none;
+	}	
+.float_main{
+	background:#9C3;
+	height:150px;
+	}
+.float_foot{
+	cursor:pointer;
+	}	

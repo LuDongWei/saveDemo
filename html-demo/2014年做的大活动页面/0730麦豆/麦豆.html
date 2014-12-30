@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>无标题文档</title>
+			<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+			<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body style="background:#fdfdc1;">
+
+<style type="text/css">
+.page_all{background:#fdfdc1;}	
+.wrapper{ width:100%;}
+.main{width:960px;
+ margin:0 auto;
+ }
+
+.main ul{width:970px;}
+.main ul li{
+   display:inline-block;           
+  *display:inline;                 
+  *zoom:1;
+   float:left;
+   text-align:center; 
+}
+.dif-4 li{margin-right:7px;margin-top:7px;}
+.dif-3 li{margin-right:9px;margin-top:7px;}
+.dif-2 li{margin-right:6px;margin-top:6px;}
+
+.mbbBean{
+  font-family:"微软雅黑";
+  font-weight:bolder;
+  font-size:14px;
+  line-height:27px;
+}
+.mbbBean .mbb-cash{
+  margin-top:91px; 
+  overflow:hidden;
+}
+.mbb-cash .spend{
+  width:150px;
+  text-align:center;
+  color:#ffffff;
+  float:left;
+}
+.mbb-cash a{
+  display:block;
+  padding:0px 30px 0px 20px;
+  float:left;
+  background-color:#fefad3;
+  color:#d3184f;
+  border-radius:2px;
+  position:relative; 
+}
+.mbb-cash a i{
+  top:10px;
+  right:16px;
+  position:absolute;
+  display:block;
+  border-top:4px solid #fefad3;
+  border-bottom:4px solid #fefad3;
+  border-left:8px solid #d3184f;
+}
+
+.big-turn{
+	position:relative;
+}
+.big-turn .explain{
+	width:350px;
+	color:#fff3ae;
+	font-size:12px;
+	line-height:18px;
+	position:absolute;
+	top:208px;
+	left:37px;
+}
+.big-turn .explain ul{
+	width:350px;
+	overflow:hidden;
+}
+.big-turn .explain ul li{
+	text-align:left;
+	margin-bottom:15px;
+}
+.big-turn .explain ul img{
+	vertical-align:middle;
+}
+.big-turn .m-body{
+	position:absolute;
+	width:568px;
+	height:568px;
+	top:7px;
+	left:428px;
+}
+.m-body .disk{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:568px;
+	height:568px;
+	background:url(http://cca.mbaobao.com/mkts/201408/04/roll/zhuan.png) no-repeat top center;
+}
+.dFlash{
+	background-position:0px -569px !important;
+}
+.m-body .start{
+	 width:107px; 
+	 height:202px;
+	 position:absolute;
+	 top:182px;
+	 left:230px;
+	 cursor:pointer;
+}
+/*-- 奖品 --*/
+.xp-award{
+  width:532px;
+  height:214px;
+  background-color:#000000;
+  text-align:center;
+  display:none;
+}
+.xp-award .xp-class{
+  width:40px;
+  height:40px;
+  display:block;
+  float:right;
+  color:#e52756;
+  font-size:30px;
+}
+.xp-award .xp-main{
+  padding-top:55px;
+}
+.xp-main h3{
+  color:#e52756;
+  font-size:36px;
+  font-weight:bolder;
+}
+.xp-main .award{
+  font-size:18px;
+  color:#ffffff;
+}
+/*-- 文字滚动 --*/
+.awards-people{
+  line-height:30px;
+  color:#ffffff;
+}
+#container{
+    position:relative;
+    overflow:hidden;  /*这个东西折腾了很久才弄出来*/
+    width:930px;
+    height:30px;
+    margin:0px 15px 0px 15px; 
+}
+#content{
+    position:absolute;
+    left:0;
+    top:0;
+    white-space:nowrap;  
+}
+
+/*--列表--*/
+.b-main{ width:960px; margin:0 auto; overflow:hidden; font-size:0; position:relative;}
+.b-float img{ float:left;}
+.b-list{ width:970px}
+.b-list li{ width:236px; height:400px; float:left; margin:0 3px 3px 0; position:relative; background-color:#fff}
+.b-list li .p-info{text-align:center; width:236px; height:66px; position:absolute; bottom:5px; right:0;}
+.b-list li .p-info .p-title{ height:20px; width:226px; overflow:hidden; white-space: nowrap;text-overflow: ellipsis; padding:0 5px}
+.b-list li .p-info .p-title a{ font-size:12px; line-height:18px; color:#333; text-decoration:none;}
+.b-list li .p-info .p-title a:hover{ text-decoration:underline}
+.b-list li .p-info .p-price{ font-weight: 700;color: #333; font-size:14px; line-height:18px; font-family:'微软雅黑'}
+.b-list li .p-info strong{color: #ed1c24;}
+.b-list li .p-info s{font-weight: 400;color: #888;padding-left: 2px; text-decoration:line-through}
+.p-btn{ padding-top:5px;}
+
+</style>
+
+<!--奖品-->
+<div class="xp-award">
+     <a href="javascript:void(0);" class="xp-class">X</a>   
+     <div class="xp-main">
+          <h3>恭喜您</h3>
+          <p class="award">获得[TZOT]可爱零钱袋一个</p>  
+     </div> 
+</div>  
+<!--奖品-->
+
+<textarea rows="0" cols="0"  style="display:none;" id="mName">
+&nbsp;&nbsp;&nbsp;&nbsp;47495****@qq.com||获得[TZOT]多功能收纳袋一个,&nbsp;&nbsp;&nbsp;&nbsp;60904****@qq.com||获得价值298元的DUDU真皮女包一个,&nbsp;&nbsp;&nbsp;&nbsp;102754****@qq.com||获得5元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;61761****@qq.com||获得价值129元双肩包一个,&nbsp;&nbsp;&nbsp;&nbsp;machu****@tom.com||获得[TZOT]可爱零钱袋一个,&nbsp;&nbsp;&nbsp;&nbsp;000****@163.com||获得10元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;31327****@qq.com||获得价值99元时尚化妆包一个,&nbsp;&nbsp;&nbsp;&nbsp;67491****@qq.com||获得20元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;121055****@qq.com||获得50元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;asaliuj****@163.com||获得[TZOT]多功能收纳袋一个,&nbsp;&nbsp;&nbsp;&nbsp;chairman2008****@163.com||获得价值78元经典手包一个,&nbsp;&nbsp;&nbsp;&nbsp;8188****@qq.com||获得[TZOT]可爱零钱袋一个,&nbsp;&nbsp;&nbsp;&nbsp;wawa0****@126.com||获得价值298元的DUDU真皮女包一个,&nbsp;&nbsp;&nbsp;&nbsp;8727****@qq.com||获得10元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;kuaid****@hotmail.com||获得10元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;49518****@qq.com||获得5元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;zhaoj****@163.com||获得价值129元双肩包一个,&nbsp;&nbsp;&nbsp;&nbsp;1519****@qq.com||获得20元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;22941****@qq.com||获得[TZOT]可爱零钱袋一个,&nbsp;&nbsp;&nbsp;&nbsp;wjsdl****@163.com||获得价值78元经典手包一个,&nbsp;&nbsp;&nbsp;&nbsp;hr198****@163.com||获得5元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;dandan1****@163.com||获得10元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;zj****@126.com||获得5元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;28099****@qq.com||获得价值99元时尚化妆包一个,&nbsp;&nbsp;&nbsp;&nbsp;30337****@qq.com||获得50元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;chenzi****@hotmail.com||获得[TZOT]多功能收纳袋一个,&nbsp;&nbsp;&nbsp;&nbsp;syms0****@126.com||获得[TZOT]可爱零钱袋一个,&nbsp;&nbsp;&nbsp;&nbsp;zhao_zi_****@126.com||获得价值598元牛皮公文包一个,&nbsp;&nbsp;&nbsp;&nbsp;cici-****@163.com||获得10元现金券一张~,&nbsp;&nbsp;&nbsp;&nbsp;002****@163.com||获得5元现金券一张~ 
+</textarea>  
+
+<div class="wrapper" style="background:url(http://cca.mbaobao.com/mkts/201408/04/roll/back_bg.jpg) no-repeat top center; height:914px;">
+	<div class="main">
+		 <div class="head">
+           <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_01.jpg?2014" width="960" height="387" /> 
+		 </div>	
+		 <div class="awards-people"   style="background:url(http://cca.mbaobao.com/mkts/201408/04/roll/maid_02.jpg) no-repeat top center; height:30px;">
+         <div id="container">
+           <div id="content">
+           </div>
+         </div> 
+		 </div>	
+		 <div class="mbb-dial" style="background:url(http://cca.mbaobao.com/mkts/201408/04/roll/maid_03.jpg) no-repeat top center; height:497px;">
+ 	       <div class="big-turn">
+              <div class="explain">
+                  <ul>
+                    <li>
+                     <img src="http://cca.mbaobao.com/mkts/201408/04/roll/st.png" width="18" height="18" />消耗10麦豆抽奖1次，每人每天有5次抽奖机会
+                    （麦豆余额充足<br />
+                     &nbsp;&nbsp;&nbsp;&nbsp;的情况下）；
+                    </li>
+                    <li>
+                     <img src="http://cca.mbaobao.com/mkts/201408/04/roll/st.png" width="18" height="18" />实物奖品将会在2014年9月20日前统一发放，请在会员中心—
+                     <br />
+                     &nbsp;&nbsp;&nbsp;&nbsp;账户中心完善你的用户资料（地址、电话、联系人等），以便<br />
+                     &nbsp;&nbsp;&nbsp;&nbsp;后续
+                     的奖品发放，如无信息则视为放弃奖品；
+                    </li>
+                    <li>
+                     <img src="http://cca.mbaobao.com/mkts/201408/04/roll/st.png" width="18" height="18" />抽奖的现金券及礼品券可在得奖后在账号内查看；
+                     点击查看现<br />
+                     &nbsp;&nbsp;&nbsp;&nbsp;金券及礼品券>>
+                    </li>
+                    <li>
+                     <img src="http://cca.mbaobao.com/mkts/201408/04/roll/st.png" width="18" height="18" />麦包包外呼电话：0573-83925555或83969999，
+                     该活动解释<br />
+                     &nbsp;&nbsp;&nbsp;&nbsp;权归麦包包所有；
+                    </li>
+                    <li>
+                     <img src="http://cca.mbaobao.com/mkts/201408/04/roll/st.png" width="18" height="18" />活动日期：即日起至2014年8月30日。 
+                    </li>
+                  </ul>
+              </div>
+              <div class="m-body">
+                   <div class="disk" id="mdisk">
+                   </div>
+                   <div class="start" style="width:107px; height:202px;">
+                        <img src="http://cca.mbaobao.com/mkts/201408/04/roll/start.png" width="107" height="202" id="wPointer" /> 
+                   </div> 
+              </div>           
+         </div>     
+		 </div>
+	</div>
+</div>
+
+<!--01-->
+<div class="main" style="margin-top:7px;">
+    <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_04.jpg"  width="960" height="55" />
+    <ul class="dif-4 clearfix">
+		    <li>
+          <a href="http://www.mbaobao.com/item/1503002701" target="_blank">
+          <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_25.jpg" width="235" height="245" />
+          </a>
+       </li>
+        <li>
+          <a href="http://www.mbaobao.com/item/1503000401" target="_blank">
+          <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_26.jpg" width="235" height="245" />
+          </a>
+        </li>
+        <li>
+          <a href="http://www.mbaobao.com/item/1409011901" target="_blank">
+          <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_05.jpg" width="235" height="245" />
+          </a>
+        </li>
+        <li>
+          <a href="http://www.mbaobao.com/item/1504002503" target="_blank">
+          <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_06.jpg" width="235" height="245" />
+          </a>
+        </li>
+        <li>
+          <a href="http://www.mbaobao.com/item/1405001302" target="_blank">
+          <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_08.jpg" width="235" height="245" />
+          </a>
+        </li>
+        <li>
+          <a href="http://www.mbaobao.com/item/1407006707" target="_blank">
+          <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_09.jpg" width="235" height="245" />
+          </a>
+        </li>
+        <li>
+          <a href="http://www.mbaobao.com/item/1504030001" target="_blank">
+          <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_10.jpg" width="235" height="245" />
+          </a>
+        </li>
+        <li>
+          <a href="http://www.mbaobao.com/item/1503015501" target="_blank">
+          <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_07.jpg" width="235" height="245" />
+          </a>
+        </li>
+	</ul>
+    <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_11.jpg" width="960" height="125"  style="margin-top:7px;" />
+</div>	
+
+<!--02-->
+<div class="main" style="margin-top:7px;">
+    <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_12.jpg" width="960" height="56" />
+	  <ul class="dif-3 clearfix mbbBean" id="getCode">
+		    <li style="width:314px;height:126px; background:url(http://cca.mbaobao.com/mkts/201408/04/roll/maid_27.jpg) no-repeat top center;">
+            <div class="mbb-cash">
+                 <div class="spend">
+                     20麦豆兑换
+                 </div>
+                 <a href="javascript:void(0)" data-id="4340|21732">
+                     立即兑换
+                     <i></i>
+                 </a>
+            </div> 
+        </li>
+        <li style="width:314px;height:126px; background:url(http://cca.mbaobao.com/mkts/201408/04/roll/maid_15.jpg) no-repeat top center;">
+              <div class="mbb-cash">
+                 <div class="spend">
+                     50麦豆兑换
+                 </div>
+                 <a href="javascript:void(0)" data-id="4341|21733">
+                     立即兑换
+                     <i></i>
+                 </a>
+            </div> 
+        </li>
+        <li style="width:314px;height:126px; background:url(http://cca.mbaobao.com/mkts/201408/04/roll/maid_16.jpg) no-repeat top center;">
+             <div class="mbb-cash">
+                 <div class="spend">
+                     100麦豆兑换
+                 </div>
+                 <a href="javascript:void(0)" data-id="4342|21734">
+                     立即兑换
+                     <i></i>
+                 </a>
+            </div>  
+        </li>
+        <li style="width:314px;height:126px; background:url(http://cca.mbaobao.com/mkts/201408/04/roll/maid_18.jpg) no-repeat top center;">
+             <div class="mbb-cash">
+                 <div class="spend">
+                     150麦豆兑换
+                 </div>
+                 <a href="javascript:void(0)" data-id="4343|21735">
+                     立即兑换
+                     <i></i>
+                 </a>
+            </div>  
+        </li>
+        <li style="width:314px;height:126px; background:url(http://cca.mbaobao.com/mkts/201408/04/roll/maid_21.jpg) no-repeat top center;">
+             <div class="mbb-cash">
+                 <div class="spend">
+                     200麦豆兑换
+                 </div>
+                 <a href="javascript:void(0)" data-id="4344|21737">
+                     立即兑换
+                     <i></i>
+                 </a>
+            </div>  
+        </li>
+        <li style="width:314px;height:126px; background:url(http://cca.mbaobao.com/mkts/201408/04/roll/maid_22.jpg) no-repeat top center;">
+             <div class="mbb-cash">
+                 <div class="spend">
+                     500麦豆兑换
+                 </div>
+                 <a href="javascript:void(0)" data-id="4345|21738">
+                     立即兑换
+                     <i></i>
+                 </a>
+            </div> 
+        </li>
+	 </ul>
+</div>
+
+<!--03-->
+<div class="main" style="margin-top:7px;">
+    <img src="http://cca.mbaobao.com/mkts/201408/05/gai/de_01.jpg" width="960" height="56" />
+</div>	
+
+<!--04-->
+<div class="main" style="margin-top:7px; padding-bottom:50px;">
+    <img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_14.jpg" width="960" height="56" /> 
+     <ul class="dif-2 clearfix">
+        <li><a href="http://mkt.mbaobao.com/a-nvshen0730/" target="_blank"><img src="http://cca.mbaobao.com/mkts/201408/05/gai/de_02.jpg" width="477" height="213" /></a></li>
+        <li><a href="http://coach.mbaobao.com/?l_bi=poi_a_5_1_1" target="_blank"><img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_17.jpg" width="477" height="213" /></a></li>
+        <li><a href="http://mkt.mbaobao.com/a-bromen0710/?l_bi=poi_a_2_1_1" target="_blank"><img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_19.jpg" width="477" height="213" /></a></li>
+        <li><a href="http://mkt.mbaobao.com/a-sp20140710/?l_bi=poi_a_3_1_1" target="_blank"><img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_20.jpg" width="477" height="213" /></a></li>
+        <li><a href="http://mkt.mbaobao.com/a-hot0812/" target="_blank"><img src="http://cca.mbaobao.com/mkts/201408/05/gai/de_03.jpg" width="477" height="213" /></a></li>
+        <li><a href="http://mkt.mbaobao.com/a-chloden/" target="_blank"><img src="http://cca.mbaobao.com/mkts/201408/04/roll/maid_24.jpg" width="477" height="213" /></a></li>
+	</ul> 
+</div>
+
+
+<script id="page-template" type="text/x-handlebars-template">
+{{#each page_list}}
+{{#if banner}}
+ <div>{{banner}}</div>
+{{/if}}
+
+  {{#if sku}}
+  <div class="b-main">
+     <ul class="b-list">
+     {{#each sku}}
+
+            <li class="list_sku">
+              <div class="p-pic">
+                  <a href="http://www.mbaobao.com/item/{{skuid}}" target="_blank"><img src="http://cca.mbaobao.com/mkts/201402/10/ah/jbg.gif"  data-oxlazy="http://cca.mbaobao.com/mkts/brand/changenew/{{skuid}}.jpg" width="236" height="320" border="0" /></a>
+              </div>
+               <div class="p-info">
+                  <div class="p-title">
+                    <a href="http://www.mbaobao.com/item/{{skuid}}" target="_blank">{{fullname}}</a>
+                  </div>
+                   <div class="p-price">
+                       <span class="p-price">
+                              {{#if ispromotionprice}}
+                               <strong>优惠价：￥{{promotionprice}}</strong>
+                               <s>￥{{saleprice}}</s>
+                               {{else}}
+                                <strong>麦包价：￥{{salepric}}</strong>
+                               {{/if}}
+                       </span>
+                   </div>
+                   <div class="p-btn">
+                        <a  href="http://cart.mbaobao.com/add/{{skuid}}/1.html" rel="nofollow">
+                            <img src="http://cca.mbaobao.com/mkts/201301/11/newpic/btn_cart.gif" width="87" height="22" alt="">
+                          </a>
+                    </div>
+               </div>
+            </li>
+       
+       {{/each}}
+     </ul>
+     </div>
+    {{/if}}
+
+{{/each}}   
+</script>
+
+
+
+<script type="text/javascript">
+    seajs.use('mbb/pageTemplate/1.0.0/pageTemplate', function(P){
+        
+        P.build({
+            template:$("#page-template")
+        });    
+
+    })
+</script>
+
+<script type="text/javascript">
+  seajs.use("./mbbRotate.js")
+</script>
+
+</body>
+</html>
+	 	

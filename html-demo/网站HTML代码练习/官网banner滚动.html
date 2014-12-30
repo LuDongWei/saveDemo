@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link  href="css/reset.css"  rel="stylesheet" type="text/css" />
+<script src="seajs/sea-debug_2.1.1.js" ></script>
+<script src="seajs/config_2.1.js"></script>
+<style type="text/css">
+
+.home_banner{
+	height:420px;
+overflow:hidden;
+position:relative;
+ }
+.home_slider a{display:block;height:395px;width:100%;}
+.bx-prev{
+	position:absolute;
+	top:170px;
+	left:100px;
+	}
+.bx-next{
+	position:absolute;
+	top:170px;
+	right:100px;
+	}	
+.home_slider_pager{
+	position:absolute;
+	bottom:40px;
+	right:100px;
+	width:120px;
+	height:20px;
+	overflow:hidden;
+	}
+.home_slider_pager a{
+	text-decoration:none;
+	}	
+.pager-link{
+	display:inline-block;
+	*zoom:1;
+	width:20px;
+	height:20px;
+	background:#FFF;
+	margin-left:7px;
+	font-size:12px;
+	text-align:center;
+	line-height:20px;
+	border-radius:9px;
+	}	
+.pager-active {
+	background:#0F0;
+	}
+</style>
+</head>
+<body>
+<div class="home_banner">
+<ul id="home_slider" class="home_slider">
+<li><a href="#" style="background: url(img/1600-1.jpg)   no-repeat center top">121</a>121212</li>
+<li><a href="#" style="background: url(img/1600-2.jpg)   no-repeat center top"></a></li>
+<li><a href="#" style="background: url(img/1600-3.jpg)   no-repeat center top"></a></li>
+<li><a href="#" style="background: url(img/1600-4.jpg)   no-repeat center top"></a></li>
+</ul>
+<div class="home_slider_pager"></div>
+</div>
+
+<script type="text/javascript">
+seajs.use("./js/home_banner.js",function(){})
+</script>
+</body>
+</html>

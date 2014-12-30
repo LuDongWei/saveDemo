@@ -1,0 +1,88 @@
+CSS3选择器：伪类选择器  http://www.w3cplus.com/css3/pseudo-class-selector
+
+写法：
+1.E:pseudo-class{property:value}
+其中E为元素;pseudo-class为伪类名称;property是css的属性；value为css的属性值
+  示例
+  a:link{color:red;}
+  
+2.E.class:pseudo-class{property:value}
+  示例
+  a.selected:hover {color: blue;}
+
+
+一，动态伪类
+最常见的锚点伪类
+.demo a:link {color:gray;}/*链接没有被访问时前景色为灰色*/
+.demo a:visited{color:yellow;}/*链接被访问过后前景色为黄色*/
+.demo a:hover{color:green;}/*鼠标悬浮在链接上时前景色为绿色*/
+.demo a:active{color:blue;}/*鼠标点中激活链接那一下前景色为蓝色*/  
+（注意顺序：遵守LoVe/HAte--Link--visited--hover--active）
+
+行为伪类
+1 :hover   用于当用户把鼠标移动到元素上面是的效果；
+2 :action  用于用户点击元素那一下的效果
+3 :focus   用于元素成为焦点，这个经常用在表单元素上
+
+二，UI元素状态伪类
+"type=text"      有enable和disabled两种状态 可写状态和不可状态
+"type=radio"和   有checked和uncheked两种状态 选择和没选择
+"type=checkbox"
+
+三，CSS3的:nth选择器（CSS3结构类）
+1 :fist-child选择某个元素的第一个子元素；
+.demo li:first-child {background: green; border: 1px dotted blue;}
+
+2 :last-child选择某个元素的最后一个子元素；
+.demo li:last-child {background: green; border: 2px dotted blue;}
+
+3 :nth-child()选择某个元素的一个或多个特定的子元素；
+:nth-child(length);/*参数是具体数字*/
+:nth-child(n);/*参数是n,n从0开始计算*/             //会选择所有        
+:nth-child(n*length)/*n的倍数选择，n从0开始算*/    //(2n)选择2的倍数  
+:nth-child(n+length);/*选择大于length后面的元素*/
+:nth-child(-n+length)/*选择小于length前面的元素*/
+:nth-child(n*length+1);/*表示隔几选一*/
+//上面length为整数
+
+4:nth-last-child()选择某个元素的一个或多个特定的子元素，从这个元素的最后一个子元素开始算；
+  同上
+  
+5:nth-of-type()选择指定的元素；
+6:nth-last-of-type()选择指定的元素，从元素的最后一个开始计算；
+
+7:first-of-type选择一个上级元素下的第一个同类子元素；
+8:last-of-type选择一个上级元素的最后一个同类子元素；
+
+9:only-child选择的元素是它的父元素的唯一一个了元素；
+10:only-of-type选择一个元素是它的上级元素的唯一一个相同类型的子元素；
+
+11:empty选择的元素里面没有任何内容。
+
+四,否定选择器（:not）
+input:not([type="submit"]) {border: 1px solid red;}
+form中所有input加边框，但又不想submit也起变化
+
+五，伪元素
+CSS中的伪元素大家以前看过：:first-line,:first-letter,:before,:after;那么在CSS3中，他对伪元素进行了一定的调整，在以前的基础上增加了一个“：”也就是现在变成了“::first-letter,::first-line,::before,::after”另外他还增加了一个“::selection”,两个“：：”和一个“：”css3中主要用来区分伪类和伪元素，到目前来说，这两种方式都是被接受的，也就是说不管使用哪种写法所起的作用都是一样的，只是一个书写格式不同而以。
+::first-line选择元素的第一行，比如说改变每个段落的第一行文本的样式，我们就可以使用这个
+	p::first-line {font-weight:bold;}.....
+	
+::before和::after这两个主要用来给元素的前面或后面插入内容，这两个常用"content"配合使用，见过最多的就是清除浮动，
+	.clearfix:before,
+	.clearfix:after {
+		 content: ".";
+		 display: block;
+		 height: 0;
+		 visibility: hidden;
+	  }
+	 .clearfix:after {clear: both;}
+	 .clearfix {zoom: 1;}
+
+
+
+
+
+
+
+

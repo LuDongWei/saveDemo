@@ -1,0 +1,722 @@
+HTML5应用开发：JavaScript语义模板库handlebars教程
+
+(原文地址：http://software.intel.com/es-es/node/256388)
+
+
+
+Enviado por Dawei Cheng 程大伟... el Jue, 05/07/2012 - 19:18
+
+
+Categorías: Procesadores Intel® Atom™  Movilidad  HTML5  JavaScript*  Windows*  Desarrolladores  Desarrolladores para Intel AppUp®
+
+Etiquetas: web开发  Handlebars  JavaScript template
+前言
+
+Web应用开发正在处于一个快速发展的时期，随着HTML5规范的落实和普及，相信会有越来越多的优秀的web应用呈现出来。JavaScript是web应用开发中是非常重要的语言，该语言有很多流行的库供大家使用。本期给大家介绍语义模板库Handlebars的使用方法。
+
+本文示例代码已经全部上传GitHub：https://github.com/DaweiCheng/handlebarstutor 也欢迎大家积极贡献更多示例代码。
+
+目录
+
+1. Handlebars介绍
+
+2. 安装和使用
+
+3. 使用expressions
+
+4. 使用helpers
+
+5. partials
+
+1. Handlebars介绍
+
+Handlebars是JavaScript一个语义模板库，通过对view和data的分离来快速构建Web模板。它采用"Logic-less template"（无逻辑模版）的思路，在加载时被预编译，而不是到了客户端执行到代码时再去编译，这样可以保证模板加载和运行的速度。Handlebars兼容Mustache，你可以在Handlebars中导入Mustache模板。
+
+2. 安装和使用
+
+Handlebars的安装非常简单，你只需要从Github下载最新版本，你也可访问下面网址获取最新信息：http://handlebarsjs.com/。 目前handlebars.js已经被许多项目广泛使用了，handlebars是一个纯JS库，因此你可以像使用其他JS脚本一样用script标签来包含handlebars.js：
+
+ 
+
+1
+<script type="text/javascript" src="script/handlebars-1.0.0.beta.6.js"></script>
+ 
+
+3. 使用expressions
+
+Handlebars expressions是handlebars模板中最基本的单元，使用方法是加两个花括号{{value}}, handlebars模板会自动匹配相应的数值，对象甚至是函数。
+
+基本expressions使用方法：
+
+在HTML网页中，添加需要使用模板的地方（目前Handlebars仅支持id操作）：
+
+ 
+
+1
+<div id="list">
+2
+</div>
+01
+<script id="people-template" type="text/x-handlebars-template">
+02
+  {{#people}}
+03
+    <div class="person">
+04
+      <h2>{{first_name}} {{last_name}}</h2>
+05
+      <div class="phone">{{phone}}</div>
+06
+      <div class="email"><a href="mailto:{{email}}">{{email}}</a></div>
+07
+      <div class="since">User since {{member_since}}</div>
+08
+    </div>
+09
+  {{/people}}
+10
+</script>
+
+
+在JavaScript文件中添加预编译函数和数据：
+
+ 
+
+01
+$(document).ready(function() {
+02
+   
+03
+  // compile our template
+04
+  var template = Handlebars.compile($("#people-template").html());
+05
+   
+06
+  var data = {
+07
+    people: [
+08
+      { first_name: "Alan", last_name: "Johnson", phone: "1234567890", email: "alan@test.com", member_since: "Mar 25, 2011" },
+09
+      { first_name: "Allison", last_name: "House", phone: "0987654321", email: "allison@test.com", member_since: "Jan 13, 2011" },
+10
+      { first_name: "Nick", last_name: "Pettit", phone: "9836592272", email: "nick@test.com", member_since: "Apr 9, 2009" },
+11
+      { first_name: "Jim", last_name: "Hoskins", phone: "7284927150", email: "jim@test.com", member_since: "May 21, 2010" },
+12
+      { first_name: "Ryan", last_name: "Carson", phone: "8263729224", email: "ryan@test.com", member_since: "Nov 1, 2008" }
+13
+    ]
+14
+  };
+15
+   
+16
+  $('#list').html(template(data));
+17
+});
+ 
+
+完整的demo代码：
+
+ 
+
+01
+<!DOCTYPE html>
+02
+<html>
+03
+  <head>
+04
+    <title>Handlebars Expressions Example</title>
+05
+  </head>
+06
+  <body>
+07
+    <h1>Handlebars Expressions Example!</h1>
+08
+<!--this is a list which will rendered by handlebars template.    --> 
+09
+    <div id="list">
+10
+    </div>
+11
+     
+12
+    <script type="text/javascript" src="script/jquery.js"></script>
+13
+    <script type="text/javascript" src="script/handlebars-1.0.0.beta.6.js"></script>
+14
+     
+15
+    <script id="people-template" type="text/x-handlebars-template">
+16
+      {{#people}}
+17
+        <div class="person">
+18
+          <h2>{{first_name}} {{last_name}}</h2>
+19
+          <div class="phone">{{phone}}</div>
+20
+          <div class="email"><a href="mailto:{{email}}">{{email}}</a></div>
+21
+          <div class="since">User since {{member_since}}</div>
+22
+        </div>
+23
+      {{/people}}
+24
+    </script>
+25
+     
+26
+    <script type="text/javascript">
+27
+      $(document).ready(function() {
+28
+         
+29
+        // compile our template
+30
+        var template = Handlebars.compile($("#people-template").html());
+31
+         
+32
+        var data = {
+33
+          people: [
+34
+            { first_name: "Alan", last_name: "Johnson", phone: "1234567890", email: "alan@test.com", member_since: "Mar 25, 2011" },
+35
+            { first_name: "Allison", last_name: "House", phone: "0987654321", email: "allison@test.com", member_since: "Jan 13, 2011" },
+36
+            { first_name: "Nick", last_name: "Pettit", phone: "9836592272", email: "nick@test.com", member_since: "Apr 9, 2009" },
+37
+            { first_name: "Jim", last_name: "Hoskins", phone: "7284927150", email: "jim@test.com", member_since: "May 21, 2010" },
+38
+            { first_name: "Ryan", last_name: "Carson", phone: "8263729224", email: "ryan@test.com", member_since: "Nov 1, 2008" }
+39
+          ]
+40
+        };
+41
+         
+42
+        $('#list').html(template(data));
+43
+      });
+44
+    </script>
+45
+  </body>
+46
+</html>
+Block expressions使用方法
+
+使用Block expressions可以改变js的上下文来调用／渲染模板。
+
+例如，我们使用helper创建一个HTML list
+
+ 
+
+1
+<script id="people-template" type="text/x-handlebars-template">
+2
+    {{#list people}}
+3
+        {{first_name}} {{last_name}}  {{phone}} {{email}} {{member_since}}
+4
+    {{/list}}
+5
+</script>
+JavaScript文件中数据如下：
+
+         var template = Handlebars.compile($("#people-template").html());
+        Handlebars.registerHelper('list', function (items, options) {
+            var out = "<div>";
+            for (var i = 0, l = items.length; i < l; i++) {
+                out = out + "<div>" + options.fn(items[i]) + "</div>";
+            }
+            return out + "</div>";
+        });
+
+添加一个名叫list的helper，funcitons(items, options)传入两个参数, data中的people作为第一个参数传入，options作为第二个参数传入，options附带属性fn，使用fn可以调用该模块的内容。
+
+ 
+
+完整的demo代码：
+
+ 
+
+01
+<!DOCTYPE html>
+02
+<html>
+03
+  <head>
+04
+    <title>Handlebars Block Expressions Example</title>
+05
+  </head>
+06
+  <body>
+07
+    <h1>Handlebars Expressions Example!</h1>
+08
+<!--this is a list which will rendered by handlebars template.    --> 
+09
+    <div id="list">
+10
+    </div>
+11
+     
+12
+    <script type="text/javascript" src="script/jquery.js"></script>
+13
+    <script type="text/javascript" src="script/handlebars-1.0.0.beta.6.js"></script>
+14
+     
+15
+    <script id="people-template" type="text/x-handlebars-template">
+16
+        {{#list people}}
+17
+            {{first_name}} {{last_name}}  {{phone}} {{email}} {{member_since}}
+18
+        {{/list}}
+19
+    </script>
+20
+     
+21
+    <script type="text/javascript">
+22
+      $(document).ready(function() {
+23
+         
+24
+        // compile our template
+25
+        var template = Handlebars.compile($("#people-template").html());
+26
+ 
+27
+        Handlebars.registerHelper('list', function (items, options) {
+28
+            var out = "<div>";
+29
+ 
+30
+            for (var i = 0, l = items.length; i < l; i++) {
+31
+                out = out + "<div>" + options.fn(items[i]) + "</div>";
+32
+            }
+33
+ 
+34
+            return out + "</div>";
+35
+        });
+36
+ 
+37
+        var data = {
+38
+          people: [
+39
+            { first_name: "Alan", last_name: "Johnson", phone: "1234567890", email: "alan@test.com", member_since: "Mar 25, 2011" },
+40
+            { first_name: "Allison", last_name: "House", phone: "0987654321", email: "allison@test.com", member_since: "Jan 13, 2011" },
+41
+            { first_name: "Nick", last_name: "Pettit", phone: "9836592272", email: "nick@test.com", member_since: "Apr 9, 2009" },
+42
+            { first_name: "Jim", last_name: "Hoskins", phone: "7284927150", email: "jim@test.com", member_since: "May 21, 2010" },
+43
+            { first_name: "Ryan", last_name: "Carson", phone: "8263729224", email: "ryan@test.com", member_since: "Nov 1, 2008" }
+44
+          ]
+45
+        };
+46
+         
+47
+        $('#list').html(template(data));
+48
+      });
+49
+    </script>
+50
+  </body>
+51
+</html>
+With Expressions 使用方法
+
+一般情况下，Handlebars模板会在编译的阶段的时候进行context传递和赋值。使用with的方法，我们可以将context转移到数据的一个section里面（如果你的数据包含section）。这个方法在操作复杂的template时候非常有用。直接看完整的demo代码：
+
+ 
+
+01
+<!DOCTYPE html>
+02
+<html>
+03
+  <head>
+04
+    <title>Handlebars Block "with" Expressions Example</title>
+05
+  </head>
+06
+  <body>
+07
+    <h1>Handlebars Expressions Example!</h1>
+08
+<!--this is a list which will rendered by handlebars template.    --> 
+09
+    <div id="list">
+10
+    </div>
+11
+     
+12
+    <script type="text/javascript" src="script/jquery.js"></script>
+13
+    <script type="text/javascript" src="script/handlebars-1.0.0.beta.6.js"></script>
+14
+     
+15
+    <script id="people-template" type="text/x-handlebars-template">
+16
+      {{#people}}
+17
+        <div class="person">
+18
+          <p>{{title}}
+19
+          {{#with author}}
+20
+              By {{first_name}} {{last_name}}</p>
+21
+          {{/with}}
+22
+        </div>
+23
+      {{/people}}
+24
+    </script>
+25
+     
+26
+    <script type="text/javascript">
+27
+      $(document).ready(function() {
+28
+         
+29
+        // compile our template
+30
+        var template = Handlebars.compile($("#people-template").html());
+31
+ 
+32
+        var data = {
+33
+          people: [
+34
+            { title: "first people: ", author: {first_name: "Alan", last_name: "Johnson"},  },
+35
+            { title: "second people: ", author: {first_name: "Jack", last_name: "een"},  },
+36
+            { title: "third people: ", author: {first_name: "Tom", last_name: "Peter"},  },
+37
+            { title: "fourth people: ", author: {first_name: "Asn", last_name: "Smith"},  },
+38
+          ]
+39
+        };
+40
+         
+41
+        $('#list').html(template(data));
+42
+      });
+43
+    </script>
+44
+  </body>
+45
+</html>
+ 
+
+4. 使用Helpers
+
+使用Helpers用户可以操作handlebars模板中的数据，添加相应的逻辑等等。
+
+用户自定义Helpers
+
+如本例中，添加formatPhoneNumber helpers，来对电话号码进行格式统一化。
+
+Template中代码如下：
+
+ 
+
+1
+{{#people}}
+2
+<div class="person">
+3
+  <h2>{{first_name}} {{last_name}}</h2>
+4
+  <div class="phone">{{formatPhoneNumber phone}}</div>
+5
+  <div class="email"><a href="mailto:{{email}}">{{email}}</a></div>
+6
+  <div class="since">User since {{member_since}}</div>
+7
+</div>
+8
+{{/people}}
+JavaScript中，需要使用Handlebars.registerHelper来注册helpers，代码：
+
+ 
+
+1
+// add the formatPhoneNumber helper
+2
+Handlebars.registerHelper("formatPhoneNumber", function(phoneNumber) {
+3
+  phoneNumber = phoneNumber.toString();
+4
+  return "(" + phoneNumber.substr(0,3) + ") " + phoneNumber.substr(3,3) + "-" + phoneNumber.substr(6,4);
+5
+});
+完整demo代码：
+
+ 
+
+01
+<!DOCTYPE html>
+02
+<html>
+03
+  <head>
+04
+    <title>Handlebars Helpers Example</title>
+05
+  </head>
+06
+  <body>
+07
+    <h1>Handlebars Helpers Example!</h1>
+08
+     
+09
+    <div id="list">
+10
+    </div>
+11
+     
+12
+    <script type="text/javascript" src="script/jquery.js"></script>
+13
+    <script type="text/javascript" src="script/handlebars-1.0.0.beta.6.js"></script>
+14
+     
+15
+    <script id="people-template" type="text/x-handlebars-template">
+16
+      {{#people}}
+17
+      <div class="person">
+18
+        <h2>{{first_name}} {{last_name}}</h2>
+19
+        <div class="phone">{{formatPhoneNumber phone}}</div>
+20
+        <div class="email"><a href="mailto:{{email}}">{{email}}</a></div>
+21
+        <div class="since">User since {{member_since}}</div>
+22
+      </div>
+23
+      {{/people}}
+24
+    </script>
+25
+     
+26
+    <script type="text/javascript">
+27
+      $(document).ready(function() {
+28
+         
+29
+        // compile our template
+30
+        var template = Handlebars.compile($("#people-template").html());
+31
+         
+32
+        // add the formatPhoneNumber helper
+33
+        Handlebars.registerHelper("formatPhoneNumber", function(phoneNumber) {
+34
+          phoneNumber = phoneNumber.toString();
+35
+          return "(" + phoneNumber.substr(0,3) + ") " + phoneNumber.substr(3,3) + "-" + phoneNumber.substr(6,4);
+36
+        });
+37
+         
+38
+        var data = {
+39
+          people: [
+40
+            { first_name: "Alan", last_name: "Johnson", phone: "1234567890", email: "alan@test.com", member_since: "Mar 25, 2011" },
+41
+            { first_name: "Allison", last_name: "House", phone: "0987654321", email: "allison@test.com", member_since: "Jan 13, 2011" },
+42
+            { first_name: "Nick", last_name: "Pettit", phone: "9836592272", email: "nick@test.com", member_since: "Apr 9, 2009" },
+43
+            { first_name: "Jim", last_name: "Hoskins", phone: "7284927150", email: "jim@test.com", member_since: "May 21, 2010" },
+44
+            { first_name: "Ryan", last_name: "Carson", phone: "8263729224", email: "ryan@test.com", member_since: "Nov 1, 2008" }
+45
+          ]
+46
+        };
+47
+         
+48
+        $('#list').html(template(data));
+49
+      });
+50
+    </script>
+51
+  </body>
+52
+</html>
+If helpers用法
+
+if helpers使用方法很简单，只需要在template中添加{{if}}, 如果有else，也一样，添加{{else}}。Template中代码如下：
+
+ 
+
+01
+{{#people}}
+02
+  <div class="person">
+03
+    <p>{{title}}
+04
+    {{#if author}}
+05
+       {{author.first_name}} {{author.last_name}}</p>
+06
+    {{else}}
+07
+       Unknown Author</p>
+08
+    {{/if}}
+09
+  </div>
+10
+{{/people}}
+ 
+
+Each helpers 用法
+
+使用each方法，可以在template中添加{{this}}, 用each来遍历在data中是所有数据。Template中代码如下：
+
+ 
+
+1
+{{#each people}}
+2
+  <div class="person">
+3
+      {{this}}
+4
+  </div>
+5
+{{/each}}
+  
+
+5. 使用partials
+
+当你想要复用模板的一部分，或者将长模板分割成为多个模板方便维护时，partials就派上用场了。直接看代码比较直接，母模板定义如下：其中用>partials 来包含相应的子模板。
+
+1
+<script id="people-template" type="text/x-handlebars-template">
+2
+  {{#each people}}
+3
+    {{> person}}
+4
+  {{/each}}
+5
+</script>
+子模板代码：
+
+ 
+
+1
+<script id="person-partial" type="text/x-handlebars-template">
+2
+  <div class="person">
+3
+    <h2>{{first_name}} {{last_name}}</h2>
+4
+    <div class="phone">{{phone}}</div>
+5
+    <div class="email"><a href="mailto:{{email}}">{{email}}</a></div>
+6
+    <div class="since">User since {{member_since}}</div>
+7
+  </div>
+8
+</script>
+JavaScript中需要用Handlebars.registerPartial对子模板进行注册，代码如下：
+
+ 
+
+01
+// compile our template
+02
+var template = Handlebars.compile($("#people-template").html());
+03
+ 
+04
+// add the person partial
+05
+Handlebars.registerPartial("person", $("#person-partial").html());
+06
+ 
+07
+var data = {
+08
+  people: [
+09
+    { first_name: "Alan", last_name: "Johnson", phone: "1234567890", email: "alan@test.com", member_since: "Mar 25, 2011" },
+10
+    { first_name: "Allison", last_name: "House", phone: "0987654321", email: "allison@test.com", member_since: "Jan 13, 2011" },
+11
+    { first_name: "Nick", last_name: "Pettit", phone: "9836592272", email: "nick@test.com", member_since: "Apr 9, 2009" },
+12
+    { first_name: "Jim", last_name: "Hoskins", phone: "7284927150", email: "jim@test.com", member_since: "May 21, 2010" },
+13
+    { first_name: "Ryan", last_name: "Carson", phone: "8263729224", email: "ryan@test.com", member_since: "Nov 1, 2008" }
+14
+  ]
+15
+};
+16
+ 
+17
+$('#list').html(template(data));
+所有demo代码下载地址： https://github.com/DaweiCheng/handlebarstutor 

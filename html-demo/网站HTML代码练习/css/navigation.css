@@ -1,0 +1,79 @@
+
+a:hover{ text-decoration:none;}
+.head{width:100%;height:130px;}
+/*▼ 导航条*/
+.navigation{width:100%; height:35px;position:relative;}
+.navigation_shadow{ position:absolute;height:3px; bottom:-3px; width:100%; background:url(../img/guanwang/shadow-x.png) repeat-x;z-index:3;*z-index:-1;}
+.main{width:960px;margin:0 auto; height:35px;}	
+.menu{width:100%;height:35px;background:#ed1e23;}
+.m_goods{position:relative;width:194px;float:left; height:35px}
+.m_goods a.tit, .m_member a,.m_channel li a{color:#FFF;text-align:center;line-height:36px;font-size:15px;font-family:'微软雅黑';font-weight:700;}
+.m_goods a.tit{width:194px;height:35px;background:#b30004; display:block;}			
+.m_channel{width:350px;height:35px;float:left;}
+.m_channel ul{font-size:0px;}	
+.m_channel li{display:inline-block;*zoom:1;*display:inline}
+.m_channel li a{display:block;width:66px;text-align:center;line-height:34px;background:url(../img/guanwang/guanwang.png) no-repeat -13px -212px; }
+.m_channel .m_show a{ background:#ed1e23}
+.m_xuan a:hover{width:66px;background:#9b0005; margin:0 0 0 -1px; padding-left:1px; line-height:35px;}	
+.m_channel .m_home a{display:block;height:33px;background:#FFF;color:#ed1e23;border-top:1px solid #ed1e23;border-buttom:1px solid #ed1e23;}
+.m_member{float:right;width:131px;margin-left:200px;}
+.m_member a{display:block;width:131px;height:35px;background:url(../img/guanwang/guanwang.png) no-repeat -110px -210px;padding-left:20px;}
+.m_member a:hover{background:url(../img/guanwang/guanwang.png) no-repeat -110px -245px;}
+/*▲ 导航条*/
+/*▼ 悬浮导航*/
+.m_goods_navigation{position:absolute;width:194px;height:395px;background:#FFF;top:35px;z-index:2; }
+.nav_bags{height:85px; position:relative;}
+.nav_bags .nav_min{ width:165px;border-bottom:1px solid #cccccc; margin:0 auto; height:85px;}
+.nav_bags dt{ padding-top:5px; height:30px;}
+.nav_bags dt a,.nav_btn a{ color:#333333; font-size:15px; font-weight:600;font-family:'微软雅黑';height:30px;line-height:30px; margin-left:4px;}
+.nav_bags dt i,.nav_btn i{ width:15px; height:30px; float:left;}
+.nav_bags dt i.more,.nav_btn i.more{background:url(../img/guanwang/guanwang.png) no-repeat -49px 2px;  float:right; }
+.nav_btn i.more{ margin-right:17px;}
+.nav_woman_bags dt i{ background:url(../img/guanwang/guanwang.png) no-repeat -528px 7px; }
+.nav_man_bags dt i{ background:url(../img/guanwang/guanwang.png) no-repeat -543px 7px; }
+.nav_box_bags dt i{ background:url(../img/guanwang/guanwang.png) no-repeat -557px 7px; }
+.nev_new{ height:37px;padding-left:14px; padding-top:10px;}
+.nev_new dt i.more{ margin-right:16px;}
+.nev_new i{ background:url(../img/guanwang/guanwang.png) no-repeat -571px 7px;}
+.nev_group i{ background:url(../img/guanwang/guanwang.png) no-repeat -599px 7px;}
+.nev_allbags i{ background: url(../img/guanwang/guanwang.png) no-repeat -614px 10px;}
+.nav_bags dd a{ font-size:12px; color:#666666; line-height:20px;}
+.nav_bags dd a:hover{color:#ff0000;}
+.nav_bags dd a.red{ color:#ff0000;}
+.nav_bags dd a.left{ margin-left:14px;}
+.nav_btn{ height:46px; border-bottom:1px solid #cccccc;}
+.nev_allbags{ height:45px;}
+.nav_btn dt{ padding-left:14px; padding-top:10px;}
+.nav_btn a span{ font-size:12px;color:#666666; font-weight:normal; margin-left:10px;}
+.nev_new a span{ font-size:12px;color:#666666; font-weight:normal; margin-left:10px;}
+.nav_btn a.red{ color:#F00;}
+.m_goods_navigation_shadow{height:395px; right:-3px; width:3px;*z-index:-1; position:absolute; background:url(../img/guanwang/shadow-y.png) repeat-y;}
+/*▲ 悬浮导航*/
+/*▼ 隐藏的悬浮*/
+.nav_woman_bags_xm,.nav_man_bags_xm,.nav_box_bags_xm,.nav_new_xm{position:absolute;width:760px;background:#FFF;border:2px solid #ca3537;left:200px;top:3px;}
+.nav_man_bags_xm{  top:-80px;}
+.nav_new_xm{top:-20px;}
+.nav_woman_bags_xm_left dl{ width:505px; margin-left:10px; border-bottom:1px solid #CCC;display:inline-block; }	
+.nav_woman_bags_xm_left dt{ float:left; width:77px;}
+.nav_woman_bags_xm_left dd{ float:left; width:420px; }	
+.nav_woman_bags_xm_left dt a{ color:#4f4f4f; font-size:12px; line-height:26px; float:right;}
+.nav_woman_bags_xm_left li{ display:inline-block;*zoom:1;*display:inline;}
+.nav_woman_bags_xm_left li a{ height:34px; line-height:34px; margin-left:5px;}			
+.nav_woman_bags_xm_left{ width:526px; height:100%; float:left}	
+.nav_woman_bags_xm_right{ width:234px;; height:100%; background:#f8f8f8; float:left;}
+.nav_woman_bags_xm_right dt a{ color:#F00; font-weight:500;}
+.nav_woman_bags_xm_right .activity ul{ margin-left:20px;}
+.nav_woman_bags_xm_right .activity li{ list-style:square;}
+.nav_woman_bags_xm_right .recommend ul{ width:219px;overflow:hidden;*zoom:1;background-color:#dedede; border-bottom:1px #dedede solid; }
+.nav_woman_bags_xm_right .recommend li{ display:inline-table; float:left;}
+.nav_woman_bags_xm_right .recommend li a{display:block; width:106px; height:54px; overflow:hidden; padding:1px;border-left:1px #dedede solid;border-top:1px #dedede solid; background:#FFF; text-align:center;}
+.nav_woman_bags_xm_right .recommend li a:hover{ border-color:#999; position:relative; z-index:1;padding: 1px 0 0 1px; border-right:1px #999 solid; border-bottom:1px #999 solid; color:#000}
+.nav_woman_bags_xm_lian,.nav_man_bags_xm_lian,.nav_box_bags_xm_lian,.nav_new_lian{position:absolute; height:80px; width:10px; border-bottom:2px solid #ca3537; border-top:2px solid #ca3537; border-right:1px solid #cccccc;	left:191px; top:3px; background:#FFF; z-index:4; overflow:hidden;}
+.nav_new_lian{ height:46px;}
+.nav_woman_bags_xm_hell,.nav_man_bags_xm_hell,.nav_box_bags_xm_hell,.nav_new_hell{position:absolute; height:80px; width:184px; border-bottom:2px solid #ca3537; border-top:2px solid #ca3537; 
+left:0px; top:3px; z-index:4; overflow:hidden; border-left:8px solid #ca3537;}
+.nav_new_hell{ height:46px;}
+.nav_over_here{ display:none;}
+/*▲ 隐藏的悬浮*/
+.banner{width:100%;height:395px;background:#9FF;}
+

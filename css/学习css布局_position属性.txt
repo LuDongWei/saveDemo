@@ -1,0 +1,64 @@
+     position属性
+  	 
+.static {
+position: static;
+}
+ 默认值。任意position:static;的元素不会被特殊定位。
+ 
+.relative1 {
+position: relative;
+}
+.relative2 {
+position: relative;
+top: -20px;
+left: 20px;
+background-color: white;
+width: 500px;
+}
+1.relative表现的和static一样，除非你添加了一些额外的属性。
+2.在一个相对定位（position属性的值为relative）的元素上设置top，right，bottom和left
+  属性会使其偏离其正常位置。其他的元素则不会调整位置来弥补它偏离后剩下的空隙。
+  
+.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background-color: white;
+}  
+一个固定定位元素会相对于视窗来定位，这意味着即使页面滚动，
+它还是会停留在相同的位置。
+在移动游览器对fixed的支持很差。
+
+.relative {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+.absolute {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+}
+absolute与fixed的表现类似，除了它不是相对于视窗而是相对于最近的“positioned”祖先元素。
+如果绝对定位（position属性的值为absolute）的元素没有”position“祖先元素，那么它是相对于文档的body元素，
+并且它会随着页面滚动而移动。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

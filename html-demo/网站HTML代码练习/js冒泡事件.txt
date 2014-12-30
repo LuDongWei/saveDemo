@@ -1,0 +1,88 @@
+http://lengend.iteye.com/blog/1013372
+http://blog.sina.com.cn/s/blog_a322154901015qkk.html
+
+JavaSciprt事件中有两个很重要的特性：事件冒泡以及目标元素。
+
+事件冒泡: 当一个元素上的事件被触发的时候，比如说鼠标点击了一个按钮，同样的事件将会在那个元素的所有祖先元素中被触发。这 一过程被称为事件冒泡；这个事件从原始元素开始一直冒泡到DOM树的最上层。
+
+目标元素: 任何一个事件的目标元素都是最开始的那个元素，在我们的这个例子中也就是按钮，并且它在我们的元素对象中以属性的形 式出现。使用事件代理的话我们可以把事件处理器添加到一个元素上，等待一个事件从它的子级元素里冒泡上来，并且可以很方便地得知这个事件是从哪个元素开始 的。
+
+如何来阻止?
+ 
+1.event.stopPropagation(); 
+ <script type="text/javascript">
+
+        $(function() {
+        $("#hr_three").click(function(event) {
+                event.stopPropagation();
+            });
+        });
+       
+
+<script>
+再点击“点击我”，会弹出：我是最里层，然后链接到百度
+ 
+ 
+ 2.return false;
+如果头部加入的是以下代码
+<script type="text/javascript">
+
+$(function() {
+$("#hr_three").click(function(event) {
+return false;
+});
+});
+
+<script>
+再点击“点击我”，会弹出：我是最里层，但不会执行链接到百度页面
+ 
+由此可以看出：
+1.event.stopPropagation(); 
+   事件处理过程中，阻止了事件冒泡，但不会阻击默认行为（它就执行了超链接的跳转）
+ 
+ 
+2.return false;
+   事件处理过程中，阻止了事件冒泡，也阻止了默认行为（比如刚才它就没有执行超链接的跳转）
+ 
+ 
+还有一种有冒泡有关的：
+3.event.preventDefault(); 
+   如果把它放在头部A标签的click事件中，点击“点击我”。
+   会发现它依次弹出：我是最里层---->我是中间层---->我是最外层，但最后却没有跳转到百度
+ 
+    它的作用是：事件处理过程中，不阻击事件冒泡，但阻击默认行为（它只执行所有弹框，却没有执行超链接跳转）
+
+
+
+通过一个小例子来解释
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default5.aspx.cs" Inherits="Default5"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>Porschev---Jquery 事件冒泡</title>
+
+<script src="jquery-1.3.2-vsdoc.js" type="text/javascript"></script>
+
+</head>
+<body>
+<form id="form1" runat="server">
+<div id="divOne" onclick="alert('我是最外层');">
+<div id="divTwo" onclick="alert('我是中间层！')">
+<a id="hr_three" href="http://www.baidu.com" mce_href="http://www.baidu.com" onclick="alert('我是最里层！')">点击我</a>
+</div>
+</div>
+</form>
+</body>
+</html> 
+比如上面这个页面，
+分为三层：divOne是第外层，divTwo中间层，hr_three是最里层;
+他们都有各自的click事件，最里层a标签还有href属性。
+ 
+运行页面，点击“点击我”,会依次弹出：我是最里层---->我是中间层---->我是最外层
+---->然后再链接到百度.
+ 
+这就是事件冒泡，本来我只点击ID为hr_three的标签，但是确执行了三个alert操作。
+事件冒泡过程（以标签ID表示）：hr_three----> divTwo----> divOne 。从最里层冒泡到最外层。
+

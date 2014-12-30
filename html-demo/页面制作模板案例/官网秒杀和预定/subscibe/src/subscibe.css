@@ -1,0 +1,120 @@
+.sb-content {
+	width: 430px;
+	height: 173px;
+	background-color: #fdd131;
+}
+.sb-content .sb-head {
+	width: 430px;
+	height: 40px;
+	overflow: hidden;
+}
+.sb-head .sb-name {
+	width: 358px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: bolder;
+	text-align: left;
+	padding-left: 12px;
+	float: left;
+	font-family: '微软雅黑';
+	color: #40316a;
+}
+.sb-head .sb-close {
+	width: 60px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+}
+.sb-close .cl-i {
+	display: block;
+	width: 28px;
+	height: 28px;
+	border-radius: 14px;
+	margin-left: 16px;
+	margin-top: 6px;
+	font-style: normal;
+	text-align: center;
+	cursor: pointer;
+	line-height: 28px;
+	font-family: '微软雅黑';
+	background-color: #40316a;
+	color: #ffffff;
+}
+.sb-content .sb-content {
+	width: 428px;
+	height: 132px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	position: relative;
+}
+.sb-content .sb-main {
+	position: absolute;
+	top: 45px;
+	left: 55px;
+	height: 40px;
+	width: 318px;
+	overflow: hidden;
+}
+.sb-main .m-text {
+	width: 178px;
+	height: 40px;
+	float: left;
+	position: relative;
+}
+.sb-main .m-submit {
+	width: 125px;
+	height: 40px;
+	margin-left: 10px;
+	float: left;
+}
+.sb-main .in-1 {
+	width: 164px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 18px;
+	text-align: left;
+	padding: 7px 6px 7px 6px;
+	border: 1px solid #b4b4b4;
+	position: absolute;
+	font-family: '微软雅黑';
+	top: 0px;
+	left: 0px;
+	z-index: 998;
+}
+.sb-main .in-2 {
+	width: 125px;
+	height: 40px;
+	font-size: 18px;
+	font-weight: bolder;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	font-family: '微软雅黑';
+	background-color: #40316a;
+	color: #fdd131;
+}
+.sb-main .in-2:hover {
+	filter: alpha(opacity=90);
+	opacity: 0.9;
+}
+.sb-main .m-text .default {
+	color: #bfbfbf;
+}
+.sb-main .m-text .warn {
+	color: #e63d3d;
+}
+.m-text .sb-hint {
+	position: absolute;
+	height: 24px;
+	line-height: 24px;
+	font-family: '微软雅黑';
+	font-size: 16px;
+	top: 7px;
+	left: 9px;
+	z-index: 999;
+}
+.simplemodal-overlay {
+	background-color: #000000;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "seckill",
+  "title": "seckill plug-in",
+  "description": "seckill time limit",
+  "version": "1.0.0",
+  "author": {
+    "name": "douban"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-mbb-build": "~0.1.11",
+    "grunt-ftp-deploy": "*",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-contrib-csslint": "~0.1.1",
+    "grunt-text-replace": "~0.3.2"
+  },
+  "family": "mbb",
+  "spm": {
+    "alias": {
+      "jquery":"jquery",
+      "gallery/handlebars/1.0.0/handlebars":"gallery/handlebars/1.0.0/handlebars"
+    },
+    "output": ["seckilling.js"]
+  }
+}

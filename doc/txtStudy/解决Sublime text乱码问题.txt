@@ -1,0 +1,10 @@
+欲解决问题，关键在于让Sublime Text 2支持GB2312和GBK。步骤如下：
+
+1.安装Sublime Package Control。
+ 在Sublime Text 2上用Ctrl+～打开控制台并在里面输入以下代码，Sublime Text  
+2就会自动安装Package Control。
+import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')  
+ 
+2.重启Sublime Text 2
+3.然后使用Ctrl+Shift+P打开命令行模式，在里面输入Install Package即可搜索需要的Package。
+4.一般使用“ConvertToUTF8”和“GBK Encoding Support”即可正常读取和写入CJK格式的文件了。

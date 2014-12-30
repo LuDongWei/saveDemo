@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="seajs/sea-debug.js" id="seajsnode" data-config="seajs/config.js"></script>
+<link href="css/roll.css" rel="stylesheet" type="text/css" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--▼ R roll-->
+<div class="rollBox">
+<h3 class="rollText">商品图片轮播</h3>
+   <div class="rollgoods">
+      <div  id="rollListBox">   
+      <ul>
+        <li><img src="img/2_4.gif" /></li>
+        <li><img src="img/3_1.gif" /></li>
+        <li><img src="img/3_2.gif" /></li>
+        <li><img src="img/3_3.gif" /></li>
+        <li><img src="img/3_4.gif" /></li>
+      </ul>
+      </section>
+      </div>
+   </div>
+</div>
+<!--▲ R roll-->
+<script type="text/javascript">
+seajs.use("./seajs/roll.js",function(R){
+	R.rollList();
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset='utf-8'>
+	 <title>Element Editing</title>
+<style>
+body {font-family: 'Palatino Linotype', serif;}
+h1 {font-size: large;}
+div {margin-top: 15px;margin-bottom: 20px;}
+button {padding: 3px;}
+#editableElement {background: #F0F0F0;padding: 5px;}
+
+iframe {width: 600px;height: 250px;}
+#editedHTML {width: 600px;height: 250px;
+  border: darkgray 2px solid;overflow: scroll;
+  overflow-x: hidden;}
+</style>
+
+</head>
+<body>
+<script type="text/javascript">
+//cotentEditable编辑器
+function startEdit(){
+    //使元素可编辑
+    var element=document.getElementById("editableElement");
+    element.contentEditable=true;  
+}
+function stopEdit(){
+    //返回正常元素，并使其不可编辑
+    var element=document.getElementById("editableElement");
+    element.contentEditable=false;
+    alert('you eduted content:'+element.innerHTML);
+}
+//designMode编辑器
+function startEdit_(){
+	//<ifrme>转换为设计模式
+	var editor = document.getElementById("pageEditor");
+    editor.contentWindow.document.designMode = "on";
+}
+function stopEdit_(){
+	// Turn off design mode in the <iframe>.
+  var editor = document.getElementById("pageEditor");
+  editor.contentWindow.document.designMode = "off";
+
+  // Display the edited HTML (just to prove it's there).
+  var htmlDisplay = document.getElementById("editedHTML");
+  htmlDisplay.textContent =   editor.contentWindow.document.body.innerHTML;
+
+}
+</script>
+
+<h1>contentEditable</h1>
+<h1>Editable &lt;div&gt; Below:</h1>
+<div id="editableElement">You can edit this text, if you'd like.</div>
+<div>
+  <button onclick="startEdit()">Start Editing</button>
+  <button onclick="stopEdit()">Stop Editing</button>
+</div>
+
+<!---->
+
+<h1>designMode</h1>
+<h1>Editable Page</h1>
+<iframe src="./2.构造网页的新样式.html" id='pageEditor' ></iframe>
+<div>
+  <button onclick="startEdit_()">Start Editing_</button>
+  <button onclick="stopEdit_()">Stop Editing_</button>
+</div>
+
+<h1>Edited HTML</h1>
+<div id="editedHTML">
+	
+</div>
+	
+</body>
+</html>

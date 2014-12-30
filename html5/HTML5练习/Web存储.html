@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.9.1.min.js"   type="text/javascript"></script>
+<style type="text/css">
+.div1{
+	width:400px;
+	height:100px;
+	margin:30px auto;
+	border:1px solid #000;
+	}
+.div2{
+    width:400px;
+	height:100px;
+	margin:30px auto;
+	border:1px solid #000;
+	}
+p{
+	font-size:14px;
+	line-height:18px;
+	}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+if(localStorage.pagecount)//localStorage计数
+{	
+localStorage.pagecount=Number(localStorage.pagecount)+1;
+}
+else
+{
+localStorage.pagecount=1;
+}
+
+if(sessionStorage.pagecount)
+{
+sessionStorage.pagecount=Number(sessionStorage.pagecount)+1;	
+}
+else
+{
+sessionStorage.pagecount=1;
+}
+
+$(document).ready(function(){
+	$("#p1").text("Visits: " + localStorage.pagecount + " time(s).");
+	$("#p2").text("Visits: " + sessionStorage.pagecount + " time(s).");
+	});
+	
+</script>
+<div class="div1">
+<p id="p1">1</p>
+<p>刷新页面会看到计数器在增长。</p>
+<p>请关闭浏览器窗口，然后再试一次，计数器会继续计数。</p>
+<p>localStoraged的方法存储的数据不没时间限制。</p>
+</div>
+<div class="div2">
+<p id="p2">2</p>
+<p>刷新页面会看到计数器在增长。</p>
+<p>请关闭浏览器窗口，然后再试一次，计数器重新计数。</p>
+<p>sessionStorage方法针对一个session进行数据存储，关闭游览器窗口后，数据会被删除</p>
+</div>
+</body>
+</html>

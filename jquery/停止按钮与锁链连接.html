@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="js/jquery-1.9.1.min.js" type="text/javascript" ></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+	 $("#button_1").click(function(){
+		  var  aa=$(this).attr("id");
+		
+		
+		
+		  if(aa=="button_1"){
+            $(this).slideUp(5000,function(){alert("完成一个步骤之后的")}).slideDown(5000).val("请再按我一次").attr('id','button_2');		
+		    $("#div1").animate({width:'400px'},5000 )
+			$("#div1").animate({height:'200px'},5000 ).css("background","red"); 
+			 
+		  $("#button_04").click(function(){
+
+		  $("#div1").stop();
+		 		  
+		  });
+		  
+	     $("#button_05").click(function(){
+		   $("#div1").stop(true);		  
+		  });
+		  
+		  $("#button_06").click(function(){s
+		   $("#div1").stop(true,true);
+		 		  
+		  });  
+			 
+			 
+			 
+			  } 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+		  else{
+			$(this).val("我们来测试一下callback"); 
+			$("#div2").show().append('<a id="a_1" style="cursor:hand;text-decoration: none" href="#">点击我看看</a>');    
+              var  bb=$("").attr("id");	   
+			  
+			    $("#a_1").click(function(){
+		        $("#div2").animate({
+			    left:'100px',
+			    height:'50',
+			    },function(){alert("又完成一个步骤之后的")}); 
+		        });
+	      }	 			 
+	  });
+	  
+	  
+		 
+	    
+			 
+			 
+			 
+			 
+			 
+		  	  
+	
+	  
+	  
+	  
+
+	  
+	  
+  });
+</script>
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="div1" style="border:solid #00F; width:800px; height:400px;  margin:100px  auto; text-align:center; position:relative">
+<input value="请先点击我一下" type="button" style="background:#099; width:60%; height:40%"  id="button_1"/>
+<div id="div2" style="border:solid #CF0; width:40%; height:20%;  background:#C3F; margin: 30px auto; position:relative; display:none"></div>
+</div>
+<div >
+<input id="button_04" type="button" style="background:#F36; width:200px; height:50px; margin-left:400px" value="我是停止按钮" />
+按钮会停止当前活动的动画,但是允许已排队的动画向前执行
+</div>
+
+<div >
+<input id="button_05" type="button" style="background:#F36; width:200px; height:50px; margin-left:400px" value="我是停止所有按钮" />
+按钮会停止当前活动的动画,并清空动画列队；因此元素上的所有动画都会停止
+</div>
+
+<div >
+<input id="button_06" type="button" style="background:#F36; width:200px; height:50px; margin-left:400px" value="我是停止但要完成按钮" />
+会立即完成当前的活动的动画，然后停下来
+</div>
+
+
+
+
+
+</body>
+</html>

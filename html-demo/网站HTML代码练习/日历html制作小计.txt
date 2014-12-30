@@ -1,0 +1,59 @@
+一步步教你实现跨游览器的js日历   http://www.csharpwin.com/dotnetspace/1355.shtml
+
+获取时间的方法   
+getDate() 查看Date对象并返回日期 
+getDay() 返回星期几 
+getHours() 返回小时数 
+getMinutes() 返回分钟数 
+getMonth() 返回月份值 
+getSeconds() 返回秒数 
+getMilliseconds()返回毫秒值 
+getTime() 返回完整的时间 
+getYear() 返回年份 
+getFullYear()返回一个四位数表示的年份 
+getTimezoneOffset() 返回本地时间和GMT相差的分钟数 
+
+注：用getYear()返回的数并不一定是4位的！处于1900年和1999年间的getYear()方法返回的只有两位数。在此之前的或是在此之后的年份返回的都是四位数的。getYear()方法不应该再使用了。推荐使用getFullYear方法。另，javascript也提系列基于世界时的时间设置函数，如 getUTCDate()，getUTCDay()，getUTCFullYear()，getUTCHours()，getUTCMilliSeconds()，getUTCMinutes()，getUTCMonth ()与getUTCSeconds()方法。
+
+/********根据一个日期求得星期，如'2009-6-21' return 0（星期日）***********/
+var get_day = function (strDate){ 
+    var f = strDate.replace(/-/g,'/'); 
+    f = new Date(f).getDay(); 
+    return "星期"+"天一二三四五六".split('')[f] 
+} 
+alert(get_day('2009-7-25'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

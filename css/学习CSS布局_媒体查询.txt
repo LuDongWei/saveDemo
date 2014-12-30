@@ -1,0 +1,17 @@
+"响应式设计"是一种让网站针对不同的游览器和设备“相应”不同显示效果的策略，
+这样可以让网站在任何情况下显示的很棒！
+
+@media screen and (min-width:600px) {
+  nav {
+    float: left;
+    width: 25%;
+  }
+  section {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width:599px) {
+  nav li {
+    display: inline;
+  }
+}

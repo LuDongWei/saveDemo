@@ -1,0 +1,270 @@
+ <div class="s7-item s7-m-8 s7-hot">
+            <a href="http://www.mbaobao.com/item/1404000102" target="_blank" title="第一夫人牛皮包
+" class="s7-pic" hidefocus="true">
+              <img src="http://cca.mbaobao.com/mkts/201408/09/luck/brand/hot/1404000102.jpg" width="234" height="250" border="0" alt="第一夫人牛皮包
+"></a>
+            <div class="s7-prices">
+              <div class="s7-hot-l">
+
+                <p class="s7-info">
+                  <a href="http://www.mbaobao.com/item/1404000102" target="_blank" class="name">第一夫人牛皮包</a>
+                </p>
+                <ul>
+                  <li class="price-name">
+                    <div class="priced">
+                      麦包价
+                      <span>￥488</span>
+                    </div>
+                    <div class="sale-price">
+                      周年庆价
+                      <span>￥</span>
+                    </div>
+                  </li>
+                  <li class="price-num">298</li>
+                  <li class="price-dicount">
+                    <div class="dicount-txt">折扣</div>
+                    <div class="dicount-num">6.1</div>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="s7-hot-r ">
+                <a href="javaScript:void(0)" data-id="50|1404000102" class="reserve noteRds" hidefocus="true" title="立即抢购"></a>
+              </div>
+            </div>
+          </div>
+          <div class="s7-item s7-m-8 s7-hot">
+            <a href="http://www.mbaobao.com/item/1309002901" target="_blank" title="蛇纹牛皮女王包
+" class="s7-pic" hidefocus="true">
+              <img src="http://cca.mbaobao.com/mkts/201408/09/luck/brand/hot/1309002901.jpg" width="234" height="250" border="0" alt="蛇纹牛皮女王包
+"></a>
+            <div class="s7-prices">
+              <div class="s7-hot-l">
+
+                <p class="s7-info">
+                  <a href="http://www.mbaobao.com/item/1309002901" target="_blank" class="name">蛇纹牛皮女王包</a>
+                </p>
+                <ul>
+                  <li class="price-name">
+                    <div class="priced">
+                      麦包价
+                      <span>￥428</span>
+                    </div>
+                    <div class="sale-price">
+                      周年庆价
+                      <span>￥</span>
+                    </div>
+                  </li>
+                  <li class="price-num">358</li>
+                  <li class="price-dicount">
+                    <div class="dicount-txt">折扣</div>
+                    <div class="dicount-num">8.4</div>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="s7-hot-r ">
+                <a href="javaScript:void(0)" data-id="51|1309002901" class="reserve noteRds" hidefocus="true" title="立即抢购"></a>
+              </div>
+            </div>
+          </div>
+          <div class="s7-item s7-m-8 s7-hot">
+            <a href="http://www.mbaobao.com/item/1408005302" target="_blank" title="森林小马波士顿包
+" class="s7-pic" hidefocus="true">
+              <img src="http://cca.mbaobao.com/mkts/201408/09/luck/brand/hot/1408005302.jpg" width="234" height="250" border="0" alt="森林小马波士顿包
+"></a>
+            <div class="s7-prices">
+              <div class="s7-hot-l">
+
+                <p class="s7-info">
+                  <a href="http://www.mbaobao.com/item/1408005302" target="_blank" class="name">森林小马波士顿包</a>
+                </p>
+                <ul>
+                  <li class="price-name">
+                    <div class="priced">
+                      麦包价
+                      <span>￥336</span>
+                    </div>
+                    <div class="sale-price">
+                      周年庆价
+                      <span>￥</span>
+                    </div>
+                  </li>
+                  <li class="price-num">168</li>
+                  <li class="price-dicount">
+                    <div class="dicount-txt">折扣</div>
+                    <div class="dicount-num">5.0</div>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="s7-hot-r ">
+                <a href="javaScript:void(0)" data-id="52|1408005302" class="reserve noteRds" hidefocus="true" title="立即抢购"></a>
+              </div>
+            </div>
+          </div>
+          <div class="s7-item s7-m-8 s7-hot">
+            <a href="http://www.mbaobao.com/item/1412005301" target="_blank" title="素雅熟女手提包
+" class="s7-pic" hidefocus="true">
+              <img src="http://cca.mbaobao.com/mkts/201408/09/luck/brand/hot/1412005301.jpg" width="234" height="250" border="0" alt="素雅熟女手提包
+"></a>
+            <div class="s7-prices">
+              <div class="s7-hot-l">
+
+                <p class="s7-info">
+                  <a href="http://www.mbaobao.com/item/1412005301" target="_blank" class="name">素雅熟女手提包</a>
+                </p>
+                <ul>
+                  <li class="price-name">
+                    <div class="priced">
+                      麦包价
+                      <span>￥188</span>
+                    </div>
+                    <div class="sale-price">
+                      周年庆价
+                      <span>￥</span>
+                    </div>
+                  </li>
+                  <li class="price-num">178</li>
+                  <li class="price-dicount">
+                    <div class="dicount-txt">折扣</div>
+                    <div class="dicount-num">9.5</div>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="s7-hot-r ">
+                <a href="javaScript:void(0)" data-id="53|1412005301" class="reserve noteRds" hidefocus="true" title="立即抢购"></a>
+              </div>
+            </div>
+          </div>
+          <div class="s7-item s7-m-8 s7-hot">
+            <a href="http://www.mbaobao.com/item/1411002402" target="_blank" title="粉彩复古箱型包
+" class="s7-pic" hidefocus="true">
+              <img src="http://cca.mbaobao.com/mkts/201408/09/luck/brand/hot/1411002402.jpg" width="234" height="250" border="0" alt="粉彩复古箱型包
+"></a>
+            <div class="s7-prices">
+              <div class="s7-hot-l">
+
+                <p class="s7-info">
+                  <a href="http://www.mbaobao.com/item/1411002402" target="_blank" class="name">粉彩复古箱型包</a>
+                </p>
+                <ul>
+                  <li class="price-name">
+                    <div class="priced">
+                      麦包价
+                      <span>￥358</span>
+                    </div>
+                    <div class="sale-price">
+                      周年庆价
+                      <span>￥</span>
+                    </div>
+                  </li>
+                  <li class="price-num">169</li>
+                  <li class="price-dicount">
+                    <div class="dicount-txt">折扣</div>
+                    <div class="dicount-num">4.7</div>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="s7-hot-r ">
+                <a href="javaScript:void(0)" data-id="54|1411002402" class="reserve noteRds" hidefocus="true" title="立即抢购"></a>
+              </div>
+            </div>
+          </div>
+          <div class="s7-item s7-m-8 s7-hot">
+            <a href="http://www.mbaobao.com/item/1503000401" target="_blank" title="双拉链大容量公文包" class="s7-pic" hidefocus="true">
+              <img src="http://cca.mbaobao.com/mkts/201408/09/luck/brand/hot/1503000401.jpg" width="234" height="250" border="0" alt="双拉链大容量公文包"></a>
+            <div class="s7-prices">
+              <div class="s7-hot-l">
+
+                <p class="s7-info">
+                  <a href="http://www.mbaobao.com/item/1503000401" target="_blank" class="name">双拉链大容量公文包</a>
+                </p>
+                <ul>
+                  <li class="price-name">
+                    <div class="priced">
+                      麦包价
+                      <span>￥598</span>
+                    </div>
+                    <div class="sale-price">
+                      周年庆价
+                      <span>￥</span>
+                    </div>
+                  </li>
+                  <li class="price-num">299</li>
+                  <li class="price-dicount">
+                    <div class="dicount-txt">折扣</div>
+                    <div class="dicount-num">5.0</div>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="s7-hot-r ">
+                <a href="javaScript:void(0)" data-id="55|1503000401" class="reserve noteRds" hidefocus="true" title="立即抢购"></a>
+              </div>
+            </div>
+          </div>
+          <div class="s7-item s7-m-8 s7-hot">
+            <a href="http://www.mbaobao.com/item/1505009301" target="_blank" title="双口袋休闲公文包" class="s7-pic" hidefocus="true">
+              <img src="http://cca.mbaobao.com/mkts/201408/09/luck/brand/hot/1505009301.jpg" width="234" height="250" border="0" alt="双口袋休闲公文包"></a>
+            <div class="s7-prices">
+              <div class="s7-hot-l">
+
+                <p class="s7-info">
+                  <a href="http://www.mbaobao.com/item/1505009301" target="_blank" class="name">双口袋休闲公文包</a>
+                </p>
+                <ul>
+                  <li class="price-name">
+                    <div class="priced">
+                      专柜价
+                      <span>￥698</span>
+                    </div>
+                    <div class="sale-price">
+                      麦包价
+                      <span>￥</span>
+                    </div>
+                  </li>
+                  <li class="price-num">149</li>
+
+                </ul>
+              </div>
+              <div class="s7-hot-r ">
+                <a href="javaScript:void(0)" data-id="56|1505009301" class="reserve noteRds" hidefocus="true" title="立即抢购"></a>
+              </div>
+            </div>
+          </div>
+          <div class="s7-item s7-m-8 s7-hot">
+            <a href="http://www.mbaobao.com/item/1505014802" target="_blank" title="100%头层牛皮商务包" class="s7-pic" hidefocus="true">
+              <img src="http://cca.mbaobao.com/mkts/201408/09/luck/brand/hot/1505014802.jpg" width="234" height="250" border="0" alt="100%头层牛皮商务包"></a>
+            <div class="s7-prices">
+              <div class="s7-hot-l">
+
+                <p class="s7-info">
+                  <a href="http://www.mbaobao.com/item/1505014802" target="_blank" class="name">100%头层牛皮商务包</a>
+                </p>
+                <ul>
+                  <li class="price-name">
+                    <div class="priced">
+                      麦包价
+                      <span>￥998</span>
+                    </div>
+                    <div class="sale-price">
+                      周年庆价
+                      <span>￥</span>
+                    </div>
+                  </li>
+                  <li class="price-num">199</li>
+                  <li class="price-dicount">
+                    <div class="dicount-txt">折扣</div>
+                    <div class="dicount-num">2.0</div>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="s7-hot-r ">
+                <a href="javaScript:void(0)" data-id="57|1505014802" class="reserve noteRds" hidefocus="true" title="立即抢购"></a>
+              </div>
+            </div>
+          </div>

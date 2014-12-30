@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+    <script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body style="background:#3C3; height:1000px;">
+
+<style type="text/css">
+.page_all{} 
+.wrapper{ width:100%;}
+.main{width:960px;margin:0 auto;}
+
+/*--秒杀--*/
+.brand-seckill{
+    width:316px;
+    height:400px;
+    overflow:hidden;
+    position:relative;
+}
+.brand-seckill .head{
+    width:316px;
+    height:51px;
+}
+.brand-seckill .br-seckill{
+    width:310px;
+    height:349px;
+    margin:0 auto;
+    background-color:#ffffff;   
+}
+.br-seckill .br-time{
+	text-align:center;
+	width:168px;
+	margin:0 auto;
+	height:26px;
+	padding:5px;
+	line-height:25px;
+}
+.br-time .clock{
+	float:left;
+}
+.br-time .clock img{
+	vertical-align:middle;
+}
+.br-time .over{
+    float:left;
+}
+.br-time .countdown{
+	display:block;
+    width:92px;
+    height:24px;
+	line-height:24px;
+	background:url(img/ms_02.jpg) no-repeat top center;
+	color:#ffffff;
+	font-size:16px;
+	font-weight:bolder;
+	float:left;
+	overflow:hidden;
+}
+.countdown span{
+	display:block;
+	text-align:center;
+	float:left;
+}
+.countdown .h{
+	width:25px;
+}
+.countdown .m{
+	width:42px;
+}
+.countdown .s{
+	width:25px;
+}
+.br-seckill .br-pic img{
+	width:254px;
+	margin:0 auto;    
+}
+.br-seckill .br-inf{
+	overflow:hidden;
+	height:59px;
+}
+.br-inf div{
+	float:left;
+} 
+.br-inf .in-price-1{
+	width:123px;
+	text-align:left;
+}
+.in-price-1 .mbbP{
+	font-size:12px;
+	color:#707070;
+	margin-top:5px;
+	padding-left:30px;
+}
+.in-price-1 .sellP{
+	color:#e4295e;
+	font-size:18px;
+	font-weight:bolder;
+	padding-left:21px;
+}
+.br-inf .in-price-2{
+	width:92px;
+	color:#e4295e;
+}
+.in-price-2 .sellP-2{
+    font-weight:bolder;
+	font-size:30px;
+	line-height:67px;
+}
+.in-price-2 .sellP-2 span{
+    font-size:18px;
+}
+.br-inf .in-a{
+	width:95px;
+	height:59px;
+}
+.brand-seckill .stoleOut .masking{
+    position:absolute;
+    width:310px;
+    height:353px;
+    top:48px;
+    left:3px;
+    filter:alpha(opacity=50);
+    opacity:0.5;
+    background-color:#666666;  
+}
+.brand-seckill .stoleOut .text{
+    position:absolute;
+    color:#ffffff;
+    font-size:50px;
+    top: 143px;
+    left: 76px;
+    font-weight:bolder;
+}
+</style>
+
+<!--今日秒杀-->
+<div class="brand-seckill" id="brSeckill" data-id="4112">
+ 
+</div>
+<!--今日秒杀-->
+
+
+<script type="text/javascript">
+seajs.use("./seckill.js");    
+</script>
+
+
+</body>
+</html>

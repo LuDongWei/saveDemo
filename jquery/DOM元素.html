@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+	   $(".text").mouseover(function(){
+		   $(".text").val("");
+		   });
+	   <!--文本框中的内容进行判断，满足条件进行相应的值的求--> 
+		$(".bu_1").click(function(){  
+		var text =$(".text").val();
+		 var nob=/^[0-9]*[1-9][0-9]*$/;   //判断为正整数不包括0
+	      var  tt=nob.test(text);
+			if(tt){
+				text=parseInt(text)-1;   //字符串转换成数字再计算
+				if(text>5){
+				$(".span_1").css("color","red");	
+					}else{
+				$(".span_1").css("color","#ccc");	
+			    var aa=$(".li").get(text);    //用get方法获取其中的内容
+                var ss=aa.innerHTML;			   
+			    alert(ss);
+					}
+				}else{
+				alert("请输入正确的数值"); 	
+					}			
+			});   
+		<!--li被点击返回值-->	
+		$(".li").click(function(){
+			var  li=$(this).index();
+			alert(li);
+		    var  vv=$(".li").eq(li).text();//用eq判断对应的值
+	        alert(vv);
+			});	
+			
+		<!--获取li被选中的数量-->
+		$(".bu_2").click(function(){
+			var size=$(".li").size();			
+			alert(size);
+			});
+		<!--获取全部的内容，并调整div—2的大小显示-->	
+		$(".bu_3").click(function(){
+			var xx=$(".li").toArray();
+			var mm='';
+            for(i=0;i<xx.length;i++){
+			 mm=mm+xx[i].innerHTML;
+             mm=mm+'</br>';            //换行
+				}
+			$(".div_2").animate({height:'190px'});		//增加宽度
+			$(".span_3").after(mm);						
+			});	
+		
+		
+		
+			
+	   });
+</script>
+
+<style type="text/css">
+.div_1{
+	width:400px;
+	height:50px;
+	border:1px solid #000;
+	margin:0 auto;
+	}
+.div_2{
+	width:400px;
+	height:120px;
+	border:1px solid #000;
+	margin:20px auto 0px;
+	}
+.span_1{
+	color:#CCC;
+	font-size:12px;
+	}	
+.span_2{
+	color:#000;
+	font-size:14px;
+	}		
+.ul{
+	list-style-type:circle;	
+	}
+.li{
+	width:80px;
+	float:left;
+	cursor:help;
+	}		
+</style>
+</head>
+
+<body>
+<div class="div_1">
+<ul class="ul_1">
+<li class="li">1.西瓜</li>
+<li class="li">2.哈密瓜</li>
+<li class="li">3.土豆</li>
+<li class="li">4.西红柿</li>
+</ul>
+</div>
+<div class="div_2">
+1.<input type="text" value="请输入提取的id"  class="text" style="color:#999; border:1px solid #000" width="80px" height="30px"/>
+<input type="button" value="提取内容" width="50px" height="30px" class="bu_1">
+<span class="span_1">(请输入1-4之间的数值)</span></br>
+2.<span class="span_2">点击上面的li能获得每个li对于的数值和内容.</span></br>
+3.<input type="button" value="获取一共的li的被选中的数量" width="50px" height="30px" class="bu_2"></br>
+4.<input type="button" value="能获取全部的值" width="50px" height="30px" class="bu_3"></br>
+<span class="span_3">水果的种类</br></span>
+</div>
+</body>
+</html>

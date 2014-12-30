@@ -1,0 +1,80 @@
+ {{#seckill}}
+        <div class="head">
+            <img src="http://cca.mbaobao.com/mkts/201406/05/mm/ms.png" width="316" height="51" />
+        </div>
+        <div class="br-seckill" data-ap="{{apId}}"  data-begin="{{beginTime}}" >
+           <div class="br-time">
+             {{#if isSeckill}}  
+                <span class="clock">
+                    <img src="http://cca.mbaobao.com/mkts/201406/05/mm/ms_03.jpg" width="15" height="15" />&nbsp;
+                    剩&nbsp; 
+                </span>
+             {{else}}
+                <span class="clock">
+                    <img src="http://cca.mbaobao.com/mkts/201406/05/mm/ms_03.jpg" width="15" height="15" />&nbsp;
+                    距开始&nbsp; 
+                </span>
+             {{/if}}   
+                <span class="countdown"> 
+                    <span class="h">00</span>
+                    <span class="m">00</span>
+                    <span class="s">00</span>
+           </span>
+           {{#if isSeckill}} 
+             <span class="over">
+                   &nbsp;结束
+                </span>
+            {{else}}
+           {{/if}}
+           </div>
+           {{#skus}} 
+           <div class="br-pic">
+                <a href="http://www.mbaobao.com/item/{{sku}}" target="_blank">
+                    <img src="{{image}}" width="254" height="254" />
+                </a>
+            </div>
+           {{/skus}}
+
+           <div class="br-inf">
+                {{#skus}} 
+                <div class="in-price-1">
+                    <p class="mbbP"><del>麦包价{{mbbPrice}}元</del>
+                    </p>
+                    <p class="sellP">秒杀价:</p>
+                </div>
+                <div class="in-price-2">
+                    <p class="sellP-2">
+                        {{sellPrice}}<span>元</span>
+                    </p>
+                </div>
+                {{/skus}}
+                {{#if isSeckill}}
+                   {{#skus}} 
+                   <div class="in-a">
+                    <a href="http://cart.mbaobao.com/do/items/add/{{sku}}/1.html" target="_blank">
+                        <img src="http://cca.mbaobao.com/mkts/201406/05/mm/ms_01.png" width="95" height="59" />
+                    </a>
+                   </div>
+                    {{/skus}}
+                   {{else}}
+                  {{#skus}}
+                  <div class="in-a">
+                        <img src="http://cca.mbaobao.com/mkts/201406/05/mm/jj.png" width="95" height="59" />
+                   </div>
+                  {{/skus}}
+                {{/if}}
+            </div>
+          </div> 
+             
+             {{#skus}}  
+             {{#if isSellOut}}
+                <div class="stoleOut">
+                   <div class="masking">
+                   </div>
+                   <div class="text">                     
+                   已抢完
+                   </div> 
+                 </div> 
+             {{/if}}
+             {{/skus}}
+     {{/seckill}} 

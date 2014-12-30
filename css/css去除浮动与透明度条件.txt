@@ -1,0 +1,22 @@
+/*---去除浮动--*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.clearfix {
+    zoom: 1
+}
+
+
+那些年我们以前清过的浮动
+http://www.iyunlu.com/view/css-xhtml/55.html
+
+overflow: hidden; //清除对下，使其元素有高度
+clear: both;      //清除对上，使其有位置
+
+
+透明度：
+filter: alpha(opacity=100);opacity: 1;

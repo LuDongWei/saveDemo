@@ -1,0 +1,97 @@
+测试网站软件 YSlow
+
+规则一:减少HTTP请求（图片地图，CSS Sprites，内嵌图片和脚本，样式表的合并）
+案例:图片地图：http://stevesouders.com/hpws/imagemap-no.php  or imagemap
+     CSS Sprites：  http://stevesouders.com/examples/sprites.php
+	 内嵌图片和脚本：http://stevesouders.com/examples/inline-images.php  (内嵌图片)
+	                 http://stevesouders.com/examples/inline-css-images.php (内嵌CSS图片)
+	 样式表的合并：http://stevesouders.com/examples/combo-none.php   or combo.php
+	 
+规则二：使用内容发布网络（内容发布网络 CDN）
+案例： http://stevesouders.com/hpws/ex-cdn.php 	 cdn示例    加利福尼亚
+       http://stevesouders.com/hpws/ex-cdn.php 	 无cdn示例  华盛顿特区   速度的快慢和你所在的区域有关
+	   
+规则三：添加Expires头（使用缓存来减少HTTP请求数量，减少相应时间）（Expires头和Cache-Control max-age）（在服务器中配置）
+案例： http://stevesouders.com/hpws/expiresoff.php   无
+  	   http://stevesouders.com/hpws/expireson.php    有
+	   
+规则四：压缩组件（压缩html 脚本 样式表 xml json 不包括图片）
+案例： 	http://stevesouders.com/hpws/nogzip.html     无压缩的示例
+	    http://stevesouders.com/hpws/gzip-html.html  压缩html的示例
+		http://stevesouders.com/hpws/gzio-all.html   压缩所以组件的示例
+	   （apache启用gzip压缩方法  http://www.xmydlinux.org/201108/604.html）
+	   
+规则五：将样式表放在顶部
+案例：  http://stevesouders.com/hpw/css-fouc.php     无样式内容的css闪烁的示例
+        http://stevesouders.com/hpws/css-bottom.php  将ccs放在底部的示例
+        http://stevesouders.com/hpws/css-top.php     将css放在顶部的示例（推荐使用link不用@import放在head中）
+        
+规则六：将脚本放在底部
+案例： http://stevesouders.com/hpws/js-middle.php   将脚本放在中间的示例（底部内容要等中间的js加载后才能展现）              		
+ 	   并行下载
+       能简单地使用CNAME（DNS）来将组件分别放到多个主机中。（使用2个主机带来的性能更好）	   
+	   在下载脚本时并行下载实际上是被禁用的  （脚本能使用document.write）来修改页面内容	
+	   
+	   http://stevesouders.com/hpws/js-blocking.php  (脚本阻塞的示例)
+	   http://stevesouders.com/hpws/js-top.php  （脚本放在顶部的示例,出现白屏现象）
+	   http://stevesouders.com/hpws/js-defer.php (延迟脚本的示例)
+	   http://stevesouders.com/hpws/js-bottom.php  (脚本放在底部，最佳的实践)
+	   
+规则七：避免CSS表达式
+案例： http://stevesouders.com/hpws/expression-counter.php (表达式计数器的示例)（问题：轻易产生访问，在ie中点击文本框，终止进程）
+       http://stevesouders.com/hpws/ontime-expression.php (一次性表达式) 
+       http://stevesouders.com/hpws/event-handle.php (事件处理器的示例)
+	   在没有深入了解底层影响的情况下使用CSS表达式是很危险的
+	   
+规则八：使用外部JavaScript和CSS
+案例：  http://stevesouders.com/hpws/inlined.php  (内嵌JS和CSS的示例)       
+        http://stevesouders.com/hpws/external.php (外部JS和CSS的示例)
+        使用外部可以缓存，方便修改。
+        组件的重用（这种情况对于那些每用户每月会话数量较高，普通用户在一个会话中访问多个不同的页面的网站来说是有意义的）
+        http://stevesouders.com/hpws/external-cacheable.php（可缓存的外部js和css的案例）
+		http://stevesouders.com/hpws/post-onload.php （加载后下载的示例）
+        （‘加载下载’示例的JavaScript代码将doOnload函数关联到文档的onLoad事件。将外部文件放到游览器的缓存中以便用户接下来访问其他页面）
+        http://stevesouders.com/hpws/dynamic-inlining.php (动态内嵌示例)
+
+规则九：减少DNS查找
+        通过使用Keep-Alive和较少的域名来减少DNS查找
+		
+规则十：精简JavaScript
+案例：  http://stevesouders.com/hpws/js-small-normal.php (一般的小脚本的示例)
+		http://stevesouders.com/hpws/js-small-minify.php (经过精简的小脚本的示例)
+		http://stevesouders.com/hpws/js-large-minify.php （经过精简的打脚本的示例）
+        （推荐使用精简[jsmin]和压缩[gzip]的方式）
+
+规则十一：避免重定向（技术方法不太了解）
+		（寻找一种避免重定向的方法）
+		
+规则十二：移除重复脚本		
+		（确保脚本只被包含一次）
+		
+规则十三：配置ETag
+		（配置或移除ETag）
+		
+规则十四：使Ajax可缓存		
+		 （确保Ajax请求遵守性能指导，尤其应具有长久的Expires头）
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+	   
+	   
+	   
+	   
+		
+		
+		

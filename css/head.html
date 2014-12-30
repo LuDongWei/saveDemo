@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>头部分页面</title>
+<!--css代码-->
+<style type="text/css">
+/*头部部分*/
+body{
+	margin: 0;
+    padding: 0;
+	}
+.head{
+	background:#ededed;
+	text-align:center;
+  
+}
+ /*设置在head中的img的属性*/
+.head img{
+	/*定义在一个段落中的位置*/
+	vertical-align:middle; 
+	 /*设置图片的上下距离20px*/
+	padding: 20px 0;	
+	}
+.head span{
+	font-size:30px;
+	font-family: 'Bree Serif', serif;
+	vertical-align:middle;
+	margin-left:10px;
+	color: #414142;
+	font-weight:bolder;
+	}
+/*为了能在ie7上运行*/	
+.menu{
+	background:#f5f5f5;
+	text-align:center;
+}
+.menu a{
+	color:#8f8f8f;
+	text-decoration:none;
+	font-size:18px;
+	line-height:33px;
+	font-weight:300;
+
+	} 
+.menu a:hover{
+	background: #CCC;
+	}
+.a1{
+	padding:5px 15px;
+	
+	}	
+.a2{
+    padding:5px 15px;
+
+	}	
+	
+ /*在ie运行只有在ie9及其以上才能进行判断*/
+@media screen and (min-width:601px) {
+ /*导航部分----左上角部分*/	
+.menu{
+	background:#f5f5f5;
+	text-align:center;
+	/*改变成绝对定位*/
+	position:absolute;
+	width:250px;
+	/*距离上边的距离*/
+	padding-top:30px;
+	top:-16px;
+	left:-100px;
+	/*旋转--多种定义为了适应主流游览器*/	 
+transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+	}
+.menu a{
+	color:#8f8f8f;
+	text-decoration:none;
+	/*把字体变成块元素*/
+	display:block;
+	font-size:18px;
+	line-height:33px;
+	font-weight:300;
+	}
+.menu a:hover{
+	background: #CCC;
+	}						
+}
+ /*在ie运行只有在ie9及其以上才能进行判断*/
+@media screen and (max-width:600px) {
+ /*导航部分----转换成条状部分*/	
+.menu{
+	background:#f5f5f5;
+	text-align:center;
+	margin-top:10px;
+	
+}
+.menu a{
+	color:#8f8f8f;
+	text-decoration:none;
+	font-size:18px;
+	line-height:33px;
+	font-weight:300;
+
+	} 
+.menu a:hover{
+	background: #CCC;
+	}
+.a1{
+	padding:5px 15px;
+	
+	}	
+.a2{
+    padding:5px 15px;
+
+	}
+	
+/*--重新定义图片和文字使其能适应屏幕大改变-->*/
+.head img{
+	/*定义在一个段落中的位置*/
+	vertical-align:middle; 
+	width:17%;    
+	}
+.head span{
+	font-size:25px;
+	font-family: 'Bree Serif', serif;
+	vertical-align:middle;
+	margin-left:10px;
+	color: #414142;
+	font-weight:bolder;
+	}	
+			
+	
+
+}
+	
+</style>
+<script type="text/javascript">
+    
+	/*获取页面的大小和iframe的大小
+    function iframeResize(){
+	alert(this.document.body.scrollHeight); //弹出当前页面的高度 
+    var obj = parent.document.getElementById("main"); //取得父页面IFrame对象 
+    alert(obj.height); //弹出父页面中IFrame中设置的高度 
+    obj.height = this.document.body.scrollHeight; //调整父页面中IFrame的高度为此页面的高度} 
+	*/
+	 
+ 
+</script>
+</head>
+<body >   <!--onload="iframeResize()"-->
+<div class="head">
+<img src="http://cca.mbaobao.com/edm/201307/30/logo.png" border="0" />
+<span>学习CSS布局</span>
+<div class="menu">
+<a href="#"  class="a1">主页</a>
+<a href="#"  class="a2">目录</a>
+</div>
+</div>
+</body>
+</html>

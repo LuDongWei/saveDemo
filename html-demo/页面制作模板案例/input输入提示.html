@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>无标题文档</title>
+			<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+			<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+
+<style type="text/css">
+.page_all{}	
+.wrapper{ width:100%;}
+.main{width:960px;margin:0 auto;}
+
+/*--列表--*/
+.list-2,.list-3{width:960px;overflow:hidden;}
+.list-2 li,.list-3 li{display:inline-block;*display:inline;*zoom:1;float:left;text-align:center;}
+.list-2 li{margin-top:3px;margin-right:3px;}
+.list-3 li{margin-top:3px;margin-right:4px;}
+
+/*--官网调产品列表--*/
+/*.activity_list_box{width:100%;}
+.activity_view_box{margin:0 auto;background-color:#ffffff;}*/ 
+
+.input-test{
+	width:190px;
+	margin:0 auto;
+	border:1px solid #000000;
+}
+.input-test .mbb-inp{
+	margin:5px auto;
+}	
+.input-test .mbb-buttom{
+
+}	
+</style>
+
+
+<!--输入框测试--> 
+<div class="input-test">
+     <input type="text" name="phone" class="mbb-inp" id="mbbInput" placeholder="请输入手机号" />
+     <button class="mbb-buttom">我要预订</button>
+</div>	
+
+<script type="text/javascript">
+$(document).ready(function($){
+
+   $.fn.foucsText = function(text){
+        var this_=this;
+        var tt_= (text==null) ? $(this_).val() : text;
+        
+        this_.val(tt_);
+        
+        this_.focus(function(){
+        	 if(this_.val()==tt_){
+        	 	this_.val("");
+        	 }
+        }) 
+     
+        this_.blur(function(){
+             if (this_.val() == "") {
+             	 console.log(this_.val()+"123")
+                 this_.val(tt_)
+             }
+        })    
+        
+        return this_ 
+   }
+
+    $("#mbbInput").foucsText("请输入手机号");
+})
+</script>
+
+</body>
+</html>
+		

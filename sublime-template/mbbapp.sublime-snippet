@@ -1,0 +1,132 @@
+<snippet>
+	<content><![CDATA[
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>麦包包手机签到 手机麦包包网-触屏版,正品承诺支持货到付款,满149元或满2件免运费!</title>
+	
+	<meta name="viewport" content="width=device-width">
+	<meta property="qc:admins" content="10413263642172176375" />
+	<meta property="wb:webmaster" content="6c1306619b13572d" />
+	<meta name="baidu-site-verification" content="Tkk91We3bT" />
+    <meta name="keywords" content="麦包包手机签到 手机麦包包,麦包包客户端,麦包包手机,麦包包手机客户端,麦包包IOS,麦包包iphone,麦包包安卓,麦包包andriod" /> 
+    <meta name="description" content="麦包包手机签到 买包包? 麦包包! 中国最大最知名的快时尚箱包网上购物商城.手机麦包包,满149包邮或满2件免运费,支持货到付款,10天原件无条件退换货" /> 
+	
+	<link href="http://wsstatic.mbaobao.com/v3/common/image/favicon.ico" rel="shortcut icon" />
+	<link rel="apple-touch-icon-precomposed" href="http://cca.mbaobao.com/mkts/201208/13/mbbicon.png"/>
+	<link rel="stylesheet" media="only screen" href="http://cca.mbaobao.com/static/mod/min/f=page/mbbMobile/1.0.1/css/common.css,page/mbbMobile/1.0.1/css/module.css?1108" />
+	<script src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,page/mbbMobile/1.0.1/sea-config.js,jquery/jquery/1.7.2/jquery.js?1108"></script>
+	<script src="http://cca.mbaobao.com/static/mod/page/mbbMobile/1.0.1/global.js?1108"></script>
+	<script type="text/javascript">
+		var drive = '';
+		var MBAOBAO_DOMAIN = "mbaobao.com";
+	</script>
+	<script>
+	seajs.use('page/mbbMobile/1.0.1/global');
+	</script>
+</head>
+
+<body>
+<!--▼ S HEADER-->
+<header class="mbHead">
+	<div class="mbTop clearfix">
+		<div class="mbTop_wrap">
+			<a class="userLogo" href="/user/userCenter.html">
+				<img src="http://cca.mbaobao.com/static/mod/page/mbbMobile/1.0.1/img/user_logo.png" alt="userlogo" width="30" height="30"/>
+			</a>
+			<a class="mbLogo" href="/index.html">
+				<img src="http://cca.mbaobao.com/static/mod/page/mbbMobile/1.0.1/img/logo.png" alt="mbblogo" width="119" height="19"/>
+			</a>
+			<a class="mbCart" href="/cart">
+				<span class="modRankSTag"> <em id="cartItemCount">0</em>
+				</span>
+			</a>
+		</div>
+	</div>
+</header>
+<!--▲ E HEADER-->	
+
+
+<!--▼ S ARTICLE-->
+<style type="text/css">
+.M_main{
+width:320px;
+margin:0 auto;
+}			                                        
+</style>
+<article class="M_main">
+  <header>
+     <img src="img/deli_01.jpg" width="100%">
+  </header>
+
+  <div class="Countion">
+       
+  </div>
+</article>
+
+<!--▲ E ARTICLE-->	
+
+
+
+<!--▼ S FOOTER-->
+<footer class="mbFoot">
+	<ul class="mbService clearfix">
+		<li><span></span>10天无理由退换货</li>
+		<li><span></span>专业配送货到付款</li>
+	</ul>
+	<ul class="mbBotLink clearfix">
+		<li><a href="/index.html">首页</a></li>
+		<li><a href="/user/message/userMessage.html">用户反馈</a></li>
+		<li><a href="/helpCenter/helpList.html">帮助中心</a></li>
+	</ul>
+	<ul class="mbBotInfo clearfix">
+		<li id="loginInfo"></li>
+		<li>
+			<nav>
+				<a href="http://m.mbaobao.com">触屏版</a>
+				<a href="http://m.mbaobao.com/appDownload.html">客户端</a>
+				<a href="http://www.mbaobao.com/?refid=mobile">电脑版</a>
+			</nav>
+		</li>
+	</ul>
+	<div class="mbCopyright">
+		<p>&copy;2007-2013 Mbaobao All Rights Reserved.</p>
+		<p>ICP:浙B2-20100425 </p>
+	</div>
+	<div style="display:none;">
+		<script src="http://s22.cnzz.com/stat.php?id=4999664&web_id=4999664" language="JavaScript" async></script>
+        <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe8fe4fc3e4ad8c8ae903fd42f798d24a' async type='text/javascript'%3E%3C/script%3E"));
+        </script>
+	</div>
+</footer>
+
+<!--▲ E FOOTER-->
+<script type="text/javascript">
+	  window._pt_lt = new Date().getTime();
+	  window._pt_sp_2 = [];
+	  _pt_sp_2.push('setAccount,1e4ba25e');
+	  _pt_sp_2.push('setDomain,m.mbaobao.com');
+	  var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	  (function() {
+		var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+		atag.src = _protocol + 'js.ptmind.com/js/pta.js?2013102401';
+		var stag = document.createElement('script'); stag.type = 'text/javascript'; stag.async = true;
+		stag.src = _protocol + 'js.ptmind.com/js/pts.js?2013102401';
+		var s = document.getElementsByTagName('script')[0]; 
+		s.parentNode.insertBefore(atag, s);s.parentNode.insertBefore(stag, s);
+	  })();
+</script>
+
+</body>
+
+</html>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mbbapp</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	  <scope>text.html</scope>
+</snippet>

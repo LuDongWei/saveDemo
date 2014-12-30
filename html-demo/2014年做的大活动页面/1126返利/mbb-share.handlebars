@@ -1,0 +1,102 @@
+{{#InviteUserList}}
+<li class="item">
+  <span class="name">{{username}}</span>
+  <span class="time">{{time}}</span>
+  已参加
+</li>
+{{/InviteUserList}}
+
+
+{{#InviteOrderList}}
+<tr>
+  <td>top{{number}}</td>
+  <td>{{order_id}}</td>
+  <td>{{order_date}}</td>
+  <td>￥{{pay_amount}}</td>
+  <td>￥{{rebate_price}}</td>
+  
+  {{#if isUse}}
+       {{#if isCode}}
+          <td>已邀请</td>
+          <td class="invite-code-show" data-order="{{order_id}}">
+            <button type="button" class="btn btn-primary">查看邀请码</button>
+          </td>
+       {{else}}
+          <td>已返利</td>
+          <td></td>
+       {{/if}}
+  {{else}}
+     <td>正常</td>
+     <td class="invite-code-create" data-order="{{order_id}}">
+      <button type="button" class="btn btn-danger">生成邀请码</button>
+     </td> 
+  {{/if}}
+</tr>
+<tr class="invite-list" data-order="{{order_id}}">
+  <td colspan="7">
+    <table class="table">
+      <tr>
+        {{#details}}
+         <td class="invite-friends" data-code="{{code}}">
+            {{code}}
+            <span>
+                   点击邀请小伙伴分享返利
+            </span>
+         </td>
+        {{/details}}
+         <td>
+           <div class="goods-share" id="goodsShare">
+             分享：
+             <div class="share-box js-status-share">
+               <a class="share-sina" href="http://v.t.sina.com.cn/share/share.php?url=http://www.mbaobao.com&amp;title=麦包包&amp;rcontent=&amp;pic=http://cca.mbaobao.com/mkts/201411/28/fex2/60x60.jpg" rel="nofollow" target="_blank">新浪微博</a>
+               <a class="share-qqwb" href="http://v.t.qq.com/share/share.php?url=http://www.mbaobao.com&amp;title=麦包包&amp;pic=http://cca.mbaobao.com/mkts/201411/28/fex2/60x60.jpg" rel="nofollow" target="_blank">腾讯微博</a>
+               <a class="share-renren" href="http://share.renren.com/share/buttonshare.do?link=http://www.mbaobao.com&amp;title=麦包包" rel="nofollow" target="_blank">人人网</a>
+               <a class="share-qqkj" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.mbaobao.com&amp;title=麦包包&amp;pics=http://cca.mbaobao.com/mkts/201411/28/fex2/60x60.jpg&amp;summary=" rel="nofollow" target="_blank">QQ空间</a>
+             </div>
+           </div>
+         </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+{{/InviteOrderList}}
+
+
+
+{{#details}}
+   <td>{{code}}</td>
+{{/details}}
+
+{{#InviteList}}
+ <tr>
+   <td>{{code}}</td>
+   {{#if yq}}
+      <td>已验证</td>
+   {{else}}
+      <td>未验证</td>
+   {{/if}}
+
+   <td>{{use_mobile}}</td>
+   
+   {{#if xd}}
+      <td>已下单</td>
+   {{else}}
+      <td>未下单</td>
+   {{/if}}
+   
+   {{#if fl}}
+      <td>已获得</td>
+   {{else}}
+      <td>未获得</td>
+   {{/if}}
+ </tr>
+{{/InviteList}}
+
+{{#InviteUseOrderList}}
+<tr>
+  <td>{{order_id}}</td>
+  <td>{{order_date}}</td>
+  <td>{{rebate_price}}</td>
+  <td>{{rebate_state}}</td>
+</tr> 
+{{/InviteUseOrderList}}

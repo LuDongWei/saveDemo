@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+<style type="text/css">
+.wrapper_02{ background:url(http://cca.mbaobao.com/mkts/201312/17/lagan/lagan_02.jpg) repeat-y top center; font-size:0px;}
+.main{width:1016px; margin:0 auto;}
+.main_02{ overflow:hidden; clear: both;}
+.main_02 img{ float:left;}
+.image_hot{ width:1016px; height:821px; position:relative; overflow:hidden; clear: both;}
+.image_hot .image_small{}
+.image_hot .image_small span{ position:absolute;filter:alpha(opacity=80);opacity:0.8; display:none;}
+.image_hot .image_small #image_small_01{  top:142px; left:418px;}
+.image_hot .image_small #image_small_02{  top:260px; left:430px;}
+.image_hot .image_small #image_small_03{  top:330px; left:350px;}
+.image_hot .image_small #image_small_04{  top:450px; left:450px;}
+.image_hot .image_small #image_small_05{  top:350px; left:350px;}
+.activity_view_box{margin: 0 auto; font-size: 12px;}
+.activity_list_box{width: 1016px;}
+</style>
+
+
+<div class="wrapper_02">
+	<div class="main main_02">
+		
+      <div class="image_hot"> 
+      <img src="http://cca.mbaobao.com/mkts/201312/17/lagan/lagan_11.jpg" width="508" height="821" border="0" usemap="#Map" />
+      <map name="Map" id="Map">
+      <area shape="rect" coords="350,190,446,257" href="javascript:void(0);" data-id="0" id="image_hot_img" />
+      <area shape="rect" coords="335,260,406,332" href="javascript:void(0);" data-id="1" id="image_hot_img"/>
+      <area shape="rect" coords="249,319,331,386" href="javascript:void(0);" data-id="2" id="image_hot_img"/>
+      <area shape="rect" coords="268,418,351,508" href="javascript:void(0);" data-id="3" id="image_hot_img"/>
+      <area shape="rect" coords="360,546,445,643" href="javascript:void(0);" data-id="4" id="image_hot_img"/>
+      <area shape="rect" coords="98,326,226,623" href="http://www.mbaobao.com/item/1409009001" target="_blank" />
+      <area shape="rect" coords="366,359,473,524" href="http://www.mbaobao.com/item/1409009501" target="_blank" />
+      <area shape="rect" coords="137,704,240,779" href="http://cart.mbaobao.com/do/items/add/1409009001/1.html" target="_blank" />
+      <area shape="rect" coords="248,704,366,783" href="http://cart.mbaobao.com/do/items/add/1409009501/1.html" target="_blank" />
+      </map>
+       <div class="image_small"> 
+       <span id="image_small_01" ><img src="http://cca.mbaobao.com/mkts/201312/17/lagan/lagan_36.jpg" /></span>
+       <span id="image_small_02" ><img src="http://cca.mbaobao.com/mkts/201312/17/lagan/lagan_39.jpg" /></span>
+       <span id="image_small_03" ><img src="http://cca.mbaobao.com/mkts/201312/17/lagan/lagan_38.jpg" /></span>
+       <span id="image_small_04" ><img src="http://cca.mbaobao.com/mkts/201312/17/lagan/lagan_37.jpg" /></span>
+       <span id="image_small_05" ><img src="http://cca.mbaobao.com/mkts/201312/17/lagan/lagan_35.jpg" /></span>
+       </div>
+       <img src="http://cca.mbaobao.com/mkts/201312/17/lagan/lagan_12.jpg" border="0" usemap="#Map6" />
+       <map name="Map6" id="Map6">
+         <area shape="rect" coords="91,97,254,400" href="http://www.mbaobao.com/item/1409008701" target="_blank" />
+         <area shape="rect" coords="265,42,453,411" href="http://www.mbaobao.com/item/1409009201" target="_blank" />
+         <area shape="rect" coords="158,465,268,554" href="http://cart.mbaobao.com/do/items/add/1409008701/1.html" target="_blank" />
+         <area shape="rect" coords="278,468,388,558" href="http://cart.mbaobao.com/do/items/add/1409009201/1.html" target="_blank" />
+         <area shape="rect" coords="173,676,327,731" href="#top_04" />
+       </map>
+      </div>
+        
+       
+  </div>
+</div>
+
+
+<script type="text/javascript">
+seajs.use('jquery',function($){
+	$('.image_hot').find('#image_hot_img').mouseover(function(){
+		var n=$(this).data("id");
+		$('.image_small').find('span').hide();		
+		$('.image_small').find('span').eq(n).fadeIn();			   
+	   })
+	})
+</script>
+
+
+</body>
+</html>

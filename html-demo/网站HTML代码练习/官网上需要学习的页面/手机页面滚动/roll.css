@@ -1,0 +1,138 @@
+.rollBox{
+	background:#FFF;
+	-webkit-box-shadow: 0px 1px 2px #999;
+    -webkit-border-radius: 5px;
+	margin-top:8px;
+	position:relative;
+	display:none
+	}
+.rollBox h3{
+	color:#666666;
+	font-weight:bolder;
+	line-height:30px;
+	margin-left:15px;
+	}
+.rollRrev{
+	position:absolute;
+	top:30px;
+	left:0;
+	width:17px;
+	}
+.rollNext{
+    position:absolute;
+	top:30px;
+	right:0;
+	width:17px;
+	}
+
+/*单个商品显示*/		
+#rollCot img{
+	border:1px solid #CCC;
+	}	
+#rollCot li div{
+	margin-left:2px;
+	}	
+#rollCot span{
+	font-size:12px;
+	color:#ec1a22;
+	font-weight:bolder;
+	display:block;
+	height:35px;
+	padding-top:10px;
+}
+/*左右移动*/
+#rollCot div.flickSlideBottom div.bottomLeft,#rollCot div.flickSlideBottom div.bottomRight {
+
+    position:absolute;
+    bottom:5px;
+    cursor:pointer;
+    outline:none;
+    background-repeat: no-repeat;
+    text-indent:-999em;
+}
+#rollCot div.flickSlideBottom div.bottomLeft {
+	position:absolute;
+    top:30px;
+	left:0;
+	width:17px; 
+	background-image:url(img/tuijian_06.jpg);
+}
+#rollCot div.flickSlideBottom div.bottomRight {
+	position:absolute;
+    top:30px;
+	right:0;
+	width:17px;
+    background-image:url(img/tuijian_10.jpg);
+}
+/**/
+#rollCot div.moveWrap {
+    width:275px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+#rollCot ul.moveWrapBG {
+    width:100%;
+    height:auto;
+    visibility:hidden;
+    display:inline-block;
+    position:relative;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+    margin:0 auto;
+    padding:0;
+    overflow:hidden
+}
+
+#rollCot div.slideMask {
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+    margin-right:0!important;
+}
+#rollCot div.moveWrap>ul.move{
+    margin:0;
+    padding:0;
+    position:relative;
+    left:0;
+    top:0;
+    list-style:none;
+    width:20000px;
+    -webkit-transition:all 0.6s ease-in-out;
+    -webkit-transform:translate3d(0,0,0);
+    -webkit-transition-duration:400ms;
+    -webkit-transition-property:-webkit-transform;
+    margin:0;
+    padding:0;
+    display:none;
+}
+#rollCot li{
+    padding:0;
+    float:left;
+    list-style:none;
+    text-align:center;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+#rollCot li.slideUnit>div {
+	
+    padding:0px;
+    display:inline-block;
+    vertical-align:middle;
+    text-align:center;
+    -webkit-box-sizing:border-box;
+	
+}
+						

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js两种图片等比缩放</title>
+<style>
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+
+.proshow{border:1px solid #e0e0e0;margin:10px 0; width:690px; height:203px;}
+.prodList{width:147px;height:150px;margin:0 15px; text-align:center;float:left;display:inline;overflow:hidden; background:#f00}
+.prodList h3{width:147px; height:30px; line-height:30px; text-align:center; font-size:12px; background:#2B2B2B}
+.picBox{width:147px; height:114px;line-height:110px; overflow:hidden; text-align:center; display:table-cell; vertical-align:middle; *disply:block; font-size:110px;}
+.prodList img{margin:0 auto;}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+
+function rs(el){
+//首先判断图片是长的还是宽的。如果是长的就对宽进行变形，否则对高进行变形
+(el.width>el.height)?el.width = Math.min(147,el.width):el.height = Math.min(114,el.height);
+}
+</script>
+<!-- 当图片加载完成后调用函数,记得下面不要限制住长和宽
+ -->
+<div class="proshow"> 
+ <div class="prodList">	
+   <div class="picBox">							    
+      <a href="#"><img onload="rs(this)" src="images/proshow.jpg" alt="" title=""/></a>
+   </div>
+   <h3>洗衣成品</h3>											   							  
+ </div
+  ><div class="prodList">	
+   <div class="picBox">							    
+      <a href="#"><img onload="rs(this)" src="images/1.jpg" alt="" title=""/></a>
+   </div>
+   <h3>洗衣成品</h3>											   							  
+ </div
+  ><div class="prodList">	
+   <div class="picBox">							    
+      <a href="#"><img onload="rs(this)" src="images/l1.jpg" alt="" title=""/></a>
+   </div>
+   <h3>洗衣成品</h3>											   							  
+ </div>
+</div>
+
+<script language="JavaScript">
+<!--
+//图片按比例缩放
+var flag=false;
+function DrawImage(ImgD,iwidth,iheight){
+//参数(图片,允许的宽度,允许的高度)
+var image=new Image();
+image.src=ImgD.src;
+if(image.width>0 && image.height>0){
+flag=true;
+if(image.width/image.height>= iwidth/iheight){
+if(image.width>iwidth){
+ImgD.width=iwidth;
+ImgD.height=(image.height*iwidth)/image.width;
+}else{
+ImgD.width=image.width;
+ImgD.height=image.height;
+}
+ImgD.alt=image.width+"×"+image.height;
+}
+else{
+if(image.height>iheight){
+ImgD.height=iheight;
+ImgD.width=(image.width*iheight)/image.height;
+}else{
+ImgD.width=image.width;
+ImgD.height=image.height;
+}
+ImgD.alt=image.width+"×"+image.height;
+}
+}
+}
+//-->
+</script>
+
+第二种：<img src="images/l2.jpg" onload="javascript:DrawImage(this,147,114)">
+</body>
+</html>

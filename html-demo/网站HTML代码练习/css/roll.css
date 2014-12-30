@@ -1,0 +1,156 @@
+.rollBox{
+	border:1px solid #000;
+	width:240px;
+	height:240px;
+	margin:100px auto;
+	text-align:center;
+	position:relative;	
+	}
+.rollText{
+	font-size:14px;
+	line-height:40px;
+	font-family:'微软雅黑';
+	font-weight:bolder;
+	}
+.rollgoods{
+	margin:15px auto;
+	border:1px solid #099;
+    width:170px;
+	height:160px;
+
+	}
+.rollgoods img{
+	border:1px solid #9C0;
+	width:130px;
+	height:120px;
+	}	
+.rollgoods ul{
+	list-style:none;
+	margin:20px auto;
+	}
+.rollgoods li{
+	}
+/**/
+/*左右移动*/
+.rollgoods div.flickSlideBottom div.bottomLeft,.rollgoods div.flickSlideBottom div.bottomRight {
+
+    position:absolute;
+    bottom:5px;
+    cursor:pointer;
+    outline:none;
+    background-repeat: no-repeat;
+    text-indent:-999em;
+}
+.rollgoods div.flickSlideBottom div.bottomLeft {
+	position:absolute;
+    top:80px;
+	left:10px;
+	width:17px;
+	background-image:url(../img/tuijian_06.jpg)
+}
+.rollgoods div.flickSlideBottom div.bottomRight {
+	position:absolute;
+    top:80px;
+	right:10px;
+	width:17px;
+    background-image:url(../img/tuijian_10.jpg);
+}
+
+/**/
+.rollgoods div.moveWrap {
+    width:150px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.rollgoods ul.moveWrapBG {
+    width:100%;
+    height:auto;
+    visibility:hidden;
+    display:inline-block;
+    position:relative;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+    margin:0 auto;
+    padding:0;
+    overflow:hidden
+}
+
+.rollgoods div.slideMask {
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+    margin-right:0!important;
+}
+.rollgoods div.moveWrap>ul.move{
+    margin:0;
+    padding:0;
+    position:relative;
+    left:0;
+    top:0;
+    list-style:none;
+    width:20000px;
+    -webkit-transition:all 0.6s ease-in-out;
+    -webkit-transform:translate3d(0,0,0);
+    -webkit-transition-duration:400ms;
+    -webkit-transition-property:-webkit-transform;
+    margin:0;
+    padding:0;
+    display:none;
+}
+.rollgoods li{
+	margin-top:18px;
+    padding:0;
+    float:left;
+    list-style:none;
+    text-align:center;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.rollgoods li.slideUnit>div {
+	
+    padding:0px;
+    display:inline-block;
+    vertical-align:middle;
+    text-align:center;
+    -webkit-box-sizing:border-box;
+	
+}
+/*位置显示*/
+.rollgoods div.flickSlideBottom ul.slidePager {
+    display:inline-block;
+    width:auto;
+    text-align:center;
+    margin:0 6px;
+    padding:0;
+    vertical-align:middle;
+}
+.rollgoods div.flickSlideBottom ul.slidePager li.slidePagerPointer {
+    background:#e8e8e8;
+    width:10px;
+    height:10px;
+    display:inline-block;
+    margin:0 4px;
+    text-indent:-999em;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px
+}
+
+.rollgoods div.flickSlideBottom ul.slidePager li.slidePagerPointer.active {
+    background:#ec1b23
+}
+
+		
+			

@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<script src="seajs/sea-debug.js" data-config="seajs/config.js" id="seajsnode"></script>
+<style  type="text/css">
+.hover{
+	width:350px;
+	height:150px;
+	background:#999;
+}
+.time{
+	width:350px;
+	height:100px;
+	border:1px solid #000;
+	margin:0 auto;
+	/*非IE的主流浏览器识别的垂直居中的方法*/
+     display: table-cell;
+     vertical-align:middle;
+
+	}
+	
+.time ul {
+	list-style:none;
+	font-size:0;   /*去掉元素之间的非正常空隙*/
+	*word-spacing:-1px;/* IE6、7 */
+	text-align:center;/*水平居中*/
+	}
+
+ul li{
+	display: inline-block;/*现代游览器+ie6,7inline元素*/
+	*display:inline; /* IE6、7 block 元素 */
+    *zoom:1;
+	padding:10px 10px;
+	box-shadow: 1px 1px 4px #000;/*{box-shadow:投影方式 X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色}*/
+	color:#fff;
+	background-color:#3a3a3a;/*在不能显示渐变阴影的游览器显示的背景颜色*/ 
+	border-radius: 4px;/*设置圆角*/
+	font-size:40px;
+	background-image: -webkit-linear-gradient(top, #454545, #000); /*背景颜色渐变*/
+	text-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);/*文字的阴影text-shadow:[x轴(X Offset) y轴(Y Offset)  模糊半径(Blur)  颜色(Color)],[x轴(                                                Offset) y轴(Y Offset)  模糊半径(Blur)  颜色(Color)]...*/
+	text-align: center;
+	margin-right:5px;
+    *margin-top:20px;/*当不能垂直居中的时候*/
+	}
+#li{
+	padding:1px 1px;
+	background-image: none;
+	background-color: inherit;
+	box-shadow:none;
+	color:#000;
+	font-weight:bolder;
+	}
+.setTime{
+	border:1px solid   #000;
+	border-top:none;
+	height:46px;
+	}
+.button{
+	width:50px;
+	height:30px;
+	color:#9F0;
+	background-color:#3a3a3a;/*在不能显示渐变阴影的游览器显示的背景颜色*/ 
+	background-image: -webkit-linear-gradient(top, #454545, #000);
+	border-radius: 4px;
+	box-shadow: 1px 1px 4px #000;
+	border: 1px solid #0F3;
+     font-family:楷体_GB2312;
+	 cursor:pointer;
+	 margin:5px;
+	}
+.setTime select{
+	width:50px;
+	height:18px;
+	font-family:Microsoft YaHei;
+	background-color:#0F9;
+
+	}
+.setTime option:hover{
+	background-color:#09F;
+	
+}
+.alarm{
+	display:none;
+	font-size:25px;
+	width:120px;
+	height:30px;
+	background:#CC9;
+	color: #900;
+	border:2px solid #C60;
+	margin:10px auto;
+	text-align:center;
+	}
+</style>
+</head>
+<body>
+<!--▼ 浮动框部分-->
+<div class="hover"> 
+<!--▼ 时钟部分-->
+<div class="time">
+     <ul>
+     <li  class="hours">8</li>
+     <li  class="hours">8</li>
+     <li id="li">:</li>
+     <li  class="minutes">8</li>
+     <li  class="minutes">8</li>
+     <li id="li">:</li>    
+     <li  class="seconds">8</li>
+     <li  class="seconds">8</li>
+     </ul>
+</div>
+<!--▼ 定时报警设置区--> 
+<div class="setTime">
+   <input type="button" value="开始" class="button start"/>
+   <select id="hours">
+   <option selected="selected">0</option>
+   <option>1</option>
+   <option>2</option>
+   <option>3</option>
+   <option>4</option>
+   <option>5</option>
+   <option>6</option>
+   <option>7</option>
+   <option>8</option>
+   <option>9</option>
+   <option>10</option>
+   <option>11</option>
+   <option>12</option>
+   </select>
+   <span>小时</span>
+   <select id="minutes">
+   <option selected="selected">0</option>
+   <option>1</option>
+   <option>2</option>
+   <option>3</option>
+   <option>4</option>
+   <option>5</option>
+   <option>10</option>
+   <option>15</option>
+   <option>20</option>
+   <option>30</option>
+   <option>40</option>
+   <option>50</option>
+   </select>
+   <span>分</span>
+   <select id="seconds">
+   <option selected="selected">0</option>
+   <option>5</option>
+   <option>10</option>
+   <option>15</option>
+   <option>20</option>
+   <option>30</option>
+   <option>40</option>
+   <option>50</option>
+   </select>
+    <span>秒</span>
+   <input type="button" value="结束"  class="button end" />
+</div>
+<div class="alarm">时间到了!</div>
+</div>
+
+<!--▼ 为了测试浮动框设置的高度-->
+<div style="height:5000px"></div>
+<script type="text/javascript">
+   seajs.use('./js/hovering.js',function(H){
+    H.hovering('.hover',['130','none','none','20'],'top');	   
+   })
+</script>
+<!--▼ 时间的显示设置-->
+<script type="text/javascript">
+    seajs.use("./js/timing.js",function(T){
+		T.timing();
+		})
+</script>
+</body>
+</html>
+<!--   设计思路
+一：悬浮框接口，当使用这个接口可以控制的div的悬浮
+   可以设置选择的top，right，bottom，left的悬浮位置的值，不需要的设置设置为none，
+   设置悬浮框的滚动是否需要在top或者bottom之间停留，正常悬浮位置为middle
+
+二：报警区，设计思路
+   可以选择需要报警的时间可按照秒和分小时来
+   有开始按钮
+   到达报警时背景颜色变成红色
+   报警完成有停止按钮  
+-->

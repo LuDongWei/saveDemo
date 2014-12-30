@@ -1,0 +1,108 @@
+/* CSS Document */
+/*全局样式重置
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 "宋体", Arial, sans-serif; word-wrap:break-word; color:#333;}
+a{text-decoration:none;  cursor:pointer;  color:#666;}
+a:hover{color:#06F;}
+a:active,a:focus{outline:none;  star:expression(this.onFocus=this.blur());}
+ol,ul ,li{list-style: none;} 
+h1, h2, h3, h4, h5, h6{font-weight:normal; font-size:100%;} 
+img{border:0;}
+
+/*清除浮动
+-----------------------------------------------------------------------------------------------------------------------------------------------*/
+.clearfix:after{clear:both; content:"."; display:block; height:0; visibility:hidden;}
+.clearfix{*zoom:1;}
+
+/*--浮动--*/
+.fl{float:left; display:inline;}
+.fr{float:right; display:inline;}
+
+
+/**焦点图**/
+.banner{ width:990px; margin:0 auto;}
+.banner .bannerBot{ float:left; width:970px; margin-left:10px; _display:inline; background:url(../images/bannerBot.png) repeat-x; height:8px; font-size:0; line-height:0;}
+#fcbx{ float:left; margin-left:10px; _display:inline;}
+#fcbx , #fcimg{ width:970px; height:297px; overflow:hidden;}
+#fcbx div , #fcnum { top: -23px; height: 23px; margin-bottom: -23px; position:relative; }
+#fcbx div { filter:alpha(opacity=25); -moz-opacity:0.25; opacity:0.25; background-color:#000; }
+#fcimg img{ width:970px; height:297px; overflow:hidden;}
+
+#fcnum { float:right; margin-right: 10px; }
+#fcnum li{ float:left; background:#FFF; margin-left:5px; height:7px; width:7px; cursor: pointer; margin-top:8px; font-size:0; line-height:0;}
+#fcnum li.crn { background-color:#F15D17; }
+
+
+/* 图片左右滚动*/
+#gundong {
+overflow:hidden;
+width:900px;
+height:300px;
+margin:15px 0 0 20px;;
+
+}
+
+#ingundong {
+float: left;
+width: 800%;
+}
+
+#gundong1 {
+float: left;
+}
+
+#gundong2 {
+float: left;
+}
+/*上下滚动*/ 
+#demo{width:650px;
+height:340px;
+overflow:hidden;
+margin-top:10px;
+float:left;
+position:relative;
+}
+#indemo{
+	width:650px;
+	height:800%;
+	float:left;
+}
+#demo1{float:left;}
+#demo2{float:left;}
+#demo li{width:204px;  margin-top:0 8px 0 2px; float:left;}
+
+
+.prodList{
+	width:180px;
+	height:150px;
+	margin-left:6px;	 
+	text-align:center;
+	float:left;
+	display:inline;
+	overflow:hidden;	
+	padding-bottom:10px; 
+}
+.prodList h3{width:158px; height:30px; line-height:30px; font-weight:normal; font-size:12px;}
+
+.prodList .picBox{width:158px; height:118px; overflow:hidden;}
+
+.prodList .picImgBox{width:158px; height:118px; line-height:118px;  overflow:hidden; text-align:center; display:table-cell; vertical-align:middle; *disply:block;font-size:118px; }
+
+.prodList .picImgBox img{width:158px; text-align:center; border:none; display:block; margin:0 auto; vertical-align:middle;}
+
+/*图片滑动  */ 
+#num_nav ul li{text-indent:-999px;}
+.o_soild{width:444px; height:252px; border:1px solid #CCCCCC; margin:10px 10px;position: relative; }
+.slideitem {
+    height: 248px;
+    left: 5px;
+    position: absolute;
+    top: 2px;
+    width: 444px;
+}
+.slideitem IMG {
+    border: 0 none;
+    height: 248px;
+    width: 444px;
+}

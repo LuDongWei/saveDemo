@@ -1,0 +1,37 @@
+1.判断对象存在或不存在
+var divContent=document.getElementById("div--");
+if(divContent){
+	//..
+}else{
+	//..
+}
+
+2.使用||赋默认值
+var strName=obj.name||"Stan"; //if obj.name == undefined or null
+
+3.使用&&避免TypeError:undefined
+var strName = obj.owner && obj.owner.name;//if obj.owner != null or undefined
+
+4.编写立刻执行的函数表达式
+(function(message){
+  alert(message);
+})("do it");
+
+5.命名规范
+局部变量命名前缀
+字符串：str    整型：int    浮点型：flt    日期：dtm    数组：ary
+文本框：txt    下拉框：ddl  单选框：rdo    复选框:chk   隐藏域：hid
+图片：img      IFrame元素：ifm           span元素：spn  div元素：div   
+超链接：lnk    表格元素：tbl              表格行：tr      单元格：td
+其它采用类型简写作为前缀
+
+6.使用[]动态访问对象属性
+for(var attr in obj) {
+   alert(obj[attr]);
+}
+
+7.最小化全局变量，减少全局变量污染
+var MY_GLOBAL_CONTAINER = {};//某一个功能模块的全局变量全部由它存放
+MY_GLOBAL_CONTAINER.param1 = ...;
+MY_GLOBAL_CONTAINER.param2 = ...;
+

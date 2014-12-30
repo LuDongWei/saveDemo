@@ -1,0 +1,16 @@
+在css中 >好的运用
+css中大于号其实就是继承的意思，只有下一级分类能继承，再下一级就不继承，简单点说就是儿子辈的继承，孙子辈的不继承；
+ 打个比方div span{…}这样写,div下的不论是儿子辈的span还是孙子辈的span都应用样式;
+
+也就是说，div下的所有span都有这个样式。
+
+div>span{…}这样写,div下的只有儿子辈的span应用样式;
+
+但是如果是这种情况<span>dddddd<span>aaaaa</span></span>孙子辈的span会继承儿子辈的span样式;
+
+试的时候这样<p><span>aaaaa</span><!–2–></p>才是真正的孙子辈样式
+
+但是这个大于号在ie6下是不支持的。
+
+
+特殊符号：http://www.365gf.com/knowledge/div/detail_5587.html

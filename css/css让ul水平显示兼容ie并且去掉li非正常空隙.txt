@@ -1,0 +1,140 @@
+.box ul{
+  list-style:none;/去掉li前面的标签
+  font-size:0;/*去掉元素之间的非正常空隙*/
+  *word-spacing:-1px;/*ie6,7*/
+  text-align:center; /*水平居中*/ 
+}
+.box li{
+  display:inline-block:/*现代游览器支持水平显示ie7以下不支持*/
+  *display:inline;/*IE6,IE7 block元素*/
+  *zoom:1;
+  *margin-top:20px;/*当不能垂直居中的时候*/
+  text-align:center;
+  
+}
+
+
+透明度
+filter: alpha(opacity=69);opacity: 0.69;写两个的 专门为ie加一个
+
+
+
+/*css中zoom:1的作用，小标签大作用
+css中的zoom的作用
+1、检查页面的标签是否闭合
+不要小看这条，也许折腾了你两天都没有解决的 CSS BUG 问题，却仅仅源于这里。毕竟页面的模板一般都是由开发来嵌套的，而他们很容易犯此类问题。
+快捷提示：可以用 Dreamweaver 打开文件检查，一般没有闭合的标签，会黄色背景高亮。
+　　2、样式排除法
+有些复杂的页面也许加载了 N 个外链 CSS 文件，那么逐个删除 CSS 文件，找到 BUG 触发的具体 CSS 文件，缩小锁定的范围。
+　　对于刚才锁定的问题 CSS 样式文件，逐行删除具体的样式定义，定位到具体的触发样式定义，甚至是具体的触发样式属性。
+　　3、模块确认法
+有时候我们也可以从页面的 HTML 元素出发。删除页面中不同的 HTML 模块，寻找到触发问题的 HTML 模块。
+　　4、检查是否清除浮动
+其实有不少的 CSS BUG 问题是因为没有清除浮动造成的。养成良好的清除浮动的习惯是必要的，推荐使用 无额外 HTML 标签的清除浮动的方法（尽量避免使用 overflow:hidden;zoom:1 的类似方法来清除浮动，会有太多的限制性）。
+　　5、检查 IE 下是否触发 haslayout
+很多的 IE 下复杂 CSS BUG 都与 IE 特有的 haslayout 息息相关。熟悉和理解 haslayout 对于处理复杂的 CSS BUG 会事半功倍。推荐阅读 old9 翻译的 《On having layout》（如果无法翻越穿越伟大的 GFW，可阅读 蓝色上的转帖 ）
+快捷提示：如果触发了 haslayout，IE 的调试工具 IE Developer Toolbar 中的属性中将会显示 haslayout 值为 -1。
+　　6、边框背景调试法
+故名思议就是给元素设置显眼的边框或者背景（一般黑色或红色），进行调试。此方法是最常用的调试 CSS BUG 的方法之一，对于复杂 BUG 依旧适用。经济实惠还环保^^
+最后想强调一点的是，养成良好的书写习惯，减少额外标签，尽量语义，符合标准，其实可以为我们减少很多额外的复杂 CSS BUG，更多的时候其实是我们自己给自己制造了麻烦。希望你远离 BUG ，生活越来越美好。
+*/
+
+
+/*haslayout是什么意思  去*zoom=1的深入研究
+什么是 haslayout ？
+
+haslayout 是Windows Internet Explorer渲染引擎的一个内部组成部分。在Internet Explorer中，一个元素要么自己对自身的内容进行计算大小和组织，要么依赖于父元素来计算尺寸和组织内容。为了调节这两个不同的概念，渲染引擎采用了 hasLayout 的属性，属性值可以为true或false。当一个元素的 hasLayout 属性值为true时，我们说这个元素有一个布局（layout）
+
+当一个元素有一个布局时，它负责对自己和可能的子孙元素进行尺寸计算和定位。简单来说，这意味着这个元素需要花的代价来维护自身和里面的内容，而不是依赖于祖先元素来完成这些工作。因此，一些元素默认会有一个布局。当我们说一个元素拥有layout或得到layout，或者说一个元素has layout 的时候，我们的意思是指它的微软专有属性 hasLayout 被设为了 true 。一个layout元素可以是一个默认就拥有 layout 的元素或者是一个通过设置某些 CSS 属性得到 layout 的元素。如果某个HTML元素拥有 haslayout 属性，那么这个元素的 haslayout 的值一定只有 true，haslayout 为只读属性 一旦被触发，就不可逆转。通过 IE Developer Toolbar 可以查看 IE 下 HTML 元素是否拥有haslayout，在 IE Developer Toolbar 下，拥有 haslayout 的元素，通常显示为haslayout = -1。
+
+负责组织自身内容的元素将默认有一个布局，主要包括以下元素（不完全列表）：
+
+* body and html
+
+* table， tr， th， td
+
+* img
+
+* hr
+
+* input， button， file， select， textarea， fieldset
+
+* marquee
+
+* frameset， frame， iframe
+
+* objects， applets， embed
+
+对于并非所有的元素都默认有布局，微软给出的主要原因是性能和简洁。如果所有的元素都默认有布局，会对性能和内存使用上产生有害的影响。
+
+如何激发 haslayout？
+
+大部分的 IE 显示错误，都可以通过激发元素的 haslayout 属性来修正。可以通过设置 css 尺寸属性(width/height)等来激发元素的 haslayout，使其拥有布局。如下所示，通过设置以下 css 属性即可。
+
+* display: inline-block
+
+* height: (任何值除了auto)
+
+* float: (left 或 right)
+
+* position: absolute
+
+* width: (任何值除了auto)
+
+* writing-mode: tb-rl
+
+* zoom: (除 normal 外任意值)
+
+Internet Explorer 7 还有一些额外的属性(不完全列表):
+
+* min-height: (任意值)
+
+* max-height: (除 none 外任意值)
+
+* min-width: (任意值)
+
+* max-width: (除 none 外任意值)
+
+* overflow: (除 visible 外任意值)
+
+* overflow-x: (除 visible 外任意值)
+
+* overflow-y: (除 visible 外任意值)
+
+* position: fixed
+
+其中 overflow-x 和 overflow-y 是 css3 盒模型中的属性，目前还未被浏览器广泛支持。
+
+对于内联元素(默认即为内联的元素，如 span，或 display:inline; 的元素)，
+
+width 和 height 只在 IE5.x 下和 IE6 或更新版本的 quirks 模式下触发 hasLayout 。而对于 IE6，如果浏览器运行于标准兼容模式下，内联元素会忽略 width 或 height 属性，所以设置 width 或 height 不能在此种情况下令该元素具有 layout。
+
+zoom 总是可以触发 hasLayout，但是在 IE5.0 中不支持。
+
+具有layout 的元素如果同时 display: inline ，那么它的行为就和标准中所说的 inline-block 很类似了：在段落中和普通文字一样在水平方向和连续排列，受 vertical-align 影响，并且大小可以根据内容自适应调整。这也可以解释为什么单单在 IE/Win 中内联元素可以包含块级元素而少出问题，因为在别的浏览器中 display: inline 就是内联，不像 IE/Win 一旦内联元素拥有 layout 还会变成 inline-block。
+
+haslayout 问题的调试与解决
+
+当网页在 IE 中有异常表现时，可以尝试激发 haslayout 来看看是不是问题所在。常用的方法是给某元素 css 设定 zoom:1 。使用 zoom:1 是因为大多数情况下，它能在不影响现有环境的条件下激发元素的 haslayout。而一旦问题消失，那基本上就可以判断是 haslayout 的原因。然后就可以通过设定相应的 css 属性来对这个问题进行修正了。建议首先要考虑的是设定元素的 width/height 属性，其次再考虑其他属性。
+
+对 IE6 及更早版本来说，常用的方法被称为霍莉破解(Holly hack)，即设定这个元素的高度为 1% (height:1%;)。需要注意的是，当这个元素的 overflow 属性被设置为 visible 时，这个方法就失效了。或者使用 IE 的条件注释。
+
+对 IE7 来说，最好的方法时设置元素的最小高度为 0 (min-height:0;)。
+
+haslayout 问题引起的常见 bug
+
+IE6 及更低版本的双空白边浮动 bug
+
+bug 修复: display:inline;
+
+IE5-6/win 的 3 像素偏移 bug
+
+bug 修复: _height:1%;
+
+E6 的躲躲猫(peek-a-boo) bug
+
+bug 修复: _height:1%;
+
+
+*/
+

@@ -1,0 +1,227 @@
+sku: 1502002402,
+shoppePrice: 1118, //专柜价 
+mbbPrice: 500, //麦包价格 
+sellPrice: 250, //售价格\优惠价 
+priceTitle: "优惠价", //价格标题 
+brandName: "[DUDU]", //品牌 
+categoryName: "手提斜挎包", //种类 
+stockQty: 115, //销售数量 
+beginTime: "2014-5-23 10:00:00", //开始时间 
+endTime: "2014-5-23 11:00:00", //结束时间 
+passLag: 22222, //离开始秒杀时间戳 
+remainLag: 22222, //离结束秒杀时间戳 
+isSeckill: false //是否开启秒杀 
+
+传入数据: 
+data {
+  activitys: "2501,2032",
+  sales: "25011,20321",
+  beginTime: "2014-5-23 10:00:00",
+  endTime: "2014-5-28 10:00:00"
+}
+
+输出数据: {
+  activityID: {
+    2525: [{
+      stockQty: 115,
+      beginTime: "2014-5-23 10:00:00",
+      endTime: "2014-5-23 11:00:00",
+      passLag: 22222,
+      remainLag: 22222,
+      isSeckill: false,
+      apId: 555,
+      skus: [{
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }, {
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }, {
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }]
+    }, {
+      stockQty: 115,
+      beginTime: "2014-5-23 15:00:00",
+      endTime: "2014-5-23 16:00:00",
+      passLag: 22222,
+      remainLag: 22222,
+      isSeckill: false,
+      apId: 345,
+      skus: [{
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }, {
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }, {
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }]
+    }],
+    2526: [{
+      stockQty: 115,
+      beginTime: "2014-5-23 10:00:00",
+      endTime: "2014-5-23 11:00:00",
+      passLag: 22222,
+      remainLag: 22222,
+      isSeckill: false,
+      apId: 555,
+      skus: [{
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }, {
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }, {
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }]
+    }, {
+      stockQty: 115,
+      beginTime: "2014-5-23 15:00:00",
+      endTime: "2014-5-23 16:00:00",
+      passLag: 22222,
+      remainLag: 22222,
+      isSeckill: false,
+      apId: 345,
+      skus: [{
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }, {
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }, {
+        sku: 1502002402,
+        shoppePrice: 1118,
+        mbbPrice: 500,
+        sellPrice: 250,
+        priceTitle: "优惠价",
+        brandName: "[DUDU]",
+        categoryName: "手提斜挎包"
+      }]
+    }]
+  },
+  salesList: [{
+    stockQty: 115,
+    beginTime: "2014-5-23 10:00:00",
+    endTime: "2014-5-23 11:00:00",
+    passLag: 22222,
+    remainLag: 22222,
+    isSeckill: false,
+    apId: 555,
+    skus: [{
+      sku: 1502002402,
+      shoppePrice: 1118,
+      mbbPrice: 500,
+      sellPrice: 250,
+      priceTitle: "优惠价",
+      brandName: "[DUDU]",
+      categoryName: "手提斜挎包"
+    }, {
+      sku: 1502002402,
+      shoppePrice: 1118,
+      mbbPrice: 500,
+      sellPrice: 250,
+      priceTitle: "优惠价",
+      brandName: "[DUDU]",
+      categoryName: "手提斜挎包"
+    }, {
+      sku: 1502002402,
+      shoppePrice: 1118,
+      mbbPrice: 500,
+      sellPrice: 250,
+      priceTitle: "优惠价",
+      brandName: "[DUDU]",
+      categoryName: "手提斜挎包"
+    }]
+  }, {
+    stockQty: 115,
+    beginTime: "2014-5-23 10:00:00",
+    endTime: "2014-5-23 11:00:00",
+    passLag: 22222,
+    remainLag: 22222,
+    isSeckill: false,
+    apId: 555,
+    skus: [{
+      sku: 1502002402,
+      shoppePrice: 1118,
+      mbbPrice: 500,
+      sellPrice: 250,
+      priceTitle: "优惠价",
+      brandName: "[DUDU]",
+      categoryName: "手提斜挎包"
+    }, {
+      sku: 1502002402,
+      shoppePrice: 1118,
+      mbbPrice: 500,
+      sellPrice: 250,
+      priceTitle: "优惠价",
+      brandName: "[DUDU]",
+      categoryName: "手提斜挎包"
+    }, {
+      sku: 1502002402,
+      shoppePrice: 1118,
+      mbbPrice: 500,
+      sellPrice: 250,
+      priceTitle: "优惠价",
+      brandName: "[DUDU]",
+      categoryName: "手提斜挎包"
+    }]
+  }]
+}

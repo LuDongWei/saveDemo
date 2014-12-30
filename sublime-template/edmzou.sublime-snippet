@@ -1,0 +1,320 @@
+<snippet>
+	<content><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>周二上新</title>
+</head>
+
+<body>
+
+<!--周二上新EDM头部-->
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="24" align="center" valign="bottom" style="font-size:12px; color:#555555; line-height:16px">
+      如果您无法正常浏览此邮件，请在我们的网站
+      <a href="{$WEBLINK}" target="_blank" style="font-size:12px; color:#FF0000; text-decoration:none">查看完整版本</a>
+    </td>
+  </tr>
+  <tr>
+    <td height="29" align="center" valign="top" style="font-size:12px; color:#555555; line-height:16px">
+      为确保您订阅的信息不被当做垃圾邮件处理，请把
+      <a href="mailto:mt@taobaombaobao.com" style="font-size:12px; color:#FF0000;">mt@taobaombaobao.com</a>
+      添加为你的联系人
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="left" valign="top">
+            <a href="http://cps.mbaobao.com/cps/146388" target="_blank" title="麦包包">
+              <img src="http://cca.mbaobao.com/edm/201206/25/175new/175new_03.jpg" alt="麦包包"  border="0" style="vertical-align:bottom" />
+            </a>
+          </td>
+          <td align="right" valign="bottom">
+            <a href="http://cps.mbaobao.com/cps/146388" target="_blank" title="晒包">
+              <img src="http://cca.mbaobao.com/edm/201206/25/175new/175new_03.gif" alt="晒包"  border="0" style="vertical-align:bottom" />
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left" valign="middle" bgcolor="#363636">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#363636">
+        <tr>
+          <td width="86" height="14" align="center" valign="middle" style="border-right: 1px solid #7c7c7c; text-align:center">
+            <a style="font-size: 12px; text-decoration: none; color: #ffffff; line-height:14px;" title="时尚女包" href="http://cps.mbaobao.com/cps/146390" target="_blank">时尚女包</a>
+          </td>
+          <td width="77" align="center" valign="middle" style="border-right: 1px solid #7c7c7c; text-align:center">
+            <a style="font-size: 12px; text-decoration: none; color: #ffffff; line-height:14px;" title="精品男包" href="http://cps.mbaobao.com/cps/146392" target="_blank">精品男包</a>
+          </td>
+          <td width="67" align="center" valign="middle" style="border-right: 1px solid #7c7c7c; text-align:center">
+            <a style="font-size: 12px; text-decoration: none; color: #ffffff; line-height:14px;" title="真皮包" href="http://cps.mbaobao.com/cps/146394" target="_blank">真皮包</a>
+          </td>
+          <td width="80" align="center" valign="middle" style="border-right: 1px solid #7c7c7c; text-align:center">
+            <a style="font-size: 12px; text-decoration: none; color: #ffffff; line-height:14px;" title="钱包手包" href="http://cps.mbaobao.com/cps/146396" target="_blank">钱包手包</a>
+          </td>
+          <td width="81" align="left" valign="middle" style="border-right: 1px solid #7c7c7c; text-align:center">
+            <a style="font-size: 12px; text-decoration: none; color: #ffffff; line-height:14px;" title="销量排行" href="http://cps.mbaobao.com/cps/146398" target="_blank">销量排行</a>
+          </td>
+          <td width="76" align="left" valign="middle" style="text-align:center">
+            <a style="font-size: 12px; text-decoration: none; color: #ffffff; line-height:14px;" title="周二上新" href="http://cps.mbaobao.com/cps/146400" target="_blank">周二上新</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td width="47" align="left" valign="top">
+      <img src="http://cca.mbaobao.com/edm/201203/05/tp/head_10.jpg" width="47" height="32" border="0" style="vertical-align:bottom" />
+    </td>
+    <td width="77" align="left" valign="middle" bgcolor="#ec1c24" style="font-size:12px; line-height:18px">
+      <a href="http://cps.mbaobao.com/cps/146404" target="_blank" style="color:#ffffff; text-decoration:none" title="我的订单">加入收藏</a>
+    </td>
+  </tr>
+</table>
+<!--周二上新EDM头部-->
+
+<!--周二上新EDM内容-->
+<!--头部-->
+<table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+  <tr>
+    <td align="left" valign="top">
+      <a href="http_01" target="_blank" title="新品上架">
+        <img alt="新品上架" src="http://cca.mbaobao.com/edm/201401/13/zouer/zour_10.jpg" border="0" style="vertical-align:bottom" width="175" height="261" ></a>
+    </td>
+    <td width="134" align="left" valign="top">
+      <a href="http_01" target="_blank" title="新品上架">
+        <img alt="新品上架"  src="http://cca.mbaobao.com/edm/201401/13/zouer/zour_11.jpg" border="0" style="vertical-align:bottom" width="175" height="261" ></a>
+    </td>
+    <td width="146" align="left" valign="top">
+      <a href="http_01" target="_blank" title="新品上架">
+        <img alt="新品上架"  src="http://cca.mbaobao.com/edm/201401/13/zouer/zour_12.jpg" border="0" style="vertical-align:bottom" width="175" height="261" ></a>
+    </td>
+    <td width="146" align="left" valign="top">
+      <a href="http_01" target="_blank" title="新品上架">
+        <img alt="新品上架"  src="http://cca.mbaobao.com/edm/201401/13/zouer/zour_13.jpg" border="0" style="vertical-align:bottom" width="175" height="261" ></a>
+    </td>
+  </tr>
+</table>
+<!--头部-->
+
+<!--优惠-->
+<table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+  <tr>
+    <td align="left" valign="top">
+      <a href="http_02" target="_blank" title="减20">
+        <img alt="减20" src="http://cca.mbaobao.com/edm/201401/13/zouer/zour_14.jpg" border="0" style="vertical-align:bottom" width="700" height="85" ></a>
+    </td>
+  </tr>
+</table>
+<!--优惠-->
+
+<table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+  <tr>
+    <td  align="left" valign="top"    width="700" height="36"  style="background:#efefef; font-size:12px; padding-left:4px; color:#606060; line-height:30px">精选每周二新鲜上架风格手袋，无论您想如何搭配，时尚潮流或者经典风尚？在这里，我们为你一网打尽！</td>
+  </tr>
+</table>
+
+<!--商品区-->
+<table width="700" cellpadding="0" cellspacing="0" align="center" style="border:1px solid #CCC">
+  <tr>
+    <td align="left" valign="bottom">
+      <!--商品01--> 
+      <table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+        <tr>
+          <td align="left" valign="bottom">
+            <table  border="0" align="right" cellpadding="0" cellspacing="0" >
+              <tr>
+                <td align="left" valign="top">
+                  <a href="_http_01" target="_blank" title="_name_01">
+                    <img src= 
+       "http://cca.mbaobao.com/edm/201401/13/zouer/zour_16.jpg" border="0" style="vertical-align:bottom"  width="338" height="85" alt="_name_01"></a>
+                </td>
+              </tr>
+              <tr>
+                <td  align="left"  valign="top" style="font-size:12px; line-height:18px;color:#898989; padding-left:30px; height:95px;" >复古的如意锁带着一种旧旧的年代感，椭圆的身型意<br/>
+                味着圆圆满满，承袭所有的祝福与希冀，锁住一切吉<br/>
+                祥和如意。当美好的寓意又融进甜蜜的色彩里，那是<br/>
+                一段绚烂又不会褪色的时光。 
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="bottom">
+                  <a href="_http_01" target="_blank" title="_name_01">
+                    <img src=
+       "http://cca.mbaobao.com/edm/201401/13/zouer/zour_17.jpg" border="0" style="vertical-align:bottom" width="338" height="80" alt="_name_01"></a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="134" height="320" align="left" valign="bottom">
+            <a href="_http_01" target="_blank" title="_name_01">
+              <img src="http://cca.mbaobao.com/edm/201401/13/zouer/zour_15.jpg" style="vertical-align:bottom" width="362" height="274" border="0" alt="_name_01"></a>
+          </td>
+        </tr>
+      </table>
+      <!--商品01--> 
+      
+      <!--商品02--> 
+      <table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+        <tr>
+          <td width="139"  align="left" valign="bottom">
+            <a href="_http_02" target="_blank" title="_name_02">
+              <img src="http://cca.mbaobao.com/edm/201401/13/zouer/zour_18.jpg" border="0" style="vertical-align:bottom"  width="340" height="310" alt="_name_02"></a>
+          </td>
+          <td align="left" valign="bottom">
+            <table width="328" border="0" align="left" cellpadding="0" cellspacing="0" >
+              <tr>
+                <td align="left" valign="top">
+                  <a href="_http_02" target="_blank" title="_name_02">
+                    <img src=
+      "http://cca.mbaobao.com/edm/201401/13/zouer/zour_19.jpg" border="0" style="vertical-align:bottom"  width="184" height="83" alt="_name_02"></a>
+                </td>
+              </tr>
+              <tr>
+                <td  align="left"  valign="top" style="font-size:12px; line-height:18px;color:#898989; padding-left:25px;height:70px;" >极简式样的手提袋，一目了然地呈现在你的眼前。<br/>
+                垂顺的收线，低调的鳄鱼纹表层错落有致，简洁的<br/>
+                气质，干净的款型。
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="bottom">
+                  <a href="_http_02" target="_blank" title="_name_02">
+                    <img src=
+      "http://cca.mbaobao.com/edm/201401/13/zouer/zour_20.jpg" border="0" style="vertical-align:bottom" width="360" height="82" alt="_name_02"></a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!--商品02--> 
+      
+      <!--商品03--> 
+      <table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+        <tr>
+          <td align="left" valign="bottom">
+            <table border="0" align="right" cellpadding="0" cellspacing="0" >
+              <tr>
+                <td align="left" valign="top">
+                  <a href="_http_03" target="_blank" title="_name_03">
+                    <img src= 
+       "http://cca.mbaobao.com/edm/201401/13/zouer/zour_22.jpg" border="0" style="vertical-align:bottom"  width="260" height="86" alt="_name_03"></a>
+                </td>
+              </tr>
+              <tr>
+                <td  align="left"  valign="top" style="font-size:12px; line-height:18px;color:#898989; padding-left:35px;height:70px;" >敢打上独家印记的精心设计，别出心裁的风格装<br/>
+                饰，顷刻间眼前一亮。再深挖独到设计的灵感来<br/>
+                源，象征胜利的美好寓意抓人心魄。
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="bottom">
+                  <a href="_http_03" target="_blank" title="_name_03">
+                    <img src=
+       "http://cca.mbaobao.com/edm/201401/13/zouer/zour_23.jpg" border="0" style="vertical-align:bottom" width="334" height="94" alt="_name_03"></a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td height="320" align="left" valign="bottom">
+            <a href="_http_03" target="_blank" title="_name_03">
+              <img src="http://cca.mbaobao.com/edm/201401/13/zouer/zour_21.jpg" style="vertical-align:bottom" width="366" height="282" border="0" alt="_name_03"></a>
+          </td>
+        </tr>
+      </table>
+      <!--商品03-->
+
+      <!--商品04--> 
+      <table width="700" cellpadding="0" cellspacing="0" border="0" align="center">
+        <tr>
+          <td  align="left" valign="bottom">
+            <a href="_http_04" target="_blank" title="_name_04">
+              <img src="http://cca.mbaobao.com/edm/201401/13/zouer/zour_24.jpg" style="vertical-align:bottom" width="334" height="288" border="0" alt="_name_04"></a>
+          </td>
+          <td align="left" valign="bottom">
+            <table  border="0" align="right" cellpadding="0" cellspacing="0" >
+              <tr>
+                <td align="left" valign="top">
+                  <a href="_http_04" target="_blank" title="_name_04">
+                    <img src= 
+       "http://cca.mbaobao.com/edm/201401/13/zouer/zour_25.jpg" border="0" style="vertical-align:bottom"  width="233" height="85" alt="_name_04"></a>
+                </td>
+              </tr>
+              <tr>
+                <td  align="left"  valign="top" style="font-size:12px; line-height:18px;color:#898989; padding-left:30px; height:70px;" >男士想要锋芒锐显，又要低调涵养，那唯有典藏之后才<br/>
+                能真心拥有和体会，我们从源头抓起，才能确保包包的<br/>
+                完美。 
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="bottom">
+                  <a href="_http_04" target="_blank" title="_name_04">
+                    <img src=
+       "http://cca.mbaobao.com/edm/201401/13/zouer/zour_26.jpg" border="0" style="vertical-align:bottom" width="366" height="77" alt="_name_04"></a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!--商品04--> 
+    </td>
+  </tr>
+</table>
+<!--商品区-->
+<!--周二上新EDM内容-->
+
+<!--周二上新EDM尾部--> 
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" style="height:10px;line-height:0;font-size:0;overflow:hidden">
+  <tr>
+    <td height="18" align="left" valign="top">
+      <img src="http://cca.mbaobao.com/edm/201211/20/tb/xp18.jpg" width="698" height="13" border="0" style="vertical-align:bottom" />
+    </td>
+  </tr>
+</table>
+
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="35" align="left" valign="bottom" style="font-size:12px; color:#555555; line-height:24px; padding-left:3px">
+      尊敬的会员，您之所以收到这封邮件，是因为您曾经购买过麦包包的产品。我们保证仅向您发送关于麦包包的新品、促销优惠以及服务的电子邮件。麦包包尊重并保护您的隐私。
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="bottom" style="font-size:12px; color:#555555; line-height:24px; padding-left:3px">
+      如果您不愿意继续接收来自麦包包的邮件，请点击
+      <a href="{$PLUGINLINK=unsubscribe}" target="_blank" style="color:#ed1c24">退订本类</a>
+      邮件。
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="bottom" style="font-size:12px; color:#555555; line-height:24px; padding-left:3px">
+      如果有问题请访问
+      <a href="http://cps.mbaobao.com/cps/146528" target="_blank" style="font-size:12px; color:#FF0000;">售后服务中心</a>
+      ，或者旺旺联系麦包包店铺客服：
+      <a target="_blank" href="http://cps.mbaobao.com/cps/162957">
+        <img border="0" src="http://amos.im.alisoft.com/grponline.aw?v=3&amp;uid=%C2%F3%B0%FC%B0%FC%CF%E4%B0%FC%B9%D9%B7%BD%C6%EC%BD%A2%B5%EA&amp;site=cntaobao&amp;gids=52858&amp;s=1" alt="点击这里给我发消息" />
+      </a>
+      。
+    </td>
+  </tr>
+  <tr>
+    <td height="35" align="center" valign="middle" style="font-size:12px; color:#555555; line-height:24px">&copy;2007-2012 Mbaobao All Rights Reserved</td>
+  </tr>
+</table>
+<!--周二上新EDM尾部-->
+
+</body>
+</html>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>edmzou</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	  <scope>text.html</scope>
+</snippet>

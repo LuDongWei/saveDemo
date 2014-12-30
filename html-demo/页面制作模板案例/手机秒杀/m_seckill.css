@@ -1,0 +1,183 @@
+.M_main{
+width:320px;
+margin:0 auto;
+}
+.M_main header img{
+	float:left;
+}
+
+/*----今天秒杀----*/
+.app_seckill_today{
+width:320px;
+background:#4eaeda;
+height:250px;
+overflow:hidden;
+}
+
+.app_seckill_today .app_seckill_choose{
+font-size:0px;
+margin-left:1px;
+}
+.app_seckill_today .app_seckill_choose li{
+float:left;
+display:inline-block;
+*display:inline;
+*zoom:1;
+font-size:12px;
+color:#ffffff;
+width:106px;
+height:35px;
+background:#000000;
+line-height:15px;
+text-align:center;
+font-family:'微软雅黑';
+}
+
+.app_seckill_today .app_seckill_choose li .type{
+height:16px;
+line-height:21px;
+}
+
+.app_seckill_today .app_seckill_choose li .time{
+height:19px;
+line-height:19px;
+font-size:16px;	
+}
+
+
+.app_seckill_today .app_seckill_choose li a{
+display:block;
+color:#ffffff;
+width:106px;
+height:35px;
+position:relative;
+}
+
+.app_seckill_today .app_seckill_choose li a i{
+position: absolute;
+bottom: -11px;
+left: 45%;
+display: inline-block;
+border-width: 4px;
+border-color: #4eaeda #fff #fff #fff;
+border-style: solid;
+width: 0;
+height: 0;
+line-height: 0;
+display: none;
+}
+
+.app_seckill_today .app_seckill_choose li a.selected{
+background:#4eaeda;
+}
+
+.app_seckill_today .app_seckill_choose li a.selected i{
+display: block;	
+}
+
+.app_seckill_today .app_seckill_goods{
+width:320px;
+height:208px;
+font-size:0px;
+overflow:hidden;	
+}
+.app_seckill_today .app_seckill_goods li{
+width:314px;
+height:208px;
+background:#ffffff; 
+margin:3px;
+}
+.app_seckill_today .app_seckill_goods li .app_seckill_left{
+float:left;
+height:167px;
+}
+
+.app_seckill_today .app_seckill_goods li .app_seckill_right{
+float:right;
+height:167px;
+}
+
+.app_seckill_today .app_seckill_goods li .app_seckill_right .app_seckill_goods_time{
+	line-height:16px;
+	color: #f74ea6;
+    font-size: 12px;
+	background:url(http://cca.mbaobao.com/mbaobao/201401/05/seckill/app_seckill_10.jpg) no-repeat top center;
+	width:140px;
+	height:73px;
+	background-size:140px 51px;		
+}
+
+.app_seckill_today .app_seckill_goods_02 li .app_seckill_right .app_seckill_goods_time_02{
+	width:140px;
+	height:51px;
+	background-size:140px 51px;		
+}
+
+.app_seckill_today .app_seckill_goods li .app_seckill_goods_purchase{
+    font-size:12px;
+    float:left;
+}
+
+.app_seckill_today .app_seckill_goods li .app_seckill_goods_purchase img{
+margin-top:3px;
+margin-left:24px;
+}
+
+/*-----弹框-----*/
+.popupWrap{height:400px;position:fixed;top:0px;z-index:9999;width:320px;margin:0 auto;background:#f0f0f0;font-family:Microsoft YaHei; display:none;}
+.popup-end{padding:15px 30px 20px 30px}
+.popup-btn{display:block;width:100%;background:#2a9dd3;height:55px;line-height:55px;text-align:center;font-size:18px;font-weight:700;color:#fff;border-radius:6px;}
+
+.popup-rule{height:400px;background:url(http://cca.mbaobao.com/mkts/201401/06/lc/pic_rule_02.jpg) no-repeat;background-size:320px 420px;overflow:hidden;*zoom:1}
+.popup-rule .popup-rule-close{width:45px;height:45px;float:right;cursor:pointer;display:block;}
+
+.popup-address{padding:20px 30px}
+.popup-address .address-input{width:258px;height:35px;line-height:35px;border:1px solid #2a9dd3;}
+
+.popup-mobile{padding:20px 30px}
+.popup-mobile .mobile-input{width:258px;height:35px;line-height:35px;border:1px solid #2a9dd3;}
+
+.popup-noget{padding:20px 30px}
+
+#seckill_click{
+	cursor:pointer;
+}
+
+.ml-btn-19 {
+	/*General*/
+	display: inline-block;
+	text-decoration: none;
+	
+	/*Text*/
+	font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	line-height:240%;
+	color:rgb(201,36,49);
+	text-align:center;
+	text-shadow:0px 1px 0px rgba(255,255,255,0.25);
+	
+	/*Button*/
+	background-color: #F06365;
+	/*background-image:-moz-linear-gradient(53% 100% 90deg,rgb(237,94,96) 0%,rgb(255,123,128) 100%); 
+	background-image:-webkit-gradient(linear,53% 100%,53% 3%,color-stop(0, rgb(237,94,96)),color-stop(1, rgb(255,123,128)));
+	background-image:-webkit-linear-gradient(90deg,rgb(237,94,96) 0%,rgb(255,123,128) 100%);
+	background-image:-o-linear-gradient(90deg,rgb(237,94,96) 0%,rgb(255,123,128) 100%);
+	background-image:-ms-linear-gradient(90deg,rgb(237,94,96) 0%,rgb(255,123,128) 100%);*/
+	background-image:linear-gradient(90deg,rgb(237,94,96) 0%,rgb(255,123,128) 100%);
+	width:120px;
+	height:32px;
+	border-color:rgb(212,58,67);
+	border-width:1px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border-style:solid;
+	-moz-box-shadow:0px 0px 0px 3px rgba(0,0,0,0.1) ,inset 0px 1px 0px rgba(255,255,255,0.25);
+	-webkit-box-shadow:0px 0px 0px 3px rgba(0,0,0,0.1) ,inset 0px 1px 0px rgba(255,255,255,0.25);
+	box-shadow:0px 0px 0px 3px rgba(0,0,0,0.1) ,inset 0px 1px 0px rgba(255,255,255,0.25);
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffff7b80,endColorstr=#ffed5e60,GradientType=0)
+		progid:DXImageTransform.Microsoft.Glow(Color=#ff000000,Strength=3)";
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffff7b80,endColorstr=#ffed5e60,GradientType=0)
+		progid:DXImageTransform.Microsoft.Glow(Color=#ff000000,Strength=3);
+}

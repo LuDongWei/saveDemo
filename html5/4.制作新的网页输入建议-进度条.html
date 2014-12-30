@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	 <meta charset="utf-8">
+ 	 <title>Html5 	Test</title>
+ 	 <link rel="alternate" href="./css/ZookeeperForm.css">
+     <style>
+       .Label{
+       	 display: inline-block;
+       	 width: 125px;
+       }
+     </style>
+ </head>
+ <body>
+
+     <h1>Zoo Keeper Application Form</h1>
+     <form action="#" id="">
+     	 <p><i>Please complete the form. Mandatory fields are marked with a <em>*</em></i></p>
+     <fieldset>
+        <legend>What's Your Favorite Animal?</legend>
+        <datalist id='animalChoices'>
+          <span class='Label'>Pick an option:</span>
+              <select id="favoriteAnimalPreset">
+                  <option label='Alpaca' value="alpaca"></option>
+                  <option label="Zebra" value="zebra">
+                  <option label="Cat" value="cat">
+                  <option label="Caribou" value="caribou">
+                  <option label="Caterpillar" value="caterpillar">
+                  <option label="Anaconda" value="anaconda">
+                  <option label="Human" value="human">
+                  <option label="Elephant" value="elephant">
+                  <option label="Wildebeest" value="wildebeest">
+                  <option label="Pigeon" value="pigeon">
+                  <option label="Crab" value="crab">
+              </select>
+              <br>
+          <span class='Label'>Or type it in:</span>
+        </datalist>
+        <input list='animalChoices' id="favoriteAnimal">
+     </fieldset>
+     <p><input type="submit" value="Submit Application"></p>     	 
+     </form>
+
+     <br><br>
+     <h1>'progress'and'meter'</h1>
+     
+	<h2>Progress Bars</h2>
+	Current progress: <progress max=100 value=50>50%</progress><br>
+	Current progress: <progress>Task in progress...</progress>
+
+	<h2>Meters</h2>
+	Your suitcase weighs: <meter min="5" max="70" value="28">28 pounds</meter><br>
+	Your suitcase weighs: <meter min="5" max="100" high="70" value="79">79 pounds</meter>*
+	<p><small>* A surcharge applies to suitcases heavier than 70 pounds.</small></p>
+	<div class="separatedSection">
+	<p>Our goal is to raise $50,000 for SLF (Save the Lemmings Foundation).</p>
+	<p>So far we've raised $14,000. <meter max="50000" value="14000"></meter></p>
+	</div> 
+
+	
+      
+ 	
+ </body>
+ </html>

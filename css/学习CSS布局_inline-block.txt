@@ -1,0 +1,30 @@
+你可以创建很多网格来铺满游览器。在过去很长的一段时间内使用float是一种选择。
+但是使用inline-block会更简单。让我们看下使用这两种方法的例子。
+使用浮动：
+.box {
+  float: left;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+.after-box {
+  clear: left;
+}
+使用inline-block:
+.box2 {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
+要使ie6和ie7支持inline-block还要进行额外的工作
+
+使用inline-block布局
+要注意：
+vertical-align属性会影响到inline-block元素，你可能会把它的值设置为top
+你需要设置每一列的宽度
+如果HTML源代码中元素之间有空格，那么列与列之间会产生空隙
+
+
+
+

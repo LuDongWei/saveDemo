@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<meta charset="utf-8">
+			<title>Paint</title>
+<style>
+body{background:white;}
+.Toolbar{float:left; font-family: 'Trebuchet MS';font-size: 14px;font-variant: small-caps;
+    text-align: center; background: #F2F7FE;padding: 10px 15px 3px 10px;
+    margin-bottom: 1px;margin-right: 1px;border: 1px solid #7B899B;}  
+.Toolbar button {padding: 6px;margin: 7px 2px;font-variant: normal;font-size: 12px;}
+.CanvasContainer {clear: both;}  /*图像的左右侧*/
+canvas {border: 1px solid #7B899B;}
+img {padding: 2px;border: 2px solid #F2F7FE;}
+img:hover{border: 2px groove #E4F0FE;background: white;}
+img.Selected {border: 2px groove #E4F0FE;}
+#savedCopyContainer {display: none;}
+#savedCopyContainer img {width: 250px; height: 150px;}
+</style>
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="./js/excanvas.js"></script>
+        <![endif]-->
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="./js/canvas.text.js"></script>
+        <![endif]-->
+		<script type="text/javascript" src="./js/drawing.js"></script>	
+	</head>
+	<body>
+        <div class="Toolbar">
+         -Pen Color-<br>
+            <img src="img/pen_red.gif" id="redPen" alt="Red Pen" 
+            onclick="changeColor('rgb(212,21,29)',this)">
+            <img src="img/pen_green.gif" id="greenPen" alt="Green Pen"
+            onclick="changeColor('rgb(131,190,61)',this)">	
+            <img src="img/pen_blue.gif" id="bluePen" alt="Blue Pen"
+            onclick="changeColor('rgb(0,86,166)',this)">		
+        </div>
+	    <div class="Toolbar">
+	         -Pen Color-<br>
+	     <img src="img/pen_thin.gif" alt="Thin Pen" 
+	     onclick="changeThickness(1,this)">
+	     <img src="img/pen_medium.gif" alt="Medium Pen"
+	     onclick="changeThickness(5,this)">	
+	     <img src="img/pen_thick.gif" alt="Thick Pen" 
+	     onclick="changeThickness(10, this)">		
+	   </div>
+       <div class="CanvasContainer">
+       	  <canvas id="drawingCanvas" width="500" height="300">	
+       	  </canvas>
+       </div>
+       <div class="Toolbar">
+       	-Operations-<br>
+       	 <button onclick="saveCanvas()">Save the Canvas</button>
+       	 <button onclick="clearCanvas()">Clear the Canvas</button>
+       	 <div id="savedCopyContainer">
+       	 	 <img id="savedImageCopy"><br>
+       	 	 Right-click to save...
+       	 </div>
+       </div>
+	</body>
+</html>

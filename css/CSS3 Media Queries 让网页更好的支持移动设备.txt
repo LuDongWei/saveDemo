@@ -1,0 +1,123 @@
+/*基本语法*/     在ie8包括ie8均不能运行
+@media scree and (min-width:1024px) and (max-width:1280px){
+     body{padding:1em;}
+}
+
+//全部的使用者都會載入這裡的 CSS。
+ 
+@media screen and (min-width: 1200px) {
+    // 如果使用者之視窗寬度 >= 1200px，將會再載入這裡的 CSS。
+}
+ 
+@media screen and (min-width: 768px) and (max-width: 979px) {
+    // 如果使用者之視窗寬度介於 768px ~ 979px，將會再載入這裡的 CSS。    
+}
+ 
+@media screen and (max-width: 767px) {
+    // 如果使用者之視窗寬度 <= 768px，將會再載入這裡的 CSS。    
+}
+ 
+@media screen and (max-device-width: 480px) {
+    // 如果使用者之裝置寬度 <= 480px，將會再載入這裡的 CSS。 
+}
+
+ /* 常用类型 */
+2.类型	     解释
+3.all	     所有设备
+4.braille	     盲文
+5.embossed     盲文打印
+6.handheld     手持设备
+7.print	     文档打印或打印预览模式
+8.projection   项目演示，比如幻灯
+9.screen	     彩色电脑屏幕
+10.speech	     演讲
+11.tty	     固定字母间距的网格的媒体，比如电传打字机
+12.tv	     电视
+
+  /* 常用设备 */
+2.设备	     屏幕尺寸
+3.显示器	     1280 x 800
+4.ipad	     1024 x 768
+5.Android      800 x 480
+6.iPhone       640 x 960
+7. 
+8.1280 > 1024 > 960 > 800 >768 > 640
+9. 
+10./* 根据上述尺寸简单的分了几个页面版本 */
+11.@media screen and (min-width:1280px){
+12.	body{ 适合较大的台机显示器或更大 }
+13.}
+14. 
+15.@media screen and (min-width: 800px) and (max-width: 1280px) {
+16.	body{ 适合一般的台机显示器或笔记本 }
+17.}
+18. 
+19.@media screen and (max-width: 800px) {
+20.	body{ 适合一般的平板电脑或智能手机 }
+21.}
+
+
+国际惯例：IE5.5/6/7是不支持media query的，所以我也把这种不支持利用了起来，尝试去区分IE和非IE浏览器的样式，不知道是否合理？！
+1.@media screen and (min-width: 0px) {
+2.	body{ IE goodbye }
+3.}
+
+
+我是通过屏幕尺寸来简单的区分页面样式，如果你想细分样式你可以参考一下内容。
+1./*Google的iPhone横屏样式*/
+2.@media screen and (max-height:300px){
+3.    body{ iPhone 横屏 }
+4.}
+5. 
+6./*android手机的多分辨率*/
+7./* for 240 px width screen */
+8.@media only screen and (max-device-width:240px){
+9.    body{ for Android }
+10.}
+11. 
+12./* for 360px width screen */
+13.@media only screen and (min-device-width:241px) and (max-device-width:360px){
+14.    body{ for Android }
+15.}
+16. 
+17./* for 480 px width screen */
+18.@media only screen (min-device-width:361px)and (max-device-width:480px){
+19.    body{ for Android }
+20.}
+21. 
+22./* device-aspect-ratio 特定屏幕长宽比例 */
+23. 
+24./* for 4:3 screen */
+25.@media only screen and (device-aspect-ratio:4/3){
+26.    body{  }
+27.}
+28. 
+29./* for 16:9 and 16:10 screen */
+30.@media only screen and (device-aspect-ratio:16/9) and (device-aspect-ratio:16/10){
+31.    body{  }
+32.}
+33. 
+34./* for 480px*800px width screen */
+35.@media only screen (device-aspect-ratio:5/3){
+36.    body{  }
+37.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

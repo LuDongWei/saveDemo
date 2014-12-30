@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/reset.css" rel="stylesheet"  type="text/css" />
+<script src="seajs/sea-debug.js" id="seajsnode" data-config="seajs/config.js"></script>
+<style type="text/css">
+.main{
+	width:960px;
+	margin:0 auto;	
+	}
+.choose_goods_left{
+	float:left;
+	}
+.choose_goods_right{
+	float:right;
+	}
+.choose_goods_right{
+	width:450px;
+	height:110px;
+	overflow:hidden;
+	}	
+.choose_goods_main ul{
+	font-size:0; /*去掉元素之间的非正常空隙*/
+	*word-spacing:-1px;/*IE6,7*/
+	height:131px;
+	}
+.choose_goods_main li{
+	display:inline-block; /*现代游览器水平显示*/
+	*display:inline;  /*ie6,7水平显示*/
+	*zoom:1;
+	margin-left:8px;
+	margin-top:20px;
+	}		
+.choose_goods_main img{
+	border:1px solid #999;
+	}			
+</style>
+</head>
+<body>
+<div class="main">
+<div class="rolling">
+ <ul class="J_Hot1">
+ <li><img src="img/baihei_20.jpg" /></li>
+ <li><img src="img/baihei_20_1.jpg" /></li>
+ </ul>
+</div>
+
+<div class="choose_goods">
+<div class="choose_goods_left"><img src="img/heibai_07.jpg"></div>
+<div class="choose_goods_right">
+   <ul>
+   <li><img src="img/hei_09_01.jpg"></li>  
+   <li><img src="img/hei_09_01.jpg"></li>
+   <li><img src="img/hei_09.jpg"></li>    
+   </ul>
+</div> 
+<div class="choose_goods_main">
+   <ul>
+   <li><img src="img/heibai_11.jpg" /></li>
+   <li><img src="img/heibai_13.jpg" /></li>
+   <li><img src="img/heibai_15.jpg" /></li>
+   </ul>
+</div>
+</div>
+
+<div class="choose_goods">
+<div class="choose_goods_left"><img src="img/heibai_07.jpg"></div>
+<div class="choose_goods_right">
+   <ul>
+   <li><img src="img/hei_09_01.jpg"></li>  
+   <li><img src="img/hei_09_01.jpg"></li>
+   <li><img src="img/hei_09.jpg"></li>    
+   </ul>
+</div> 
+<div class="choose_goods_main">
+   <ul>
+   <li><img src="img/heibai_11.jpg" /></li>
+   <li><img src="img/heibai_13.jpg" /></li>
+   <li><img src="img/heibai_15.jpg" /></li>
+   </ul>
+</div>
+</div>
+
+<div class="choose_goods">
+<div class="choose_goods_left"><img src="img/heibai_07.jpg"></div>
+<div class="choose_goods_right">
+   <ul>
+   <li><img src="img/hei_09_01.jpg"></li>  
+   <li><img src="img/hei_09_01.jpg"></li>
+   <li><img src="img/hei_09.jpg"></li>    
+   </ul>
+</div> 
+<div class="choose_goods_main">
+   <ul>
+   <li><img src="img/heibai_11.jpg" /></li>
+   <li><img src="img/heibai_13.jpg" /></li>
+   <li><img src="img/heibai_15.jpg" /></li>
+   </ul>
+</div>
+</div>
+
+<div class="choose_goods">
+<div class="choose_goods_left"><img src="img/heibai_07.jpg"></div>
+<div class="choose_goods_right">
+   <ul>
+   <li><img src="img/hei_09_01.jpg"></li>  
+   <li><img src="img/hei_09_01.jpg"></li>
+   <li><img src="img/hei_09.jpg"></li>    
+   </ul>
+</div> 
+<div class="choose_goods_main">
+   <ul>
+   <li><img src="img/heibai_11.jpg" /></li>
+   <li><img src="img/heibai_13.jpg" /></li>
+   <li><img src="img/heibai_15.jpg" /></li>
+   </ul>
+</div>
+</div>
+
+
+</div>
+<script type="text/javascript">
+  seajs.use('./js/chang_goods.js',function(C){
+	C.chang_goods('.choose_goods_main','.choose_goods_right',3);
+	});
+</script>
+</body>
+</html>
+<!--
+商品选择插件,里面还有一个滚动插件属于官网
+把商品的价格和对应的商品都填到choose_goods中按顺序
+输入商品和价格的div编号，就可以选择商品显示对应的价格
+插入顺序，商品，价格,默认显示
+滚动独立的代码段
+-->
+
+

@@ -1,0 +1,61 @@
+官网 ：http://www.sublimetext.com/
+介绍 : http://drizzlep.diandian.com/SublimeText2
+
+主要快捷键
+Ctrl+L 选择整行（按住-继续选择下行）
+Ctrl+KK 从光标处删除至行尾
+Ctrl+Shift+K 删除整行
+Ctrl+Shift+D 复制光标所在整行，插入在该行之前
+Ctrl+J 合并行（已选择需要合并的多行时）
+Ctrl+KU 改为大写
+Ctrl+KL 改为小写
+Ctrl+D 选词 （按住-继续选择下个相同的字符串）
+Ctrl+M 光标移动至括号内开始或结束的位置
+Ctrl+Shift+M 选择括号内的内容（按住-继续选择父括号）
+Ctrl+/注释整行（如已选择内容，同“Ctrl+Shift+/”效果）
+Ctrl+Shift+/注释已选择内容
+Ctrl+Z 撤销
+Ctrl+Y 恢复撤销
+Ctrl+M 光标跳至对应的括号
+Alt+.闭合当前标签
+Ctrl+Shift+A 选择光标位置父标签对儿
+Ctrl+Shift+[折叠代码
+Ctrl+Shift+]展开代码
+Ctrl+KT 折叠属性
+Ctrl+K0 展开所有
+Ctrl+U 软撤销
+Ctrl+T 词互换
+Tab 缩进 自动完成
+Shift+Tab 去除缩进
+Ctrl+Shift+↑ 与上行互换
+Ctrl+Shift+↓ 与下行互换
+Ctrl+K Backspace 从光标处删除至行首
+Ctrl+Enter 光标后插入行
+Ctrl+Shift+Enter 光标前插入行
+Ctrl+F2 设置书签
+F2 下一个书签
+Shift+F2 上一个书签
+Ctrl+f 搜索
+Esc  取消
+
+
+1.直接安装
+安装Sublime text 2插件很方便，可以直接下载安装包解压缩到Packages目录（菜单->preferences->packages）。
+
+2.使用Package Control组件安装
+也可以安装package control组件，然后直接在线安装：
+按Ctrl+`调出console（注：安装有QQ输入法的这个快捷键会有冲突的，输入法属性设置-输入法管理-取消热键切换至QQ拼音）
+   粘贴以下代码到底部命令行并回车：
+import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
+3.重启Sublime Text 2。
+4.如果在Perferences->package settings中看到package control这一项，则安装成功。
+
+        用Package Control安装插件的方法：
+1.按下Ctrl+Shift+P调出命令面板
+2.输入install 调出 Install Package 选项并回车，然后在列表中选中要安装的插件。
+  不爽的是，有的网络环境可能会不允许访问陌生的网络环境从而设置一道防火墙，而Sublime Text 2貌似无法设置代理，可能就获取不到安装包列表了。
+好，方法介绍完了，下面是本文正题，一些有用的Sublime Text 2插件：
+GBK Encoding Support  解决乱码   Zen Coding 快速编码
+jQuery Package for sublime Text  jquery必备    等
+
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+<style type="text/css">
+.page_all{}	
+.wrapper{ width:100%;}
+.main{width:960px;margin:0 auto;}
+
+</style>
+
+
+
+
+<div id="aabb">
+     <ul class="mbbSeckill">
+     	 <li>
+          <div class="seckill-item">
+              <div class="s-time">
+              </div>   
+         	    <div class="s-pic">
+         	    	 <span>限量50</span>
+         	    	 <a href="http://www.mbaobao.com/item/#" target="_blank"><img src="http://cdn01.mbbimg.cn/1404/14040035/02/100/01.jpg" /></a>
+         	    </div>
+              <!--▼ 开始秒杀-->
+              <div class="s-content">
+                  <div class="s-inf">
+                      <p class="shoppeP"><del>原价￥265</del></p>
+                      <p class="sellP">秒杀价<span>￥</span><span>9.9</span></p> 
+                  </div>
+                  <div class="s-buy">
+                      <span class="s-but">
+                          <i></i> 
+                          <a href="http://cart.mbaobao.com/do/items/add/#/1.html" target="_blank">秒</a>
+                      </span> 
+                  </div>           
+              </div>
+              <!--▲ 开始秒杀-->
+
+              <!--▼ 未开始秒杀-->
+              <div class="no-begin">
+                   未开始 
+              </div>  
+              <!--▲ 未开始秒杀-->
+
+              <!--▼ 已经抢购完-->
+              <div class="no-stockQty">
+                   已经抢购完
+              </div>
+              <!--▲ 已经抢购完-->
+          </div>
+     	 </li>
+     </ul>
+</div>
+
+
+
+
+<script type="text/javascript">
+seajs.use("./seckilling.js", function(SK){
+   
+ 
+    
+   //单次秒杀传入秒杀的活动id或者促销编号和对应
+   //** 传入的数支持单个和多个并能自主的输出到页面中
+
+   //组装成对象一并传入获取数据
+   //组装成每块的数据并进行数据分析
+
+   //程序默认把秒杀以模板的样式输出到页面的块中
+   //
+   
+   // var sk1 = SK.create({
+   // 	    activity: "3880",
+   // 	    showDay: 0,
+   // 	    divID:"aabb",
+   // 	    imgSize:"1024",
+   // 	    countDown:function(aa){
+   //          // alert(1)
+   // 	    }
+   // });
+
+   // var sk1 = SK.create({
+   // 	    activity: "3881,3880",
+   // 	    divID:"aabb2",
+   // 	    showDay: 1
+   // });
+
+   // var sk2 = SK.create({
+   // 	    activity: "3881",
+   // 	    showDay:"1" 
+   // });
+ 
+   var sk3 = SK.create({
+   	    sale: "1965",
+   	    divID:"aabb"
+   });
+
+   // var sk4 = SK.create({
+   // 	    sale: "1964,1965"
+   // });
+
+   // setTimeout(function(){
+   // }, 100)    
+
+   SK.start();
+   // SK.start({
+   // 	    beginTime:"2014-05-27",            
+   // 	    endTime:"2014-05-29"            
+   // });
+})	
+</script>
+
+
+</body>
+</html>

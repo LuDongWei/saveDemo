@@ -1,0 +1,30 @@
+使用GruntJS构建Web程序（1）
+Gruntjs是JavaScript项目的构建工具，也是基于node的一个命令行工具。
+很多开源JS项目都是使用它搭建。
+如jQuery，Qunit，CanJS等。它有以下作用。
+合并JS文件   压缩js文件  单元测试（基于QUnit）  完全自动化（automation）
+
+一，安装node
+http://www.cnblogs.com/snandy/archive/2012/03/03/2377380.html    nodejs的安装
+    1.去http://nodejs.org 下载安装。
+	2.node -v 查看安装版本
+	3.console.log('hello, nodejs.') ;
+	4.var http = require("http");
+	http.createServer(function(request, response) {
+	response.writeHead(200, {"Content-Type": "text/html"});
+	response.write("Hello World!");
+	response.end();
+	}).listen(8000);
+	5.能运行表示安装成功
+二，安装grunt
+http://www.cnblogs.com/snandy/archive/2013/03/07/2946989.html    安装grunt 安装插件
+     1.npm install -g grunt-cli   安装grunt命令行工具grunt-cli（装软件）
+	 2. npm install grunt --save-dev  进入到某项目根目录，安装grunt及其插件
+	 3.npm install 装依赖
+
+三，使用Gruntjs搭建web程序
+
+
+
+
+http://gruntjs.com/getting-started

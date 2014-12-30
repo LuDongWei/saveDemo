@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
+<!--图片轮播代码-->
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script   src="js/jquery.slideBox.min.js" type="text/javascript"></script>
+
+<!--参数配置-->
+<script type="text/javascript">
+  jQuery(function($){
+	$('#demo2').slideBox({
+		direction : 'top',//left,top#方向
+		duration : 0.3,//滚动持续时间，单位：秒
+		easing : 'linear',//swing,linear//滚动特效
+		delay : 5,//滚动延迟时间，单位：秒
+		startIndex : 1//初始焦点顺序
+	});
+	$('#demo3').slideBox({
+		duration : 0.3,//滚动持续时间，单位：秒
+		easing : 'linear',//swing,linear//滚动特效
+		delay : 5,//滚动延迟时间，单位：秒
+		hideClickBar : false,//不自动隐藏点选按键
+		clickBarRadius : 10
+	});
+	$('#demo4').slideBox({
+		hideBottomBar : true//隐藏底栏
+	});
+	$('#demo5').slideBox();
+});
+
+</script>
+<style>
+.head{
+	margin: 0 auto;	
+	}
+</style>
+</head>
+
+<body>
+<h3>一、左右轮播，滚动持续0.6秒，滚动延迟3秒，滚动效果swing，初始焦点第1张，点选按键自动隐藏，按键边框半径（IE8-只方不圆）5px（以上各项为默认设置值）</h3>
+<div id="demo2" class="slideBox head">
+   <ul class="items">
+      <li><a href="#" title="1"><img src="img/g_1.jpg"></a></li>
+      <li><a href="#" title="2"><img src="img/g_2.jpg"></a></li>
+      <li><a href="#" title="3"><img src="img/g_3.jpg"></a></li>
+      <li><a href="#" title="4"><img src="img/g_4.jpg"></a></li>
+      <li><a href="#" title="5"><img src="img/g_5.jpg"></a></li>
+   </ul>
+</div> 
+</body>
+</html>

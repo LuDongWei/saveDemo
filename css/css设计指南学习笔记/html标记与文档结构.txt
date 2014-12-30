@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+<style type="text/css">
+.wrapper{ width:100%;}
+.wrapper_mian{position:relative; width:100%; z-index:1; height:; overflow:hidden;}
+.wrapper_mian .wrapper_mian_bk{ position:absolute; top:0; left:0; z-index:2; width:100%; min-width:960px;}
+.wrapper_mian .wrapper_mian_bk div{ width:100%; height:100px;}
+.main_{ width:960px; margin:0 auto;}
+
+.mbb_mian{width:100; position:relative; z-index:3}
+.mbb_mian .mbb_mian_botton{text-align:center;height:;}
+
+.clearfix:after {content: ".";display: block;
+    height: 0;clear: both; visibility: hidden;}
+.clearfix {zoom: 1;}
+</style>
+
+<!--悬浮框-->
+<!-- <div style="z-index:999;width:153px;height:445px;position:fixed;top:100px;right:auto;left:50%; margin-left:-635px; _position:absolute;_top:expression(eval(document.documentElement.scrollTop)+170);" id="xp_ball_bb">
+  <img src="http://cca.mbaobao.com/mkts/201312/11/bc/srg.jpg" width="110" height="199" border="0"  style=" display:none;" />
+</div> -->
+
+<div class="wrapper_mian">
+	<div class="mbb_mian">
+		<div class="mbb_mian_botton" style="position:absolute;top:0; left:0;width:100%; padding:0px;">
+			<img src="http://cca.mbaobao.com/mkts/201401/21/bgmain.gif" width="960" height=""/>              
+	    </div>
+	</div>
+
+	<!--模块-->    
+      <div class="mbb_mian_botton" style="position:absolute;top:402px; left:0;width:100%; padding:0px;height:70px;z-index:999;">
+    	<div class="main_">
+	     
+	    </div>  
+    </div>
+
+    <!--data-oxlazy-->
+	<div class="wrapper_mian_bk">
+		div.wrapper_mian_bk_$$[style="background:url(img/banner2_$$.jpg);background-position: center top; background-repeat: no-repeat;height:100px;" style2="background-position: center top; background-repeat: no-repeat;height:100px;"]*41
+	</div>
+</div>
+
+<script type="text/javascript">
+seajs.use("gallery/lazyload/2.0.0/lazyLoad",function(){})
+</script>
+
+<script type="text/javascript">
+//seajs.use("jquery", function($){
+//     $(window).scroll(function(){
+//        var win_top=$(document).scrollTop();
+//        if(win_top>=500){
+//            $('#xp_ball_bb').find('img').slideDown();
+//        }else{
+//            $('#xp_ball_bb').find('img').slideUp();
+//        }
+//     })
+// })
+</script>
+
+
+</body>
+</html>

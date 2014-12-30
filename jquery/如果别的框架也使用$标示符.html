@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script  type="text/javascript">
+/*$.noConflict();
+jQuery(document).ready(function(){
+  jQuery("button").click(function(){
+    jQuery("#bu_1").text("jQuery 仍在运行！");
+  });
+});*/
+
+
+/*var jq = $.noConflict();
+jq(document).ready(function(){
+  jq("button").click(function(){
+    jq("#bu_2").text("jQuery 仍在运行！");
+  });
+});*/
+
+
+$.noConflict();                        //三种方法都能运行选择一种
+jQuery(document).ready(function($){
+  $("button").click(function(){
+    $("#bu_3").text("jQuery 仍在运行！");
+  });
+});
+</script>
+<link href="css/reset.css"  type="text/css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+<div  style="border:solid 1px #039; width:600px ; height:50px ; margin:0 auto; margin-top:100px ; text-align:center">
+<button id="bu_1">noConflict()释放$</button>
+<button id="bu_2">noConflict()释放$创建自己的标签</button>
+<button id="bu_3">noConflict()释放$在块中使用$标签</button>
+</div>
+</body>
+</html>

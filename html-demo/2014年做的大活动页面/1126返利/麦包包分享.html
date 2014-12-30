@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>无标题文档</title>
+		    <link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/4.0.0/global.css?20141111" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,mbb/config/2.0.2/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?1118"></script>
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/mbb/global/3.0.0/global.js?20141114"></script>
+
+</head>
+
+<body>
+
+
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/mkts/201412/03/fx/my-bootstrap.css" media="all" />
+
+<style type="text/css">
+.goods-share {
+  color: #404040;
+}
+.goods-share .share-box {
+  display: inline-block;
+}
+.share-box a.share-qqkj, .share-box a.share-qqwb, .share-box a.share-renren, .share-box a.share-sina {
+  background: url(http://cca.mbaobao.com/static/mod/page/goodsdetail/4.0.2/img/share_icon.png?ff180b) no-repeat;
+  width: 16px;
+  margin-right: 8px;
+  height: 16px;
+  float: left;
+  display: block;
+  *display: inline;
+  *zoom: 1;
+  overflow: hidden;
+  line-height: 999em
+}
+.share-box a.share-sina {
+  background-position: 0 0
+}
+.share-box a.share-qqwb {
+  background-position: 0 -26px
+}
+.share-box a.share-qqkj {
+  background-position: 0 -104px
+}
+.share-box a.share-renren {
+  background-position: 0 -52px
+}
+</style>
+
+
+<style type="text/css">  
+.content {
+  font-family: '微软雅黑';
+  width: 100%;
+  background-color: #dc2d63;
+}
+.main {
+  width: 960px;
+  margin: 0 auto;
+}
+.mbb-table {
+  background-color: #ffffff;
+}
+.mbb-table table td {
+  padding: 0px !important;
+  line-height: 44px !important;
+}
+.mbb-table table td button {
+  margin-top: 5px;
+}
+.mbb-inf {
+  line-height: 60px;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 14px;
+}
+.invite-list td {
+  background-color: #fff1f5;
+}
+.invite-list .table {
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-size: 18px;
+  width: 90%;
+  margin: 0 auto;
+}
+.invite-list .table td {
+  border-top: none;
+}
+
+/* --参加展示-- */
+.mbb-join {
+  overflow: hidden;
+}
+.mbb-join .mbb-left {
+  float: left;
+}
+.mbb-join .mbb-right {
+  float: left;
+}
+.join-lsit {
+  width: 320px;
+  height: 324px;
+  border: 1px solid #e35782;
+  border-radius: 5px;
+}
+.join-lsit .more {
+  width: 306px;
+  height: 28px;
+  line-height: 28px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-top: 5px;
+  text-align: center;
+  color: #dc2d63;
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 14px;
+}
+.join-lsit .cut-list {
+  margin-top: 7px;
+  height: 278px;
+  overflow: hidden;
+}
+.join-lsit .list {
+  line-height: 28px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+}
+.join-lsit .list li {
+  height: 28px;
+}
+.join-lsit .item {
+}
+.join-lsit .name {
+}
+.join-lsit .time {
+}
+
+/* --点击选择-- */
+.mbb-choose {
+  width: 960px;
+  height: 250px;
+  position: relative;
+}
+.mbb-choose button {
+  color: #bd1046;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 10px 82px;
+  *padding: 5px 35px;
+}
+.mbb-choose button:hover {
+  color: #bd1046;
+}
+.mbb-choose button:focus {
+  color: #bd1046;
+}
+.mbb-choose button.noMbbEntry {
+  background-color: #d2d1d5;
+  color: #545354;
+}
+.mbb-choose button.noMbbEntry:hover {
+  color: #545354;
+}
+.mbb-choose button.noMbbEntry:focus {
+  color: #545354;
+}
+.mbb-choose .fan-1, .mbb-choose .fan-2, .mbb-choose .button-1, .mbb-choose .button-2 {
+  position: absolute;
+}
+.mbb-choose .fan-1 {
+  top: 47px;
+  left: 128px;
+}
+.mbb-choose .fan-2 {
+  top: 47px;
+  left: 619px;
+}
+.mbb-choose .button-1, .mbb-choose .button-2 {
+  width: 288px;
+}
+.mbb-choose .hint {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 5px;
+}
+.mbb-choose .hint a {
+  color: #ffffff;
+  text-decoration:underline;
+}
+.mbb-choose .hint a:hover {
+  color: #ffffff;
+}
+.mbb-choose .button-1 {
+  top: 127px;
+  left: 147px;
+}
+.mbb-choose .button-2 {
+  top: 127px;
+  left: 514px;
+}
+
+/* --我要邀请-- */
+.mbb-invite {
+  margin: 40px 0px;
+}
+.invite-order .order-inf {
+  line-height: 60px;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 14px;
+}
+.invite-order {
+}
+
+/* --我要返利-- */
+.mbb-rebate {
+  margin: 40px 0px;
+}
+.rebate-order .rebate-logIn {
+  width: 420px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.rebate-logIn .form-group {
+  overflow: hidden;
+}
+.form-group .col-sm-2 {
+  width: 80px;
+  height: 36px;
+  line-height: 36px;
+  float: left;
+}
+.form-group .col-sm-10 {
+  width: 340px;
+  float: left;
+}
+.form-group input {
+  padding: 0px 6px;
+}
+.rebate-order .rebate-logIn label {
+  color: #ffffff;
+}
+.rebate-order .rebate-logIn button {
+  color: #bd1046;
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 5px 40px;
+  margin: 0 auto;
+}
+.mbb-choose button:hover {
+  color: #bd1046;
+}
+.mbb-choose button:focus {
+  color: #bd1046;
+}
+.mbbModule {
+  display: none;
+}
+.mbb-rebate .rebate-order {
+  display: none;
+}
+.invite-list {
+  display: none;
+}
+.mbb-choose .hint p {
+  display: none;
+}
+.rebate-win-list{
+  margin-top:20px;
+  display:none;
+}
+.rebate-win-list .mbb-table .table{
+  margin-bottom: 0px;
+}
+
+/* --底部-- */
+.share-wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+.share-wrap .list-wrap {
+  width: 990px;
+  overflow: hidden;
+}
+.share-wrap .list-wrap li {
+  width: 475px;
+  height: 250px;
+  padding: 0 10px 10px 0;
+  float: left;
+}
+.location {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/*---分享---*/
+.invite-friends{
+  cursor:pointer;
+  position:relative;
+}
+.invite-friends span{
+  font-size:14px;
+  position:absolute;
+  z-index:999;
+  left: 77px;
+  top: -44px;
+  background-color:#DC2E63;
+  border-radius:8px;
+  line-height:24px;
+  padding:2px 4px;
+  color:#ffffff;
+  width:95px;
+  display:none;
+}
+.invite-friends:hover span{
+  display:block;
+}
+</style>
+
+
+
+<div class="content" style="background:url(http://cca.mbaobao.com/mkts/201411/28/fex2/back.jpg) top center repeat-y">
+
+   <div class="content" style="background:url(http://cca.mbaobao.com/mkts/201411/28/fex2/top_back.jpg) top center repeat-y">
+     <div style="font-size:0px; width:1068px; height:663px; margin:0 auto; position:relative; overflow:hidden;">
+
+          <img src="http://cca.mbaobao.com/mkts/201412/01/fx/top_01.jpg" border="0" width="1068" height="221" style="float:left" />
+          <img src="http://cca.mbaobao.com/mkts/201412/01/fx/top_02.jpg" border="0" width="1068" height="221" style="float:left" />
+          <img src="http://cca.mbaobao.com/mkts/201412/01/fx/top_03.jpg" border="0" width="1068" height="221" style="float:left" />
+     
+          <div class="location" style="font-size:36px; color:#8d3800; width:165px; height:87px; line-height:87px; font-weight:bold; text-align:center; top:105px; left:130px;">
+               贵阳站
+          </div>
+          <div class="location" style="color:#dc2d63; font-size:14px; width:790px; line-height:20px; text-align:left; top: 576px; left: 199px;">
+              麦包包好友分享计划启动啦！<strong>贵阳</strong>的小伙伴们抢先独享福利哦，凭<strong>贵阳</strong>订单邀请小伙伴完成任务，就可以和小伙伴一起赢得返利<br />
+              哦！最高可以获得25%的返利，这么大波分享返利正在靠近，怎能独享，赶紧邀请小伙伴一起参加吧！
+          </div>
+      </div> 
+   </div>
+       
+   <div style="width:1068px; background:url(http://cca.mbaobao.com/mkts/201411/28/fex2/main.jpg) 3px center repeat-y; margin:0 auto;">
+      <div class="main" style="font-size:0px; width:960px; height:285px;  position:relative; overflow:hidden; ">
+          <img src="http://cca.mbaobao.com/mkts/201411/28/fex2/fenx_01.jpg" width="960" height="143" style="float:left"  />
+          <img src="http://cca.mbaobao.com/mkts/201412/01/fx/main_01.jpg" width="960" height="142" style="float:left"  />
+           <div class="location"  style="font-size:12px; color:#750024; width:73px; height:36px; line-height:18px; text-align:center;  font-weight:bold; top: 164px; left: 18px; ">
+              必须是贵阳的<br />
+              有效订单
+          </div>
+     </div>  
+      <div class="main">
+      
+      <!--参加展示-->
+      <!--<div class="mbb-join">
+               <div class="mbb-left">
+
+               </div>
+               <div class="mbb-right">
+                    <div class="join-lsit"> 
+                         <div class="more">
+                           <p>
+                            当前已有<span id="mbbPeople"></span>人参加
+                            </p>
+                         </div>
+                         <div class="cut-list">
+                           <ul class="list" id="mbbJoin">                           
+                           </ul>
+                         </div>
+                    </div>
+               </div> 
+      </div>-->
+      <!--参加展示-->
+          
+          <!--点击选择-->
+          <div class="mbb-choose" id="mbbChoose">
+               <span class="fan-1"><img src="http://cca.mbaobao.com/mkts/201411/28/fex2/fanl_01.jpg" width="200" height="80" /></span>
+               <span class="fan-2"><img src="http://cca.mbaobao.com/mkts/201411/28/fex2/fanl_02.jpg" width="200" height="80" /></span>  
+               <div class="button-1">
+                 <button type="button" class="btn btn-warning  mbbEntry" data-id="0" >我要邀请</button>
+                 <div class="hint" id="button01">
+                      <p class="p-1">你还没有可用订单哦，  <a href="http://www.mbaobao.com/" target="_blank">立即去选包>></a></p>
+                      <p class="p-2">
+                         你已经<span>*</span>个订单可以邀请<br>
+                         点击我要邀请可进行操作>>
+                      </p>
+                      <p class="p-3">
+                         你的账户已经有<span>X</span>个邀请码<br>
+                         成功邀请<span>X</span>个小伙伴
+                      </p>
+                 </div> 
+               </div>
+               <div class="button-2">
+                 <button type="button" class="btn btn-warning  mbbEntry" data-id="1" >我要返利</button>
+                 <div class="hint" id="button02">
+                      <p class="p-1">你已经绑定但是没订单哦，<a href="http://www.mbaobao.com/" target="_blank">立即去选包>></a></p>
+                      <p class="p-2">
+                         一个账号只有一次返利机会
+                      </p>
+                      <p class="p-3">
+                         您还未绑定邀请码 请速度绑定哦<br>
+                        以免邀请码被别的小伙伴抢走哦！ 
+                      </p>  
+                 </div> 
+               </div>
+          </div>  
+          <!--点击选择-->
+
+
+          
+          <!--成功返利订单-->
+          <div class="rebate-win-list" id="rebateOred">  
+              <div class="mbb-table rebate-choose" >
+                <table class="table table-striped">
+                  <tr class="headline">
+                    <td>订单编号</td>
+                    <td>我买的时间</td>
+                    <td>可获订单返利</td>
+                    <td>获取时间</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="mbb-inf">
+                 此订单不可再参加邀请
+              </div>  
+          </div>
+          <!--成功返利订单-->    
+                   
+
+          
+          <div class="mbb-invite mbbModule">
+              <!--选择订单-->
+              <div class="invite-order">
+                   <img src="http://cca.mbaobao.com/mkts/201411/28/fex2/fenx_03.jpg" width="960" height="75" /> 
+                   <div class="mbb-inf" id="inviteInf">
+                      <p>你的账户<span class="mbbName">xxxxx</span>，共有<span class="d">0</span>个可参加活动订单,&nbsp;&nbsp;点击邀请码 就可以邀请小伙伴来分享返利哦！</p>
+
+                   </div>
+                   <div class="mbb-table order-table" id="inviteOrder">
+                        <table class="table table-striped">
+                          <tr class="headline">
+                            <td>排行</td>
+                            <td>订单编号</td>
+                            <td>我买的时间</td>
+                            <td>我的订单金额</td>
+                            <td>已返利金额</td>
+                            <td>状态</td>
+                            <td>操作</td>
+                          </tr>
+                        </table> 
+                   </div> 
+                   <div class="mbb-inf">
+                      <p>*将邀请码分享给小伙伴，小伙伴在页面完成验证购买即可获得返利哦！</p>
+                   </div>
+              </div>  
+            <!--选择订单-->   
+            
+
+             <!--邀请记录-->
+              <div class="invite-order">
+                   <img src="http://cca.mbaobao.com/mkts/201411/28/fex2/fenx_04.jpg" width="960" height="81" />
+                   <div class="mbb-inf">
+                      <p>你可以通过手机、QQ、微信、微博等多种途径发送你的邀请码给小伙伴，最先完成注册及下单的小伙伴就可以和你一起获得返利哦！</p>
+                   </div>
+                   <div class="mbb-table" id="inviteCodeList">
+                        <table class="table table-striped">
+                          <tr class="headline">
+                            <td>邀请码</td>
+                            <td>是否邀请成功</td>
+                            <td>邀请成功的小伙伴</td>
+                            <td>是否下单成功</td>
+                            <td>是否已获得返利</td>
+                          </tr>
+                        </table> 
+                   </div> 
+              </div>  
+            <!--邀请记录-->
+          </div>
+
+          <div class="mbb-rebate mbbModule">
+             <!--验证码-->
+             <div class="rebate-order" id="rebateLog">
+                   <img src="http://cca.mbaobao.com/mkts/201411/28/fex2/fenx_09.jpg" width="960" height="59" />
+                   <div class="rebate-logIn">
+                       <div class="form-horizontal">
+                         <div class="form-group">
+                           <label for="inputEmail3" class="col-sm-2 control-label">手机号</label>
+                           <div class="col-sm-10">
+                             <input type="text" class="form-control phone"  ></div>
+                         </div>
+                         <div class="form-group">
+                           <label for="inputPassword3" class="col-sm-2 control-label">验证码</label>
+                           <div class="col-sm-10">
+                             <input type="text" class="form-control code"  ></div>
+                         </div>
+                         <div class="form-group">
+                           <div>
+                             <button type="button" class="btn btn-warning submit">提交完成绑定</button>
+                           </div>
+                         </div>
+                       </div>
+                  </div>
+             </div>       
+             <!--验证码-->
+             
+
+             
+             <div id="noRebate" style="padding-bottom:30px; display:none">
+                 <img src="http://cca.mbaobao.com/mkts/201411/28/fex2/fenx_11.jpg" width="960" height="65" />
+             </div>
+             <!--选择返利的订单--> 
+          </div>  
+     </div>
+     
+     <div class="main" style="font-size:0px;">
+          <img src="http://cca.mbaobao.com/mkts/201411/28/fex2/fenx_05.jpg" width="960" height="145" />
+          <img src="http://cca.mbaobao.com/mkts/201411/28/fex2/fenx_06.jpg?2014" width="960" height="144" />
+          <img src="http://cca.mbaobao.com/mkts/201411/28/fex2/fenx_07.jpg" width="960" height="145" />
+          <div style="width:960px; height:270px; position:relative;">
+          <img src="http://cca.mbaobao.com/mkts/201412/01/fx/banner_15.jpg" width="960" height="270" />
+             <div class="location" style=" font-size:12px; width:642px; color:#750024; line-height:20px; text-align:left;top: 47px;left: 159px;">
+                1、活动仅限贵阳区会员参加；<br />
+                2、贵阳会员并拥有有效订单（有效订单指订单状态为"已发货"（仅限线上支付），或"已完成"（仅限货到付款），<br />
+                并无退换货记录的订单。）<br />
+                3、成功邀请好友在麦包包完成注册+首个订单（金额不限）后，<span style="color:#ffffff; font-weight:bold;">邀请者订单实付金额的10%将平均返现给你与你<br />
+                的好友</span>（你和好友分别得5%现金返利）。<br />
+                4、返现金额仅限好友的首笔订单，通过您邀请的小伙伴，成功订购的第一笔订单，第二笔订单无效，且好友在收到商品<br />
+                之后30天未退货，你和你的好友方各自可得到你订单实付金额5%。<br />
+                5、每个贵阳的有效订单可获得5个验证码。<br />
+                6、返利现金将以邀请者及被邀请者购买包包原来的支付方式导入双方账户。<br />
+                7、恶意参加活动的用户，一旦发现我们将会取消活动资格并冻结返利金额。<br />
+             </div>
+          </div>
+     </div>  
+     </div>
+     
+     
+     <div style="width:1062px; margin:0 auto;">
+       <img src="http://cca.mbaobao.com/mkts/201411/28/fex2/buttom.jpg" width="1062" height="137" style="margin-left:-1px;" />
+     </div>
+
+
+     <div class="share-wrap">
+       <div class="list-wrap">
+         <ul class="share-list">
+           <li>
+             <a href="http://www.mbaobao.com/item/1306006601" target="_blank">
+               <img src="http://cca.mbaobao.com/mkts/201411/28/share/1306006601.jpg" width="475" height="250" />     
+             </a>
+           </li>
+           <li>
+             <a href="http://www.mbaobao.com/item/1405001703" target="_blank">
+               <img src="http://cca.mbaobao.com/mkts/201411/28/share/1405001703.jpg" width="475" height="250" />     
+             </a>
+           </li>
+           <li>
+             <a href="http://www.mbaobao.com/item/1405002202" target="_blank">
+               <img src="http://cca.mbaobao.com/mkts/201411/28/share/1405002202.jpg" width="475" height="250" />     
+             </a>
+           </li>
+           <li>
+             <a href="http://www.mbaobao.com/item/1409011901" target="_blank">
+               <img src="http://cca.mbaobao.com/mkts/201411/28/share/1409011901.jpg" width="475" height="250" />     
+             </a>
+           </li>
+           <li>
+             <a href="http://www.mbaobao.com/item/1503000401" target="_blank">
+               <img src="http://cca.mbaobao.com/mkts/201411/28/share/1503000401.jpg" width="475" height="250" />     
+             </a>
+           </li>
+           <li>
+             <a href="http://www.mbaobao.com/item/1503009401" target="_blank">
+               <img src="http://cca.mbaobao.com/mkts/201411/28/share/1503009401.jpg" width="475" height="250" />     
+             </a>
+           </li>
+           <li>
+             <a href="http://www.mbaobao.com/item/1505034801" target="_blank">
+               <img src="http://cca.mbaobao.com/mkts/201411/28/share/1505034801.jpg" width="475" height="250" />     
+             </a>
+           </li>
+           <li>
+             <a href="http://www.mbaobao.com/item/1506010806" target="_blank">
+               <img src="http://cca.mbaobao.com/mkts/201411/28/share/1506010806.jpg" width="475" height="250" />     
+             </a>
+           </li>
+         </ul>
+       </div>
+     </div>
+     <div class="share-wrap" style="padding:10px 0">
+       <div class="list-wrap">$tUtil.GetToHTML("mod")</div>
+     </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+var  winShare={
+     "url":"http://mkt.mbaobao.com/a-gyshare1201/",
+     "title1":"求组团赢返利啦，小伙伴们用邀请码（",
+     "title2":"）参加活动，完成页面任务就可以和我一起分享返利啦，参加活动请戳http://mkt.mbaobao.com/a-gyshare1201/",
+     "pic":"http://cca.mbaobao.com/mkts/201411/28/fex2/60x60.jpg" 
+} 
+</script>
+
+
+<script type="text/javascript">
+seajs.use("http://cca.mbaobao.com/mkts/201412/10/share.js")
+</script>
+
+
+
+
+</body>
+</html>
+		

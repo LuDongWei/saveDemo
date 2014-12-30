@@ -1,0 +1,29 @@
+@charset "utf-8";
+body{ margin:0; padding:0;font-size:12px;-moz-user-select:none;}html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}img,body,html{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;}q:before,q:after{content:'';}
+
+a{text-decoration:none; font-size:12px;}
+a:hover{text-decoration:none;}
+
+/*top*/
+.tog{width:100%;height:30px;background:url(../images/top_float_bg.png) 0 top repeat-x;position:absolute;z-index:2;cursor:pointer;}
+	.tog span{width:159px;height:30px;margin:0 auto;line-height:24px;color:#FFF;text-align:center;display:block;background:url(../images/tog.png) 0 5px no-repeat;}
+.togclose{width:100%;height:27px;background:url(../images/top_float_bg.png) 0 top repeat-x;position:absolute;z-index:2;cursor:pointer;}
+	.togclose span{font-family:Verdana;font-size:12px;width:159px;height:27px;margin:0 auto;text-align:center;line-height:22px;color:#FFF;display:block;background:url(../images/togclose.png) 0 5px no-repeat;}
+.tog_contact{height:433px; width:100%;background:#FFF url(../images/tog_contact_bg.gif) 0 bottom repeat-x;position:absolute;z-index:1;display:none;}
+.t_con_box{width:982px;margin:0 auto;height:433px;position:relative;}
+.drift_left{width:478px;height:135px;border-bottom:1px solid #EAEAEA;}
+	.drift_left p{padding:0 0 8px 18px;line-height:28px;color:#000098;font-size:14px;}
+.phone{width:478px;height:147px;}
+	.phone dl{width:100%;padding:20px 0 0 18px;}
+	.phone dl dd{width:230px;}
+	.phone dl dd , .phone dl dd div, .phone dl dd img, .phone dl dd h3, .phone dl dd span, .phone dl dd p{float:left;}
+	.phone dl dd div{width:100%;padding:10px 0 4px;}
+	.phone dl dd img{padding-top:4px;}
+	.phone dl dd h3{width:160px;color:#d30000;font-size:16px;font-weight:normal;padding-left:10px;}
+	.phone dl dd span{width:160px;padding-left:10px;font-family:Segoe UI;color:#8E8C8C;}
+	.phone dl dd p{width:100%;color:#d30000;font-family:Impact;font-size:28px;}
+	.phone dl dd .consult_img{padding-left:15px;}
+	.phone dl dd .online{float:left;width:113px;color:#3b3b3b;height:34px;line-height:34px;background:url(../images/icon_online.gif) 0 0 no-repeat;}
+	.phone dl dd .online q{float:left;line-height:30px;padding-left:46px;cursor:pointer;}
+	.phone dl dd a.online:hover{color:#D30000;}
+.map{width:538px;height:297px;position:absolute;right:0;top:0;_clear:both;}

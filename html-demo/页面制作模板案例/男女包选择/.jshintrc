@@ -1,0 +1,15 @@
+{
+    "asi": true,
+    "boss": true,
+    "curly": true,
+    "undef": true,
+    "browser": true,
+    "onevar": false,
+    "eqeqeq": false,
+    "sub": true,
+    "globals": {
+        "jQuery": true,
+        "window": true,
+        "define": true
+    }
+}

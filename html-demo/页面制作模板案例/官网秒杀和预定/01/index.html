@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+<style type="text/css">
+.page_all{}	
+.wrapper{ width:100%;}
+.main{width:960px;margin:0 auto;}
+
+/*--秒 杀--*/
+.sk-time{
+     width:960px;
+     height:140px;
+	 background:url(http://cca.mbaobao.com/mkts/201406/04/sk/time.jpg) no-repeat top center;
+	 margin:0 auto;
+}
+.sk-time ul{
+     font-size:0px;
+}
+.sk-time ul li{
+     width:192px;
+     height:92px;
+     background-color:#fdd131;
+     display:inline-block;
+     *display:inline;
+     *zoom:1;
+     float:left;
+     margin-top:23px;
+     visibility:hidden;
+     position:relative;
+}
+.sk-time ul li i{
+     position:absolute;
+     display:block;
+     height: 0;
+     width: 0;
+     border: 12px solid #fdd131;
+     bottom:-24px;
+     left:84px;
+     border-color: #fdd131 #40316a  #40316a #40316a; 
+}
+.sk-time li p{
+     text-align:center;
+}
+.sk-time li .title{
+     font-size:18px;
+     color:#9b51fe;
+     line-height:30px;
+}
+.sk-time li .time{
+     font-size:24px;
+     font-weight:bolder;
+     color:#ffffff;
+     width:150px;
+     height:35px;
+     line-height:35px;
+     background-color:#9b51fe;
+     border-radius:17px;
+     margin:0 auto; 
+}
+.sk-time li .state{
+     font-size:12px;
+     line-height:24px;
+     color:#9b51fe;
+}
+.sk-time li i{
+
+}
+.sk-piece{ 
+ width:960px;
+ height:1000px;
+ position:relative;
+ background-color:#40316a;
+ margin:0 auto;
+ font-size:12px;
+ z-index:2; 	
+}
+.piece{
+ position:absolute;	
+ width:192px;
+ height:192px;
+ overflow:hidden;
+ z-index:3;	
+}
+.piece .masking{
+   display:block;
+   visibility:hidden;
+}
+.sk-masking .masking{
+   visibility:visible;
+   position:absolute;
+   width:192px;
+   height:192px;
+   top:0px;
+   left:0px;
+   filter:alpha(opacity=50);
+   opacity:0.5;
+   background-color:#40316a;
+   z-index:4; 
+}
+.sk-masking:hover .masking{
+   visibility:hidden;
+}
+.sk-brand{
+
+}
+.sk-seckill{
+
+}
+.sk-colour{
+
+}
+.sk-colour a{
+ display:block; 
+ width:192px;
+ height:192px;
+}
+.sk-colour .p-text{
+	color:#ffffff;
+	text-align:right;
+	font-family:"微软雅黑";
+	width:192px; 
+	height:50px;
+	bottom:0px;
+}
+.p-text .p-1{
+	font-size:16px;
+	height:20px;
+	line-height:20px;
+}
+.p-text .p-2{
+	height:30px;
+	line-height:30px;
+}
+.s-status{
+     width:100%;
+     height:100%;
+     position:absolute;
+     z-index:4;
+     display:none;
+}
+.s-status{
+     position:absolute;
+     height:800px;
+     top:-4px;
+     background-color:#fdd131;
+     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
+/*.s-status .s-left,.s-status .s-right{
+     filter:alpha(opacity=30);opacity:0.3;
+     background-color:#40316a;
+}*/
+/*.s-status .s-mian{
+     width:100%;
+     height:800px;
+     background-color:#fdd131;
+     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}*/
+.s-10{
+   width:200px;
+   left:188px;
+}
+.s-14{
+   width:200px;
+   left:380px;
+}
+.s-16{
+   width:200px;
+   left:572px;
+}
+.s-20{
+   width:200px;
+   left:764px;
+}
+/*.s-10 .s-left{
+     width:188px;
+     left:0px;
+}
+.s-10 .s-right{
+     width:572px;
+     left:388px;
+} 
+.s-14 .s-left{
+     width:380px;
+     left:0px;
+} 
+.s-14 .s-right{
+     width:380px;
+     left:580px;
+}
+.s-16 .s-left{
+     width:572px;
+     left:0px;
+} 
+.s-16 .s-right{
+     width:188px;
+     left:772px;
+}
+.s-20 .s-left{
+     width:764px;
+     left:0px;
+} 
+.s-20 .s-right{
+     width:0px;
+     left:388px;
+} */
+/*--秒杀 块--*/
+.sk-seckill .seckill-item{
+     width:192px;
+     height:192px;
+     overflow:hidden;
+     position:relative;
+}
+.seckill-item .s-pic span{
+     position:absolute;
+     display:block;
+     width:40px;
+     height:36px;
+     border-radius:40px;
+     color:#ffffff; 
+     font-weight:bolder;
+     font-size:12px;
+     line-height:16px;
+     padding-top:4px;
+     left:12px;
+     top:12px;
+     text-align:center;
+}
+.seckill-item .s-pic span.hav{
+     background-color:#f6760d;
+}
+.seckill-item .s-pic span.no{
+     background-color:#b4b4b4;
+}
+.seckill-item .s-bar{
+     width:192px;
+     height:78px;
+     position:absolute;
+     bottom:0px;
+     left:0px;
+}
+.seckill-item .willSeckill,.seckill-item .onSeckill{
+     background:url(http://cca.mbaobao.com/mkts/201406/04/sk/ha.png);
+}
+.s-bar .shoppeP{
+     margin-top:10px;
+     font-size:12px;
+     line-height:12px; 
+     color:#333333;
+     text-align:left;
+}
+.s-bar .sellP{
+     font-size:15px;
+     color:#ad1500;
+     text-align:left;
+     line-height:22px;
+}
+.s-bar .sellP .n-1{
+     font-size:12px;
+}
+.s-bar .sellP .n-2{
+     font-size:24px;
+     font-weight:bolder;
+}
+.s-bar .bay{
+     width:114px;
+     margin:0 auto;
+     *margin-top:2px;
+}
+.seckill-item .overSeckill{
+     background:url(http://cca.mbaobao.com/mkts/201406/04/sk/noo.png);
+     height:48px;
+}
+.overSeckill .bay{
+     width:40px;
+     float:right;
+     position:absolute;
+     top:11px;
+     right:0px;
+}   
+</style>
+
+<div class="wrapper" style="background:url(img2/m_02.jpg) no-repeat top center;">
+   <div class="main">
+      <img src="img2/m_01.jpg" width="960" height="446" /> 
+   </div>
+</div>
+
+<div class="wrapper" style="background:url(img2/m_03.jpg) repeat-y top center;">
+<div class="sk-time" id="sTime">
+     <ul>
+        <li></li>   
+        <li id="time_1">
+            <p class="title">10点档</p>
+            <p class="time">00:00:00</p>
+            <p class="state">秒杀中</p>
+            <i></i>  
+        </li>
+        <li id="time_2">
+            <p class="title">14点档</p>
+            <p class="time">00:00:00</p>
+            <p class="state">秒杀中</p>
+            <i></i> 
+        </li>
+        <li id="time_3">
+            <p class="title">16点档</p>
+            <p class="time">00:00:00</p>
+            <p class="state">秒杀中</p> 
+            <i></i> 
+        </li>
+        <li id="time_4">
+            <p class="title">20点档</p>
+            <p class="time">00:00:00</p>
+            <p class="state">秒杀中</p> 
+            <i></i> 
+        </li>
+     </ul>        
+</div>
+
+<div class="sk-piece" id="sPiece">
+     
+     <!--▼状态 10点档--> 
+     <div class="s-status s-10" id="time_1_">
+         <!--  <div class="s-left">
+          </div> -->
+        <!--   <div class="s-mian">               
+          </div> -->
+          <!-- <div class="s-right">
+          </div>   --> 
+     </div>
+     <!--▲状态 10点档-->
+
+     <!--▼状态 14点档-->      
+     <div class="s-status s-14" id="time_2_">
+          <!-- <div class="s-left">
+          </div> -->
+         <!--  <div class="s-mian">               
+          </div> -->
+          <!-- <div class="s-right">
+          </div>  -->  
+     </div> 
+     <!--▲状态 14点档--> 
+
+     <!--▼状态 16点档-->      
+     <div class="s-status s-16" id="time_3_">
+         <!--  <div class="s-left">
+          </div> -->
+         <!--  <div class="s-mian">               
+          </div> -->
+         <!--  <div class="s-right">
+          </div>   --> 
+     </div> 
+     <!--▲状态 16点档--> 
+
+     <!--▼状态 20点档-->      
+     <div class="s-status s-20" id="time_4_">
+          <!-- <div class="s-left">
+          </div> -->
+          <div class="s-mian">               
+          </div>
+          <!-- <div class="s-right">
+          </div>  -->  
+     </div>
+     <!--▲状态 20点档-->  
+
+ 
+     <!-- <div class="piece sk-brand" style="top:120px; left:120px; background-color:">
+     	  <a href="#" target="_blank"><img src="http://placehold.it/192x192/fc46aa" width="192" height="192"></a>
+     </div> 	
+     
+     <div class="piece sk-seckill" data-ap="" style="top:120px; left:120px;">
+     	  我是秒杀
+     </div> 
+
+     <div class="piece sk-colour" style="top:120px; left:120px;">
+     	<a href="#" target="_blank">  
+     	  <div class="p-text">
+     	  	   <p class="p-1">我是小色块</p>
+     	  	   <p class="p-2">查看详情<i></i></p>
+     	  </div>
+     	</a>  
+     </div>  -->
+
+    <!--  <div class="piece sk-brand sk-masking" data-num="0|0" style="top: 55px; left:55px; background-color: rgb(108, 57, 178); z-index: 3;">
+         <a href="http://www.mbaobao.com/item/1403002701" target="_blank">
+             <img src="http://placehold.it/192x192/fc46aa" width="192" height="192"></a>
+         <a class="masking" ></a>    
+     </div> -->
+</div>
+</div>
+<!--即将开始(willSeckill) 秒杀(onSeckill) 秒杀完(overSeckill)=无货(noGoods)-->
+
+
+<div class="piece sk-seckill">
+        <div class="seckill-item">
+             <div class="s-pic">
+                  <!-- <span class="hav">限时<br>特惠</span> -->
+                  <span class="no">限时<br>特惠</span> 
+                  <a href="http://www.mbaobao.com/item/#" target="_blank"><img src="http://cdn01.mbbimg.cn/1404/14040035/02/100/01.jpg" width="192" hegiht="192" /></a> 
+             </div>
+
+             <!--▼ 未开始秒杀-->  
+            <!--  <div class="s-bar willSeckill">
+                  <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥265</del></p>
+                  <p class="sellP">&nbsp;&nbsp;秒杀价<span class="n-1">￥</span><span class="n-2">9.9</span></p> 
+                  <div class="bay">
+                       <img src="http://cca.mbaobao.com/mkts/201406/04/sk/jj.png" width="114" height="27" />
+                  </div>
+             </div> -->
+             <!--▲ 未开始秒杀-->
+             
+              <!--▼ 开始秒杀-->
+             <!-- <div class="s-bar onSeckill">
+                  <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥265</del></p>
+                  <p class="sellP">&nbsp;&nbsp;秒杀价<span>￥</span><span>9.9</span></p> 
+                  <div class="bay">
+                      <a href="http://cart.mbaobao.com/do/items/add/#/1.html" target="_blank"><img src="http://cca.mbaobao.com/mkts/201406/04/sk/li.png" width="114" height="27" /></a>
+                  </div>
+             </div> -->
+             <!--▲ 开始秒杀-->
+             
+
+             <!--▼ 已经抢购完--> 
+             <div class="s-bar overSeckill">
+                  <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥265</del></p>
+                  <p class="sellP">&nbsp;&nbsp;秒杀价<span>￥</span><span>9.9</span></p> 
+                  <div class="bay">
+                       <img src="http://cca.mbaobao.com/mkts/201406/04/sk/no.png" width="40" height="27"  />
+                  </div>
+             </div>
+             <!--▲ 已经抢购完-->
+
+
+             <!--▼ 已经过期-->
+             <!--▲ 已经过期-->
+        </div>         
+</div>
+
+<script id="seckill-template" type="text/x-handlebars-template">
+     {{#seckill}}
+          <div class="seckill-item">
+              <div class="s-pic">
+                    {{#if isSeckill}}
+                         {{#skus}}   
+                         {{#if isSellOut}}
+                            <span class="no">限时<br>特惠</span>
+                           {{else}}
+                            <span class="hav">限时<br>特惠</span> 
+                         {{/if}}
+                         {{/skus}}  
+                     {{else}}
+                     {{#if isOverdue}}
+                     <span class="no">限时<br>特惠</span>
+                     {{else}}
+                     <span class="hav">限时<br>特惠</span> 
+                     {{/if}} 
+                   {{/if}}
+                   {{#skus}}  
+                  <a href="http://www.mbaobao.com/item/{{sku}}" target="_blank"><img src={{image}} width="192" hegiht="192" /></a> 
+                   {{/skus}}  
+               </div>       
+               {{#if isSeckill}} 
+                         {{#skus}}  
+                         {{#if isSellOut}}
+                         <div class="s-bar overSeckill">
+                              <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥{{shoppePrice}}</del></p>
+                              <p class="sellP">&nbsp;&nbsp;秒杀价<span>￥</span><span>{{sellPrice}}</span></p> 
+                              <div class="bay">
+                                   <img src="http://cca.mbaobao.com/mkts/201406/04/sk/no.png" width="40" height="27"  />
+                              </div>
+                         </div> 
+                         {{else}}
+                         <div class="s-bar onSeckill">
+                              <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥{{shoppePrice}}</del></p>
+                              <p class="sellP">&nbsp;&nbsp;秒杀价<span>￥</span><span>{{sellPrice}}</span></p> 
+                              <div class="bay">
+                              <a href="http://cart.mbaobao.com/do/items/add/{{sku}}/1.html" target="_blank"><img src="http://cca.mbaobao.com/mkts/201406/04/sk/li.png" width="114" height="27" /></a>
+                           </div>
+                         </div>
+                         {{/if}} 
+                         {{/skus}} 
+                     {{else}}                   
+                       {{#if isOverdue}}
+                       {{#skus}} 
+                       <div class="s-bar overSeckill">
+                              <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥{{shoppePrice}}</del></p>
+                              <p class="sellP">&nbsp;&nbsp;秒杀价<span>￥</span><span>{{sellPrice}}</span></p> 
+                              <div class="bay">
+                                   <img src="http://cca.mbaobao.com/mkts/201406/04/sk/no.png" width="40" height="27"  />
+                              </div>
+                         </div>
+                        {{/skus}} 
+                       {{else}}
+                      {{#skus}} 
+                         <div class="s-bar willSeckill">
+                          <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥{{shoppePrice}}</del></p>
+                          <p class="sellP">&nbsp;&nbsp;秒杀价<span class="n-1">￥</span><span class="n-2">{{sellPrice}}</span></p> 
+                          <div class="bay">
+                               <img src="http://cca.mbaobao.com/mkts/201406/04/sk/jj.png" width="114" height="27" />
+                          </div>
+                       </div>
+                      {{/skus}} 
+                     {{/if}}
+               {{/if}}
+          </div>
+     {{/seckill}} 
+</script>
+
+<script type="text/javascript">
+seajs.use("./sPiece.js")	
+</script>
+
+</body>
+</html>

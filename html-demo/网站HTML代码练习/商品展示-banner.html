@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
+<script src="seajs/sea-debug.js" data-config="seajs/config.js" id="seajsnode"></script>
+<style type="text/css">
+.main{
+	margin:0 auto;
+	width:940px;
+	height:470px;
+	background-color:#0F3;
+	overflow:hidden;
+	padding:10px;
+	}
+.goods{
+	float:left;
+	height:470px;
+	overflow:hidden;
+	}
+.choose{
+	float:right;
+	height:470px;
+	overflow:hidden;
+	}
+.choose li{
+	margin-bottom:9px;
+	}
+.choose li a{
+	width:140px;
+	height:110px;
+	display:block;	
+	}				
+</style>
+</head>
+<body>
+<div class="main">
+    <ul class="goods">
+    <li><img src="img/goods_01.jpg"></li>
+    <li><img src="img/goods_02.jpg"></li>
+    <li><img src="img/goods_03.jpg"></li>
+    <li><img src="img/goods_04.jpg"></li>
+    </ul>
+    
+    <ul class="choose">
+    <li><a href="#"><img src="img/goods01.jpg"></a></li>
+    <li><a href="#"><img src="img/goods02.jpg"></a></li>
+    <li><a href="#"><img src="img/goods03.jpg"></a></li>
+    <li><a href="#"><img src="img/goods04.jpg"></a></li>
+    </ul>
+</div>
+<script type="text/javascript">
+  seajs.use('./js/banner.js',function(B){
+	  B.banner('.goods','.choose','2000','true');
+	  });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2",
+		"select-windows",
+		"ssl-windows"
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"CSS Format",
+		"CSScomb",
+		"CSSFormat",
+		"Emmet",
+		"Emmet Css Snippets",
+		"HTML5",
+		"HTMLAttributes",
+		"JsFormat",
+		"LiveStyle",
+		"Markdown Preview",
+		"NodeEval",
+		"Package Control",
+		"SyncedSideBar",
+		"Tag",
+		"Theme - Soda"
+	]
+}

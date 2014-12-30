@@ -1,0 +1,77 @@
+<snippet>
+  <content><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+
+<style type="text/css">
+.page_all{ width:100%; background-color:#e5e5e5;}
+.content{ width:100%;}
+.main{ width:960px; margin:0 auto; font-size:0px;}
+/*--100层--*/
+.content_mian{position:relative; width:100%; z-index:1; height:; overflow:hidden;}
+.content_mian .content_mian_bk{ position:absolute; top:0; left:0; z-index:2; width:100%; min-width:960px;}
+.content_mian .content_mian_bk div{ width:100%; height:100px;}
+
+.mbb_mian{width:100; position:relative; z-index:3}
+.mbb_mian .mbb_mian_botton{text-align:center;height:;}
+</style>
+
+
+<div class="page_all">
+  <!--top-->
+  <div class="content" style="background:url() no-repeat top center;">
+     <div class="main">
+        
+     </div>
+  </div>
+  <!--top-->
+
+  <!--视频--> 
+  <div class="k-main v_box" style="width:952px;border:4px solid #000;">
+      <script language="javascript"> 
+        var swf_height=500;
+        var swf_width=952;
+        var texts = "";
+        var files = "http://cca.mbaobao.com/mkts/201406/23/nike/nike.flv";
+        document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+          document.write('<param name="movie" value="http://cca.mbaobao.com/mkts/201402/18/vcastr.swf"><param name="quality" value="high">');
+          document.write('<param name="menu" value="false"><param name="allowFullScreen" value="true" />');
+          document.write('<param name="FlashVars" value="vcastr_file='+files+'&vcastr_title='+texts+'&IsAutoPlay=1">');
+          document.write('<embed src="http://cca.mbaobao.com/mkts/201402/18/vcastr.swf" allowFullScreen="true" FlashVars="vcastr_file='+files+'&vcastr_title='+texts+'&IsAutoPlay=1" menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>');
+        </script>
+  </div>
+  <!--视频-->
+
+  <!--foot-->
+  <div class="content_mian">
+      <!--data-oxlazy-->
+    <div class="content_mian_bk">
+      div.content_mian_bk_\$\$[style="background:url(img/banner2_\$\$.jpg);background-position: center top; background-repeat: no-repeat;height:100px;" style2="background-position: center top; background-repeat: no-repeat;height:100px;"]*41
+    </div>
+  </div>
+  <!--foot-->
+
+</div>
+
+\$tUtil.GetToHTML("288_goods_sku_range","newImg=http://cca.mbaobao.com/mkts/brand/mmc/","width=318","height=400")
+
+<script type="text/javascript">
+  seajs.use("gallery/lazyload/2.0.0/lazyLoad")
+</script>
+
+</body>
+</html>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+      <tabTrigger>mbbBrand</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+      <scope>text.html</scope> 
+</snippet>

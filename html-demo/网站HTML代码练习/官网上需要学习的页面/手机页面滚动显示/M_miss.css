@@ -1,0 +1,118 @@
+.miss_top li{
+	display:inline-block;
+	color:#FFF;
+	margin-left:6px;
+	line-height:24px;
+	text-align:center;
+	font-size:13px;
+	font-weight:bolder;	
+	text-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);
+	position:relative;
+	}
+i.miss_arrow{
+	position:absolute;
+	bottom:-8px;
+	left:45%;
+	display: inline-block;
+	border-width: 4px;
+	border-color: #fa6087 #fff #fff #fff;
+	border-style: solid;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	display:none
+}
+.miss_top .on  .miss_arrow{
+	display:block
+}
+.miss_top li a{
+  color:#FFF;
+  display:block;
+  cursor:pointer;
+  width:50px;
+  height:24px;
+  background:#58bce5;
+}
+.miss_top li.on a {
+	background:#ea547c;
+}
+.miss_top li a:hover{
+  background:#ea547c;
+}
+.miss_goods{
+	height:300px;
+	padding-top:5px;
+	position:relative;
+}
+.miss_top ul{
+	font-size:0px;
+	line-height:0px;
+}
+.moveWrap dl{
+	width:300px;
+	
+	}
+
+
+.miss_goods .moveWrap{
+	height:288px;
+	overflow:hidden;
+}
+
+.miss_goods .bottomLeft{
+	position:absolute;
+	top:130px;;
+	left:-6px;
+	opacity:0.5;
+	border-radius: 5px;
+	background:#000  url(http://cca.mbaobao.com/mkts/201307/12/shouj/left.png) center center no-repeat;
+	color:#FFF;
+	font-size:14px;
+	font-weight:bolder;
+	text-align:center;
+	padding:10px;
+	cursor:pointer;
+}
+
+.miss_goods .bottomRight{
+	position:absolute;
+	top:130px;;
+	right:-6px;
+	opacity:0.5;
+	border-radius: 5px;
+	background:#000 url(http://cca.mbaobao.com/mkts/201307/12/shouj/right.png) center center no-repeat;
+	color:#FFF;
+	font-size:14px;
+	font-weight:bolder;
+	text-align:center;
+	padding:10px;
+	cursor:pointer;
+}
+.miss_goods .off{
+	opacity:0.2;
+	}
+
+.miss_goods ul{
+	width:9999px;
+	height:288px;
+}
+.miss_goods li{
+	float:left;
+	height:295px;
+	width:288px;
+}
+
+.miss_goods dd{
+	float:left;
+	margin:6px;
+
+	}
+.miss_goods dd img{
+	border:1px solid #999;
+	width:130px;
+	height:130px;	
+	}
+	
+.slidePager{
+	display:none
+}

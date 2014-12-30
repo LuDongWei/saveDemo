@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?> 
+<Banner 
+	bannerWidth="270"
+	bannerHeight="200"
+
+	textSize="14"
+	textColor=""
+	textAreaWidth=""
+	textLineSpacing="0"	
+	textLetterSpacing="-0.5"	
+	textMarginLeft="12"
+	textMarginBottom="3"
+	
+	transitionType="1"
+	transitionDelayTimeFixed="8" 
+	transitionDelayTimePerWord=".5"
+	transitionSpeed="8"
+	transitionBlur="yes"
+	transitionRandomizeOrder="no"	
+	
+	showTimerClock="yes"
+	showBackButton="yes"
+	showNumberButtons="yes"
+	showNumberButtonsAlways="Yes"
+	showNumberButtonsHorizontal="yes"
+	showNumberButtonsAscending="yes"
+	autoPlay="yes">
+	
+	<item image="images/1.jpg" link="http://www.niutuku.com/" textBlend="no"><![CDATA[]]></item>
+
+	<item image="images/2.jpg" link="http://www.niutuku.com/" textBlend="no"><![CDATA[]]></item>
+
+	<item image="images/3.jpg" link="http://www.niutuku.com/" textBlend="no"><![CDATA[]]></item>
+
+	<item image="images/4.jpg" link="http://www.niutuku.com/" textBlend="no"><![CDATA[]]></item>
+
+	<item image="images/5.jpg" link="http://www.niutuku.com/" textBlend="no"><![CDATA[]]></item>	        
+         
+</Banner>
+

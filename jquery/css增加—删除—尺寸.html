@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/reset.css" type="text/css"  rel="stylesheet" />
+<script src="js/jquery-1.9.1.min.js"  type="text/javascript" ></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+	  $("#bu_1").click(function(){
+	        $("#div_1").addClass("blue");	  
+		  });
+	  $("#bu_2").click(function(){
+		    $("#div_2").removeClass("green");
+		  });	  
+	  $("#bu_3").click(function(){
+		    $("#div_2").toggleClass("red");
+		  });		  
+	  $("#bu_4").click(function(){
+		  $("#div_2").css({"background-color":"yellow","border":"double 4px #6033a3"});
+		  });
+		$("#bu_5").click(function(){
+		  var txt="";
+		  txt+="width()返回宽度（不包括内边框，边框或外边框）"+$("#div_2").width()+"</br>";
+		   txt+="height()返回宽度（不包括内边框，边框或外边框）"+$("#div_2").height()+"</br></br>";	
+		    
+			txt+="innerwidth()返回宽度（包括内边框）"+$("#div_2").innerWidth()+"</br>";	
+			 txt+="innerheight()返回宽度（包括内边框）"+$("#div_2").innerHeight()+"</br></br>";
+			 	
+			  txt+="outerwidth()返回宽度（包括内边框，边框）"+$("#div_2").outerWidth()+"</br>";	
+			   txt+="outerheight返回宽度（包括内边框，边框）"+$("#div_2").outerHeight()+"</br>";		
+		  $("#div_2").html(txt);	
+			});  
+			
+		 $("#bu_6").click(function(){
+		  $("#div_2").width(250).height(250);
+		  });
+		   $("#bu_7").click(function(){
+		 	  var txt="";
+		  txt+="Document width/height"+$(document).width();
+          txt+="x"+$(document).height()+"</br>";
+		   
+           txt+="Window width/height"+$(window).width();
+          txt+="x"+$(window).height()+"</br>";		
+            $("#P_1").after(txt);
+		  });	
+			
+			
+			
+			
+	  });	  	  
+</script>
+<style>
+.blue
+{
+background:#0F9;	
+}
+.green
+{
+ background:#F99 ;	
+}
+
+.red
+{
+ background:#be4a4a;
+}
+
+
+</style>
+
+</head>
+<body>
+<div id="div_1" style="text-align:center; width:600px;  height:600px; margin:0 auto; margin-top:50px; border: solid 2px  #CC3;">
+<p style=" font-size:30px" id="P_1">div_1</p>
+<div id="div_2"  class="green" style="text-align:center; width:300px; height:300px; padding:10px; border:solid 2px #990; margin: 150px">
+<p style=" font-size:30px">div_2</p>
+</div>
+</div>
+
+<div style="border:groove 2px #000; width:800px; height:50px; margin:0 auto; text-align:center; margin-top:35px">
+<button id="bu_1" style="width:100px; height:30px; background: #099; margin-top:10px">添加bu_1的背景颜色</button>
+<button id="bu_2"  style="width:100px; height:30px; background: #099; margin-top:10px">删除bu_2的背景颜色</button>
+<button id="bu_3"  style="width:100px; height:30px; background: #099; margin-top:10px">添加或删除bu_2的颜色</button>
+<button id="bu_4"  style="width:100px; height:30px; background: #099; margin-top:10px">用css更改添加属性</button>
+<button id="bu_5"  style="width:100px; height:30px; background: #099; margin-top:10px">求div_2的高和宽的相关属性</button>
+<button id="bu_6"  style="width:100px; height:30px; background: #099; margin-top:10px">改变div_2的高和宽</button>
+<button id="bu_7"  style="width:100px; height:30px; background: #099; margin-top:10px">返回html和窗口的尺寸在div_1中</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<snippet>
+	<content><![CDATA[
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="mobile-agent"content="format=html5; url=http://m.mbaobao.com">
+    <title>双11返场大促 麦包包触屏版</title>
+    <meta name="apple-itunes-app" content="app-id=408126283" />
+        <meta name="keywords" content="双11返场大促" /> 
+            <meta name="description" content="双11返场大促" /> 
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    
+    <link href="http://cca.mbaobao.com/mkts/201404/09/favicon.ico" rel="shortcut icon" />
+    <link rel="apple-touch-icon-precomposed" href="http://cca.mbaobao.com/mkts/201208/13/mbbicon.png"/>
+
+    <script type="text/javascript">
+        var drive = '';
+        var MBAOBAO_DOMAIN = "mbaobao.com"; 
+        var domain = 'mbaobao.com';
+    </script>
+
+     <link href="http://cca.mbaobao.com/static/mod/mobile/global/3.0.0/global.css" rel="stylesheet" type="text/css" />
+    <script src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.2.1/sea.js,seajs/seajs/2.2.1/seajs-style.js,mobile/config/2.0.0/sea-config.js,zepto/zepto/1.1.2/zepto.js,gallery/underscore/1.6.0/underscore.js,gallery/handlebars/1.0.0/handlebars.js,mobile/global/3.0.0/global.js?1106"></script>
+
+    <link rel="stylesheet" media="only screen" href="http://cca.mbaobao.com/static/mod/page/mbbMobile/1.0.2/css/common.css?0704" />
+    <link rel="stylesheet" media="only screen" href="http://cca.mbaobao.com/static/mod/page/mbbMobile/1.0.2/css/module.css?0822" />
+
+    <script>
+       // seajs.use('mobile/global/3.0.0/global');
+    </script>
+</head>
+
+<body>
+<!-- TOP -->
+<header class="m-head">
+        <div class="head-layout">
+                        <a href="/index.html" class="mbb-logo" style="margin-left:7px;"></a>
+            
+            <a href="/ajax/cart/page/app/101" class="user-cart">
+                <span class="iconfont">&#xe60d;</span>
+                <span id="cartItemCount" class="cart-num">0</span>
+            </a>
+            <a href="/user/" class="iconfont user-center">&#xe61f;</a>
+                    </div>
+</header>
+<!--/ TOP -->
+  
+
+
+<!--sku链接： http://m.mbaobao.com/item/#.html-->
+<!--商品列表：\$!sku.html-->
+<!--一行2块
+<div class="flex-out">
+     <div class="flex-in">
+        <img src="img/qz_01.jpg" width="100%">  
+     </div>
+     <div class="flex-in">
+        <img src="img/qz_01.jpg" width="100%">  
+     </div>
+</div>
+-->
+
+
+<!--▼ S ARTICLE-->
+<style type="text/css">
+.M_main{
+   min-width:320px;
+   max-width:640px;
+   margin:0 auto;
+}
+/*---仿-table---*/
+.flex-out{
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;   
+}
+.flex-in{
+     -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+     -moz-box-flex: 1;         /* OLD - Firefox 19- */
+     -webkit-flex: 1;          /* Chrome */
+     -ms-flex: 1;              /* IE 10 */
+     flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */ 
+}
+/*---640样式---*/
+@media screen and (max-width: 640px){
+
+}
+</style>
+
+<section class="M_main">
+     <header>
+     	 <img src="img/qz_01.jpg" width="100%"> 
+     </header>
+        
+     <div class="content">
+     	
+     </div> 
+
+     <footer>
+     	
+     </footer>  
+</section>
+<!--▲ E ARTICLE-->	
+
+    <script>
+    seajs.use(['page/mbbMobile/1.0.2/activity','gallery/lazyload/2.0.1/lazyLoad'],function(activity,lazyLoad){
+              setTimeout(function(){
+                    lazyLoad.detect();
+              },1000);
+    });
+    </script>
+    
+    
+    <section class="M_advertis">
+            <dl class="underway">
+                <dt>以下活动正在进行中</dt>
+                <dd>
+                                                    <div class="u_left">
+                        <a href="http://m.mbaobao.com/a-wjks.html?mob_bi=weijindibu"><img alt="" src="http://cca.mbaobao.com/mkts/201411/mob/323-238pj.jpg" width="100%" /></a>
+                     </div>
+                                                    <div class="u_right">
+                                                     <div class="u_top">
+                        <a href="http://m.mbaobao.com/a-11encore.html"><img alt="" src="http://cca.mbaobao.com/mkts/201411/mob/285-144encore.jpg" width="100%" /></a>
+                     </div>
+                                                                                     <div class="u_bottom">
+                        <a href="http://m.mbaobao.com/a-new88.html"><img alt="" src="http://cca.mbaobao.com/mkts/201411/mob/05/88.jpg" width="100%" /></a>
+                     </div>
+                                                  </div>    
+                </dd>
+            </dl>
+            <dl class="equities">
+                <dt>手机用户专项权益</dt>
+                <dd>
+                  <img src="http://cca.mbaobao.com/mbaobao/201403/19/f_09.jpg" width="100%" >
+                </dd>  
+            </dl>  
+    </section>
+    
+
+    <!-- FOOT -->
+   <footer class="m-footer">
+    <div class="footer-login">
+        <a href="/user/message/userMessage.html" class="f-callback">用户反馈</a>
+        <div class="f-login" id="loginInfo"></div>
+    </div>
+
+    <div class="go-other">
+        <a href="/app.html"><i class="iconfont">&#xe611;</i>iPhone版</a>
+        <a href="/app.html"><i class="iconfont">&#xe615;</i>Android版</a>
+                <a href="http://www.mbaobao.com/?refid=mobile"><i class="iconfont">&#xe61a;</i>PC版</a>
+                <a href="http://m.mbaobao.com"><i class="iconfont">&#xe618;</i>首页</a>
+    </div>
+    
+    <div class="footer-info">
+        <div class="footer-cs">麦包包官方客服热线：4006-528-528</div>
+        <div class="copyright">
+            <p>©2007-2014 Mbaobao All Rights Reserved.</p>
+            <p>ICP:浙B2-20100425</p>
+        </div>
+    </div>
+   </footer>
+    <!--/ FOOT -->
+
+    <script>
+        seajs.use('page/mbbMobile/1.0.2/activity')
+    </script> 
+     
+
+</body>
+
+</html>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>app640</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	  <scope>text.html</scope>
+</snippet>

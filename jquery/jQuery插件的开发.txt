@@ -1,0 +1,263 @@
+jQuery 插件开发全解析：http://www.iteye.com/topic/545971
+
+1.类级别的插件开发（添加静态方法，例子:$.AJAX()）
+1.1添加一个新的全局函数
+   jQuery.foo=function(){
+   alert(123);
+   }
+
+1.2增加多个全局函数
+   jQuery.foo=function(){
+   alert(12)
+   }
+   jQuery.bar=function(aa){
+   alert(aa)
+   }
+   调用时和一个函数一样：jQuery.foo();jQuery.bar();
+   
+1.3使用jQuery.extend(object);
+   jQuery.extend({
+   foo:function(){
+   alert();
+   },
+   bar:function(aa){
+   alert(aa);
+   }
+   })
+
+1.4使用命名空间(避免某些函数或变量将于其他jQuery插件冲突)
+   jQuery.myPlugin={
+   foo:function(){
+   alert();
+   },
+   bar:function(aa){
+   alert(aa);
+   }
+   };
+   采用命名空间的函数仍然是全局函数，调用时采用的方法：
+   $.myPlugin.foo();
+   $.myPligin.bar(aa);
+   
+2.对象级别的插件开发
+形式1：(function($){
+        $.fn.extend({
+		pluginName:function(opt,callback){
+                   //控制器插件的代码就写在这里		                     
+		}		
+		})
+		}
+        )(jQuery);
+
+形式2：(function($){
+       $.fn.pluginName=function(){
+	      //同上
+	   };
+	   })(jQuery)
+上面定义了一个jQuery函数，形参是$，函数定义完成后，吧jQuery这个实参传递进去，立即调用。	   	   
+
+2.1在jQuery名称空间下声明一个名字（力求仅用一个名字来包含它的所有内容）
+$.fn.hilight=function(){
+     //控制器插件的代码就写在这里
+};
+我们的插件通过这样被调用：
+$('#abc').hilight():
+
+2.2接受options参数以控制插件的行为(添加指定的功能)
+//插件定义
+$.fn.hilight=function(option){
+     var defults={
+	    foreground:'red',
+		background:'yellow'
+	 }
+     //扩展我们的默认选项与所提供
+     var opts=$.extend(defaults,options);
+     //我们的插件的实现代码就在这里	 
+  };
+  我们的插件可以这样被调用：
+  $('#abc').hilight({
+      foreground:'blue'
+  })
+
+2.3暴露插件的默认设置
+(对上面的代码的一种改进是暴露插件的默认设置，使使用者更容易用较少的代码覆盖和修改插件)
+//插件定义
+$.fn.hilight=function(option){
+   //扩展我们的默认选项与所提供。
+   //注意，第一个参数是一个空对象
+   //这是保持高于我们‘违约’的对象
+   var opts=$.enxtnd({},$.fn.hilight.defaults,options);
+   //我们的插件实现代码写在这里
+};
+//插件默认属性-添加了对我们插件的功能
+$.fn.hilight.default={
+  foreground:'red',
+  background:'yellow'
+};
+现在使用者可以包含这样的一行在他们的脚本里
+//这个只需要调用一次，且不一定要在ready块中调用
+$.fn.hilight.defaults.foreground='blue';          
+
+接下来我们可以像这样使用插件的方法，结果它设置蓝色的前景色：  
+$('#myDiv').hilight();   
+
+2.4适当的暴露一些函数(能够传递他们自己设置来覆盖你的插件，其他人也能为你的插件写插件)
+//插件定义
+$.fn.hilight=function(options){
+    //迭代和重新格式化每个匹配的元素
+	return this.each(function(){
+	   var $this=$(this);
+       //...
+       var markup=$this.html();
+       //调用我们的格式功能
+       markup=$.fn.hilight.format(markup);
+       $this.html(markup);	   
+	});
+};
+//定义我们的格式功能
+$.fn.hilight.format=function(txt){
+return '<strong>'+txt+'</strong>';
+}
+
+2.5保持私有函数的私有性
+(function($){
+   //插件定义
+   $.fn.hilight=function(options){
+      debug(this);
+	  //...
+   };
+   //私有函数用于调用
+   function debug($obj){
+     if(window.console&&window.console.log)
+	   window.console.log('hilight selection count:'+$obj.size());
+   };
+})(jQuery);
+我们的‘debug’方法不能从外部闭包进入，因此对于我们的实现是私有的
+
+2.6支持Metadata插件
+$.fn.hilight=function(options){
+  //...
+  //建立主要选项元素迭代之前
+  var opts=$.extend({},$.fn.hilight.defaults,options);
+  return this.each(function(){
+     var $this=$(this);
+	 //构建元素特定选项
+	 var o=$.meta?$.extend({},opts,$this.data()):opts;
+	 //...
+  })
+}
+它测试Metadata插件是否被安装如果它被安装了，它能扩展我们的options对象通过抽取元数据
+这行作为最后一个参数添加到Jquery.extend，覆盖任何其它选项设置
+现在我们能从"markup”处驱动行为,如果我们选择了“markup”：
+调用的时候可以这样写： jQuery.foo(); 或 $.foo(); 
+
+示例：
+<!--  markup  -->    
+<div class="hilight { background: 'red', foreground: 'white' }">    
+  Have a nice day!    
+</div>    
+<div class="hilight { foreground: 'orange' }">    
+  Have a nice day!    
+</div>    
+<div class="hilight { background: 'green' }">    
+  Have a nice day!    
+</div>    
+现在我们能高亮哪些div仅使用一行脚本：  
+$('.hilight').hilight();  
+
+2.7整合
+//创建一个闭包
+(function($){
+   //插件的定义
+   $.fn.hilight=function(option){
+        debug(this);
+		//建立主要选项元素迭代之前
+		var opts=$.extend({},$.fn.hilight.defaults,options);
+		//迭代和重新格式化每个匹配的元素
+		return this.each(function(){
+		  $this=$(this);
+		  //构建元素特定选项
+		  var o=$.meta?$.extend({},opts,$this.data()):opts;
+		  //更新元素样式
+		  $this.css({
+		    backgroundColor:o.background,
+			color:o.foreground
+		  });
+		  var marup=$this.html();
+		  //调用我们的格式功能
+		  marup=$.fn.hilight.format(markup);
+		  $this.html(markup);		  
+		})
+   };
+   //私有属性:debugging
+   function debug($obj){
+       if (window.console && window.console.log)    
+      window.console.log('hilight selection count: ' + $obj.size());    
+   };   
+   //定义暴露format函数
+   $.fn.hilight.format=function(txt){
+       return '<strong>' + txt + '</strong>';    
+   };   
+   //插件的defaults
+   $.fn.hilight.defaults={
+       foreground:'red',
+	   background:'yellow'
+   };   
+//闭包结束   
+})(jQuery);
+
+3.总结
+  jQuery为开发插件提供了两个方法，分别是：
+  jQuery.fn.extend(object);  给jQuery对象添加方法   
+  jQuery.extend(object);     为扩展jQuery类本身，为类添加新的方法。
+  
+3.1jQuery.fn.extend(object);    对jQuery.prototype进行扩展，为jQuery类添加‘成员函数’
+   fn是什么东西呢，查看jQuery代码，就不难发现。
+   jQuery.fn=jQuery.prototype={
+   init:function(selector,context){
+    //....//
+   }
+   };
+   原来jQuery.fn=jQuery.prototype
+   
+例子：做一个特殊的编辑框，被点击时，便alert当前编辑框里的内容
+$.fn.extend({
+     alertWhileClick:function(){
+	   $(this).click(function(){
+	      alert($(this).val());
+	   });
+	 }
+})
+$("#input1").alertWhileClick(); //页面上为：<input id="input1" type="text"/>
+$("#input1")　为一个jQuery实例，当它调用成员方法 alertWhileClick后，便实现了扩展，每次被点击时它会先弹出目前编辑里的内容。
+
+3.2jQuery.extend(object);
+为jQuery类添加类方法，可以理解为添加静态方法
+$.extend({
+  add:function(a,b){return a+b;}
+});
+//便为　jQuery　添加一个为 add　的　“静态方法”，之后便可以在引入 jQuery　的地方，使用这个方法了，$.add(3,4); //return 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

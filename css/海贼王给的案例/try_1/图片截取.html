@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片截取</title>
+</head>
+<style>
+
+.scroll{width:960px; height:315px; margin-top:6px;}
+.pic{position:relative; WIDTH:960px; height:265px; border:1px solid #e6e6e6; margin:0 auto 0;}
+.pic .pcont{FLOAT:left; display:inline; margin:15px 0 0 35px; OVERFLOW: hidden; WIDTH:890px; position:relative;}
+.pic .pl{FLOAT:left; display:inline; WIDTH:162px; height:240px;  z-index:2;}
+.pic .box .name{width:160px; height:30px; line-height:30px; float:left; display:inline; text-align:center; font-weight:normal; overflow:hidden;} 
+.pic .box .price{width:120px; height:20px; line-height:20px; float:left; display:inline; margin-left:20px; font-weight:normal; overflow:hidden;}
+.pic .box .picBox{width:160px; height:186px;border:1px #e6e6e6 solid; float:left; display:inline; overflow:hidden;}
+.pic .box .picImgBox{ width:160px; height:186px; line-height:167px; overflow:hidden; text-align:center; display:table-cell; vertical-align:middle; *disply:block; font-size:167px;}
+.pic .box .picImgBox img{height:186px; text-align:center; border:none; display:block; margin:0 auto; vertical-align:middle;}
+
+
+</style>
+
+<body>
+<div class="scroll fl">
+      <DIV class="pic">	
+         <DIV class="pcont" >
+                <div class="box">								     
+                     <div class="picBox">            
+                          <div class="picImgBox">  
+                              <a href="display_ny.html"><img src="images/banner.jpg" alt="" title=""/> </a>                
+                          </div>           
+                     </div>       
+                      <h3 class="name"><a href="display_ny.html">杭州悠悠时尚女装</a></h3>   
+                      <h4 class="price"><del class="fl">￥698.00</del><span class="orange b fr">￥198.00</span></h4>					  
+                </div>
+                
+                <div class="box">								     
+                     <div class="picBox">            
+                          <div class="picImgBox">  
+                              <a href="display_ny.html"><img src="images/show1.jpg" alt="" title=""/> </a>                
+                          </div>           
+                     </div>       
+                      <h3 class="name"><a href="display_ny.html">杭州悠悠时尚女装</a></h3>   
+                      <h4 class="price"><del class="fl">￥698.00</del><span class="orange b fr">￥198.00</span></h4>					  
+                </div>
+         </DIV>	
+     </DIV>      
+</div>
+<p>对于大图片，截取其中一部分。若图片较小 则会放大再截取</p>
+</body>
+</html>

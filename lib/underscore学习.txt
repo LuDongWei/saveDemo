@@ -1,0 +1,434 @@
+Underscore 是一个javaScript 实用库，但是没有扩展任何javaScript内置对象
+它弥补了部分jQuery没实现的功能 ，同时又是Backbone.js必不可少的部分。
+
+var _=require("underscore");  //下文用_指代underscore
+
+一.template(templateString, [data], [settings])  --模板引擎
+参数说明：
+templateString：模板文本
+[data]：对应模板数据
+[settings]：基本配置信息
+
+运用：
+   var compiled = _.template("hello: <%= name %>");
+   compiled({name: 'moe'});
+=> "hello: moe"
+
+   var list = "<% _.each(people, function(name) { %> <li><%= name %></li> <% }); %>";
+   _.template(list, {people: ['moe', 'curly', 'larry']});
+=> "<li>moe</li><li>curly</li><li>larry</li>"
+
+   var template = _.template("<b><%- value %></b>");
+   template({value: '<script>'});
+=> "<b>&lt;script&gt;</b>"
+这就是underscrore的模板相关语法。
+<%%>里面能使用js代码
+
+//模板部分还有很多等以后有时间分析
+//http://www.cnblogs.com/yexiaochai/p/3473723.html
+
+二.Collections
+1.each(list, iterator, [context])    --遍历
+参数说明：
+list：对象集合
+iterator：回调函数
+[context]：回调函数执行作用域
+
+*如果zepto/jquery包的话可以更加精简
+*由于ECMAScript 5中的array提供了新的ForEach方法，这里如果支持最新的方法，使用即可
+
+运用：
+_.each([1, 2, 3], alert);
+=> alerts each number in turn...
+_.each({one: 1, two: 2, three: 3}, alert);
+=> alerts each number value in turn...
+
+
+2.map(list, iterator, [context])    --通过变换函数（iterator替代器、回调函数）,将list集合值映射到新数组
+参数说明：
+list：对象集合
+iterator：回调函数
+[context]：回调函数执行作用域
+
+*ECMAScript5 array同样实现了相关功能，其实就是用于处理数组的，根据处理结果返回新的数组
+
+运用：
+_.map([1, 2, 3], function(num){ return num * 3; });
+=> [3, 6, 9]
+_.map({one: 1, two: 2, three: 3}, function(num, key){ return num * 3; });
+=> [3, 6, 9]
+
+
+3.reduce(list, iterator, memo, [context])   --函数将list中的集合归结为单独一个值，每个值会被回调函数处理
+
+运用：
+var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
+=> 6
+//??
+
+4.reduceRight(list, iterator, memo, [context])
+
+运用：
+var list = [[0, 1], [2, 3], [4, 5]];
+var flat = _.reduceRight(list, function(a, b) { return a.concat(b); }, []);
+=> [4, 5, 2, 3, 0, 1]
+//???
+
+
+5.find(list, iterator, [context])     --遍历数组，返回第一个回调检测为真的值
+与map类似
+
+运用：
+var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+=> 2
+
+
+6.filter(list, iterator, [context])    --遍历list，返回回调函数返回true的值
+过滤数组返回true
+
+运用：
+var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+=> [2, 4, 6]
+
+
+7.reject(list, iterator, [context])  --返回list中没有通过iterator真值检测的元素集合，与filter相反。
+过滤数组返回false
+
+运用：
+var odds = _.reject([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+=> [1, 3, 5]
+
+8.where(list, properties)    --遍历list，返回一个数组，这个数组包含对象所列出属性所有的值
+筛选
+
+运用：
+_.where(listOfPlays, {author: "Shakespeare", year: 1611});
+=> [{title: "Cymbeline", author: "Shakespeare", year: 1611},
+   {title: "The Tempest", author: "Shakespeare", year: 1611}]
+
+
+9.every(list, [iterator], [context])   --返回true代表每个值都存在
+判断是否数据存在完全
+
+运用：
+_.every([true, 1, null, 'yes'], _.identity);
+=> false
+
+
+10.some(list, [iterator], [context])  --返回true,如果任何值列表中通过迭代器的事实测试。短路和停止遍历列表如果找到一个
+？？
+如果list中有任何一个元素通过 iterator 的真值检测就返回true。一旦找到了符合条件的元素, 就直接中断对list的遍历.
+如果存在原生的some方法，就使用原生的some
+
+
+11.contains(list, value)   --如果list包含指定的value则返回true（愚人码头注：使用===检测）。如果list 是数组，内部使用indexOf判断。
+
+运用：
+_.contains([1, 2, 3], 3);
+=> true
+
+12.invoke(list, methodName, [*arguments]) --在list的每个元素上执行methodName方法。 任何传递给invoke的额外参数，invoke都会在调用methodName方法的时候传递给它。
+排序
+
+运用：
+_.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
+=> [[1, 5, 7], [1, 2, 3]]
+
+
+13.pluck(list, propertyName)   --pluck也许是map最常使用的用例模型的版本，即萃取对象数组中某属性值，返回一个数组。
+取对应参数生成集合
+
+运用：
+var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+_.pluck(stooges, 'name');
+=> ["moe", "larry", "curly"]
+
+
+14.max(list, [iterator], [context])  --返回list中的最大值。如果传递iterator参数，iterator将作为list排序的依据。
+取最大值
+
+运用：
+var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+_.max(stooges, function(stooge){ return stooge.age; });
+=> {name: 'curly', age: 60};
+
+
+15.min(list, [iterator], [context])   --返回list中的最小值。如果传递iterator参数，iterator将作为list排序的依据。
+取最小值
+
+运用：
+var numbers = [10, 5, 100, 2, 1000];
+_.min(numbers);
+=> 2
+
+16.sortBy(list, iterator, [context])   --返回一个排序后的list拷贝副本。如果有iterator参数，iterator将作为list排序的依据。迭代器也可以是字符串的属性的名称进行排序的(比如 length)。
+升序排序
+
+运用：
+_.sortBy([1, 2, 3, 4, 5, 6], function(num){ return Math.sin(num); });
+=> [5, 4, 6, 3, 1, 2]
+
+
+17.groupBy(list, iterator, [context])  --把一个集合分组为多个集合，通过 iterator 返回的结果进行分组. 如果 iterator 是一个字符串而不是函数, 那么将使用 iterator 作为各元素的属性名来对比进行分组.
+根据规则拆分集合
+
+运用：
+_.groupBy([1.3, 2.1, 2.4], function(num){ return Math.floor(num); });
+=> {1: [1.3], 2: [2.1, 2.4]}
+
+_.groupBy(['one', 'two', 'three'], 'length');
+=> {3: ["one", "two"], 5: ["three"]}
+
+
+18.indexBy(list, iterator, [context])  --给定一个list，和 一个用来返回一个在列表中的每个元素键 的iterator 函数（或属性名）， 返回一个每一项索引的对象。和groupBy非常像，但是当你知道你的键是唯一的时候可以使用indexBy 。
+当键是唯一时排序
+
+运用：
+var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+_.indexBy(stooges, 'age');
+=> {
+  "40": {name: 'moe', age: 40},
+  "50": {name: 'larry', age: 50},
+  "60": {name: 'curly', age: 60}
+}
+
+
+19.countBy(list, iterator, [context])  --排序一个列表组成一个组，并且返回各组中的对象的数量的计数。类似groupBy，但是不是返回列表的值，而是返回在该组中值的数目。
+与groupBy类似返回的是数量不是值
+
+运用：
+_.countBy([1, 2, 3, 4, 5], function(num) {
+  return num % 2 == 0 ? 'even': 'odd';
+});
+=> {odd: 3, even: 2}
+
+
+20.shuffle(list)  --洗牌
+打乱
+ 
+运用：
+_.shuffle([1, 2, 3, 4, 5, 6]);
+=> [4, 1, 6, 3, 5, 2]
+
+
+21.toArray(list)   --把list(任何可以迭代的对象)转换成一个数组，在转换 arguments 对象时非常有用。
+转化数组
+
+运用：
+(function(){ return _.toArray(arguments).slice(1); })(1, 2, 3, 4);
+=> [2, 3, 4]
+
+
+22.size(list)
+计算长度
+
+运用
+_.size({one: 1, two: 2, three: 3});
+=> 3
+
+--------------
+三.Function
+23.memoize(function, [hashFunction])  --加速运算
+加速运算
+
+运用：
+var fibonacci = _.memoize(function(n) {
+  return n < 2 ? n: fibonacci(n - 1) + fibonacci(n - 2);
+});
+
+
+24.throttle(function, wait, [options])
+默认情况下，throttle将在你调用的第一时间尽快执行这个function，并且，如果你在wait周期内调用任意次数的函数，
+都将尽快的被覆盖。如果你想禁用第一次首先执行的话，传递{leading: false}，还有如果你想禁用最后一次执行的话，传递{trailing: false}。
+
+运用：
+var throttled = _.throttle(updatePosition, 100);
+$(window).scroll(throttled);
+
+等等
+//http://documentcloud.github.io/underscore/ 
+......
+
+---------
+四.object
+25.keys(object)
+返回对象名称
+
+运用：
+_.keys({one : 1, two : 2, three : 3});
+=> ["one", "two", "three"]
+
+
+26.values(object)
+返回所有对象的属性的值。
+
+运用：
+_.values({one : 1, two : 2, three : 3});
+=> [1, 2, 3]
+
+
+27.pairs(object)
+将一个对象转换为一组键值对。
+
+运用：
+_.pairs({one: 1, two: 2, three: 3});
+=> [["one", 1], ["two", 2], ["three", 3]]
+
+
+28.invert(object)
+反转
+
+运用：
+_.invert({Moe: "Moses", Larry: "Louis", Curly: "Jerome"});
+=> {Moses: "Moe", Louis: "Larry", Jerome: "Curly"};
+
+
+29.extend(destination, *sources)
+扩展
+
+运用：
+_.extend({name : 'moe'}, {age : 50});
+=> {name : 'moe', age : 50}
+
+
+30.pick(object, *keys)
+返回需要的值
+
+运用：
+_.pick({name : 'moe', age: 50, userid : 'moe1'}, 'name', 'age');
+=> {name : 'moe', age : 50}
+
+
+31.省略_.omit(object, *keys)
+
+
+32.isEqual(object, other)  --执行一个优化深两个对象之间的比较,以确定是否应该被视为平等的。
+对象比较
+
+运用：
+var moe   = {name : 'moe', luckyNumbers : [13, 27, 34]};
+var clone = {name : 'moe', luckyNumbers : [13, 27, 34]};
+moe == clone;
+=> false
+_.isEqual(moe, clone);
+=> true
+
+
+33.isEmpty(object)   
+是否为空
+
+运用：
+_.isEmpty([1, 2, 3]);
+=> false
+_.isEmpty({});
+=> true
+
+.isElement(object)
+如果对象是一个DOM元素返回true。
+
+isArray(object)
+如果对象是一个数组返回true。 .........
+
+
+.zip(*arrays)  
+压缩
+
+运用：
+_.zip(['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]);
+=> [["moe", 30, true], ["larry", 40, false], ["curly", 50, false]]
+
+_.unzip(*arrays)
+解压缩
+
+运用：
+_.unzip(["moe", 30, true], ["larry", 40, false], ["curly", 50, false]);
+=> [['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]]
+
+
+_.object(list, [values])
+对象比较
+
+运用：
+_.object(['moe', 'larry', 'curly'], [30, 40, 50]);
+=> {moe: 30, larry: 40, curly: 50}
+
+_.object([['moe', 30], ['larry', 40], ['curly', 50]]);
+=> {moe: 30, larry: 40, curly: 50}
+
+
+_.range([start], stop, [step])
+创建数据
+
+运用：
+_.range(10);
+=> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+_.range(1, 11);
+=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+_.range(0, 30, 5);
+=> [0, 5, 10, 15, 20, 25]
+_.range(0, -10, -1);
+=> [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
+_.range(0);
+=> []
+
+等等
+
+
+---------------------------
+五。practical Function
+33.noConflict()
+给“_”的控制变量回到原来的主人。返回一个强调对象的引用。
+
+var underscore = _.noConflict();
+
+
+34.identity(value)
+var moe = {name : 'moe'};
+moe === _.identity(moe);
+=> true
+
+35.random(min, max)
+随机
+
+_.random(0, 100);
+=> 42
+
+36.uniqueId([prefix])
+
+
+37.escape(string)
+转义字符串插入到HTML,取代&、<、>、'、'和/字符。
+
+运用：
+_.escape('Curly, Larry & Moe');
+=> "Curly, Larry &amp; Moe"
+
+38.unescape(string)
+反
+
+39.result(object, property)
+如果指定属性的值是一个函数然后调用它的对象上下文;否则,返回它。
+
+运用：
+var object = {cheese: 'crumpets', stuff: function(){ return 'nonsense'; }};
+_.result(object, 'cheese');
+=> "crumpets"
+_.result(object, 'stuff');
+=> "nonsense"
+
+
+40.Chaining
+...
+
+41.chain(obj)
+返回一个包装对象
+
+运用：
+var stooges = [{name : 'curly', age : 25}, {name : 'moe', age : 21}, {name : 'larry', age : 23}];
+var youngest = _.chain(stooges)
+  .sortBy(function(stooge){ return stooge.age; })
+  .map(function(stooge){ return stooge.name + ' is ' + stooge.age; })
+  .first()
+  .value();
+=> "moe is 21"
+

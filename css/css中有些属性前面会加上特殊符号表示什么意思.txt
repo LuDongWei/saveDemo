@@ -1,0 +1,135 @@
+﻿ie6,ie7,ie8,Firefox兼容的css hack
+补充：
+color{
+ background-color: #CC00FF;  /*所有浏览器都会显示为紫色*/
+ background-color: #FF0000\9; /*IE6、IE7、IE8会显示红色*/
+ *background-color: #0066FF;  /*IE6、IE7会变为蓝色*/   
+ _background-color: #009933;  /*IE6会变为绿色*/
+}
+好多css hack，最重要的是简单实用能解决问题就行了
+总结： 
+\9:ie6 ie7 ie8
+*:ie6 ie7
+_:ie6
+*+:ie7
+
+---------------------------------------------------------
+IE6，IE7，Firefox兼容的css hack
+第一种办法：
+body
+{
+     background:red;
+    *background:blue !important;   
+    *background: green;
+}
+
+第一排给Firefox以及其他浏览器看；
+第二排给IE7,IE7既能能识别*号，也能识别important；
+第三排给IE6也能识别*号；
+第二种办法，使用_来区分IE6：
+
+body
+{
+    background:red;
+    *background:blue;   
+    _background: green;
+}
+
+第一排给Firefox以及其他浏览器看；
+第二排给IE7,IE7既能能识别*号；
+第三排给IE6能识别下划线；
+
+对!important的理解：
+http://www.cnblogs.com/ytaozhao/archive/2012/06/28/2567256.html
+1.比如在IE中的效果总是和其他的浏览器如firefox,opera等相差2px,导致页面布局有错位， 这是因为IE对盒之间距离的解释的bug造成的，针对这种情况我们就可以利用!important来帮助解决。
+.myclass{
+ margin-left:20px!important;   //firefox,opera,chrome
+ margin-left:40px;             //ie
+}
+出现同名样式才能这样用
+
+2、如果有定义了一个样式A，比如font-size,你不打算让以后也叫样式A的覆盖掉这个font-size,也可以用 !important . 而如果新样式也用了!important 则还是会强制覆盖掉
+.A{
+ font-size:12px !important;
+}
+.A{
+ font-size:14px;   //不会生效
+}
+.A{
+ font-size:14px !important; //生效
+}
+
+----------------------------------------------------------------------------------
+http://blog.csdn.net/freshlover/article/details/12132801   // 不错
+“-″减号是IE6专有的hack
+“\9″ IE6/IE7/IE8/IE9/IE10都生效
+“\0″ IE8/IE9/IE10都生效，是IE8/9/10的hack
+“\9\0″ 只对IE9/IE10生效，是IE9/10的hack
+
+
+
+------------------
+1, IE条件注释法，微软官方推荐的hack方式。
+只在IE下生效
+<!--[if IE]>
+这段文字只在IE浏览器上显示
+<![endif]-->
+
+只在IE6下生效
+<!--[if IE 6]>
+这段文字只在IE6浏览器上显示
+<![endif]-->
+
+只在IE6以上版本生效
+<!--[if gt IE 6]>
+这段文字只在IE6以上版本IE浏览器上显示
+<![endif]-->
+
+只在IE7上不生效
+<!--[if ! IE 7]>
+这段文字在非IE7浏览器上显示
+<![endif]-->
+
+非IE浏览器生效
+<!--[if !IE]><!-->
+这段文字只在非IE浏览器上显示
+<!--<![endif]-->
+2, 选择符前缀法，即在CSS选择符前加一些只有特定浏览器才能识别的前缀。
+
+*html 前缀只对IE6生效
+*+html 前缀只对IE7生效
+
+例如：
+.test{ color:#FFF;}
+*html .test{ color:#000;}  /* only for ie6 */
+*+html .test{ color:#CCC;} /* only for ie7 */
+
+3, 属性前缀法，即在样式属性名前加一些只有特定浏览器才能识别的前缀。
+
+“_” 只对IE6生效
+“*” 只对IE6和IE7生效
+
+例如：
+.test{ color:#FFF; *color:#CCC; _color:#000;}
+
+4, 还有一种hack方法是在属性值后加上一些只有特定浏览器才能识别的前缀。
+
+“\9″  IE6/IE7/IE8/IE9/IE10都生效
+“\0″  IE8/IE9/IE10都生效
+“\9\0″ 只对IE9/IE10生效
+例如：
+.test{ color:#FFF; color:#CCC\9; color:#3FC\0;}
+
+5.button重置css样式兼容ie6,ie7
+
+button在IE6、IE7下的兼容性，需要充值css为overflow:visible
+
+ 
+
+转载
+
+6.让IE6支持max-width,min-width
+
+.sector{max-width:500px; _width:expression((documentElement.clientWidth>500)?”500px”:”auto”);
+
+min-width:300px; _width:expression((documentElement.clientWidth<300)?”300px”:”auto”);}

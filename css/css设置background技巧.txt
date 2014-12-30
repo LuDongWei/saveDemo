@@ -1,0 +1,27 @@
+css background之设置图片为背景技巧
+
+可以按顺序设置如下属性（可点击进入相应的css手册查看使用）：
+background-color 背景颜色
+background-image 背景图片
+background-repeat 背景重复
+background-attachment 背景图片是固定还是滚动
+background-position 背景图片的定位
+
+background通常的使用方法
+background:url(BBB) no-repeat 5px 5px;
+解释：url(BBB) 应用外部图片地址url(放图片地址路径)
+      no-repeat 是否让图片重复显示，这里是不重复no-repeat  
+	                          repeat-x   x方向横重复 
+                              repeat-y   y方向纵重复
+注意前后顺序 -----|5px  距左5px距离 可以跟center居中 （可以用来定位图片）
+                  |5px  距顶5px距离 可以跟top距顶部为0距离 可以跟bottom底部为0距离  
+				  
+				  
+CSS中背景图片定位方法
+  在CSS中，背景图片的定位方法有3种：
+  1）关键字：background-position: top left;
+  2）像素：background-position: 0px 0px;
+  3）百分比：background-position: 0% 0%;
+
+例子：看案例  
+			  

@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+    <script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body style="background:#3C3; height:1000px;">
+    <style type="text/css">
+.page_all{} 
+.wrapper{ width:100%;}
+.main{width:960px;margin:0 auto;}
+
+/*--秒杀--*/
+.brand-seckill{
+    width:316px;
+    height:400px;
+    overflow:hidden;
+    position:relative;
+}
+.brand-seckill .head{
+    width:316px;
+    height:51px;
+}
+.brand-seckill .br-seckill{
+    width:310px;
+    height:349px;
+    margin:0 auto;
+    background-color:#ffffff;   
+}
+.br-seckill .br-time{
+	text-align:center;
+	width:168px;
+	margin:0 auto;
+	height:26px;
+	padding:5px;
+	line-height:25px;
+}
+.br-time .clock{
+	float:left;
+}
+.br-time .clock img{
+	vertical-align:middle;
+}
+.br-time .over{
+    float:left;
+}
+.br-time .countdown{
+	display:block;
+    width:92px;
+    height:24px;
+	line-height:24px;
+	background:url(img/ms_02.jpg) no-repeat top center;
+	color:#ffffff;
+	font-size:16px;
+	font-weight:bolder;
+	float:left;
+	overflow:hidden;
+}
+.countdown span{
+	display:block;
+	text-align:center;
+	float:left;
+}
+.countdown .h{
+	width:25px;
+}
+.countdown .m{
+	width:42px;
+}
+.countdown .s{
+	width:25px;
+}
+.br-seckill .br-pic img{
+	width:254px;
+	margin:0 auto;    
+}
+.br-seckill .br-inf{
+	overflow:hidden;
+	height:59px;
+}
+.br-inf div{
+	float:left;
+} 
+.br-inf .in-price-1{
+	width:123px;
+	text-align:left;
+}
+.in-price-1 .mbbP{
+	font-size:12px;
+	color:#707070;
+	margin-top:5px;
+	padding-left:30px;
+}
+.in-price-1 .sellP{
+	color:#e4295e;
+	font-size:18px;
+	font-weight:bolder;
+	padding-left:21px;
+}
+.br-inf .in-price-2{
+	width:92px;
+	color:#e4295e;
+}
+.in-price-2 .sellP-2{
+    font-weight:bolder;
+	font-size:30px;
+	line-height:67px;
+}
+.in-price-2 .sellP-2 span{
+    font-size:18px;
+}
+.br-inf .in-a{
+	width:95px;
+	height:59px;
+}
+.brand-seckill .stoleOut .masking{
+    position:absolute;
+    width:310px;
+    height:353px;
+    top:48px;
+    left:3px;
+    filter:alpha(opacity=50);
+    opacity:0.5;
+    background-color:#666666;  
+}
+.brand-seckill .stoleOut .text{
+    position:absolute;
+    color:#ffffff;
+    font-size:50px;
+    top: 143px;
+    left: 76px;
+    font-weight:bolder;
+}
+</style>
+
+    <!--今日秒杀-->
+    <div class="brand-seckill" id="brSeckill" data-id="4112">
+        <div class="head">
+            <img src="img/ms.png" width="316" height="51" />
+        </div>
+        <div class="br-seckill">
+            <div class="br-time">
+                <span class="clock">
+                    <img src="img/ms_03.jpg" width="15" height="15" />&nbsp;
+                    剩&nbsp; 
+                </span>
+                <span class="countdown"> 
+                    <span class="h">04</span>
+                    <span class="m">25</span>
+                    <span class="s">36</span>
+                </span>
+                <span class="over">
+                   &nbsp;结束
+                </span>
+           </div>
+           <!--  <div class="br-time">
+                <span class="clock">
+                    <img src="img/ms_03.jpg" width="15" height="15" />
+                </span>
+                剩
+                <span class="countdown">
+                    <span class="h">04</span>
+                    <span class="m">25</span>
+                    <span class="s">36</span>
+                </span>
+                开始
+           </div> -->
+            <div class="br-pic">
+                <a href="http://www.mbaobao.com/item/#" target="_blank">
+                    <img src="http://placehold.it/310x310/fc46aa" width="254" height="254" />
+                </a>
+            </div>
+            <div class="br-inf">
+                <div class="in-price-1">
+                    <p class="mbbP"><del>麦包价578元</del>
+                    </p>
+                    <p class="sellP">今日秒杀价:</p>
+                </div>
+                <div class="in-price-2">
+                    <p class="sellP-2">
+                        299<span>元</span>
+                    </p>
+                </div>
+                <!--开始-->
+                <div class="in-a">
+                    <a href="http://cart.mbaobao.com/do/items/add/#/1.html" target="_blank">
+                        <img src="img/ms_01.png" width="95" height="59" />
+                    </a>
+                </div>
+                <!--开始-->
+
+                <!--未开始-->
+                <!-- <div class="in-a">
+                    <a href="http://cart.mbaobao.com/do/items/add/#/1.html" target="_blank">
+                        <img src="img/ms_04.png" width="95" height="59" />
+                    </a>
+                </div> -->
+                <!--未开始-->
+            </div>
+        </div>
+
+        <!--已经抢完-->
+            <div class="stoleOut">
+                 <div class="masking">
+                 </div>
+                 <div class="text">                     
+                   已抢完
+                 </div> 
+            </div> 
+        <!--已经抢完-->
+    </div>
+    <!--今日秒杀-->
+
+<script id="seckill-template" type="text/x-handlebars-template">
+     {{#seckill}}
+        <div class="head">
+            <img src="img/ms.png" width="316" height="51" />
+        </div>
+        <div class="br-seckill" data-ap="{{apId}}" >
+           <div class="br-time">
+             {{#if isSeckill}}  
+                <span class="clock">
+                    <img src="img/ms_03.jpg" width="15" height="15" />&nbsp;
+                    剩&nbsp; 
+                </span>
+             {{else}}
+                <span class="clock">
+                    <img src="img/ms_03.jpg" width="15" height="15" />&nbsp;
+                    距开始&nbsp; 
+                </span>
+             {{/if}}   
+                <span class="countdown"> 
+                    <span class="h">00</span>
+                    <span class="m">00</span>
+                    <span class="s">00</span>
+           </span>
+           {{#if isSeckill}} 
+             <span class="over">
+                   &nbsp;结束
+                </span>
+            {{else}}
+           {{/if}}
+           </div>
+           {{#skus}} 
+           <div class="br-pic">
+                <a href="http://www.mbaobao.com/item/{{sku}}" target="_blank">
+                    <img src="{{image}}" width="254" height="254" />
+                </a>
+            </div>
+           {{/skus}}
+
+           <div class="br-inf">
+                {{#skus}} 
+                <div class="in-price-1">
+                    <p class="mbbP"><del>麦包价{{mbbPrice}}元</del>
+                    </p>
+                    <p class="sellP">今日秒杀价:</p>
+                </div>
+                <div class="in-price-2">
+                    <p class="sellP-2">
+                        {{sellPrice}}<span>元</span>
+                    </p>
+                </div>
+                {{/skus}}
+                {{#if isSeckill}}
+                   {{#skus}} 
+                   <div class="in-a">
+                    <a href="http://cart.mbaobao.com/do/items/add/{{sku}}/1.html" target="_blank">
+                        <img src="img/ms_01.png" width="95" height="59" />
+                    </a>
+                   </div>
+                    {{/skus}}
+                   {{else}}
+                  {{#skus}}
+                  <div class="in-a">
+                    <a href="http://cart.mbaobao.com/do/items/add/{{sku}}/1.html" target="_blank">
+                        <img src="img/ms_04.png" width="95" height="59" />
+                    </a>
+                   </div>
+                  {{/skus}}
+                {{/if}}
+            </div>
+          </div> 
+
+             {{#if isSellOut}}
+                <div class="stoleOut">
+                   <div class="masking">
+                   </div>
+                   <div class="text">                     
+                   已抢完
+                   </div> 
+                 </div> 
+             {{/if}}
+     {{/seckill}} 
+</script>
+
+
+<script type="text/javascript">
+seajs.use("./seckill.js");    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BMI Calculator</title>
+
+<style>
+label{
+    display:inline-block;
+    width:60px;
+}
+mark{
+    background-color:red;
+}	
+</style>
+
+<script>
+function CalculateBMI(a,b,c,d){
+	feet=Number(a);
+	inches=Number(b);
+	pounds=Number(c);
+
+	var totalInches = (feet * 12) + inches;
+
+	var resultElement = document.getElementById(d)
+    resultElement.innerHTML = Math.round(pounds * 703 * 10 / totalInches / totalInches) / 10
+
+}	
+</script>
+
+</head>
+
+<body>
+<h1>Body <mark>Mass Index</mark> Calculator</h1>
+    
+    <form action="#"  id="bmiCalator">
+    	<label for="feet inches">Height:</label>
+        <input name="feet">feet<br>
+        <label ></label>
+        <input name="inches">inches<br>
+
+        <label for="pounds">Weight:</label>
+        <input name="pounds">pounds<br><br>
+        
+        <input type="button" name="calc" value="Calculate"
+        onclick="CalculateBMI(this.form.feet.value,this.form.inches.value,
+        this.form.pounds.value,'result')" />
+    </form>
+    
+    <p>Your BMI:<output id="result"></output></p>
+
+    <p>The party starts<time datatime="2012-03-21T16:30-5:00">
+       March 21<sup>st</sup> at 4:30p.m.</time>	
+    </p>
+</body>
+</html>

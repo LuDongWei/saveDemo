@@ -1,0 +1,230 @@
+.wrapper{ width:100%;}
+
+.simplemodal-overlay{background-color:#000000; }
+.mbb_survey{ width:960px; margin:0 auto; background-color:#ffffff; overflow:hidden; position:relative;}
+.mbb_survey .mbb_survey_close{position:absolute;top:0px; right:0px;z-index:2;}
+.mbb_survey .mbb_survey_roll{width:9999px; position:relative; overflow:hidden;}
+.mbb_survey .mbb_survey_roll .mbb_survey_head{width:960px; float:left;}
+.mbb_survey .mbb_survey_roll .mbb_survey_content{ width:960px; float:left; overflow:hidden;}
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose ul li{
+  display:inline-block;
+  *display:inline;
+  *zoom:1;
+}
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose ul li a{
+  width:198px;
+  height:286px;
+  background-color:#ffffff;
+  display:block;
+  border:2px solid #d5d5d5;
+  margin:10px;
+}
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose ul li a:hover{
+  border:2px solid #ff0066;
+}
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose ul li a img{
+  margin:2px;
+}
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_sku ul li a img{
+  width:134px;
+  height:134px;
+}
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_sku ul li .checked{
+  border:2px solid #ff0066;
+}
+
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_sku ul li a{
+  width:138px;
+  height:138px;
+  margin:3px;
+}
+
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_more ul li a,.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_size ul li a{
+  width:98px;
+  height:98px;
+  margin:3px;
+}
+
+
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul li a{
+  width:100px;
+  height:35px;
+  margin:3px;
+}
+
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_more ul li .checked,.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_size ul li .checked,.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul li .checked{
+  border:2px solid #ff0066;
+}
+
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_submit{
+margin-top: 30px;
+float: right;
+margin-right: 51px;
+width:200px;
+height:60px;
+position:relative; 
+}
+
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_submit span{
+  font-size:14px;
+  font-weight:'微软雅黑';
+  font-weight:bolder;
+  color:#ff0059;
+  display:none;
+}
+.mbb_survey .mbb_survey_roll .mbb_survey_content .mbb_survey_submit img{
+  position:absolute;
+  top:25px;
+  left:45px;
+}
+
+.mbb_survey .mbb_survey_bar{ width:960px; height:52px; background:url(http://cca.mbaobao.com/mkts/201311/15/survey/img/achieve_09.jpg) no-repeat top center;}
+.mbb_survey .bar_01{ background-position:0px 0px;}
+.mbb_survey .bar_02{ background-position:0px -54px;}
+.mbb_survey .bar_03{ background-position:0px -108px;}
+.mbb_survey .bar_04{ background-position:0px -162px;}
+.mbb_survey .bar_05{ background-position:0px -216px;}
+.mbb_survey .bar_06{ background-position:0px -270px;}
+.mbb_survey .bar_07{ background-position:0px -324px;}
+.mbb_survey .bar_08{ background-position:0px -378px;}
+
+
+/*----------男生问答----------*/
+.mbb_survey_man .mbb_survey_bar{ width:960px; height:52px; background:url(http://cca.mbaobao.com/mkts/201311/15/survey/img2/achieve_07.jpg) no-repeat top center;}
+
+.mbb_survey_man .bar_01{ background-position:0px 0px;}
+.mbb_survey_man .bar_02{ background-position:0px -54px;}
+.mbb_survey_man .bar_03{ background-position:0px -108px;}
+.mbb_survey_man .bar_04{ background-position:0px -162px;}
+.mbb_survey_man .bar_05{ background-position:0px -216px;}
+
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose ul li a:hover{
+  border:2px solid #38517b;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_more ul li a{
+  width:170px;
+  height:119px;
+  margin:3px;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul li a{
+  width:90px;
+  height:35px;
+  margin:3px;
+  margin-right:80px;
+  font-size:16px;
+  font-family:'微软雅黑';
+  text-align:center;
+  line-height:37px;
+  border:2px solid #ffffff;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_01 a{
+  color:#5889b4;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_01 a:hover,
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_01 .checked{
+  border:2px solid #5889b4;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_02 a{
+  color:#ada468;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_02 a:hover,
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_02 .checked{
+  border:2px solid #ada468;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_03 a{
+  color:#a76e5d;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_03 a:hover,
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_03 .checked{
+  border:2px solid #a76e5d;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_04 a{
+  color:#da915a;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_04 a:hover,
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_04 .checked{
+  border:2px solid #da915a;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_05 a{
+  color:#ffc938;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_05 a:hover,
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_05 .checked{
+  border:2px solid #ffc938;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_06 a{
+  color:#92a76c;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_06 a:hover,
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_06 .checked{
+  border:2px solid #92a76c;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_07 a{
+  color:#a8896c;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_07 a:hover,
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_07 .checked{
+  border:2px solid #a8896c;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_08 a{
+  color:#94b356;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_08 a:hover,
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_08 .checked{
+  border:2px solid #94b356;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_09 a{
+  color:#92a76c;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_09 a:hover,
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_09 .checked{
+  border:2px solid #92a76c;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_10 a{
+  color:#b0afab;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_10 a:hover,
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul .long_10 .checked{
+  border:2px solid #b0afab;
+}
+
+
+
+
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_size ul li a{
+  width:152px;
+  height:42px;
+  margin:3px;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_submit{
+margin-top: -10px;
+float: right;
+margin-right: 17px;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_submit span{
+  color:#38517b;
+}
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_submit img{
+  position:absolute;
+  top:25px;
+  left:45px;
+}
+
+.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_more ul li .checked,.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_size ul li .checked,.mbb_survey_man .mbb_survey_roll .mbb_survey_content .mbb_survey_choose_long ul li .checked{
+  border:2px solid #38517b;
+}

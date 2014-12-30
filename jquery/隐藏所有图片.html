@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script   type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script  type="text/javascript">
+$(document).ready(function(){
+	$("#button_01").click(function(){
+		$("img").hide(1000);
+		});
+	
+	 $("#button_02").click(function(){
+		 $("img").show(1000); 
+		 });
+	 $("#button_03").click(function(){
+		
+		  $("img#img_03").hide(1000);
+		 });
+     $("#button_04").click(function(){
+		 $("img#img_03").toggle(1000);
+		 
+		 
+		 
+		 
+		 });
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+			 
+		 
+		 
+		 
+	
+	
+	
+	});
+</script>
+
+
+
+</head>
+
+<body>
+<div style="margin:0 auto; width:960px">
+<div style=" float:left"><img src="img/zhuoni_16.jpg" name="img_01" width="240" height="330" border="0" align="bottom" id="img_01"></div>
+<div style=" float:left"><img src="img/zhuoni_17.jpg" name="img_02" width="240" height="330" border="0" align="bottom" id="img_02"></div>
+<div style=" float:left"><img src="img/zhuoni_18.jpg" name="img_03" width="240" height="330" border="0" align="bottom" id="img_03"></div>
+<div style=" float:left"><img src="img/zhuoni_19.jpg" name="img_04" width="240" height="330" border="0" align="bottom" id="img_04"></div>
+<div style=" float:left"><img src="img/zhuoni_16.jpg" name="img_01" width="240" height="330" border="0" align="bottom" id="img_01"></div>
+<div style=" float:left"><img src="img/zhuoni_17.jpg" name="img_02" width="240" height="330" border="0" align="bottom" id="img_02"></div>
+<div style=" float:left"><img src="img/zhuoni_18.jpg" name="img_03" width="240" height="330" border="0" align="bottom" id="img_03"></div>
+<div style=" float:left"><img src="img/zhuoni_19.jpg" name="img_04" width="240" height="330" border="0" align="bottom" id="img_04" /></di>
+
+</div>
+
+
+
+<div style="margin:0 auto; width:80px  "><input type="button" value="让所有的图片隐藏"  style=" background: #FFF; border:2" id="button_01" /></div>
+<div style="margin:0 auto; width:80px  "><input type="button" value="让所有被隐藏的图片显示"  style=" background: #FFF; border:2"  id="button_02" /></div>
+<div style="margin:0 auto; width:80px  "><input type="button" value="让已经售罄的隐藏"  style=" background: #FFF; border:2" id="button_03"/></div>
+<div style="margin:0 auto; width:80px  "><input type="button" value="一个按钮实现"  style=" background: #FFF; border:2" id="button_04"/></div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

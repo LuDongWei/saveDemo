@@ -1,0 +1,64 @@
+ 学习CSS布局————源自网站：http://zh.learnlayout.com/
+ 
+ 一:'display'属性
+ 用于控制布局的属性。每个元素都有一个默认的display值，这与元素的类型有关。
+ 对于大多数元素它们的默认值通常是block或inline。
+ 一个block元素同学是块元素。一个inline元素通常被叫做行内元素。
+ 
+ block:div为一个标准的块级元素。一个块级元素会新开始一行并且尽可能撑满容器。
+       其他包括p，from和HTML5中的新元素：header，footer，section等等。
+	   
+ inline:span是一个标准的行内元素。一个行内元素可以在段落中<span>像这样</span>	 
+        包裹一些文字而不会打乱段落的布局。a元素是最常用的行内元素。
+		和其他元素都在一行上。
+		*高，行高及顶和底边距不可改变；
+		 
+
+ none：一些特殊的元素的默认display值是它，例如script。
+       它和visibility属性不一样。把display设置成none不会保留元素本该显示的空间。
+       但是visibility:hidden;还会保留。
+
+inline-block: 详解地址：http://ued.taobao.com/blog/2012/08/inline-block/
+              将对象呈递为内嵌对象，但是对象的内容作为块对象呈递。旁边的内嵌对象会被呈递在同一行，允许空格。
+             （准确地说，应用此特性的元素呈现为内嵌对象，周围元素保持在同一行，但可以设置宽度和高度地块元素的属性）
+              ie下块元素如何实现display：inline-block的效果
+            1.div{dispaly:inline-block;}     2.div{display:inline;zoom:1;}			  
+ 			  div{display:inline;}
+			  
+			  现代游览器都支持display：inline-block，IE6,7inline元素也可以达到同样的效果，IE6,7block元素需要设置
+			  display:inline-block; /* 现代浏览器 +IE6、7 inline 元素 */
+              *display:inline; /* IE6、7 block 元素 */
+              *zoom:1;
+			  小结：IE6，7并不是不支持inline-block，只是block元素需要做一些处理来达到inline-block的效果。
+			  
+	直白一点的意思就是：inline-block的元素即具有block元素可以设置宽高的特性，同时又具有inline元素默认不换行
+	                    的特性，当然不仅仅是这些特性，比如inline-block元素也可以设置vertical-align属性。
+						
+    为了让各个游览器表现一致，更好的还原视觉设计稿，很多时候我们需要去掉inline-block产生的空隙。
+	分析：产生空隙的根本性原因：HTML中的换行符，空格符，制表符等产生了空白符，而这些归根结底都是字符，
+          那么它们的大小都是受到fone-size来控制的，字体大小直接导致inline或者inline-block后元素之间
+          空隙的大小，把inline-block元素间的空隙认为总是某个固定大小是错误的。
+
+          去除inline-block空隙终极解决方案
+			.dib-wrap {
+			font-size:0;/* 所有浏览器 */
+			*word-spacing:-1px;/* IE6、7 */
+			}
+			.dib-wrap .dib{
+			font-size: 12px;
+			letter-spacing: normal;
+			word-spacing: normal;
+			vertical-align:top;
+			}
+			@media screen and (-webkit-min-device-pixel-ratio:0){
+			/* firefox 中 letter-spacing 会导致脱离普通流的元素水平位移 */
+			.dib-wrap{
+			letter-spacing:-5px;/* Safari 等不支持字体大小为 0 的浏览器, N 根据父级字体调节*/
+			}
+			}
+			.dib {
+			display: inline-block;
+			*display:inline;
+			*zoom:1;
+			}
+						

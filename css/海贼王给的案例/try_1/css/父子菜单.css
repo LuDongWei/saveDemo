@@ -1,0 +1,46 @@
+/* CSS Document */
+body,div,li,ul,h1,h2,h3{ margin:0; padding:0}
+ul,li{ list-style:none}
+img{ border:0}
+
+body{ font:"宋体"; font-size:12px; line-height:25px; color:#000; background:url(../images/bg.jpg) }
+a{ text-decoration:none; color: #666;}
+a:hover{ color:#093}
+
+.clearfix:after{ clear:both; content:"."; height:0; display:block; visibility:hidden}
+.clearfix{*zoom:1}
+
+.fl{ float:left; display:inline;}
+.fr{float:right; display:inline;}
+
+.navWrap{ width:988px; height:33px;margin:0 auto; position:relative;}
+
+/* 导航*/
+.nav{height:29px;background:url(../images/nav_bg.png)  repeat-x 0 0; width:960px; text-align:center; padding-top:4px;}
+.nav li{background:url(../images/nav_t.jpg) no-repeat right 0; float:left; text-align:center; height:29px; margin:0 4px; display:block;
+position:relative; padding:0 10px}
+.nav li.last{ background:none;}
+
+.nav li:hover ul,.nav li.hover ul{display:block; }
+.nav li ul{ display:none;margin:0px; padding:0px; position:absolute;top:29px; left:-5px; } 
+.nav li ul li{ background: #FFF;width:80px; height:20px; text-align:left; padding-left:10px; border-bottom:1px dashed #CCC; clear:both;} 
+.nav li ul li a{font-weight:normal ;} 
+.nav li a{ font-weight:bold; font-size:14px;display: inline-block;}
+
+.nav_left{ width:9px; height:33px}
+.nav_right{ width:9px; height:33px}
+
+ .search{
+	background: url(../images/search.jpg) no-repeat 0 0;
+	height:24px;
+	width:283px;
+	position:absolute;
+	left: 658px;
+	top: 2px;
+	z-index:999;
+	
+}
+
+.text{ width:170px; height:24px; line-height:24px; border:none; background:none; margin-left:5px;}
+
+.btn{ width:72px; height:22px; margin-left:23px; border:none; background:none; text-indent:-9999px; cursor:pointer;}

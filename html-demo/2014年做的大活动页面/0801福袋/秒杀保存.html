@@ -1,0 +1,62 @@
+<script id="seckill-template" type="text/x-handlebars-template">
+{{#seckill}}
+  <div class="be-itme" data-ap="{{apId}}">
+      <div class="b-head">
+          限量 <strong>XXX</strong>
+          个
+      </div>
+      <div class="b-pic">
+          {{#skus}}  
+          <a href="http://www.mbaobao.com/item/{{sku}}" target="_blank">
+              <img src="{{image}}" width="298px" height="263px">
+          </a>
+          {{/skus}} 
+          <div class="b-time">
+              <span class="clock">
+                  <img src="http://cca.mbaobao.com/mkts/201406/05/mm/ms_03.jpg" width="15" height="15" />
+                  {{#if isSeckill}}
+                    &nbsp;剩&nbsp;
+                  {{else}}
+                    &nbsp;距开始&nbsp;
+                  {{/if}}
+              </span>
+              <span class="countdown">
+                  <span class="h">04</span>
+                  <span class="m">25</span>
+                  <span class="s">36</span>
+              </span>
+              {{#if isSeckill}}
+              <span class="over">&nbsp;结束</span>
+              {{else}}
+              {{/if}}
+          </div>
+      </div>
+      <div class="b-inf">
+          {{#skus}}
+          <div class="price-1">
+              <p class="p-1"> <del>麦包价{{mbbPrice}}元</del>
+              </p>
+              <p class="p-2"> <strong>秒杀价￥</strong>
+              </p>
+          </div>
+          <div class="price-2">
+              <p>{{sellPrice}}</p>
+          </div>
+          <div class="discount">
+              <p>4.8折</p>
+          </div>
+          {{/skus}}
+          <div class="go"> <i></i>
+              {{#skus}}
+              <a href="http://cart.mbaobao.com/do/items/add/{{sku}}/1.html" target="_blank" title="">
+                  <span>
+                      立即
+                      <br>抢购</span>
+                  <div class="right"></div>
+              </a>
+              {{/skus}}
+          </div>
+      </div>
+  </div>
+{{/seckill}}
+</script>

@@ -1,0 +1,271 @@
+<snippet>
+	<content><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+
+       <script type="text/javascript">
+				var jsonPage = [{
+				"banner": "<div></div>",
+				"sku": [{
+				"prom_title": "【大款】",
+				"promotionPriceTitle": "七夕价",
+				"url": null,
+				"img": null,
+				"skuimg": "http://cdn07.mbbimg.cn/1506/15060124/01/174/01.jpg",
+				"name": null,
+				"programname": null,
+				"ispromotionprice": true,
+				"promotionprice": 199.00,
+				"discount": "2.6",
+				"promtitlenow": "【大款】",
+				"skuid": 1506012401,
+				"itemurl": "http://www.mbaobao.com/item/1506012401",
+				"itemcarturl": "http://cart.mbaobao.com/add/1506012401/1.html",
+				"tagpic": "",
+				"saleprice": 768.00,
+				"marketprice": 768.00,
+				"fullname": "[不莱玫]bromen经典抽带水桶包单肩斜跨包 卡其色配咖啡色",
+				"isdisplay": true
+				}, {
+				"prom_title": "【大款】",
+				"promotionPriceTitle": "七夕价",
+				"url": null,
+				"img": null,
+				"skuimg": "http://cdn08.mbbimg.cn/1506/15060125/01/174/01.jpg",
+				"name": null,
+				"programname": null,
+				"ispromotionprice": true,
+				"promotionprice": 199.00,
+				"discount": "2.6",
+				"promtitlenow": "【大款】",
+				"skuid": 1506012501,
+				"itemurl": "http://www.mbaobao.com/item/1506012501",
+				"itemcarturl": "http://cart.mbaobao.com/add/1506012501/1.html",
+				"tagpic": "",
+				"saleprice": 768.00,
+				"marketprice": 768.00,
+				"fullname": "[不莱玫]bromen经典抽带水桶包单肩斜跨包 卡其色配棕黄色",
+				"isdisplay": true
+				}]
+				}, {
+				"banner": "<div></div>",
+				"sku": [{
+				"prom_title": "【大款】",
+				"promotionPriceTitle": "七夕价",
+				"url": null,
+				"img": null,
+				"skuimg": "http://cdn07.mbbimg.cn/1506/15060124/01/174/01.jpg",
+				"name": null,
+				"programname": null,
+				"ispromotionprice": true,
+				"promotionprice": 199.00,
+				"discount": "2.6",
+				"promtitlenow": "【大款】",
+				"skuid": 1506012401,
+				"itemurl": "http://www.mbaobao.com/item/1506012401",
+				"itemcarturl": "http://cart.mbaobao.com/add/1506012401/1.html",
+				"tagpic": "",
+				"saleprice": 768.00,
+				"marketprice": 768.00,
+				"fullname": "[不莱玫]bromen经典抽带水桶包单肩斜跨包 卡其色配咖啡色",
+				"isdisplay": true
+				  }]
+				}] 
+			</script>
+
+</head>
+
+<body>
+<style type="text/css">
+.page_all{}	
+.wrapper{ width:100%;}
+.main{width:960px; margin:0 auto;}
+.hot-main{width:960px; margin:0 auto;}
+</style>
+
+<!--banner-2-->
+<style type="text/css">
+.banner2{height:558px;overflow:hidden;}
+.banner2_left{cursor: pointer; position:absolute; top:250px; left:0px;}
+.banner2_left .bx-next,.banner2_right .bx-prev{font-size:0px;}
+.banner2_left .bx-next{width:19px; height:53px; display:block; background:url(http://cca.mbaobao.com/mbaobao/201309/20130923/banner2/banner2_left.jpg) no-repeat;}
+.banner2_right{cursor: pointer; position:absolute; top:250px; right:0px;}
+.banner2_right .bx-prev{width:19px; height:53px; display:block; background:url(http://cca.mbaobao.com/mbaobao/201309/20130923/banner2/banner2_right.jpg) no-repeat;}
+.banner2_change{position:absolute;bottom:20px; left:240px;}
+.banner2_change .pager-link{width:150px; height:14px; display:inline-block!important; margin-left:5px;} 
+.banner2_change .pager-1{background-color:#c6817a;}
+.banner2_change .pager-2{background-color:#d65655;}
+.banner2_change .pager-3{background-color:#3e3842;}
+.banner2_change .pager-active{height:18px;}
+</style>
+
+<!-- 需要重置的样式 -->
+<style type="text/css">
+.hot-change .hot-title{width:178px !important;}
+.hot-change .hot-goods{width:580px !important;}
+.hot-change .hot-goods li{ margin-left:10px !important; }
+.hot-change .goods-price{width:200px !important;}
+
+.hot-item .hot-vertical{top:492px !important;left:557px !important;}
+.hot-head .hot-slider-change {
+	width:80px !important;left:8px !important; top:-600px !important;}
+.hot-head .hot-slider-change a{margin-bottom:3px !important;}	
+</style>
+
+
+<!-- hot-head -->
+<div class="wrapper" style="<!-- background:url(http://cca.mbaobao.com/mkts/201406/14/baok/arf.jpg) no-repeat top center; -->">
+	<div class="clearfix" style="height:620px;overflow:hidden;position:relative;">
+		<div class="hot-head">
+			<div class="hot-slider">
+				<ul id="headSlider">
+					<li class="hot-item" data-sku="1506012401" style="background:url(http://cca.mbaobao.com/mkts/201407/30/blm/banner/good_01_03.jpg) no-repeat top center">
+                       <div class="hot-main">
+							<div class="hot-pic">
+								<a href="http://www.mbaobao.com/item/1506012401" target="_blank">
+									<img src="http://cca.mbaobao.com/mkts/201407/30/blm/banner/good_01_02.jpg" width="960" height="620" />
+								</a>
+							</div>
+                       </div> 
+					</li>
+					<li class="hot-item" data-sku="1506012501" style="background:url(http://cca.mbaobao.com/mkts/201407/30/blm/banner/good_02_03.jpg) no-repeat top center">
+						<div class="hot-main">
+							<div class="hot-pic">
+								<a href="http://www.mbaobao.com/item/1506012501" target="_blank">
+									<img src="http://cca.mbaobao.com/mkts/201407/30/blm/banner/good_02_02.jpg" width="960" height="620" />
+								</a>
+							</div>
+					  </div>
+					</li>
+				</ul>
+			</div>
+			<div class="hot-main">
+			  <div class="hot-slider-change clearfix" >				
+			  </div>
+			</div> 
+		</div>
+	</div>
+</div>
+<!-- hot-head -->
+
+<div class="add-hot-change"></div>  
+
+<!--banner2-->
+<div class="wrapper_02">
+	<div class="main" style="position:relative;">
+		<div class="banner2">
+			<ul>
+				<li><img src="http://cca.mbaobao.com/mbaobao/201309/20130923/banner2/banner2_01.jpg" /></li>
+                <li><img src="http://cca.mbaobao.com/mbaobao/201309/20130923/banner2/banner2_02.jpg" /></li>
+                <li><img src="http://cca.mbaobao.com/mbaobao/201309/20130923/banner2/banner2_03.jpg" /></li>
+			</ul>
+		</div>
+		<div class="banner2_change"></div>
+        <span class="banner2_left"></span>
+        <span class="banner2_right"></span>
+	</div>
+</div>
+
+<!--底部 sku 内容-->
+<div class="J-pageView">
+</div> 
+
+<!--底部sku模板-->
+<script id="page-template" type="text/x-handlebars-template">  
+{{#sku_list}}
+      {{#if banner}}
+         <div>{{banner}}</div>
+      {{/if}}
+
+      {{#if sku}}
+        <div class="main">
+          <div class="activity-4-1">
+            <ul>
+            {{#each sku}} 
+              {{#if isdisplay}}
+                  <li>
+                    <div class="pro-pic">
+                      <a href={{itemurl}} target="_blank" title={{fullname}}>
+                        <img src={{skuimg}} alt={{fullname}} width="238" height="238"></a>
+                    </div>
+                    <div class="g-info have-sale">
+                      <span class="g-title">
+                         <a href={{itemurl}} target="_blank" title={{fullname}}>
+                           {{fullname}}
+                         </a>
+                      </span>
+                      <span class="g-price"> 
+                        {{#if ispromotionprice}}
+                          <strong>{{nowPromotionTitle}}:￥{{promotionprice}}</strong>
+                         {{else}} 
+                          <strong>麦包价：￥ {{saleprice}} </strong>
+                        {{/if}}  
+                         <s>￥{{marketprice}}</s>
+                      </span>
+                    </div>
+                  </li>
+                {{/if}}
+              {{/each}}
+           </ul>
+          </div>
+        </div>    
+      {{/if}}
+{{/sku_list}} 
+</script>
+<!--底部sku模板-->
+
+<script type="text/javascript">
+seajs.use(["mbb/pageTemplate/1.0.0/hotMbb","mbb/pageTemplate/1.0.0/pageTemplate"],function(M,P){
+          var _json = window.jsonPage ? window.jsonPage : [],
+              skuData=_json[0],
+              listData=_json[1];
+           
+          M.setUp({
+              skuData:skuData
+          })
+          
+          P.build({
+              template:\$("#page-template"),
+              imgSize: '238',
+              data : {
+               'sku_list': listData
+              }
+          });          
+ 
+});	
+</script> 
+
+<script type="text/javascript">
+seajs.use(["jquery","bxslider"],function(\$,bx){
+    bx(\$);
+
+    \$(".banner2 ul").bxSlider({
+		'displaySlideQty': 1, 
+		'moveSlideQty': 1, 
+		'speed': 10,
+		'auto': true,
+		'controls': true,
+		'nextSelector':'.banner2_left',  //下一页
+		'prevSelector':'.banner2_right', //上一页
+		'easing': 'easeOutQuint',
+		'pager': true,
+		'pagerSelector':'.banner2_change'
+	})
+
+}) 
+</script>
+
+
+</body>
+</html>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	    <tabTrigger>mbbHot</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	    <scope>text.html</scope> 
+</snippet>

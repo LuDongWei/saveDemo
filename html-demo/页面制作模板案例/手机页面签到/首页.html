@@ -1,0 +1,135 @@
+
+<!DOCTYPE HTML>
+
+
+
+
+<html lang="zh-cn">
+	<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title> 手机麦包包网-触屏版,正品承诺支持货到付款,满149元或满2件免费!</title>
+	
+	<meta name="viewport" content="width=device-width">
+	<meta property="qc:admins" content="10413263642172176375" />
+	<meta property="wb:webmaster" content="6c1306619b13572d" />
+	<meta name="baidu-site-verification" content="Tkk91We3bT" />
+    <meta name="keywords" content=" 手机麦包包,麦包包客户端,麦包包手机,麦包包手机客户端,麦包包IOS,麦包包iphone,麦包包安卓,麦包包andriod" /> 
+    <meta name="description" content=" 买包包? 麦包包! 中国最大最知名的快时尚箱包网上购物商城.手机麦包包,满149包邮或满2件免运费,支持货到付款,10天原件无条件退换货" /> 
+	
+	<link href="http://wsstatic.mbaobao.com/v3/common/image/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" media="only screen" href="http://cca.mbaobao.com/static/p/mbbMobile/1.0/css/common.css?2013072001" />
+	<link rel="stylesheet" media="only screen" href="http://cca.mbaobao.com/static/p/mbbMobile/1.0/css/module.css?2013072001" />
+	<link rel="apple-touch-icon-precomposed" href="http://cca.mbaobao.com/mkts/201208/13/mbbicon.png"/>
+	
+	<script src="http://cca.mbaobao.com/static/libs/seajs/1.1/sea.js" data-main="http://cca.mbaobao.com/static/p/mbbMobile/1.0/mobile-init"></script>
+	<script type="text/javascript">
+	seajs.use("jquery", function(jQuery){
+		jQuery(function(){
+			jQuery(document).ready(function(){ 
+                    jQuery(window).scroll(function(){
+                        if(jQuery("body").scrollTop() > 35){
+                            jQuery(".mbTop").stop().animate({"opacity":0.8}, 200);
+                        } else {
+                            jQuery(".mbTop").stop().animate({"opacity":1}, 200);
+                        }
+                    });
+			
+			jQuery("#loginInfo").load("/loginInfo.html");
+			jQuery.get("/cartItem.html",function(data){
+				jQuery("#cartItemCount").html(data.itemCount);
+			},"json");
+			
+    　　	}); 
+    });
+	
+	var MBAOBAO_DOMAIN = "mbaobao.com";
+});
+</script>
+
+</head>
+<!--▼ S BODY -->
+<body>
+<div id="home">
+<!--▼ S HEAD -->
+<header class="mbHead">
+    <div class="mbTop clearfix">
+        <div class="mbTop_wrap">
+        	<a class="userLogo" href="/user/userCenter.html"><img src="http://cca.mbaobao.com/static/p/mbbMobile/1.0/img/user_logo.png" alt="userlogo" width="30" height="30"/></a>
+        	<a class="mbLogo" href="/index.html"><img src="http://cca.mbaobao.com/static/p/mbbMobile/1.0/img/logo.png" alt="mbblogo" width="119" height="19"/></a>
+        	<a class="mbCart" href="/cart/cart.html"><span class="modRankSTag"><em id="cartItemCount">0</em></span></a>
+        </div>
+    </div>
+</header>
+<!--▲ E HEAD-->
+<div id="mbSubTitle">
+	<section  class="subTitleBox">
+		<a href="http://m.mbaobao.com/item/1404001601.html" class="backBtn swap"></a>
+		<span>物流查询-微信专用</span>
+		<a href="/index.html" class="homeBtn"></a>
+	</section>
+</div>
+<!--▲ E TITLE -->
+
+
+<style type="text/css">
+.home_button{ width:300px; margin:0 auto; height:110px; }
+.home_button ul li{ display:inline-block; margin-left:17px; text-align:center; margin-top:20px;}
+.home_button li .home_button_01,.home_button li .home_button_02,.home_button li .home_button_03,.home_button li .home_button_04{background:url(http://cca.mbaobao.com/mkts/201307/29/shoujw/homepage_01.jpg) no-repeat;-webkit-border-radius: 0.5em;}
+.home_button li .home_button_01{ background-position:0px 0px;width:52px; height:50px; background-size:258px 52px;}
+.home_button li .home_button_02{ background-position:-69px 0px;width:52px; height:50px; background-size:258px 52px;}
+.home_button li .home_button_03{ background-position:-138px 0px;width:52px; height:50px; background-size:258px 52px;}
+.home_button li .home_button_04{ background-position:-206px 0px;width:52px; height:50px; background-size:258px 52px;}
+</style>
+
+
+<!--▼ C 首页 -->
+<div class="home_button">
+   <ul>
+      <li><div class="home_button_01"></div>订单查询</li>
+      <li><div class="home_button_02"></div>自助选包</li>
+      <li><div class="home_button_03"></div>每日一惠</li>
+      <li><div class="home_button_04"></div>每日签到</li>
+   </ul>
+</div>
+<!--▲ C 首页-->
+
+		<!--▼ S FOOTER-->
+<footer class="mbFoot">
+	<ul class="mbService clearfix">
+		<li><span></span>10天无理由退换货</li>
+		<li><span></span>专业配送货到付款</li>
+	</ul>
+	<ul class="mbBotLink clearfix">
+		<li><a href="/index.html">首页</a></li>
+		<li><a href="/user/message/userMessage.html">用户反馈</a></li>
+		<li><a href="/helpCenter/helpList.html">帮助中心</a></li>
+	</ul>
+	<ul class="mbBotInfo clearfix">
+		<li id="loginInfo"></li>
+		<li>
+			<nav>
+				<a href="http://m.mbaobao.com">触屏版</a>
+				<a href="http://m.mbaobao.com/appDownload.html">客户端</a>
+				<a href="http://www.mbaobao.com/?refid=mobile">电脑版</a>
+			</nav>
+		</li>
+	</ul>
+	<div class="mbCopyright">
+		<p>&copy;2007-2013 Mbaobao All Rights Reserved.</p>
+		<p>ICP:浙B2-20100425 </p>
+	</div>
+	<div style="display:none;">
+		<script src="http://s22.cnzz.com/stat.php?id=4999664&web_id=4999664" language="JavaScript"></script>
+        <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe8fe4fc3e4ad8c8ae903fd42f798d24a' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+	</div>
+</footer>
+<!--▲ E FOOTER-->
+<!--▲ E FOOTER--> 
+</div>
+</body>
+<!--▲ E BODY -->
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style  type="text/css">
+.div1{
+	width:400px;
+	height:150px;
+	border:1px solid  #000;
+	margin: 20px auto;
+	}
+</style>
+</head>
+
+<body>
+<div class="div1">
+<p>计数:<p id="p1"></p></p>
+<button onclick="startWorker()">开始</button>
+<button onclick="stopWorker()">停止</button>
+
+<script type="text/javascript">
+ var w;
+ function startWorker()
+{
+if(typeof(Worker)!=="undefined")
+{
+
+  if(typeof(w)=="undefined")
+    {
+
+    w=new Worker("demo_workers.js");
+    }
+  w.onmessage = function (event) {
+    document.getElementById("p1").innerHTML=event.data;
+  };
+}
+else
+{
+document.getElementById("p1").innerHTML="Sorry, your browserdoes not support Web Workers...";
+}
+};
+
+function stopWorker()
+{
+w.terminate();
+};
+
+	 
+
+
+</script>
+</div>
+</body>
+</html>

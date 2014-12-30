@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>无标题文档</title>
+			<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+			<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+
+<!--S -->
+<style type="text/css">
+.wrapper{width:100%}
+.Warp{background:#fff}
+.MDPlayWrap{width:960px;margin:0 auto}
+.MDPlayBox{height:465px;background:url(http://cca.mbaobao.com/mkts/201401/07/mdplay/md_bg.jpg) no-repeat;padding-top:20px}
+.MDPlay{width:920px;height:445px;margin:0 auto}
+.MDWinning{width:960px;font-size:14px;overflow:hidden;*zoom:1;height:30px;line-height:30px;text-align:left;color:#256358}
+.marquee_item{height:40px;overflow:hidden;*zoom:1;}
+.marquee_item span{padding-right:25px;float:left}
+.MDAccess{position:relative;}
+.email-subscribe {width: 300px;position: absolute;top:390px;left: 355px}
+.email-subscribe .email-img-box {padding: 5px 0}
+.email-subscribe .email-img {width: 135px;height: 160px;margin: 0 auto;text-indent: -999em;overflow: hidden;background-position: -265px -65px;}
+.email-subscribe .email-form-hd {overflow: hidden;*zoom: 1}
+.email-subscribe .email-form-hd span {float: left}
+.email-subscribe .email-form-hd a {float: right; color: #fff}
+.email-subscribe .email-form-bd {padding-top: 5px}
+.email-subscribe .sub-form {display: block; height: 28px;line-height: 28px;border: 1px solid #256358;background: #fff}
+.email-subscribe .sub-form .subtext {float: left;width: 200px;height: 28px;border: none;padding-left: 10px;font-size: 14px}
+.email-subscribe .sub-form .subbt {float: right;width: 68px;height: 28px;background-color: #256358;color: #fff; border: none;cursor: pointer;}
+.MDMore{height:40px;background:#ba003d;text-align:center}
+.simplemodal-overlay{background:#292828}
+
+.MBaoLuckyWheelWrap{padding:10px}
+.Lottery-number{position:absolute;top:106px;left:146px;width:291px;height:211px;line-height:110px;z-index:200;background:#fce36f;color:#ff6161;font-size:22px;font-family:'微软雅黑';text-align:center;font-weight:700}
+
+.MDRule{width:290px;float:right;color:#fff3ae;text-align:left;font-family:'宋体';}
+.MDRule h4{padding-top:20px;font-size:22px;weight:700;font-family:'微软雅黑';}
+.MDRule .RuleList p{padding-left:18px;line-height:24px;margin-top:20px;background:url(http://cca.mbaobao.com/mkts/201401/07/mdplay/ico_star.png) no-repeat left 5px}
+
+.award-area {
+	width:600px;
+	height:440px;
+	float:left;
+    position: relative;
+    margin: 0 auto;
+}
+
+.award-area .award-box {
+    width: 145px;
+    height: 105px;
+    position: absolute;
+}
+
+#J_AwardBox0 {
+    top: 0;
+    left: 0;
+}
+
+#J_AwardBox1 {
+    top: 0;
+    left: 146px;
+}
+
+#J_AwardBox2 {
+    top: 0;
+    left: 292px;
+}
+
+#J_AwardBox3 {
+    top: 0;
+    left: 438px;
+}
+
+#J_AwardBox4 {
+    top: 106px;
+    left: 438px;
+}
+
+#J_AwardBox5 {
+    top: 212px;
+    left: 438px;
+}
+
+#J_AwardBox6 {
+    top: 318px;
+    left: 438px;
+}
+
+#J_AwardBox7 {
+    top: 318px;
+    left: 292px;
+}
+
+#J_AwardBox8 {
+    top: 318px;
+    left: 146px;
+}
+
+#J_AwardBox9 {
+    top: 318px;
+    left: 0;
+}
+
+#J_AwardBox10 {
+    top: 212px;
+    left: 0;
+}
+
+#J_AwardBox11 {
+    top: 106px;
+    left: 0;
+}
+
+.selectedBox {
+    z-index: 300;
+}
+
+.setBottom {
+    z-index: -1;
+}
+
+.award-area-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 590px;
+    height: 435px;
+    -khtml-opacity: .3;
+    -moz-opacity: .3;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    background: #333;
+}
+
+.mask-gray {
+    background: #333;
+}
+
+.mask-yellow {
+    background: #f9e5b8;
+}
+
+.award-detail-infor {
+    position: absolute;
+    z-index: 400;
+    width: 190px;
+	top:290px;
+	left:210px;
+    padding: 10px 0;
+    background: #FFF;
+	color:#d8227b;
+	font-size:14px;
+}
+
+.view-detail a:link,.view-detail a:hover,.view-detail a:visited,.view-detail a {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background: #e1d2b0;
+}
+
+.award-detail-infor .price .salescount,.award-detail-infor .qz-price .favorable {
+    color: #CECECE;
+    float: right;
+}
+
+.award-detail-infor .qz-price .coin,.award-detail-infor .qz-price .favorable {
+    font-size: 12px;
+}
+
+.award-detail-infor .price .salescount {
+    color: #cecece;
+    float: right;
+    *margin-top: -12px;
+}
+
+.award-detail-infor .qz-price .favorable {
+    margin-top: 6px;
+}
+
+.award-detail-infor .qz-price {
+    font-size: 16px;
+    font-family: "arial";
+    text-align: justify;
+    text-justify: auto;
+    color: #333;
+}
+
+.award-detail-infor .qz-price em {
+    background-position: 0 8px;
+    font-size: 18px;
+    font-family: Arial;
+    color: #E64018;
+}
+
+.award-detail-infor a .qz-price .coin {
+    font-size: 12px;
+    color: #333;
+}
+
+.award-detail-infor .qz-price .coin {
+    font-size: 12px;
+    color: #333;
+}
+
+.award-detail-infor .qz-price .favorable {
+    color: #cecece;
+    font-size: 12px;
+    float: right;
+    margin-top: 6px;
+    *margin-top: -20px;
+}
+
+.luckydraw-operate {
+    position: absolute;
+    z-index: 200;
+    top: 212px;
+    left: 146px;
+    width: 291px;
+    height: 105px;
+    font: 0px 'Microsoft YaHei','\5b8b\4f53';
+	line-height:55px;
+    color: #fff;
+	text-indent:-999em;
+	overflow:hidden;
+    background:url(http://cca.mbaobao.com/mkts/201401/07/mdplay/luck_start.png) no-repeat center bottom;
+}
+
+.luckydraw-operate:hover{
+	/*background:url(http://cca.mbaobao.com/mkts/201311/29/mbaoclear/go_luckwheel.png) no-repeat 0 -109px;*/
+}
+
+.luckydraw-operate-bg {
+    position: absolute;
+    z-index: 100;
+    top: 102px;
+    left: 102px;
+    width: 405px;
+    height: 303px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font: 14px 'Microsoft YaHei','\5b8b\4f53';
+    color: #FFF;
+    background-color: #fff;
+}
+
+.luckydraw-operate .operate-content {
+    height: 110px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.operate-start {
+    cursor: pointer;
+}
+
+.luckydraw-operate p {
+    text-align: center;
+}
+
+.luckydraw-operate .greater,.luckydraw-operate .smaller,.luckydraw-operate .maximum {
+    line-height: 30px;
+}
+
+.luckydraw-operate .greater {
+    font-size: 22px;
+}
+
+.luckydraw-operate .greater a:link,.luckydraw-operate .greater a:visited,.luckydraw-operate .greater a {
+    font-size: 16px;
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.luckydraw-operate .smaller {
+    font-size: 20px;
+}
+
+.luckydraw-operate .maximum {
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.luckydraw-operate .main-btn,.result-content .main-btn {
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin: 10px auto;
+    padding-left: 5px;
+    background: url("http://img01.taobaocdn.com/tps/i1/T1eciIXjJtXXXXXXXX-99-40.gif") no-repeat left 0;
+}
+
+.luckydraw-operate .add-friends a {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.luckydraw-operate .main-btn a,.result-content .main-btn a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-right: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #af7900;
+    text-decoration: none;
+    text-align: center;
+    background: url("http://cca.mbaobao.com/mkts/201309/17/btn-155-40.gif") no-repeat right 0;
+}
+
+.luckydraw-result {
+    position: absolute;
+    top: 68px;
+    left: 105px;
+    z-index: 600;
+    width: 636px;
+	height:134px;
+    font: 14px 'Microsoft YaHei','\5b8b\4f53';
+	background:#ffe795;
+}
+
+.luckydraw-result .result-title {
+    position: relative;
+    padding-left: 10px;
+	height:40px;
+    line-height: 40px;
+    color: #333;
+}
+
+.luckydraw-result .close-result {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+	background: url(http://cca.mbaobao.com/mkts/201311/29/mbaoclear/colse.png) no-repeat;
+}
+
+.luckydraw-result .result-content {
+    padding: 0;
+    _padding-bottom: 20px;
+    color: #e82335;
+    overflow: hidden;
+}
+
+.result-content .tips-content {
+    padding: 40px 0;
+}
+
+.result-content .win-award {
+    padding: 10px 0 0;
+    position: relative;
+}
+
+.result-content .win-award .win-tips {
+    margin-top: 10px;
+}
+
+.result-content .win-btn-mask {
+    background: #ccc;
+    height: 40px;
+    opacity: .4;
+    filter: alpha(opacity = 40);
+}
+
+.result-content .win-btn,.result-content .win-btn-mask {
+    position: absolute;
+    top: 236px;
+    left: 60px;
+    _left: -110px;
+    width: 220px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.result-content .win-btn .main-btn {
+    margin: 0 auto;
+}
+
+.result-content p {
+    text-align: center;
+}
+
+.tips-content img {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.result-content.greater,.result-content .smaller,.result-content .maximum {
+    line-height: 30px;
+}
+
+.result-content .greater {
+    font-size: 22px;
+}
+
+.result-content .smaller {
+    font-size: 20px;
+}
+
+.result-content .maximum {
+    font-size: 24px;
+    line-height: 35px;
+	text-align:center
+}
+
+</style>
+<div class="Warp">
+<div class="MDPlayWrap">
+	<div class="MDPlayTop"><img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/sr_top.jpg" alt=""/></div>
+
+	<div class="MDWinning">
+		<ul style="overflow:hidden;*zoom:1"></ul>
+	</div>
+	
+	<div class="MDPlayBox">
+		<div class="MDPlay" style="background:#256358">
+		<!--S 抽奖-->
+		<div class="MBaoLuckyWheelWrap">
+		<div class="MBaoLuckyWheel">
+			<div class="MBaoLuckyWheelM">
+				<!-- lottery {{ -->
+				<div class="luckywheel" id="J_LuckyWheel">
+					<div class="award-area" id="J_AwardArea">
+						<div id="J_AwardList">
+							<div class="award-box" id="J_AwardBox11" showid="11">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_11.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox10" showid="10">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_10.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox9" showid="9">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_9.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox8" showid="8">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_8.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox7" showid="7">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_7.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox6" showid="6">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_6.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox5" showid="5">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_5.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox4" showid="4">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_4.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox3" showid="3">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_3.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox2" showid="2">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_2.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox1" showid="1">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_1.jpg">
+								</a>
+							</div>
+							<div class="award-box" id="J_AwardBox0" showid="0">
+								<a href="javascript:;">
+									<img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/award_0.jpg">
+								</a>
+							</div>
+						</div>
+						<div class="award-area-mask" id="J_AwardMask" style="display:none"></div>
+						<div class="Lottery-number" id="J_LotteryNumber"></div>
+						<div class="luckydraw-operate operate-start" id="J_OperateBtn" style="text-align:center">开始抽奖</div>
+						<div class="luckydraw-result" id="J_LuckyDrawResult" style="display:none;"></div>
+					</div>
+				</div>
+				<!-- }} lottery -->
+			</div>
+		</div>
+		</div>
+		<!--E 抽奖-->
+		
+		<!--S 抽奖规则-->
+		<div class="MDRule">
+			<h4 style="">活动规则</h4>
+			<div class="RuleList">
+				<p> 本活动仅限本月生日的会员参加，<span style="color:#fff;font-weight:700">100%中奖！</span><br/>
+					还未完善生日信息的会员点此<a href="http://my.mbaobao.com/member/profile/info" target="_blank" style="color:#fff;text-decoration:underline;font-weight:700">完善生日</a></p>
+				<p> 我们会以邮件或站内信的形式通知你获得抽奖 <br/>
+					机会，还未完善邮箱信息的会员点此<a href="http://my.mbaobao.com/member/profile/info" target="_blank" style="color:#fff;text-decoration:underline;font-weight:700">完善邮箱</a></p>
+				<p> 抽奖获得的麦豆会直接充值进账号内， <br/>
+					点此<a href="http://my.mbaobao.com/member/mpea/list" target="_blank" style="color:#fff;text-decoration:underline;font-weight:700">查看麦豆明细</a></p>
+				<p> 抽奖获得的麦豆有效期从获得之日起， <br/>
+					至第二年年底之前有效，点此查看<a href="http://vip.mbaobao.com/vip/mpea" target="_blank" style="color:#fff;text-decoration:underline;font-weight:700">麦豆规则</a></p>
+				<p> 如有疑问请联系右边的在线客服</p>
+			</div>
+		</div>
+		<!--E 抽奖规则-->
+		
+		</div>
+	</div>
+	
+	<div class="MDAccess"><img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/sr_bb.jpg" alt="" border="0" usemap="#Map"/>
+      <map name="Map" id="Map">
+        <area shape="rect" coords="70,389,183,431" href="https://itunes.apple.com/cn/app/id408126283?mt=8" target="_blank" />
+        <area shape="rect" coords="189,389,305,432" href="https://play.google.com/store/apps/details?id=com.yek.android.mbaobao#?t=W251bGwsMSwxLDIxMiwiY29tLnllay5hbmRyb2lkLm1iYW9iYW8iXQ.." target="_blank" />
+        <area shape="rect" coords="758,204,868,248" href="http://e.weibo.com/mbaobaovip" target="_blank" />
+        <area shape="rect" coords="758,354,870,400" href="http://e.t.qq.com/mbaobao" target="_blank" />
+        <area shape="rect" coords="520,359,630,387" href="http://edm-rss.mbaobao.com/subscribe/mail.html" target="_blank" />
+  </map>
+		<div class="email-subscribe">
+<div class="email-form">
+				<div class="email-form-bd">
+					<form action="http://www.mbaobao.com/edm/edmok" method="post" class="sub-form">
+						<input type="hidden" value="{''id'':3,''name'':''index_edm''}" name="edm_id">
+						<input type="text" value="" name="edm_email" class="subtext" id="edm-email" placeholder="请输入您的电子邮件">
+						<button type="submit" class="subbt">订&nbsp;阅</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="MDMore"><img src="http://cca.mbaobao.com/mkts/201401/07/mdplay/more_bag.jpg" alt=""/></div>
+	
+</div>	
+</div>
+
+<script type="text/javascript">
+var marquee = function(container, content, direction, speed){
+var wrapDom, 
+	containerDom,
+	contentDom,
+	contentCloneDom,
+	containerWidth,
+	containerHeight,
+	contentWidth,
+	contentHeight,
+	directionMap,
+	loop;
+
+speed = speed || 30;
+direction = direction || "left";
+containerDom = $(container);
+wrapDom = $("<div class='marquee'></div>");
+directionMap = {
+	"left" : "Left",
+	"top" : "Top"
+};
+
+contentDom = $('<span style="visibility:hidden;" class="marquee_item"></span>').append(content);
+$("body").append(contentDom);
+
+if(directionMap[direction] === "Top"){
+	contentHeight = contentDom.outerHeight();
+	containerHeight = containerDom.outerHeight();
+	wrapDom.append(contentDom.css({"visibility":"visible","width":contentHeight+"px"}));
+
+	if(containerHeight < contentHeight){
+		contentCloneDom = $('<span class="marquee_item"></span>').append(content).css("width", contentHeight+"px");
+		wrapDom.append(contentCloneDom).css("width",contentHeight*2);
+		loop = setInterval(_marquee, speed);
+	}
+
+}else if(directionMap[direction] === "Left"){
+	contentWidth = contentDom.outerWidth();
+	containerWidth = containerDom.outerWidth();
+	wrapDom.append(contentDom.css({"visibility":"visible","width":contentWidth+"px"}));
+
+	if(containerWidth < contentWidth){
+		contentCloneDom = $('<span class="marquee_item"></span>').append(content).css("width", contentWidth+"px");
+		wrapDom.append(contentCloneDom).css("width",contentWidth*2);
+		loop = setInterval(_marquee, speed);
+	}
+}
+
+containerDom.append(wrapDom);
+
+if(loop){
+	wrapDom.mouseenter(function(){
+		clearInterval(loop);
+	}).mouseleave(function(){
+		loop = setInterval(_marquee, speed);
+	});
+}
+
+
+function _marquee(){
+	var wrapDomScrollLeft = parseInt(wrapDom.css("marginLeft"));
+	if(Math.abs(wrapDomScrollLeft) == contentWidth * 2 - containerWidth){
+		wrapDom.find(".marquee_item").eq(0).appendTo(wrapDom);
+		wrapDom.css("marginLeft",-(contentWidth-containerWidth));
+	}else{
+		wrapDom.css("marginLeft",wrapDomScrollLeft - 1);
+	}
+}
+}
+
+//中奖名单
+$.ajax({
+	type: 'GET',
+	url: 'http://mkt.mbaobao.com/ajax/GetLotteryMpeaLog',
+	data: {
+		active_id : 1251,
+		d : Math.round(new Date().getTime() / 1000)
+	},
+	dataType : 'json',
+	success: function (json) {
+		if(json.error_code == ''){
+			var winList = json.result ? json.result : [];
+			var winLen = winList.length > 20 ? 20 : winList.length;
+			var Html = '';
+			for(var i = 0; i<winLen; i++){
+				Html = Html + '<span>'+winList[i].username +'&nbsp;获得了'+ winList[i].addPoint +'个麦豆</span>';
+			}
+			marquee('.MDWinning ul', Html, 'left');
+		}
+	},
+	error: function () {}
+});
+
+</script>
+
+<script type="text/javascript">
+	seajs.use("http://cca.mbaobao.com/mkts/201401/07/mdplay/mdplay",function(LuckyDraw){
+		LuckyDraw.create("#J_LuckyWheel");
+	});
+</script>
+
+<!--E -->
+
+
+
+
+
+</body>
+</html>
+		

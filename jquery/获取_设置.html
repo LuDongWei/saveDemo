@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.9.1.min.js"  type="text/javascript" ></script>
+<script  type="text/javascript">
+    $(document).ready(function(){
+		$("#bu_1").click(function(){
+		alert("text:"+$("#p_1").text());	
+			});
+		
+		$("#bu_2").click(function(){
+		alert("HTML:"+$("#p_1").html());				
+			});
+			
+	    $("#bu_1_1").click(function(){
+	    $("#p_1").text("你好中国！");
+			});
+			
+		$("#bu_1_1_1").click(function(){
+		$("#p_1").text(function(i,old){
+    	return "Old text:"+old+"1212121!";	
+			
+			});	
+			});	
+			
+		
+		$("#bu_2_2").click(function(){
+        $("#p_1").html("你好<strong>中国</strong>！");	
+			});	
+			
+			
+			
+			
+		$("#bu_3").click(function(){
+		alert("值为:"+$("#input_1").val());
+			});	
+			
+	     $("#bu_3_3").click(function(){
+	     $("#input_1").val("hello_cheng");
+			 });		
+			
+		 $("#bu_3_3_3").click(function(){
+	     $("#input_1").attr({		 
+			"title":"请填写名字"
+			 });
+			 });		
+			
+			
+		 $("#bu_4").click(function(){
+		 alert("width属性为:"+$("#input_1").attr("width"));	 	 
+			 })
+		 
+		 
+		});
+</script> 
+
+</head>
+
+<body>
+<div  style="font-size:20px ; text-align:center; margin-top:30px">
+<p id="p_1">这个短路中的<strong>粗体</strong>文本</p>
+<button id="bu_1"> 显示文本</button>
+<button id="bu_2">显示HTML</button>
+
+<button id="bu_1_1"> 改变文本</button>
+<button id="bu_1_1_1">以回调函数的方式改变文字</button>
+<button id="bu_2_2">改变html</button>
+</div>
+
+<div style="font-size:20px;  text-align:center ; margin-top:30px">
+
+<p>名字<input type="text" width="80px" height="30px" value="helo_陆" id="input_1"  title="123"></p>
+<button id="bu_3">显示所填的值</button>
+<button id="bu_3_3">改变所填的值</button>
+<button id="bu_3_3_3">title</button>
+<button id="bu_4" style="margin-top:15px">获取文本框的宽度</button>
+</div>
+
+
+</body>
+</html>

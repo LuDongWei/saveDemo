@@ -1,0 +1,45 @@
+<snippet>
+	<content>
+		<![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>无标题文档</title>
+			<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+			<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+
+<style type="text/css">
+.page_all{}	
+.content{ width:100%;}
+.main{width:960px;margin:0 auto;}
+
+/*--列表--*/
+.list-2,.list-3{width:960px;overflow:hidden;}
+.list-2 li,.list-3 li{display:inline-block;*display:inline;*zoom:1;float:left;text-align:center;}
+.list-2 li{margin-top:3px;margin-right:3px;}
+.list-3 li{margin-top:3px;margin-right:4px;}
+
+/*--官网调产品列表--*/
+/*.activity_list_box{width:100%;}
+.activity_view_box{margin:0 auto;background-color:#ffffff;}*/ 
+
+${1:}
+</style>
+
+${2:}
+
+
+${3:}
+</body>
+</html>
+		]]>
+	</content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mbbHtml</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html</scope>
+</snippet>

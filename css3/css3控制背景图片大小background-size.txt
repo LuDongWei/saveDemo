@@ -1,0 +1,8 @@
+css3控制背景图大小background-size
+background-size是css3提供的一个新特性，它可以让你随心所欲的控制背景图片的大小。
+
+background-size的类型
+
+background-size需要两个值，它的类型可以是像素（px）、百分比（%）或是auto，还可以是cover和contain。第一个值为背景图的width，另外一个值用于指定背景图上的height，如果只设定1个值，则第2个默认为auto，但当值为cover和contain时除外。
+
+cover：保持图像的宽高比例，将图片缩放到正好完全覆盖定义的背景区域，其中有一边和背景相同。

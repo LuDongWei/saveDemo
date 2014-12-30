@@ -1,0 +1,102 @@
+制作新的网页：http://www.prosetech.com/html5/
+
+第6章：基本Canvas绘图
+起步：
+<canvas id="drawingCanvas" width="500" height="300"></canvas>
+canvas{
+  border:1px dashed black;
+}
+首先：
+var canvas=document.getElementById("drawingCanvas");   //获取对象
+var context=canvas.getContext("2b");                   //取得二维绘图上下文
+
+画直线：
+context.lineWidth=10;          //线条宽度
+context.strokeStyle="#cd2828"; //颜色
+context.moveTo(10,10);    //起点
+context.lineTo(400,20);   //终点
+context.lineCap="butt";   //头型
+context.stroke();         //画出
+
+context.beginPath();      //重新开始一个新线段的绘制
+
+路径与形状
+context.moveTo(150,620);
+context.lineTo(250,720);
+context.lineTo(50,720);
+context.closePath();      //封闭的图形
+//填充内部
+context.fillStyle="blue";
+context.fill();
+//绘制轮廓
+context.lineWidth=10;
+context.strokeStyle="red";
+context.stroke();
+
+//填充矩形
+context.beginPath();
+context.fillRect(280,620,100,100);
+//边框矩形
+context.beginPath();
+context.strokeRect(390,620,100,100);
+
+
+曲线和合并
+context.beginPath();     //曲线一
+context.arc(400,850,80,1.2*Math.PI,1.8*Math.PI);
+context.stroke();
+
+context.beginPath();     //贝赛尔曲线
+context.moveTo(320,850);
+context.bezierCurveTo(250,900,450,850,490,1000);
+context.stroke();
+
+context.beginPath();     //圆
+context.arc(150,850,80,0,2*Math.PI);
+context.stroke();
+context.fillStyle="#5a0000"; 
+context.fill();
+
+
+context.beginPath();      //加入三角形
+context.moveTo(150,750);    
+context.lineTo(350,950);
+context.lineTo(150,950);
+context.closePath();           
+context.fillStyle="rgba(100,150,185,0.7)";   //0.7为透明度
+context.fill();
+context.globalCompositeOperation="xor";    //合成效果
+context.stroke();
+
+
+
+扩展看代码
+context.translate(250,1080); //移动(0,0)点，接下来的围绕新的原点旋转
+context.rotate()旋转
+//带圆角的矩形
+CanvasRenderingContext2D.prototype.roundRect=  //js加入画图扩展
+
+画图程序；
+//添加用于实现绘图操作的事件处理程序
+canvas.onmousedown=startDrawing;   //
+canvas.onmouseup=stopDrawing;      //
+canvas.onmouseout=stopDrawing;     //
+canvas.onmousemove=draw;           //
+查看代码。。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

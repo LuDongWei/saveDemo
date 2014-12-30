@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body>
+<style type="text/css">
+.page_all{} 
+.wrapper{ width:100%;}
+.main{width:960px;margin:0 auto;}
+
+/*--秒 杀--*/
+.sk-time{
+     width:960px;
+     height:140px;
+   background:url(http://cca.mbaobao.com/mkts/201406/04/sk/time.jpg) no-repeat top center;
+   margin:0 auto;
+}
+.sk-time ul{
+     font-size:0px;
+}
+.sk-time ul li{
+     width:192px;
+     height:92px;
+     background-color:#fdd131;
+     display:inline-block;
+     *display:inline;
+     *zoom:1;
+     float:left;
+     margin-top:23px;
+     visibility:hidden;
+     position:relative;
+}
+.sk-time ul li i{
+     position:absolute;
+     display:block;
+     height: 0;
+     width: 0;
+     border: 12px solid #fdd131;
+     bottom:-24px;
+     left:84px;
+     border-color: #fdd131 #40316a  #40316a #40316a; 
+}
+.sk-time li p{
+     text-align:center;
+}
+.sk-time li .title{
+     font-size:18px;
+     color:#9b51fe;
+     line-height:30px;
+}
+.sk-time li .time{
+     font-size:24px;
+     font-weight:bolder;
+     color:#ffffff;
+     width:150px;
+     height:35px;
+     line-height:35px;
+     background-color:#9b51fe;
+     border-radius:17px;
+     margin:0 auto; 
+}
+.sk-time li .state{
+     font-size:12px;
+     line-height:24px;
+     color:#9b51fe;
+}
+.sk-time li i{
+
+}
+.sk-piece{ 
+ width:960px;
+ height:1000px;
+ position:relative;
+ background-color:#40316a;
+ margin:0 auto;
+ font-size:12px;
+ z-index:2;   
+}
+.piece{
+ position:absolute; 
+ width:191px;
+ height:192px;
+ overflow:hidden;
+ z-index:3; 
+ border-left:1px solid #40316A;
+}
+.piece .masking{
+   display:block;
+   visibility:hidden;
+}
+.sk-masking .masking{
+   visibility:visible;
+   position:absolute;
+   width:192px;
+   height:192px;
+   top:0px;
+   left:0px;
+   filter:alpha(opacity=50);
+   opacity:0.5;
+   background-color:#40316a;
+   z-index:4; 
+}
+.sk-masking:hover .masking{
+   visibility:hidden;
+}
+.sk-colour a{
+ display:block; 
+ width:192px;
+ height:192px;
+}
+
+.sk-colour .p-text{
+  position:absolute;
+  color:#ffffff;
+  text-align:right;
+  font-family:"微软雅黑";
+  width:192px; 
+  height:50px;
+  bottom:-21px;
+  transition: 0.5s bottom;
+}
+.sk-colour .p-text p{
+  text-decoration:none;
+}
+.sk-colour a:hover .p-text{
+   bottom:0px;
+}
+.p-text .p-1{
+  font-size:16px;
+  height:20px;
+  line-height:20px;
+}
+.p-text .p-2{
+  height:30px;
+  line-height:30px;
+  overflow:hidden;
+}
+.p-text .p-2 i{
+  width:17px;
+  height:29px;
+  display:inline-block;
+  vertical-align:middle;
+  background:url(http://cca.mbaobao.com/mkts/201406/09/top.png) no-repeat top center;
+  margin-left:2px;
+  margin-top:-2px;
+  *margin-top:2px;
+}
+.s-status{
+     width:100%;
+     height:100%;
+     position:absolute;
+     z-index:4;
+     display:none;
+}
+.s-status{
+     position:absolute;
+     height:800px;
+     top:-4px;
+     background-color:#fdd131;
+     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
+.s-10{
+   width:200px;
+   left:188px;
+}
+.s-14{
+   width:200px;
+   left:380px;
+}
+.s-16{
+   width:200px;
+   left:572px;
+}
+.s-20{
+   width:200px;
+   left:764px;
+}
+/*--秒杀 块--*/
+.sk-seckill{
+  width:192px;
+  height:192px;
+  background:#FFF;
+  background:url(http://cca.mbaobao.com/mkts/201406/05/miao/loading-3.png) no-repeat center center;
+
+}
+.sk-seckill #seckill{
+  width:192px;
+  height:192px;
+  background:url(http://cca.mbaobao.com/mkts/201406/05/miao/loading-mbb.gif) no-repeat center center;
+}
+.sk-seckill .seckill-item{
+     width:192px;
+     height:192px;
+     overflow:hidden;
+     position:relative;
+     background-color:#ffffff;
+}
+.seckill-item .s-pic span{
+     position:absolute;
+     display:block;
+     width:40px;
+     height:36px;
+     border-radius:40px;
+     color:#ffffff; 
+     font-weight:bolder;
+     font-size:12px;
+     line-height:16px;
+     padding-top:4px;
+     left:12px;
+     top:12px;
+     text-align:center;
+}
+.seckill-item .s-pic img{
+  margin-top:4px;
+  margin-left:4px;
+}
+.seckill-item .s-pic span.hav{
+     background-color:#f6760d;
+}
+.seckill-item .s-pic span.no{
+     background-color:#b4b4b4;
+}
+.seckill-item .s-bar{
+     width:192px;
+     height:78px;
+     position:absolute;
+     bottom:0px;
+     left:0px;
+}
+.seckill-item .willSeckill,.seckill-item .onSeckill{
+     background:url(http://cca.mbaobao.com/mkts/201406/04/sk/ha.png);
+     bottom:-33px;
+     transition: 0.8s bottom;
+}
+.willSeckill .miao,.onSeckill .miao{
+     position:absolute;
+     width:40px;
+     height:27px;
+     right:0px;
+     top:12px;
+     transition: 0.3s right;
+}
+.willSeckill .bay,.onSeckill .bay{
+     position:absolute;
+     top:45px;
+     left:39px;
+}
+.sk-reserve{
+     cursor:pointer;
+}
+.willSeckill:hover,.onSeckill:hover{
+     bottom:0px; 
+}
+.willSeckill:hover .miao,.onSeckill:hover .miao{
+     right:-40px; 
+}
+.s-bar .shoppeP{
+     margin-top:7px;
+     font-size:12px;
+     line-height:12px; 
+     color:#333333;
+     text-align:left;
+}
+.s-bar .sellP{
+     font-size:15px;
+     color:#ad1500;
+     text-align:left;
+     line-height:22px;
+}
+.s-bar .sellP .n-1{
+     font-size:12px;
+}
+.s-bar .sellP .n-2{
+     font-size:24px;
+     font-weight:bolder;
+}
+.s-bar .bay{
+     width:114px;
+     margin:0 auto;
+     *margin-top:2px;
+}
+.seckill-item .overSeckill{
+     background:url(http://cca.mbaobao.com/mkts/201406/09/nn_02.png); 
+     height:45px;
+     z-index:8;
+}
+.overSeckill .bay{
+     width:40px;
+     float:right;
+     position:absolute;
+     top:11px;
+     right:0px;
+
+}
+.seckill-item .float-layer{
+   background:url(http://cca.mbaobao.com/mkts/201406/09/nn_01.png); 
+   width:192px;
+   height:147px;
+   position:absolute;
+   top:0px;
+   left:0px;
+   color:#ffffff;
+   font-size:35px;
+   line-height:192px;
+   text-align:center;
+   z-index:7;
+   font-weight:bolder;
+   cursor:pointer;
+} 
+.seckill-Bar{
+  width:967px;
+  position:fixed; 
+  height:44px;
+  background:url(http://cca.mbaobao.com/mkts/201406/09/gai/m_06.jpg) no-repeat top center;
+  z-index:99;
+  top: 0px;
+  right: auto;
+  left: 50%;
+  margin-left: -480px;
+  display:none;
+  background-color:#40316a;
+}
+.seckill-Bar-show{
+  display:block !important;
+}
+.seckill-Bar ul li{
+  height:35px;
+  line-height:35px;
+  margin-top:0px;
+  background-color:#40316a;
+}  
+.seckill-Bar ul li .time{
+  height:35px;
+  line-height:35px;
+  background-color:#fdd131;
+}  
+.seckill-Bar ul li i{
+  width:20px;
+  height:10px;
+  background:url(http://cca.mbaobao.com/mkts/201406/09/gai/m_07.png) no-repeat top center;
+  border:none;
+  bottom:-10px;
+}
+
+</style>
+
+<div class="wrapper" style=" font-size:0; background:url(http://cca.mbaobao.com/mkts/201406/05/miao/m_02.jpg) no-repeat top center;">
+   <div class="main">
+      <img src="http://cca.mbaobao.com/mkts/201406/05/miao/m_05.jpg?2014" width="960" height="446" /> 
+   </div>
+</div>
+
+<div class="wrapper" style="background:url(http://cca.mbaobao.com/mkts/201406/05/miao/m_03.jpg) repeat-y top center;">
+  <div class="sk-time" id="sTime">
+       <ul>
+          <li></li>   
+          <li id="time_1">
+              <p class="title">10点档</p>
+              <p class="time">00:00:00</p>
+              <p class="state">秒杀中</p>
+              <i></i>  
+          </li>
+          <li id="time_2">
+              <p class="title">14点档</p>
+              <p class="time">00:00:00</p>
+              <p class="state">秒杀中</p>
+              <i></i> 
+          </li>
+          <li id="time_3">
+              <p class="title">16点档</p>
+              <p class="time">00:00:00</p>
+              <p class="state">秒杀中</p> 
+              <i></i> 
+          </li>
+          <li id="time_4">
+              <p class="title">20点档</p>
+              <p class="time">00:00:00</p>
+              <p class="state">秒杀中</p> 
+              <i></i> 
+          </li>
+       </ul>        
+  </div>
+  
+  <!--seckill bar-->
+  <div class="seckill-Bar sk-time" id="seckillBar">
+       <ul>
+          <li></li> 
+          <li id="ti_1">
+            <p class="time">00:00:00</p>
+            <i></i> 
+          </li> 
+          <li id="ti_2">
+            <p class="time">00:00:00</p>
+            <i></i> 
+          </li> 
+          <li id="ti_3">
+            <p class="time">00:00:00</p>
+            <i></i> 
+          </li> 
+          <li id="ti_4">
+            <p class="time">00:00:00</p>
+             <i></i> 
+          </li> 
+       </ul> 
+  </div>  
+  <!--seckill bar-->
+
+  <div class="sk-piece" id="sPiece">    
+       <div class="s-status s-10" id="time_1_">
+       </div>    
+       <div class="s-status s-14" id="time_2_"> 
+       </div>     
+       <div class="s-status s-16" id="time_3_">
+       </div>     
+       <div class="s-status s-20" id="time_4_">
+       </div>
+       
+  </div>
+</div>
+
+
+<script id="seckill-template" type="text/x-handlebars-template">
+     {{#seckill}}
+          <div class="seckill-item">
+              <div class="s-pic">
+                    {{#if isSeckill}}
+                         {{#skus}}   
+                         {{#if isSellOut}}
+                            <span class="no">限时<br>特惠</span>
+                           {{else}}
+                            <span class="hav">限时<br>特惠</span> 
+                         {{/if}}
+                         {{/skus}}  
+                     {{else}}
+                     {{#if isOverdue}}
+                     <span class="no">限时<br>特惠</span>
+                     {{else}}
+                     <span class="hav">限时<br>特惠</span> 
+                     {{/if}} 
+                   {{/if}}
+                   {{#skus}}  
+                  <a href="http://www.mbaobao.com/item/{{sku}}" target="_blank"><img src={{image}} width="185" hegiht="185" /></a> 
+                   {{/skus}}  
+               </div>       
+               {{#if isSeckill}} 
+                         {{#skus}}  
+                         {{#if isSellOut}}
+                         <div class="s-bar overSeckill">
+                              <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥{{shoppePrice}}</del></p>
+                              <p class="sellP">&nbsp;&nbsp;秒杀价<span>￥</span><span>{{sellPrice}}</span></p> 
+                              <div class="bay">
+                                   <img src="http://cca.mbaobao.com/mkts/201406/04/sk/no.png" width="40" height="27"  />
+                              </div>
+                         </div> 
+                         <a class="float-layer clBrand" href="#" target="_blank">
+                           已抢完
+                         </div> 
+                         {{else}}
+                         <div class="s-bar onSeckill">
+                              <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥{{shoppePrice}}</del></p>
+                              <p class="sellP">&nbsp;&nbsp;秒杀价<span>￥</span><span>{{sellPrice}}</span></p> 
+                              <div class="miao">
+                                    <img src="http://cca.mbaobao.com/mkts/201406/05/miao/m_04.png" width="40" height="27" />  
+                              </div> 
+                              <div class="bay">
+                              <a href="http://cart.mbaobao.com/do/items/add/{{sku}}/1.html" target="_blank"><img src="http://cca.mbaobao.com/mkts/201406/04/sk/li.png" width="114" height="27" /></a>
+                           </div>
+                         </div>
+                         {{/if}} 
+                         {{/skus}} 
+                     {{else}}                   
+                       {{#if isOverdue}}
+                       {{#skus}} 
+                        <div class="s-bar overSeckill">
+                              <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥{{shoppePrice}}</del></p>
+                              <p class="sellP">&nbsp;&nbsp;秒杀价<span>￥</span><span>{{sellPrice}}</span></p> 
+                              <div class="bay">
+                                   <img src="http://cca.mbaobao.com/mkts/201406/04/sk/no.png" width="40" height="27"  />
+                              </div>
+                         </div>
+                        {{#if isSellOut}}
+                        <a class="float-layer clBrand" href="#" target="_blank">
+                           已抢完
+                         </div> 
+                        {{else}}
+                        <a class="float-layer clBrand" href="#" target="_blank">
+                           秒杀结束
+                         </div> 
+                         {{/if}} 
+                        {{/skus}} 
+                       {{else}}
+                      {{#skus}} 
+                         <div class="s-bar willSeckill">
+                          <p class="shoppeP">&nbsp;&nbsp;&nbsp;<del>原价￥{{shoppePrice}}</del></p>
+                          <p class="sellP">&nbsp;&nbsp;秒杀价<span class="n-1">￥</span><span class="n-2">{{sellPrice}}</span></p>
+                          <div class="miao">
+                           <img src="http://cca.mbaobao.com/mkts/201406/05/miao/m_04.png" width="40" height="27" />  
+                         </div>  
+                          <div class="bay sk-reserve" id="skReserve" data-sku={{sku}}>
+                               <img src="http://cca.mbaobao.com/mkts/201406/04/sk/jj.png" width="114" height="27" />
+                          </div>
+                       </div>
+                      {{/skus}} 
+                     {{/if}}
+               {{/if}}
+          </div>
+     {{/seckill}} 
+</script>
+
+<script type="text/javascript">
+seajs.use("http://cca.mbaobao.com/mkts/201406/16/sPiece-2.js?20140614") 
+</script>
+
+<!--S BottomHTML-->
+<div class="J-bottom-brand" data-oxlazy-module="domnode-bottom-brand"></div>
+<script type="text/javascript">
+  seajs.use('http://cca.mbaobao.com/mkts/201406/11/brandlist/throttle');
+</script>
+<!--E BottomHTML-->
+
+<!--float-->
+<link rel="stylesheet" href="http://cca.mbaobao.com/mkts/201406/06/float/float-side.css?0606">
+<div class="f-s-container" style="display:none;">
+    <div class="f-s-menu">
+        <div class="nav-menu">
+            <ul class="nav">
+                <li class="qr"><img src="http://cca.mbaobao.com/mkts/201406/06/float/tp.png" alt=""></li>
+        <li class="ms"><a href="http://mkt.mbaobao.com/a-salenzq140609/" target="_blank"><img src="http://cca.mbaobao.com/mkts/201406/06/float/m9.png" alt=""></a></li>
+                <li class="group f-women active">
+                    <a target="_blank" href="http://mkt.mbaobao.com/a-nvbaonzq140609/" class="nav-title"></a>
+                    <ul>
+                        <li><a target="_blank" class="nav-item" href="http://mkt.mbaobao.com/a-dudunzq140609/" title="精选牛皮"><img src="http://cca0.mbaobao.com/mkts/201402/26/nmbaobao/logo/dudu.jpg" alt="精选牛皮" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" class="nav-item" href="http://mkt.mbaobao.com/a-aefnzq140609/" title="优雅淑女"><img src="http://cca1.mbaobao.com/mkts/201402/26/nmbaobao/logo/af.jpg" alt="优雅淑女" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" class="nav-item" href="http://mkt.mbaobao.com/a-lmnzq140609/" title="潮流韩范"><img src="http://cca1.mbaobao.com/mkts/201402/26/nmbaobao/logo/lm.jpg" alt="潮流韩范" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" class="nav-item" href="http://mkt.mbaobao.com/a-mnzq140609/" title="青春时尚"><img src="http://cca0.mbaobao.com/mkts/201402/26/nmbaobao/logo/mplus.jpg" alt="青春时尚" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" class="nav-item" href="http://iscov.mbaobao.com/" title="香港设计师品牌"><img src="http://cca0.mbaobao.com/mkts/201404/15/logo/iscov.jpg" alt="香港设计师品牌" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" class="nav-item" href="http://mkt.mbaobao.com/a-vinhasnzq140609/" title="创意帆布包"><img src="http://cca1.mbaobao.com/mkts/201402/26/nmbaobao/logo/vinhas.jpg" alt="创意帆布包" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" class="nav-item" href="http://mkt.mbaobao.com/a-rainhanzq140609/" title="日系帆布包"><img src="http://cca4.mbaobao.com/mkts/201404/03/logo/rainha.jpg" alt="日系帆布包" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" class="nav-item" href="http://mkt.mbaobao.com/a-soponzq140609/" title="日系轻生活"><img src="http://cca.mbaobao.com/mkts/201404/03/daili/sopo2.jpg" alt="日系轻生活" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                    </ul>
+                </li>
+        
+                <li class="group f-men">
+                    <a target="_blank" href="http://mkt.mbaobao.com/a-nanbaonzq140609/" class="nav-title"></a>
+                    <ul>
+                        <li><a target="_blank" href="http://mkt.mbaobao.com/a-gebnzq140609/" title="时尚休闲男包"><img src="http://cca2.mbaobao.com/mkts/201402/26/nmbaobao/logo/gb.jpg" alt="时尚休闲男包" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://delin.mbaobao.com/" title="精品商务男包"><img src="http://cca2.mbaobao.com/mkts/201402/26/nmbaobao/logo/delin.jpg" alt="精品商务男包" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://mkt.mbaobao.com/a-landeiw0605/" title="时尚品质男包"><img src="http://cca0.mbaobao.com/mkts/website/2014/0604/landeiw-97-55.jpg" alt="时尚品质男包" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                    </ul>
+                </li>
+                <li class="group f-sport">
+                    <a target="_blank" href="http://mkt.mbaobao.com/a-xiulvnzq140609/" class="nav-title"></a>
+                    <ul>
+                        <li><a target="_blank" href="http://mkt.mbaobao.com/a-xxbmnzq140609/" title="运动休闲"><img src="http://cca3.mbaobao.com/mkts/201402/26/nmbaobao/logo/sp.jpg" alt="运动休闲" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://mkt.mbaobao.com/a-yznzq140609/"><img src="http://cca4.mbaobao.com/mkts/201402/26/nmbaobao/logo/yinzuo.jpg" alt="拉杆箱" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://toppu.mbaobao.com/"><img src="http://cca.mbaobao.com/mkts/201406/06/toppu.jpg" alt="" width="71" height="40"/><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://mkt.mbaobao.com/a-jansport0506"><img src="http://cca0.mbaobao.com/mkts/website/2014/0507/logo/jansport.jpg" alt="美国运动品牌" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://vanwalk.mbaobao.com/"><img src="http://cca1.mbaobao.com/mkts/201402/26/nmbaobao/logo/vanwalk.jpg" alt="户外运动" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                    </ul>
+                </li>
+                <li class="group f-lux">
+                    <a target="_blank" href="http://mkt.mbaobao.com/a-affordableluxury/" class="nav-title"></a>
+                    <ul>
+                        <li><a target="_blank" href="http://coach.mbaobao.com/"><img src="http://cca2.mbaobao.com/mkts/201402/26/nmbaobao/logo/coach.jpg" alt="海外奢品" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://longchamp.mbaobao.com/"><img src="http://cca2.mbaobao.com/mkts/201402/26/nmbaobao/logo/longchamp.jpg" alt="海外奢品" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://mkt.mbaobao.com/a-prada/"><img src="http://cca3.mbaobao.com/mkts/website/2014/0602/prada/prada-97-55.jpg" alt="海外奢品" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://armani.mbaobao.com/"><img src="http://cca4.mbaobao.com/mkts/201402/26/nmbaobao/logo/armani.jpg" alt="海外奢品" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://mcm.mbaobao.com/"><img src="http://cca1.mbaobao.com/mkts/201402/26/nmbaobao/logo/mcm.jpg" alt="海外奢品" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://lv.mbaobao.com/"><img src="http://cca0.mbaobao.com/mkts/201402/26/nmbaobao/logo/lv.jpg" alt="海外奢品" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://mkt.mbaobao.com/a-guess/"><img src="http://cca2.mbaobao.com/mkts/website/2014/0430/guess.jpg" alt="海外奢品" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://fendi.mbaobao.com/"><img src="http://cca3.mbaobao.com/mkts/201402/26/nmbaobao/logo/fendi.jpg" alt="海外奢品" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://dolcegabbana.mbaobao.com/"><img src="http://cca3.mbaobao.com/mkts/201402/26/nmbaobao/logo/dg.jpg" alt="" width="71" height="40"/><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://burberry.mbaobao.com/"><img src="http://cca3.mbaobao.com/mkts/201402/26/nmbaobao/logo/burberry.jpg" alt="海外奢品" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                    </ul>
+                </li>
+                <li class="group f-baby">
+                    <a target="_blank" href="http://baby.mbaobao.com/" class="nav-title"></a>
+                    <ul>
+                        <li><a target="_blank" href="http://skiphop.mbaobao.com/"><img src="http://cca3.mbaobao.com/mkts/website/2014/0511/logo/skiphop.jpg" alt="美国儿童包品牌" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://trunki.mbaobao.com/"><img src="http://cca1.mbaobao.com/mkts/website/2014/0511/logo/trunki.jpg" alt="美国儿童包品牌" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://travelbuddies.mbaobao.com/"><img src="http://cca2.mbaobao.com/mkts/website/2014/0511/logo/travel-buddies.jpg" alt="美国儿童包品牌" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://hugger.mbaobao.com/"><img src="http://cca4.mbaobao.com/mkts/website/2014/0519/baby/logo/hugger.jpg" alt="英国儿童包品牌" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://bestine.mbaobao.com/"><img src="http://cca2.mbaobao.com/mkts/website/2014/0519/baby/logo/bestine.jpg" alt="妈咪包" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://winghouse.mbaobao.com/"><img src="http://cca0.mbaobao.com/mkts/website/2014/0519/baby/logo/winghouse.jpg" alt="韩国儿童包品牌" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                        <li><a target="_blank" href="http://thomasfriends.mbaobao.com/"><img src="http://cca1.mbaobao.com/mkts/website/2014/0519/baby/logo/thomas.jpg" alt="英国儿童包品牌" width="71" height="40"><i class="i-1"></i><i class="i-2"></i><i class="i-3"></i><i class="i-4"></i></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <a target="_blank" href="http://mkt.mbaobao.com/a-laokenzq140609/"><img src="http://cca.mbaobao.com/mkts/201406/06/float/s_15.jpg" alt="" /></a>
+            <a target="_blank" href="http://mkt.mbaobao.com/a-middleyear140609/"><img src="http://cca.mbaobao.com/mkts/201406/06/float/s_18.jpg" alt="" /></a>
+        </div>
+    </div>
+</div>
+<script>
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > 700){
+            $(".f-s-container").show();
+        } else {
+            $(".f-s-container").hide();
+        }
+
+        $('.group').on('mouseenter', function(){
+            $('.group').removeClass('active');
+            $(this).addClass('active');
+        })
+    })
+</script>
+
+</body>
+</html>

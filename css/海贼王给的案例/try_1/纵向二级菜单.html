@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>简易三级目录演示</title> 
+<style> 
+<!-- 
+/*bg maiji(http://www.macji.com)*/ 
+ul,li,p{margin:0; padding:0; list-style:none; font-size:12px} 
+.m_menu_title{height:24px;line-height:24px;text-align:center;margin:0 1px} 
+.m_menu_content{border-top:solid 1px #ccc;padding:8px 2px} 
+/*一级*/ 
+.m_menu_content p{height:22px;line-height:22px} 
+.m_menu_content p a{color:#666633;font-weight:bold;text-decoration:none;background:url(http://www.macji.com/blog/img/icon.gif) no-repeat 8px 4px;padding:0 0 0 30px;display:block} 
+.m_menu_content p a:hover{color:#fe8005;font-weight:bold;text-decoration:none} 
+.m_menu_content p a.on{background-position:8px -18px} 
+/*二级*/ 
+.menu2{ } 
+.menu2 li{line-height:22px} 
+.menu2 a{color:#000; text-decoration:none; display:block; padding:0 0 0 40px; background:url(http://www.macji.com/blog/img/icon.gif) no-repeat 18px 4px;} 
+.menu2 a.on{background-position:18px -18px} 
+/*三级*/ 
+.menu2 ul{} 
+.menu2 ul a{background-position:30px -39px; padding:0 0 0 50px; color:#666633; text-decoration:underline} 
+.menu2 ul a:hover{background-color:#f5f5f5; color:#f60} 
+
+
+</style> 
+
+</head> 
+
+<body> 
+<div style="width:200px; border:solid 1px #ccc"> 
+      <div class="m_menu_title">管理中心</div> 
+    <div class="m_menu_content"> 
+         <p><a href="#his" onclick="setMenuList(1)" id="p1">一级目录1</a></p> 
+           <ul id="ul1" class="menu2" style="display:none"> 
+               <li><a href="#his" onclick="setMenuList(11)" id="p11">二级目录(1)</a> </li>
+               <li><a href="#his" onclick="setMenuList(12)" id="p12">二级目录(2)</a></li> 
+               <li><a href="#his" onclick="setMenuList(13)" id="p13">二级目录3)</a> 
+           </ul>
+         <p><a href="#his" onclick="setMenuList(2)" id="p2">一级目录2</a></p> 
+            <ul id="ul2" class="menu2" style="display:none"> 
+               <li><a href="#his" onclick="setMenuList(21)" id="p21">二级目录(21)</a> </li>
+               <li><a href="#his" onclick="setMenuList(22)" id="p22">二级目录(22)</a></li> 
+               <li><a href="#his" onclick="setMenuList(23)" id="p23">二级目录(23)</a> 
+           </ul> 
+        
+        
+        
+        
+    
+        
+       <p><a href="#his" onclick="setMenuList(3)" id="p3">一级目录3</a></p> 
+       
+          <ul id="ul3" class="menu2" style="display:none"> 
+        <li> 
+            <a href="#his" onclick="setMenuList(31)" id="p31">二级目录(老二)</a> 
+
+        </li> 
+         
+        <li> 
+            <a href="#his" onclick="setMenuList(32)" id="p32">二级目录(老二)</a> 
+
+        </li> 
+         
+        <li> 
+            <a href="#his" onclick="setMenuList(33)" id="p33">二级目录(老二)</a> 
+ 
+        </li> 
+        </ul> 
+         
+           
+      <p><a href="#his" class="on">退出</a></p> 
+    </div> 
+</div>  
+  <script> 
+  // <![CDATA[ 
+  /* 
+   
+  这里是直接写死了,根据传入的id编号,判断是否显示,不显示就显示 
+  id编号是有规律的,可用服务器端语言循环出目录 
+   
+  */ 
+  function setMenuList(num){ 
+      var p = document.getElementById('p' + num); 
+    var ul = document.getElementById('ul' + num); 
+    if(ul.style.display == 'none'){ 
+        ul.style.display = ''; 
+        p.className = "on"; 
+    }else{ 
+        ul.style.display = 'none'; 
+        p.className = ""; 
+    } 
+  } 
+  // ]]> 
+  </script> 
+</body> 
+</html> 
+

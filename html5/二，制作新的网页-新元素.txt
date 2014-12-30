@@ -1,0 +1,256 @@
+制作新的网页：http://www.prosetech.com/html5/
+
+第四章：Web表单
+表单控件：
+单行文本框 <input type="text">      显示文本框，用户可以在其中填写内容
+           <input type="password">  如果是密码内容用星号（*）或点号（‘）代替
+		   
+多行文本框 <textarea>...</textarea> 显示文本框，可以输入多行文本
+
+复选框     <input type="checkbox">  显示复选框，可以作为开关。选中或取消选中
+
+单选按钮   <input type="radio">     显示单选按钮，相同的name属性。用户只能选中其中一个
+
+按钮       <input type="submit">    显示单击按钮，用于收集标准表单数据
+           <input type="image">     显示一幅可以单击的图像而非按钮
+           <input type="reset">     用于重置输入的文本内容
+           <input type="button">    没任何功能但是可以通过js赋予它功能
+
+列表	   <select>...</select>     显示一个选择列表，用<option>元素添加
+
+-------------------------------------------------------------------------------------------
+
+通用占位符文本添加提示:plachholder
+<input id="name" placeholder="Jane Smith">
+这些文本的颜色一般是浅灰色，用以区别用户真正输入的文本。
+无统一的方式来改变样式
+如果有需要可以使用伪类（即-webkit-input-placeholder和-moz-placeholder）
+
+focus伪类，可以在文本框获得焦点时改变其样式。
+input:focus{
+   background:#eaeaea;
+}
+
+焦点：挑选正确的起点 autofocus
+<label for="name">Name<em>*</em></label>
+<input id="name" placeholder="Jane Smith" autofocus><br>
+autofocus: 把焦点给予正确的控件
+placeholder：建议数据格式（兼容性：可以使用Modernizr检查兼容效果，然后使用js）
+
+验证：
+客户端验证 服务端验证
+必须填写：required
+
+关闭验证:禁用验证功能
+<form id="aa" action="aa.cgi" novalidate>
+
+绕过验证：formnovalidate
+
+验证样式:(详情见：css3伪类)
+required(必填)      optional(选填)         //
+valid(有效)         invalid(无效)          //不是实时数据，只有提交才能体现
+in-range(在范围内)  out-of-range(超出范围) //根据控件的min和max属性来判断
+
+可以组合：
+input:required:invalid{
+   background-color:lightyellow;
+}
+有了这条规则，空着的字段就会自动高亮。
+
+使用正则表达式：
+可以通过pattern="[a-z]{3}-[a-z]{3}"  abc-abc
+学习：http://tinyurl.com/jsregex
+(html5,已经专门定义了一个用于输入电子邮件电子的输入类型)
+
+自定义验证：
+<textarea oninput="validateComments(this)"></textarea>
+function validateComments(input){
+     if(input.value.length<10){
+	    input.setCustomValidity("You need..")
+	 }else{
+	    input.setCutomValidity(""); //必要
+	 } 
+}
+这里，onInput事件会触发validateComments()的函数，
+然后调用setCutomValidity()方法。会当做自己的内置的消息
+
+游览器对验证的支持
+如果游览器不支持则通过js解决，使用Modernizr检测。
+<form id="zooKeeperForm" action="processApplication.cgi"
+onsubmit="return validateForm()">
+
+function validateForm() {
+	if (!Modernizr.input.required) {
+		//不支持required属性，因此必须自己编写代码检测
+
+		//首先，取得包含所有元素的数组
+		var inputElements=document.getElementById("zooKeeperForm").elements;
+
+		//接着，遍历数组，检测每个元素
+		for(var i=0;i<inputElements.length;i++){
+             //检测每个元素是否必填
+             if(inputElements[i].hasAttribute("required")){ 
+                //经测试发现ie7不能完成（hasAtteribute无）（可用getAttribute改写）
+             	//如果是必须填写的，则检测其值是否为空
+             	//如果为空，则表单验证失败，返回false
+             	if(inputElements[i].value=="")
+             		{  
+             		   alert("请确保填写完整")
+             		   return false;
+             		} 
+             }
+		} 
+		     //如果到了这儿，则一切顺利
+             //游览器可以提交表单
+             return true;
+	};
+      
+}
+
+也可选择现成的js库：
+webforms2：https://github.com/westonruter/webform2
+所集成的“补丁”html5Widgets：
+http://www.useragentman.com/tests/html5Widgets
+
+几个特殊的输入属性：
+Spellcheck:有些游览器可以帮用户检查输入的拼写是否正确
+Autocomplete:有些游览器为了节省你的时间，会在你想字段中输入信息时提供最近输入的值供你选择
+Autocorrect和autocapitalize:这两个属性可以用来在移动设备上控制
+                            自动纠错和自动大小写功能。
+Multiple:可以多个上传，多个选择。。。等，（type=‘email’支持）
+
+
+新的输入控件：
+HTML5为<input>元素添加了新的类型，如果不能识别（默认当做普通的文本框处理）
+
+<label for='email'>Email <em>*</em></label>
+<input id='email' type='email'></br>
+在支持email类型的游览器中的优点
+1.提供便于编辑的辅助,可以从你的地址蒲中取得电子邮件地址，帮你填到电子邮件字段。
+2.限制可能出现的错误，数值文本框中输入的字母会被游览器忽略，或者无效的日期会被拒绝。
+3.执行验证，在单击提交按钮时，游览器可以执行更加完善的检查。
+(移动设备上的游览器可以定制虚拟键盘，显示或影藏不需要的键)
+
+网址：使用url类型
+
+搜索：使用search类型
+
+电话号码：使用tel类型，在移动游览器中定制虚拟键盘，键盘中只包含数字，没有子母。
+
+数值：number类型，游览器可以自动忽略非数值字符。
+      默认范围(43000，-6)，设置min='5' max='123' step='0.1' value='160'
+
+滑动条：使用range,可以使用JavaScript响应滑动条的变化事件(onChange)
+      设置min='50' max='1000' value='160'
+
+日期和时间：也支持min和max 如<input type='date' min='2012-01-01' max='2012-12-31'>
+date: 格式为YYY-MM-DD的日期
+time: 格式为HH:mm:ss.ss,用24小时制表示的时间，秒的部分可选
+datetimelocal：格式为YYY-MM-DDTHH:mm:ss,包含日期和时间，中间用T间隔
+datetime：格式为YYY_MM_DDTHH:mm:ss-HH:mm,包含日期和时间，
+          还有一个时区偏移量。
+mouth：格式为YYY-MM，表示年月
+week：格式为YYY-Www,表示年和周，根据年份不同，一年可能有52周或53周
+
+颜色：color类型，提供一个下拉色盘		  
+
+
+新元素
+使用<datalist>显示输入建议
+<legend>What's Your Favorite Animal?</legend>
+<datalist id='animalChoices'>
+     /*<span class='Label'>Pick an option:</span>
+	    <select id='favoriteAnimalPreset'>*/
+			<option label="Alpaca" value="alpaca">
+			<option label="Zebra" value="zebra">
+			<option label="Cat" value="cat">
+		/*</select>
+		<br>
+	 <span class='Label'>Or type it in:</span>*/
+</datalist>
+<input list='animalChoices' name='list'>
+在支持<datalist>的游览器中，正常的显示，不支持的显示select
+
+使用<command>和<menu>创建工具条和菜单
+
+网页中的HTML编辑器
+使用contentEditable编辑元素
+<div id='editableElent'>this is text</div>
+var element=document.getElementById('editableElent');
+开启：element.contentEditable=true;
+关闭：element.contentEditable=false;
+
+使用designMode编辑页面 （与上类似，但是能让用户编辑整个页面）
+<iframe id='pageEditor' src=''></iframe>
+var editor=document.getElementById('pageEditor');
+开启：editor.contentWindow.document.designMode='on';
+关闭：editor.contentWindow.document.designMode='off';
+上面编辑器代码在IE或在Chrome中会启用安全现状，而Firefox则一帆风顺。
+
+
+
+
+	  
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

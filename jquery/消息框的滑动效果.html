@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+	   
+	   $("#button_03").click(function(){
+		  $("#div_01").slideToggle(4000);
+		  });
+		 
+		 
+      $("#button_02").click(function(){
+		 $("#div_01").slideUp("slow");	 
+		 });		 
+	 
+	  $("#button_01").click(function(){
+		  $("#div_01").slideDown("slow");
+		  });
+		  
+	  
+ 
+	 });
+</script>
+
+<link href="css/reset.css"  rel="stylesheet"  type="text/css" />
+
+
+
+</head>
+
+<body>
+
+<div  style=" margin-top:100px">
+<div  id="div_01"  style=" background:#9F9; width:450px; height:180px; border: solid 1px #666; margin:0 auto; margin-top:100px"> 
+   
+   <div  style="font-size:15px ; line-height:30px ; color:#00C; margin:0 auto; width:120px">
+    春　晓 </br>
+ （唐）　孟浩然 </br>
+ 春眠不觉晓,</br> 
+ 处处闻啼鸟。 </br>
+ 夜来风雨声，</br> 
+ 花落知多少。</br>
+  </div>
+
+
+
+</div>
+<div style=" background:#CC6; width:450px; height:50px; border: solid 1px #903; margin:0 auto; border-top: none">
+  <input  id="button_01"  type="button"  value="滑出信息" style="background-color: #F36; width:80px; height:30px ; margin-left:40px; margin-top:11px"  />
+  <input  id="button_02"  type="button"  value="收回信息" style="background-color: #F36;width:80px; height:30px; margin-left:40px; margin-top:11px" />
+  <input  id="button_03"  type="button"  value="弹出收回" style="background-color: #F36;width:80px; height:30px; margin-left:40px; margin-top:11px"  />
+</div>
+
+</div>
+
+
+</body>
+</html>

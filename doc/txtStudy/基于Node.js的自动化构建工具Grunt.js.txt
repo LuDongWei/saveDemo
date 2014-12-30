@@ -1,0 +1,25 @@
+基于Node.js的自动化构建工具Grunt.js  (http://www.wumii.com/item/AFE5Vq6m)
+
+流行的插件
+
+v0.4版以后，各种常用插件基本都归入了 grunt-contrib-xxx系列。下面介绍几个比较常用的插件：
+
+grunt-contrib-clean: 用于清理指定文件（夹），一般是构建之前或之后进行
+
+grunt-contrib-coffee: 将CoffeeScript编译为JavaScript
+
+grunt-contrib-compass: 调用Compass工具生成CSS文件
+
+grunt-contrib-concat: 连接源文件，减少HTTP请求
+
+grunt-contrib-copy: 复制文件（夹）
+
+grunt-contrib-handlebars: 将handlebars模板预编译为JST文件，提高运行时性能
+
+grunt-contrib-jasmine: 借助Jasmine在PhantomsJS中运行单元测试，结合grunt-template-jasmine-istanbul，还能实现单元测试覆盖率计算
+
+grunt-contrib-jshint: JS代码质量检查工具，类似jsLint
+
+grunt-contrib-watch: 监视磁盘文件，一旦更改就会重新运行指定的任务，例如使http服务器重新加载源文件
+
+grunt-contrib-ugligy: 压缩JS源文件，提高运行时性能

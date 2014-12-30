@@ -1,0 +1,89 @@
+#*
+  会员专享领麦豆列表 298*263宽图片 默认960行  一行3列
+  设置 #set($newImg=http://img/) 设置外部引用图片
+  -----------------------------------
+  使用页面  会员专享页面（领福袋）      
+*#
+
+
+<div class="mbb-goods">
+  <ul>
+    #foreach($item in $skuList)
+            #if($item.url)
+                #set ($itemUrl = $item.url)
+            #else
+                #set ($itemUrl = $item.itemurl)
+            #end
+            #if($newImg)
+               #set ($vNewImg = "$newImg${item.skuid}.jpg")
+            #else
+               #set ($vNewImg = $item.imgUrl(320))
+            #end
+    <li>
+      <div class="be-itme">
+        <div class="b-head">
+          可得
+          <strong>$item.name</strong>
+          麦豆
+        </div>
+        <div class="b-pic">
+          <a href="$itemUrl" target="_blank" > 
+            <img data-oxlazy="$vNewImg" src="http://cca.mbaobao.com/static/css/3.0.0/img/blank.png"  width="298px" height="263px"></a>
+        </div>
+        <div class="b-inf">
+          <div class="price-1">
+            <p class="p-1">
+              <del>麦包价${item.saleprice.ToString('0')}元</del>
+            </p>
+            <p class="p-2">
+              #if($item.ispromotionprice)
+                <strong>VIP特惠价￥</strong>
+              #else
+                <strong>VIP麦包价￥</strong>
+              #end
+            </p>
+          </div>
+          <div class="price-2">
+             #if($item.ispromotionprice)
+            <p>${item.promotionprice.ToString('0')}</p>
+            #else
+            <p>${item.saleprice.ToString('0')}</p>
+            #end
+          </div>
+          <div class="discount">
+            #if($item.ispromotionprice)
+               <p>${item.discount}折</p>
+            #end
+          </div>
+          <div class="go">
+            <i></i>
+            <a href="http://cart.mbaobao.com/add/${item.skuid}/1.html" target="_blank" >
+              <span>
+                立即
+                <br>抢购</span>
+              <div class="right"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+     #end 
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,788 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://cca.mbaobao.com/static/css/2.0.1/global.css?0917" media="all" />
+<script type="text/javascript" src="http://cca.mbaobao.com/static/mod/min/f=seajs/seajs/2.0.0/sea.js,seajs/seajs/2.0.0/plugin-style.js,seajs/seajs/2.0.0/plugin-mbb.js,mbb/config/2.0.1/sea-config.js,arale/events/1.0.0/events.js,gallery/cookie/1.0.2/cookie.js,jquery/jquery/1.7.2/jquery.js?09233"></script>
+</head>
+
+<body> 
+
+<style type="text/css">
+.g-purchase .bay,.g-bless .h-bay,.g-bless .n-bay,.se-time li span,.be-inf dt i,.be-inf dd i,.mbb-goods .b-head,.b-inf .discount,.b-inf .go i,.b-inf .go .right,.g-head .p-1 i,.g-head .xp-close{background:url(http://cca.mbaobao.com/mkts/201408/20/fud/icon.png);}
+/* --秒杀-- */
+.mbb-seckill{padding-bottom:74px;}
+.mbb-seckill .se-time{background:url(http://cca.mbaobao.com/mkts/201408/09/luck/skip.png) no-repeat top center;width:874px;height:100px;margin:0 auto;margin-top:30px;}
+.se-time ul{width:874px;height:100px;position:relative;}
+.se-time li{width:80px;text-align:center;font-size:18px;color:#8c2c86;position:absolute;top:5px;cursor:pointer;}
+.se-time li.on{color:#ffffff;}
+.se-time li span{display:block;width:26px;height:33px;margin-left:27px;*margin-left:0px;background-position:-27px -115px;}
+.se-time li.on span{background-position:0px -115px;}
+.se-time li .time{line-height:25px;}
+.se-time li .state{line-height:36px;}
+.se-time li.t-1{left:33px;}
+.se-time li.t-2{left:259px;}
+.se-time li.t-3{left:488px;}
+.se-time li.t-4{left:712px;}
+.se-goods{height:386px;}
+.se-goods .b-pic{position:relative;}
+.se-goods .b-pic a{width:301px;height:263px;display:block;}
+.se-goods .b-time{position:absolute;top:2px;left:60px;text-align:center;width:168px;margin:0 auto;height:26px;padding:5px;line-height:25px;}
+.b-time .clock{float:left;}
+.b-time .clock img{vertical-align:middle;}
+.b-time .over{float:left;}
+.b-time .countdown{display:block;width:92px;height:24px;line-height:24px;background:url(http://cca.mbaobao.com/mkts/201408/20/fud/ms_02.png) no-repeat top center;color:#ffffff;font-size:16px;font-weight:bolder;float:left;overflow:hidden;}
+.countdown span{display:block;text-align:center;float:left;}
+.countdown .h{width:25px;}
+.countdown .m{width:42px;}
+.countdown .s{width:25px;}
+.se-goods .b-inf .price-1{width:77px;padding-left:10px;}
+.se-goods .b-inf  .discount{margin-left:7px;margin-right:9px;}
+.se-goods .b-inf .price-1 .p-2{font-size:16px;}
+/* --麦豆专享-- */
+.mbb-bean{}
+.mbb-goods{width:940px;overflow:hidden;margin:0 auto; height:386px;}
+.mbb-goods ul{width:986px;overflow:hidden;}
+.mbb-goods ul li{float:left;margin-top:15px;margin-right:12px;}
+.mbb-goods .be-itme{width:304px;height:366px;}
+.mbb-goods .b-head{width:304px;height:49px;background-position:-0px -198px;font-size:24px;color:#ffffff;text-align:center;}
+.mbb-goods .b-head strong{font-size:30px;}
+.mbb-goods .b-pic{margin-left:2px;margin-top:-3px;height:263px;}
+.b-inf{width:298px;height:59px;background-color:#e7e7e7;overflow:hidden;color:#4f4f4f;margin:0 auto;}
+.b-inf .price-1{width:87px;float:left;padding-left:5px;margin-top:5px;}
+.price-1 .p-1{font-size:12px;line-height:22px;}
+.price-1 .p-2{font-size:14px;line-height:28px;}
+.b-inf .price-2{width:70px;float:left;color:#e32d75;font-size:37px;font-weight:bolder;line-height:67px;}
+.b-inf .discount{text-align:center;width:53px;height:22px;line-height:22px;float:left;background-position:-113px -118px;color:#e32d75;font-weight:bolder;margin-top:23px;margin-left:4px;margin-right:7px;}
+.b-inf .go{width:72px;height:59px;background-color:#e32d75;float:left;position:relative;}
+.b-inf .go i{width:6px;height:12px;position:absolute;background-position:-237px -13px;top:22px;left:-6px;}
+.b-inf .go a{display:block;width:72px;height:59px;font-size:16px;color:#ffffff;font-weight:bolder;text-align:center;padding-top:4px;}
+.b-inf .go .right{width:12px;height:24px;float:right;background-position:-237px -26px;position:absolute;top:15px;right:2px;}
+.mbb-bean .be-inf{padding:20px;color:#085566;font-family:"微软雅黑";font-size:14px;margin-top:20px;}
+.be-inf dt{font-weight:bolder;font-size:16px;}
+.be-inf dt i{display:block;width:22px;height:25px;background-position:-173px -118px;float:left;margin-right:5px;}
+.be-inf dd{padding-left:26px;line-height:25px;}
+.be-inf dd i{vertical-align:middle;display:block;float:left;width:18px;height:18px;margin-top:3px;margin-right:3px;}
+.be-inf dd.b-1 i{background-position:-200px -122px;}
+.be-inf dd.b-2 i{background-position:-219px -122px;}
+.be-inf dd.b-3 i{background-position:-238px -122px;}
+/* --已经抢完-- */
+.be-itme{position:relative;}
+.be-itme .robberyNo{position:absolute;width:299px;height:320px;left:2px;top:46px;}
+.robberyNo .no-text{position:absolute;color:#ffffff;font-size:50px;font-weight:bolder;width:100%;height:100%;text-align:center;z-index:999;line-height:320px;}
+.robberyNo .no-tier{width:100%;height:100%;filter:alpha(opacity=50);opacity:0.5;background-color:#666666;}
+</style>
+
+
+<style type="text/css">
+.wrapper{ width:100%;}
+.wrapper_mian{position:relative; width:100%; z-index:1; height:608px; overflow:hidden;}
+.wrapper_mian .wrapper_mian_bk{ position:absolute; top:0; left:0; z-index:2; width:100%; min-width:960px;}
+.wrapper_mian .wrapper_mian_bk div{ width:100%; height:100px;}
+.main_{ width:960px; margin:0 auto;}
+
+.mbb_mian{width:100; position:relative; z-index:3}
+.mbb_mian .mbb_mian_botton{text-align:center;height:608px;}
+
+.clearfix:after {content: ".";display: block;
+    height: 0;clear: both; visibility: hidden;}
+.clearfix {zoom: 1;}
+
+/*--秒杀--*/
+.skTime{
+	width:948px;
+	border:6px solid #f29b33;
+	border-bottom:none;
+}
+.skTime .time{
+	background-color:#ffffff;
+	height:88px;
+}
+.skTime .time li{
+	float:left;
+	visibility:hidden;
+	background:url(http://cca.mbaobao.com/mkts/201409/25/szn/back.jpg) no-repeat;
+}
+.skTime .time li a{
+	display:block;
+	width:237px;
+   	height:79px;
+    background:url(http://cca.mbaobao.com/mkts/201409/25/szn/btime.png?2014) no-repeat;
+}
+.skTime li a.t-1{background-position:0px 0px;}
+.skTime li a.t-2{background-position:-237px 0px;}
+.skTime li a.t-3{background-position:-474px 0px;}
+.skTime li a.t-4{background-position:-711px 0px;}
+
+.skTime li.over a{ cursor:default;}
+.skTime li.over a.t-1{background-position:0px -158px;}
+.skTime li.over a.t-2{background-position:-237px -158px;}
+.skTime li.over a.t-3{background-position:-474px -158px;}
+.skTime li.over a.t-4{background-position:-711px -158px;}
+
+.skTime li.begin a.t-1{background-position:0px -79px;}
+.skTime li.begin a.t-2{background-position:-237px -79px;}
+.skTime li.begin a.t-3{background-position:-474px -79px;}
+.skTime li.begin a.t-4{background-position:-711px -79px;}
+
+.skTime li{background-position:0px 0px;}
+.skTime li.over{background-position:-474px 0px;}
+.skTime li.begin{background-position:-237px 0px;}
+
+.skTime li.selected{border-bottom: 3px solid #F16300; padding-bottom: 6px;}
+
+/*--人气爆款--*/
+.hits{
+
+}	
+.hits .hits-list{
+	overflow:hidden;
+	height: 304px;
+}	
+.hits .hits-list li{
+	float:left;
+	position:relative;
+}
+.hits-list li a{
+    position:absolute;
+    display:block;
+    width:91px;
+    height:21px;	
+	left:10px;
+	bottom:12px;
+}	
+.hits-list li.begin a{
+	background:url(http://cca.mbaobao.com/mkts/201409/25/szn/day/begin.png) no-repeat top center;	
+}	
+.hits-list li.noBegin a{
+	background:url(http://cca.mbaobao.com/mkts/201409/25/szn/day/noBegin.png) no-repeat top center;		
+}	
+.hits-list li.begin img,.hits-list li.noBegin img,.hits-list li.hDay img{
+	margin-top:20px; 
+}
+.hits-list li .time{
+	display:block;
+	width:110px;
+	height:33px;
+	line-height:33px;
+	position:absolute;
+	background-color:#e5e5e5; 
+	top:20px;
+	left:0px;
+	color:#5c5c5c;
+	text-align:center;
+	font-size:18px;
+}
+.hits-list li.begin .time{
+	/*background-color:#E21A53;
+	color:#ffffff;*/
+}
+.hits-list li.Selected .time{
+	color:#ffffff;
+}
+
+.hits-list li.Selected .te_01{background-color:#BB7D10;}
+.hits-list li.Selected .te_02{background-color:#2781CD;}
+.hits-list li.Selected .te_03{background-color:#FF01A2;}
+.hits-list li.Selected .te_04{background-color:#8334F1;}
+.hits-list li.Selected .te_05{background-color:#8EC718;}
+.hits-list li.Selected .te_06{background-color:#FFC001;}
+.hits-list li.Selected .te_07{background-color:#F03433;}
+
+.goodList .banner{
+	width:960px;
+	height:46px;
+	padding-top:20px;
+	padding-bottom:10px;
+}
+.goods-show{
+	display:none;
+}
+/*---订阅弹框（红白）---*/ 
+#subscibe{background-color:#d31749!important;}
+.sb-head .sb-name{color:#fff!important;font-weight:normal!important;}
+.sb-close .cl-i{background-color:#fff!important;color:#d41548!important;}
+.sb-main .in-2{background-color:#d31749!important;color:#fff!important;font-weight:normal!important;}
+</style>
+
+
+<style type="text/css">
+.dh-text{
+  -webkit-animation:fadeInDown 1s .4s ease both;
+  -moz-animation:fadeInDown 1s .4s ease both;
+}	
+.dh-seven{
+  -webkit-animation:fadeInDown 1s .8s ease both;
+  -moz-animation:fadeInDown 1s .8s ease both;
+}
+.dh-left1{
+  -webkit-animation:tada 1s 0s ease both;
+  -moz-animation:tada 1s 0s ease both;
+}
+.dh-right1{
+  -webkit-animation:rotateInDownLeft 1s 1.5s ease both;
+  -moz-animation:rotateInDownLeft 1s 1.5s ease both;
+}
+.dh-right2{
+  -webkit-animation:rotateInDownLeft 1s 1.5s ease both;
+  -moz-animation:rotateInDownLeft 1s 1.5s ease both;
+}
+
+/*--文字--*/
+@-webkit-keyframes fadeInDown{
+0%{opacity:0;
+-webkit-transform:translateY(-20px)}
+100%{opacity:1;
+-webkit-transform:translateY(0)}
+}
+@-moz-keyframes fadeInDown{
+0%{opacity:0;
+-moz-transform:translateY(-20px)}
+100%{opacity:1;
+-moz-transform:translateY(0)}
+}
+
+/*--气球--*/
+@-webkit-keyframes tada{
+0%{-webkit-transform:scale(1)}
+10%,20%{-webkit-transform:scale(0.9) rotate(-3deg)}
+30%,50%,70%,90%{-webkit-transform:scale(1.1) rotate(3deg)}
+40%,60%,80%{-webkit-transform:scale(1.1) rotate(-3deg)}
+100%{-webkit-transform:scale(1) rotate(0)}
+}
+@-moz-keyframes tada{
+0%{-moz-transform:scale(1)}
+10%,20%{-moz-transform:scale(0.9) rotate(-3deg)}
+30%,50%,70%,90%{-moz-transform:scale(1.1) rotate(3deg)}
+40%,60%,80%{-moz-transform:scale(1.1) rotate(-3deg)}
+100%{-moz-transform:scale(1) rotate(0)}
+}
+/*--right--*/
+@-webkit-keyframes rotateInDownLeft{
+0%{-webkit-transform-origin:left bottom;
+-webkit-transform:rotate(-20deg);
+opacity:0}
+100%{-webkit-transform-origin:left bottom;
+-webkit-transform:rotate(0);
+opacity:1}
+}
+@-moz-keyframes rotateInDownLeft{
+0%{-moz-transform-origin:left bottom;
+-moz-transform:rotate(-20deg);
+opacity:0}
+100%{-moz-transform-origin:left bottom;
+-moz-transform:rotate(0);
+opacity:1}
+}
+
+.goods-list-show{
+	width:966px;
+	overflow:hidden;
+}
+.s7-m-4{
+	width:237px;
+	overflow:hidden;
+}
+</style>
+
+
+<script type="text/javascript">
+var dImg={
+     '01':'<img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/1001.png" width="300" height="300" />',
+     '02':'<img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/1002.png" width="300" height="300" />',
+     '03':'<img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/1003.png" width="300" height="300" />',
+     '04':'<img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/1004.png" width="300" height="300" />',
+     '05':'<img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/1005.png" width="300" height="300" />',
+     '06':'<img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/1006.png" width="300" height="300" />',
+     '07':'<img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/1007.png" width="300" height="300" />' 	  
+}	
+</script>
+
+<!--悬浮框-->
+<div style="z-index:999;width:120px;height:419px;position:fixed;top:100px;right:auto;left:50%; margin-left:-635px; _position:absolute;_top:expression(eval(document.documentElement.scrollTop)+170);overflow:hidden;" id="xp_ball_bb">
+  <img src="http://cca.mbaobao.com/mkts/201409/25/szn/head/float.png" width="120" height="450" border="0" usemap="#Map99" style="display:none;"  />
+    <map name="Map99" id="Map99">
+      <area shape="rect" coords="4,103,116,163" href="#top_01" />
+      <area shape="rect" coords="3,162,114,218" href="#top_02" />
+      <area shape="rect" coords="4,223,113,388" href="#top_03" />
+      <area shape="rect" coords="8,393,117,418" href="#top" />
+    </map>
+</div>
+
+
+<!--head-->
+<div class="wrapper_mian" style="background-color:#f29b33;">
+	<!-- <div class="mbb_mian">
+		<div class="mbb_mian_botton" style="position:absolute;top:0; left:0;width:100%; padding:0px;">
+			<img src="http://cca.mbaobao.com/mkts/201401/21/bgmain.gif" width="960" height=""/>              
+	    </div>
+	</div> -->
+
+	<!--动态效果-->    
+    <div class="mbb_mian_botton" style="position:absolute;top:49px; left:0;width:100%; padding:0px;height:70px;z-index:999;">
+    	<div class="main_">
+	         <!--头部动画-->
+                 <div style="position:relative">
+                      <span class="dh-text" style="width:497px;height:44px;position:absolute;left:231px;top:5px;">
+                         <img src="http://cca.mbaobao.com/mkts/201409/25/szn/head/01.png" width="497" height="44" />
+                      </span> 
+                      <span id="dhleft"  style="width:90px;height:126px;position:absolute;left:0px;top:40px;">
+                         <img src="http://cca.mbaobao.com/mkts/201409/25/szn/head/02.png" width="90" height="126" />
+                      </span>  
+                      <span class="dh-right1" style="width:122px;height:97px;position:absolute;right:70px;top:0px;">
+                         <img src="http://cca.mbaobao.com/mkts/201409/25/szn/head/03.png?2014" width="122" height="97" />
+                      </span>
+                      <span class="dh-right2" style="width:194px;height:151px;position:absolute;right:-5px;top:60px;">
+                         <img src="http://cca.mbaobao.com/mkts/201409/25/szn/head/brand2.png" width="184" height="143" />
+                      </span>
+                      <span class="dh-seven" style="width:153px;height:192px;position:absolute;left:407px;top:20px;">
+                         <img src="http://cca.mbaobao.com/mkts/201409/25/szn/head/banner_03.png" width="153" height="192" />
+                      </span>
+                 </div>
+             <!--头部动画-->
+	    </div>  
+    </div>
+    
+    <!--秒杀头部-->    
+    <div class="mbb_mian_botton" style="position:absolute;top:456px; left:0;width:100%; padding:0px;height:70px;z-index:999;" id="top_01" name="top_01">
+    	<div class="main_">
+             <div style="width:524px; margin:0 auto;">
+	          <img src="http://cca.mbaobao.com/mkts/201409/25/szn/time.png" width="524" height="144" />
+             </div> 
+	    </div>  
+    </div>
+
+    <!--data-oxlazy-->
+	<div class="wrapper_mian_bk">
+		<div class="wrapper_mian_bk_01" style="background:url(http://cca.mbaobao.com/mkts/201409/25/szn/gqs_01.jpg);background-position: center top; background-repeat: no-repeat;height:100px;" style2="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_02" style="background:url(http://cca.mbaobao.com/mkts/201409/25/szn/gqs_02.jpg);background-position: center top; background-repeat: no-repeat;height:100px;" style2="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_03" style="background:url(http://cca.mbaobao.com/mkts/201409/25/szn/gqs_03.jpg);background-position: center top; background-repeat: no-repeat;height:100px;" style2="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_04" style="background:url(http://cca.mbaobao.com/mkts/201409/25/szn/gqs_04.jpg);background-position: center top; background-repeat: no-repeat;height:100px;" style2="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_05" style="background:url(http://cca.mbaobao.com/mkts/201409/25/szn/gqs_05.jpg);background-position: center top; background-repeat: no-repeat;height:100px;" style2="background-position: center top; background-repeat: no-repeat;height:100px;"></div>
+		<div class="wrapper_mian_bk_06" style="background:url(http://cca.mbaobao.com/mkts/201409/25/szn/gqs_06.jpg);background-position: center top; background-repeat: no-repeat;height:108px;" style2="background-position: center top; background-repeat: no-repeat;height:108px;"></div>
+	</div>
+</div>
+
+<!--秒杀-->
+<div class="wrapper" style="background-color:#fff3b1;padding-bottom:30px;">
+	<div class="main_">
+		 
+		 <div class="skList">
+		      <div class="skTime">
+		      	   <ul class="time clearfix" id="cTime">
+		      	   	 <li data-id="0">
+		      	   	 	<a class="t-1" href="javascript:void(0)"></a>
+		      	   	 </li>
+		      	   	 <li data-id="1">
+		      	   	 	<a class="t-2" href="javascript:void(0)"></a>
+		      	   	 </li>
+		      	   	 <li data-id="2">
+		      	   	 	<a class="t-3" href="javascript:void(0)"></a>
+		      	   	 </li>
+		      	   	 <li data-id="3">
+		      	   	 	<a class="t-4" href="javascript:void(0)"></a>
+		      	   	 </li>
+		      	   </ul>
+		      </div>
+
+             <!--goods list-->
+             <div style="background-color:#ffffff;border:6px solid #f29b33;border-top:none;padding-bottom:20px;">
+				 <div class="mbb-goods se-goods">
+				 	<ul>
+				 		<li id="skGood01">
+				 		</li>
+				 		<li id="skGood02">
+				 		</li>
+				 		<li id="skGood03">
+				 		</li>
+				 	</ul>
+				 </div>
+			 </div>
+
+		 </div> 
+	</div>
+</div>
+
+
+
+<!--人气-->
+<div class="wrapper" style="background-color:#ff8888;padding-bottom:50px;" id="top_02" name="top_02">
+	<div class="main_">
+		<div class="head">
+			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/gqs_07.jpg" width="960" height="143" />
+		</div>
+
+        <div class="hits">
+        	 <ul class="hits-list" id="hitsList">
+        	 	<li class="hDay"  data-id="101">
+                   <span class="time te_01">
+        	 	   	   10月1日
+        	 	   </span>	
+                   <img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/01.jpg" width="110" height="260" />
+                   <a href="javascript:void(0)"></a>
+                   <!--  <img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/1001.png" width="300" height="300" /> -->
+        	 	</li>
+        	 	<li class="hDay"  data-id="103">
+        	 	   <span class="time te_02">
+        	 	   	   10月2日
+        	 	   </span>	
+                   <img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/02.jpg" width="110" height="260" />
+                   <a href="javascript:void(0)"></a>
+        	 	</li>
+        	 	<li class="hDay"  data-id="104">
+        	 	   <span class="time te_03">
+        	 	   	   10月3日
+        	 	   </span>	
+                   <img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/03.jpg" width="110" height="260" />
+                   <a href="javascript:void(0)"></a>
+        	 	</li>
+        	 	<li class="hDay"  data-id="105">
+        	 	    <span class="time te_04">
+        	 	   	   10月4日
+        	 	   </span>
+                   <img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/04.jpg" width="110" height="260" />
+                   <a href="javascript:void(0)"></a>
+        	 	</li>
+        	 	<li class="hDay"  data-id="106">
+        	 	   <span class="time te_05">
+        	 	   	   10月5日
+        	 	   </span>	
+                   <img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/05.jpg" width="110" height="260" />
+                   <a href="javascript:void(0)"></a>
+        	 	</li>
+        	 	<li class="hDay"  data-id="107">
+        	 	   <span class="time te_06">
+        	 	   	   10月6日
+        	 	   </span>
+                   <img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/06.jpg" width="110" height="260" />
+                   <a href="javascript:void(0)"></a>
+        	 	</li>
+        	 	<li class="hDay"  data-id="108">
+        	 	   <span class="time te_07">
+        	 	   	   10月7日
+        	 	   </span>	
+                   <img src="http://cca.mbaobao.com/mkts/201409/25/szn/day/07.jpg" width="110" height="260" />
+                   <a href="javascript:void(0)"></a>
+        	 	</li>
+        	 </ul>
+        </div> 
+        
+
+        <div class="goodList" id="goodsHot">  
+            <!--10-1-->
+            <div class="goods-show" data-load="loading">
+            	<textarea rows="0" cols="0" class="hot-loading">
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/01/1.jpg" width="960" height="46" />           
+            		</div>
+                    <div class="goods-list-show" >
+            		$tUtil.GetToHTML("1001-1","lazyload=0","width=238","height=238")
+            		</div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/01/2.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1001-2","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/01/3.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1001-3","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/01/4.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1001-4","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/01/5.jpg" width="960" height="46" />         
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1001-5","lazyload=0","width=238","height=238")
+            	    </div>
+            	</textarea>
+            </div>
+            <!--10-1-->
+            
+            <!--10-2--> 
+            <div class="goods-show" data-load="loading">
+            	<textarea rows="0" cols="0" class="hot-loading">
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/02/1.jpg" width="960" height="46" />                    
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1002-1","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/02/5.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1002-2","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/02/4.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1002-3","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/02/3.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1002-4","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/02/2.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1002-5","lazyload=0","width=238","height=238")
+            	    </div>
+            	</textarea>
+            </div>
+            <!--10-2-->
+            
+            <!--10-3--> 
+            <div class="goods-show" data-load="loading">
+            	<textarea rows="0" cols="0" class="hot-loading">
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/03/1.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1003-1","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/03/2.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1003-3","lazyload=0","width=238","height=238")
+            	    </div>
+            	</textarea>
+            </div>	
+            <!--10-3-->
+            
+            <!--10-4--> 
+            <div class="goods-show" data-load="loading">
+            	<textarea rows="0" cols="0" class="hot-loading">
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/04/1.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1004-1","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/04/2.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1004-2","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/04/3.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1004-3","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/04/4.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1004-4","lazyload=0","width=238","height=238")
+            	    </div>
+            	</textarea>
+            </div>
+            <!--10-4-->
+            
+            <!--10-5--> 
+            <div class="goods-show" data-load="loading">
+            	<textarea rows="0" cols="0" class="hot-loading">
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/05/2.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1005-1","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/05/3.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1005-2","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/05/4.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1005-3","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/05/5.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1005-4","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/05/1.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1005-5","lazyload=0","width=238","height=238")
+            	    </div>
+            	</textarea>
+            </div> 
+            <!--10-5-->
+            
+            <!--10-6--> 
+            <div class="goods-show" data-load="loading">
+            	<textarea rows="0" cols="0" class="hot-loading">
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/06/5.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            	    $tUtil.GetToHTML("1006-1","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/06/2.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1006-2","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/06/3.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1006-3","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/06/1.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1006-4","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/06/4.jpg" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1006-5","lazyload=0","width=238","height=238")
+            	    </div>
+            	</textarea>
+            </div>
+            <!--10-6-->
+            
+            <!--10-7--> 
+            <div class="goods-show" data-load="loading">
+            	<textarea rows="0" cols="0" class="hot-loading">
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/07/1.jpg?20140929" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1007-4","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/07/2.jpg?2014" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1007-1","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/07/3.jpg?2014" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1007-2","lazyload=0","width=238","height=238")
+            	    </div>
+            		<div class="banner">
+            			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/banner/07/4.jpg?2014" width="960" height="46" />            
+            		</div>
+            		<div class="goods-list-show" >
+            		$tUtil.GetToHTML("1007-3","lazyload=0","width=238","height=238")
+            	    </div>
+            	</textarea>
+            </div>
+            <!--10-7-->
+            
+        </div>
+	</div>
+</div>
+
+<!--手机-->
+<div class="wrapper" style="background-color:#71cce6;" id="top_03" name="top_03">
+	<div class="main_">
+		<div class="head">
+			<img src="http://cca.mbaobao.com/mkts/201409/25/szn/gqs_08.jpg" width="960" height="168" border="0" usemap="#Map2" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="378,115,576,163" href="http://mkt.mbaobao.com/a-guoqingmobile/" target="_blank" />
+            </map>
+      </div>
+		<div style="font-size:0px;">
+			<img src="http://cca.mbaobao.com/mkts/201409/29/br/br_01.jpg" width="960" height="156" />
+            <img src="http://cca.mbaobao.com/mkts/201409/29/br/br_02.jpg" width="960" height="156" />
+            <img src="http://cca.mbaobao.com/mkts/201409/29/br/br_03.jpg" width="960" height="156" />
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+seajs.use("gallery/lazyload/2.0.0/lazyLoad")
+</script>
+
+<script type="text/javascript">
+seajs.use("jquery", function($){
+    $(window).scroll(function(){
+       var win_top=$(document).scrollTop();
+       if(win_top>=500){
+           $('#xp_ball_bb').find('img').show();
+       }else{
+           $('#xp_ball_bb').find('img').hide();
+       }
+    })
+})
+</script>
+
+
+<script type="text/javascript">
+//动画定时
+$(function(){
+	 //left
+	 setInterval(function(){
+
+        $("#dhleft").addClass("dh-left1");
+
+        var aa=setTimeout(function(){
+        
+          $("#dhleft").removeClass("dh-left1");       
+          
+          clearTimeout(aa);  
+        },2000) 
+	 },3500)
+})	
+</script>
+
+
+<script type="text/javascript">
+//秒杀数据
+var dateSale={"0924":["6971,6972,6973","6974,6975,6976","6977,6978,6979","6980,6978,6973"],
+			  "0925":["6971,6972,6973","6974,6975,6976","6977,6978,6979","6980,6978,6973"],
+			  "0926":["6971,6972,6973","6974,6975,6976","6977,6978,6979","6980,6978,6973"],
+			  "0927":["6971,6972,6973","6974,6975,6976","6977,6978,6979","6980,6978,6973"],
+			  "0928":["6971,6972,6973","6974,6975,6976","6977,6978,6979","6980,6978,6973"],
+			  "0929":["6971,6972,6973","6974,6975,6976","6977,6978,6979","6980,6978,6973"],
+			  "0930":["6971,6972,6973","6974,6975,6976","6977,6978,6979","6980,6978,6973"],
+
+              "1001":["9468,9469,9470","9471,9472,9473","9474,9475,9476","9477,9478,9479"],
+			  "1002":["9480,9481,9482","9483,9484,9485","9486,9487,9488","9489,9490,9491"],
+			  "1003":["9492,9493,9494","9495,9496,9497","9498,9499,9500","9501,9502,9503"],
+			  "1004":["9504,9505,9506","9507,9508,9509","9510,9511,9512","9513,9514,9515"],
+			  "1005":["9516,9517,9518","9519,9520,9521","9522,9523,9524","9525,9526,9527"],
+			  "1006":["9528,9529,9530","9531,9532,9533","9534,9535,9536","9537,9538,9539"],
+			  "1007":["9540,9541,9542","9543,9544,9545","9546,9547,9548","9549,9550,9551"]
+             };  
+</script>
+
+
+<script type="text/javascript">
+seajs.use("http://cca.mbaobao.com/mkts/201409/25/szn/head/seven.js")	
+</script>
+
+
+</body>
+</html>

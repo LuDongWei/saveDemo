@@ -1,0 +1,178 @@
+第三章：有意义的标记
+
+知识点回顾：（页面结构相关的语义元素）
+<header>:表示增强型的标题，可以包含HTML标题和其他内容。其他内容可以使标志，作者署名或一组
+         指向后面内容的导航链接
+
+<hgroup>:表示增强型的标题，分组两个或多个标签元素，不包含其他内容。
+         其主要目的是把主标题和副标题联系到一起。
+		 
+<nav>:表示页面中重要的一组链接。其中的链接可以指向当前页面的主题，也可以指向网站的其他页面。
+      实际上，一个页面中包含多个<nav>也很正常。
+	
+<article>:表示一篇任何形式的文章，即类似新闻报道，论坛帖子或者博客文章（不包括评论或作者简介）
+          等能够独立的内容区块
+		  
+<aside>:表示独立于周围内容的一个完整的内容块。例如，可以用<aside>创建一个附注栏，		  
+        其中包含与主义章相关的内容或链接
+	
+<figure>和    表示一幅插图。其中<figcaption>元素标注图题（插图的标题）,而<figure>元素
+<figcaption>: 标注<figcaption>和插入图片的<img>元素。目标是反映图片和图题之间是关联的。
+
+<section>:表示文档中的一个区块，或者表示一组文档。<section>是一个通用容器，只有一条规则：	
+          其中的内容必须开始于一个标题。应该在其他语义元素（如<article>和<aside>）不适用
+		  的情况下在选用<section>
+----------------------------------------------------------------------------------------------
+		  
+1.使用<time>标注日期和时间（表示日期和时间位于，能是软件理解）
+datetime属性：提供计算机能看懂的通用格式的日期就行。
+例子：
+The party starts <time datatime="2012-03-21">March 21<sup>st</sup></time>
+The party starts <time datatime="16:30-5:00">4:30 p.m.</time>
+通过组合使用两种标准格式，可以指定某个日期的某个时间：（T）
+The party starts <time datatime="2012-03-21T16:30-5:00">March 21<sup>st</sup> at 4:30 p.m.</time>
+pubdate属性：如果当前内容（例如<time>元素所在<article>）对应一个发表日期，可以使用这个属性。
+The party starts <time datatime="16:30-5:00" pubdate>4:30 p.m.</time>
+
+2.使用<output>标注JavaScript返回值
+<output>:实际上，这个元素就是一个占位符，用于展示一小段计算后的信息。
+<script>
+function CalculateBMI(a,b,c){
+....
+var resultElement = document.getElementById(d)
+resultElement.innerHTML =...
+}
+</script>
+<form action="#" id="#">
+    <label for="feet inches">Height:</label>    
+	<input name="feet">feet<br>
+	<label></label>
+	<input name="inches">inches<br>
+	
+	<input type="button" name="calc" value="Calculate"
+	onclick="CalculateBMI(this.form.feet.value,this.form.inches.value,"result")">	
+</form>
+<p>Your BMI:<output id="result"></output></p>
+
+<label>:标签为input元素定义标注（标记）。如果您在label元素内点击文本，就会触发此控件。
+
+3.使用<mark>标注突显文本
+<mark>元素用于标注一段文本，这段文本会突出显示。
+mark{
+   background-color:yellow;
+   color:black;
+}
+默认的黄色背景，也应该为不支持HTML5的游览器添加后备样式表。
+
+4.ARIA
+ARIA(Accessible Rich Internet Application,无障碍英特网应用)
+是一个还在制定中的标准，它规定了在任意HTML元素上使用的属性，而通过这些属性可以为
+屏幕阅读器提供额外的信息。
+<header role="banner">  //告诉屏幕阅读器它的用途是保存横幅广告。
+参考规范：http://www.w3.org/TR/wai-aria/roles#landmark_roles
+--屏幕阅读器支持ARIA，不支持HTML5
+
+5.RDFa
+http://en.wikipedia.org/wiki/RDFa
+也是一种使用属性向网页中嵌入详细信息的标准。
+
+6.Microformats(微格式)
+http://microformats.org/wiki
+仅使用标准(X)HTML(亦即POSH)以及一套通用类名称的语义置标项目。
+这些项目是开发的，免费的，任何人都可以用的。
+最常见的微格式：
+hCard         //针对联系信息而设计的通用微格式
+http://microformats.org/wiki/hcard
+http://microformats.org/code/hcard/creator    //编辑器
+hCalendar     //标注约会，会议，假日，产品发布时间，商店开业时间等
+http://microformats.org/wiki/hcalendar
+http://microformats.org/code/hcalendar/creator    //编辑器
+
+支持微格式的游览器插件：
+http://microformats.org/wiki/browsers
+http://oomph.codeples.com/
+
+7.Microdata(微数据)
+http://www.w3.org/html/wg/drafts/microdata/master/    //标准
+http://www.data-vocabulary.org/Person/                //XML命名空间
+
+<div itemscope inemtype="http://www.data-vocabulary.org/Person/">
+    <span itemprop="name">Mike Rowe Formatte</span>
+    ...	
+</div>
+与微格式的区别是：微数据标注元素时使用itemprop属性，而不是class属性
+以牺牲简洁为代价，是数据更有逻辑性和更容易改编为适合你网页的语言
+
+8.Rich Snippets Testing Tool
+http://www.google.com.hk/webmasters/tools/richsnippets //验证语义标记，对Google搜索的外观的影响
+http://www.data-vocabulary.org/Review/                 //餐馆，概述，评价时间，评价
+
+9.菜谱搜索引擎
+http://www.data-vocabulary.org/Recipe/                 //菜单数据格式
+http://www.google.com/insidesearch/features/recipes/   //找食谱
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 		  
+		  
+
+	 

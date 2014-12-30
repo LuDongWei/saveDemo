@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
+    <title>无标题页</title>
+    <style type="text/css">
+        #ll{ background:#f00; _width: expression(this.width>200?"200px":true);}
+    </style>
+</head>
+<body id="obj1">
+<div id="obj2"><input id="obj3" id="Text1" type="text" /></div>
+<!-- 点击 按钮 在ie中,依据我们对上面的了解，很容易写出答案了，没错！ie只有冒泡事件 所以 顺序为：button>>div>>body;
+
+而在非ie浏览器如moz中 正如我们上面所说的  内嵌式事件  等价于addEventlistener(type,fn,false) 只从冒泡事件中 监听。
+
+所以顺序也是 btn>>div>>body;
+
+ 
+
+在addEventlistener(type,fn,true添加事件时) 只监听 “捕获事件”  当第三个参数为false时  只监听  冒泡事件
+
+ 
+-->     
+    
+
+     <script language="javascript" type="text/javascript">
+          var $=function(eid){
+             return typeof eid=="object"?eid:document.getElementById(eid);
+           };
+           var fn={
+             fn1:function(){alert("body");},
+             fn2:function(){alert("div");},
+             fn3:function(){alert("test");}
+           };
+           var et={};
+           et.addEvent=function(obj,type,fn,flag){
+             if(obj.attachEvent){
+                 obj.attachEvent("on"+type,fn);
+             }else if(obj.addEventListener){
+                 flag=(typeof flag!="undefined")?flag:true;
+                 obj.addEventListener(type,fn,flag);
+             }else{
+                 obj["on"+type]=fn;
+             }
+           };
+           
+          et.addEvent($("obj1"),"click",fn.fn1,true);
+          et.addEvent($("obj2"),"click",fn.fn2,false);
+          et.addEvent($("obj3"),"click",fn.fn3,true);
+          
+//         et.addEvent($("obj3"),"click",fn.fn3);
+//         et.addEvent($("obj2"),"click",fn.fn2);
+//         et.addEvent($("obj1"),"click",fn.fn1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "subscibe",
+  "title": "message subscibe",
+  "description": "message subscibe",
+  "version": "1.0.0",
+  "author": {
+    "name": "douban"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-mbb-build": "~0.1.11",
+    "grunt-ftp-deploy": "*",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-contrib-csslint": "~0.1.1",
+    "grunt-text-replace": "~0.3.2"
+  },
+  "family": "mbb",
+  "spm": {
+    "alias": {
+      "jquery":"jquery",
+      "simplemodal":"simplemodal"
+    },
+    "output": ["subscibe.js"]
+  }
+}

@@ -1,0 +1,70 @@
+<snippet>
+	<content><![CDATA[
+//mbbHot
+define(function(require, exports, module) {
+	var \$ = require('jquery');
+	require('bxslider')(\$);
+
+	//banner1
+	\$(".banner1 ul").bxSlider({
+		'displaySlideQty': 1,             //定义显示个数
+		'moveSlideQty': 1,                //移动个数
+		'speed': 10,                      //速度，单位毫秒
+		'auto': true,                     //自动播放
+		'controls': false,                //是否显示'previous'和'next'按钮
+		'easing': 'easeOutQuint',         //变化效果
+		'pager': true,                    //显示页码
+		'pagerSelector': '.banner1_change'//控制页码的元素
+	})
+
+	//banner2
+	\$(".banner2 ul").bxSlider({
+		'displaySlideQty': 1, 
+		'moveSlideQty': 1, 
+		'speed': 10,
+		'auto': true,
+		'controls': true,
+		'nextSelector':'.banner2_left',  //下一页
+		'prevSelector':'.banner2_right', //上一页
+		'easing': 'easeOutQuint',
+		'pager': true,
+		'pagerSelector':'.banner2_change'
+	})
+
+	//change
+	var p_change = '.p_change';                       //商品选择
+	var p_right = '.p_right';                         //价格变换
+	var p_number=0;                                   //商品数量
+
+	//鼠标点击 
+	\$(p_change).each(function(){
+		var  abc=\$(this);
+        \$(this).find("li").click(function(){
+        var box = abc.parent();
+        var index=box.find(".p_change").find('li').index(this); 
+        
+        change_goods(box,index);
+        change_price(box,index);
+        })
+	})
+
+
+	//改变商品显示
+	function change_goods(box, index) {
+		\$(box).find(p_change).find('li').find('img').css("border", "2px solid #3e3842");
+		\$(box).find(p_change).find('li').eq(index).find('img').css("border", "2px solid #c6817a");
+	}
+
+	//改变商品价格
+	function change_price(box, index) {
+		\$(box).find(p_right).find('li').hide();
+		\$(box).find(p_right).find('li').eq(index).show();
+	}
+
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	     <tabTrigger>mbbHot</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	     <scope>source.js</scope>
+</snippet>

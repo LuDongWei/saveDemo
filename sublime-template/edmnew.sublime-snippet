@@ -1,0 +1,69 @@
+<snippet>
+	<content><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新品</title>
+</head>
+
+<body>
+
+<!--新品EDM内容-->
+<table cellpadding="0" cellspacing="0" width="700" border="0" align="center">
+  <tr>
+  <td align="left" valign="top"><a href="http_01" target="_blank" title="详情点击"><img alt="详情点击" src="http://cca.mbaobao.com/edm/201311/29/new/new_01.jpg" width="700" height="52" border="0" style="vertical-align:bottom" /></a>
+  </td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" width="700" border="0" align="center">
+<tr>
+  <td align="left" valign="top">
+    <a href="http_01" target="_blank" title="详情点击"><img alt="详情点击" src="http://cca.mbaobao.com/edm/201311/29/new/new_02.jpg" width="350" height="278" border="0" style="vertical-align:bottom" /></a>
+  </td>
+  <td align="left" valign="top">
+    <a href="http_01" target="_blank" title="详情点击"><img alt="详情点击" src="http://cca.mbaobao.com/edm/201311/29/new/new_03.jpg" width="350" height="278" border="0" style="vertical-align:bottom" /></a>
+  </td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" width="700" border="0" align="center">
+<tr>
+  <td align="left" valign="top">
+    <a href="http_01" target="_blank" title="详情点击"><img alt="详情点击" src="http://cca.mbaobao.com/edm/201311/29/new/new_04.jpg" width="350" height="277" border="0" style="vertical-align:bottom" /></a>
+  </td>
+  <td align="left" valign="top">
+    <a href="http_01" target="_blank" title="详情点击"><img alt="详情点击" src="http://cca.mbaobao.com/edm/201311/29/new/new_05.jpg" width="350" height="277" border="0" style="vertical-align:bottom" /></a>
+  </td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" width="700" border="0" align="center">
+<tr>
+  <td align="left" valign="top">
+    <a href="http_01" target="_blank" title="详情点击"><img alt="详情点击" src="http://cca.mbaobao.com/edm/201311/29/new/new_06.jpg" width="700" height="96" border="0" style="vertical-align:bottom" /></a>
+  </td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" width="700" border="0" align="center">
+<tr>
+  <td align="left" valign="top"><a href="_http_01" target="_blank" title="_name_01"><img alt="_name_01" src="http://cca.mbaobao.com/edm/201311/29/new/new_07.jpg" width="233" height="242" border="0" style="vertical-align:bottom" /></a>
+  </td>
+  <td align="left" valign="top"><a href="_http_02" target="_blank" title="_name_02"><img alt="_name_02" src="http://cca.mbaobao.com/edm/201311/29/new/new_08.jpg" width="234" height="242" border="0" style="vertical-align:bottom" /></a>
+  </td>
+  <td align="left" valign="top"><a href="_http_03" target="_blank" title="_name_03"><img alt="_name_03" src="http://cca.mbaobao.com/edm/201311/29/new/new_09.jpg" width="233" height="242" border="0" style="vertical-align:bottom" /></a>
+  </td>
+</tr>
+</table>
+<!--新品EDM内容-->
+
+</body>
+</html>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>edmnew</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	  <scope>text.html</scope>
+</snippet>

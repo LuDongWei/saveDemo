@@ -1,0 +1,23 @@
+#main{
+    width:600px;
+    margin:0 auto;	
+     }
+设置块元素的width可以阻止它从左到右撑满容器。
+设置左右外边距为auto来使其水平居中。
+
+问题：当你的游览器窗口比宽度还要窄时，游览器会显示一个水平滚动条来容纳页面。
+
+解决：
+#main{
+     max-width:600px;
+	 margin:0 auto;
+     }
+在这种情况下使用max-width替代width可以使游览器更好地处理小窗口情况。 
+
+百分比宽度
+百分比是一种相对于包含块的计量单位。它对图片很有用：
+article img {
+  float: right;
+  width: 50%;
+}
+你还能同时使用min-width和max-width来现在图片的最大或最小宽度！

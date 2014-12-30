@@ -1,0 +1,73 @@
+123qwe@qq.com  
+123qwe
+
+baiyu@mbaobao.com 
+123qwe
+
+
+O0MX2V1
+
+
+获取参加者列表 
+http://mkt.mshop.cn/Ajax/InviteUserList 
+
+{
+	error: 0,
+	message: null,
+	data: {
+		list: [{
+			username: "123qwe@qq.com",
+			time: "2014-11-27"
+		}],
+		count: 1
+	}
+}
+
+获取当前用户可参加活动订单 
+http://mkt.mshop.cn/Ajax/InviteOrderList  
+说明：type：0、无 1、发起订单 2、受邀订单
+
+{
+	"error": 0,
+	"message": null,
+	"data": {
+		"list": [{
+			"order_id": 96094142,
+			"order_date": "2014-11-26 11:09:31",
+			"pay_amount": 154.00,
+			"rebate_price": 38.5000,
+			"type": 1
+		}, {
+			"order_id": 96094143,
+			"order_date": "2014-11-26 11:09:58",
+			"pay_amount": 154.00,
+			"rebate_price": 38.5000,
+			"type": 1
+		}],
+		"count": 2
+	}
+}
+
+创建邀请码 
+http://mkt.mshop.cn/Ajax/InviteCreate?orderId=96094142 
+
+查看生成邀请码使用情况 
+http://mkt.mshop.cn/Ajax/InviteList?orderId=96094142 
+
+绑定邀请订单
+http://mkt.mshop.cn/Ajax/InviteBind?code=262CF315CFAD41F09A54B176A20CBAF8&mobile=13012345678 
+0：成功   1：未登录  2：手机号码有误   3：使用过邀请码      4：邀请码无效
+
+获取可选择返利订单列表 
+http://mkt.mshop.cn/Ajax/InviteUseOrderList 
+
+绑定返利订单 
+http://mkt.mshop.cn/Ajax/InviteUseOrder?order=96094146
+
+
+判断是否绑定过邀请码，如果绑定过，查看绑定情况。在仅绑定邀请码状态下，如果有符合的订单，将直接绑定
+http://mkt.mshop.cn/Ajax/CheckInviteBind?userId=111
+说明：0是未绑定  1是未登录  2仅绑定邀请码  3已绑定邀请码和订单
+                                             false
+
+

@@ -1,0 +1,170 @@
+var data_ = {
+		activityID: {
+			3880: [{
+				stockQty: 0,
+				beginTime: "2014/5/29 9:30:38",
+				endTime: "2014/5/29 14:00:51",
+				passLag: "-29",
+				remainLag: "241",
+				isSeckill: "True",
+				apId: 1967,
+				sort: 1,
+				remark: "",
+				skus: [{
+					sku: 1404002502,
+					shoppePrice: 699,
+					mbbPrice: 179,
+					sellPrice: 68,
+					priceTitle: "优惠价",
+					brandName: "戈尔本",
+					categoryName: "单肩斜挎包",
+					promTitle: "",
+					name: "[戈尔本]里尔克系列通勤旅行两用包 海军蓝",
+					image: "http://cdn06.mbbimg.cn/1404/14040025/02/100/01.jpg",
+					stock: 23
+				}, {
+					sku: 1405002901,
+					shoppePrice: 468,
+					mbbPrice: 328,
+					sellPrice: 59,
+					priceTitle: "优惠价",
+					brandName: "戈尔本",
+					categoryName: "斜挎包",
+					promTitle: "",
+					name: "[戈尔本] 轻装mini系列休闲全头层牛皮竖款小斜挎包 黑色",
+					image: "http://cdn06.mbbimg.cn/1405/14050029/01/100/01.jpg",
+					stock: 0
+				}]
+			}],
+			3881: [{
+				stockQty: 0,
+				beginTime: "2014/5/29 15:00:09",
+				endTime: "2014/5/29 23:51:18",
+				passLag: "300",
+				remainLag: "832",
+				isSeckill: "False",
+				apId: 1968,
+				sort: 2,
+				remark: "",
+				skus: [{
+					sku: 1309002901,
+					shoppePrice: 1169,
+					mbbPrice: 428,
+					sellPrice: 0,
+					priceTitle: "",
+					brandName: "DUDU",
+					categoryName: "单肩包",
+					promTitle: "666777444444444444444444",
+					name: "[DUDU]摩登女王系列牛皮单肩包 黑色",
+					image: "http://cdn06.mbbimg.cn/1309/13090029/01/100/01.jpg",
+					stock: 3576
+				}, {
+					sku: 1404003401,
+					shoppePrice: 1049,
+					mbbPrice: 498,
+					sellPrice: 399,
+					priceTitle: "优惠价",
+					brandName: "DUDU",
+					categoryName: "手提斜挎包",
+					promTitle: "买即送价值98元牛皮零钱包，赠品不在购物车显示",
+					name: "[DUDU] Double Wonderful系列手提斜挎包 天蓝色",
+					image: "http://cdn05.mbbimg.cn/1404/14040034/01/100/01.jpg",
+					stock: 6
+				}]
+			}, {
+				stockQty: 0,
+				beginTime: "2014/5/29 15:00:09",
+				endTime: "2014/5/29 23:51:18",
+				passLag: "300",
+				remainLag: "832",
+				isSeckill: "False",
+				apId: 1969,
+				sort: 2,
+				remark: "",
+				skus: [{
+					sku: 1309002901,
+					shoppePrice: 1169,
+					mbbPrice: 428,
+					sellPrice: 0,
+					priceTitle: "",
+					brandName: "DUDU",
+					categoryName: "单肩包",
+					promTitle: "666777444444444444444444",
+					name: "[DUDU]摩登女王系列牛皮单肩包 黑色",
+					image: "http://cdn06.mbbimg.cn/1309/13090029/01/100/01.jpg",
+					stock: 3576
+				}, {
+					sku: 1404003401,
+					shoppePrice: 1049,
+					mbbPrice: 498,
+					sellPrice: 399,
+					priceTitle: "优惠价",
+					brandName: "DUDU",
+					categoryName: "手提斜挎包",
+					promTitle: "买即送价值98元牛皮零钱包，赠品不在购物车显示",
+					name: "[DUDU] Double Wonderful系列手提斜挎包 天蓝色",
+					image: "http://cdn05.mbbimg.cn/1404/14040034/01/100/01.jpg",
+					stock: 6
+				}]
+			}]
+		},
+		salesList: [{
+			stockQty: 3,
+			beginTime: "2014/5/28 13:50:00",
+			endTime: "2014/5/28 14:10:00",
+			passLag: "-1210",
+			remainLag: "-1190",
+			isSeckill: "False",
+			apId: 1965,
+			sort: 1,
+			remark: "",
+			skus: [{
+				sku: 1404003502,
+				shoppePrice: 1049,
+				mbbPrice: 358,
+				sellPrice: 299,
+				priceTitle: "优惠价",
+				brandName: "DUDU",
+				categoryName: "单肩包",
+				promTitle: "2013年夏季新品上市",
+				name: "[DUDU]柔型系列牛皮单肩包 浅驼色",
+				image: "http://cdn06.mbbimg.cn/1404/14040035/02/100/01.jpg",
+				stock: 0
+			}]
+		}, {
+			stockQty: 0,
+			beginTime: "2014/5/27 9:10:55",
+			endTime: "2014/5/28 11:00:00",
+			passLag: "-2929",
+			remainLag: "-1380",
+			isSeckill: "False",
+			apId: 1964,
+			sort: 1,
+			remark: "",
+			skus: [{
+				sku: 1404002502,
+				shoppePrice: 699,
+				mbbPrice: 179,
+				sellPrice: 68,
+				priceTitle: "优惠价",
+				brandName: "戈尔本",
+				categoryName: "单肩斜挎包",
+				promTitle: "",
+				name: "[戈尔本]里尔克系列通勤旅行两用包 海军蓝",
+				image: "http://cdn06.mbbimg.cn/1404/14040025/02/100/01.jpg",
+				stock: 23
+			}, {
+				sku: 1405002201,
+				shoppePrice: 758,
+				mbbPrice: 598,
+				sellPrice: 0,
+				priceTitle: "",
+				brandName: "戈尔本",
+				categoryName: "斜挎包",
+				promTitle: "",
+				name: "[戈尔本] 锐·风尚系列全粒面牛皮休闲斜挎包 黑色",
+				image: "http://cdn07.mbbimg.cn/1405/14050022/01/100/01.jpg",
+				stock: 279
+			}]
+		}]
+	};
