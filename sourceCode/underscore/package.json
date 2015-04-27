@@ -1,0 +1,27 @@
+{
+  "name": "underscore-style",
+  "version": "1.0.0",
+  "description": "this is style",
+  "keywords": [],
+  "homepage": "",
+  "author": "Mr.lu <weixiaobao5603169@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "./src/text.js",
+    "dependencies": {
+      "underscore": "1.6.0",
+      "expect.js": "0.3.1"
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    },
+    "buildArgs": "--include standalone"
+  }
+}

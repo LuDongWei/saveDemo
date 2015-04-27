@@ -1,0 +1,572 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"interator"
+			],
+			[
+				"re",
+				"Reduce"
+			],
+			[
+				"h",
+				"hasOwnProperty"
+			],
+			[
+				"na",
+				"nativeKeys"
+			],
+			[
+				"Fun",
+				"FuncProto"
+			],
+			[
+				"Ob",
+				"Object"
+			],
+			[
+				"a",
+				"Array"
+			],
+			[
+				"ob",
+				"ObjProto"
+			],
+			[
+				"ar",
+				"ArrayProto"
+			],
+			[
+				"sc",
+				"script	Tag"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"on",
+				"once"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"par",
+				"parseInt"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"PO",
+				"position"
+			],
+			[
+				"fot",
+				"font-size"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"txt",
+				"text-align"
+			],
+			[
+				"bl",
+				"bolder"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 438,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/text.js",
+			"settings":
+			{
+				"buffer_size": 448,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/underscore.js",
+			"settings":
+			{
+				"buffer_size": 4556,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"set js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"intsall",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/Github/saveDemo/sourceCode/underscore",
+		"/E/Github/saveDemo/sourceCode/underscore/spm_modules",
+		"/E/Github/saveDemo/sourceCode/underscore/spm_modules/underscore",
+		"/E/Github/saveDemo/sourceCode/underscore/spm_modules/underscore/1.6.0",
+		"/E/Github/saveDemo/sourceCode/underscore/src"
+	],
+	"file_history":
+	[
+		"/E/Github/saveDemo/sourceCode/underscore/spm_modules/underscore/1.6.0/underscore.js",
+		"/E/Github/saveDemo/sourceCode/underscore/src/text.js",
+		"/E/Github/saveDemo/sourceCode/underscore/package.json",
+		"/E/Github/saveDemo/sourceCode/underscore/npm-debug.log",
+		"/E/Github/demo/backbone/package.json",
+		"/E/Github/jwgouWork/demo/weight/weight2.js",
+		"/E/Github/jwgouWork/demo/weight/index.html",
+		"/E/backstage.js",
+		"/E/Github/demo/backbone/src/utils.js",
+		"/E/Github/jwgouWork/demo/weight/weight.js",
+		"/E/Github/jwgouWork/demo/weight/index.js",
+		"/E/Github/demo/backbone/phone.html",
+		"/E/Github/jwgouWork/demo/weight/spm_modules/jquery/1.9.1/jquery.min.js",
+		"/E/Github/jwgouWork/demo/weight/package.json",
+		"/E/Github/demo/backbone/README.md",
+		"/E/Github/jwgouWork/fulai/README.md",
+		"/E/jwgou/04/15/jwg/jwg/jwg/join/join.js",
+		"/E/jwgou/04/15/jwg/jwg/demo/demo/submitId.htm",
+		"/E/jwgou/04/15/jwg/jwg/demo/demo/shipment_process.htm",
+		"/E/jwgou/04/15/jwg/jwg/demo/demo/home.htm",
+		"/E/jwgou/04/15/jwg/jwg/jwg/home/home.js",
+		"/E/jwgou/04/15/jwg/jwg/demo/home.htm",
+		"/E/jwgou/04/15/jwg/jwg/demo/about.htm",
+		"/C/Users/lu/Desktop/bus.txt",
+		"/E/Github/demo/backbone/src/commentModel.js",
+		"/E/Github/demo/backbone/spm_modules/bootstrap/3.3.1/package.json",
+		"/E/Github/demo/text/index.js",
+		"/E/Github/demo/bulb/src/bulb.less",
+		"/E/Github/demo/bulb/src/bulb.js",
+		"/E/Github/demo/bulb/index.html",
+		"/E/Github/demo/bulb/src/reset.css",
+		"/E/Github/demo/bulb/src/bulb.css",
+		"/E/Github/demo/bulb/src/jquery.bxslider/4.1.2/jquery.bxslider.js",
+		"/E/Github/saveDemo/jquery/promise承诺对象.html",
+		"/E/Github/saveDemo/jquery/js/jquery-1.9.1.js",
+		"/E/Github/demo/bulb/src/jquery.bxslider/jquery.bxslider.min.js",
+		"/E/Github/demo/bulb/src/jquery.bxslider/jquery.bxslider.js",
+		"/C/Users/lu/Desktop/不莱玟/src/bulb.less",
+		"/C/Users/lu/Desktop/不莱玟/index.html",
+		"/C/Users/lu/Desktop/不莱玟/src/bulb.css",
+		"/E/Github/saveDemo/jquery/css/reset.css",
+		"/E/osChina/bangbang/src/pc/cart/checkout.js",
+		"/E/osChina/bangbang/src/pc/cart/GoodsListView.js",
+		"/E/osChina/bangbang/src/pc/static/global.css",
+		"/E/osChina/bangbang/src/pc/cart/GoldView.js",
+		"/E/osChina/bangbang/src/page/cart/InvoiceListView.js",
+		"/E/osChina/bangbang/src/pc/cart/InvoiceView.js",
+		"/E/osChina/bangbang/src/page/item/item.css",
+		"/E/osChina/bangbang/src/page/cart/cart.less",
+		"/E/osChina/bangbang/Gruntfile.js",
+		"/E/osChina/bangbang/dist/page/cart/min/cart-min.js",
+		"/E/osChina/bangbang/dist/page/cart/cart-min.js",
+		"/E/osChina/bangbang/demo/user/myOrder.html",
+		"/E/osChina/bangbang/demo/user/logisticsOrder.html",
+		"/E/osChina/bangbang/demo/cart/addressList.htm",
+		"/E/osChina/bangbang/src/page/user/user.css",
+		"/E/osChina/bangbang/demo/cart/demo-style.html",
+		"/E/osChina/bangbang/src/page/cart/cart.js",
+		"/E/osChina/bangbang/src/page/cart/cart.css",
+		"/E/osChina/bangbang/demo/cart/demo.htm",
+		"/E/osChina/bangbang/src/page/cart/AddressListView.js",
+		"/C/Users/lu/Desktop/m-bangbang/M/address/editor.cshtml",
+		"/E/osChina/bangbang/demo/region-test.html",
+		"/E/osChina/bangbang/demo/user/addressEdit.html",
+		"/C/Users/lu/Links/bangbang.lnk",
+		"/E/Github/newBlog/region/examples/index.md",
+		"/E/Github/newBlog/region/index.js",
+		"/C/Users/lu/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
+		"/C/Users/lu/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"isFinite",
+			"_wrapped",
+			"nativeKeys",
+			"breaker",
+			"width=\"120\"",
+			"width=\"160\"",
+			"0\"",
+			"width",
+			"once",
+			"right",
+			">\n",
+			"i",
+			"onGoodsTemp",
+			"keyLive",
+			"countLwg",
+			"packageInf",
+			">\n",
+			"<th scope=\"row\">1</th>",
+			"checknumber",
+			"goods-btn",
+			"                   ",
+			",10)",
+			"parseFloat(",
+			"ipWeight",
+			"\">\n",
+			"text",
+			"changeName",
+			"consol",
+			"self.parent().parent()",
+			"packBut",
+			"$(\"#",
+			">\n",
+			"<th scope=\"row\">1</th>",
+			"text",
+			"../",
+			"../jwg",
+			"../demo",
+			"../",
+			"});",
+			"})",
+			"parseIds",
+			"navigate",
+			"needShowEmpty",
+			"isDataComplete",
+			"        \n",
+			"mode",
+			"horizontal",
+			"src=\"",
+			"-->\n",
+			";\n",
+			" \n",
+			">\n",
+			"select",
+			"invoiceListView-template",
+			">\n",
+			"checkout-shop",
+			"..box",
+			"box",
+			"{\n",
+			"addr-wrap",
+			"box-address",
+			"box address",
+			"bd-container",
+			"&#xe613;",
+			"couponList",
+			";\n",
+			"price",
+			"i",
+			"container",
+			"target",
+			"render",
+			"reset",
+			"render",
+			"],\n",
+			"\",\n",
+			"type=\"text/javascript\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								349,
+								349
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/text.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/underscore.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2543,
+								2543
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 966.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "underscore.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 202.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
