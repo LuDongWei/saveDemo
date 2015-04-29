@@ -4,8 +4,44 @@
 		"selected_items":
 		[
 			[
+				"is",
+				"isMatch"
+			],
+			[
+				"ex",
+				"extendOwn"
+			],
+			[
+				"und",
+				"undefinedOnly"
+			],
+			[
+				"keys",
+				"keysFunc"
+			],
+			[
+				"pre",
+				"predicate"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"pra",
+				"predicate"
+			],
+			[
+				"pr",
+				"predicate"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
 				"in",
-				"interator"
+				"initial"
 			],
 			[
 				"re",
@@ -34,10 +70,6 @@
 			[
 				"ob",
 				"ObjProto"
-			],
-			[
-				"ar",
-				"ArrayProto"
 			],
 			[
 				"sc",
@@ -143,15 +175,23 @@
 			"file": "src/text.js",
 			"settings":
 			{
-				"buffer_size": 448,
+				"buffer_size": 1455,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "spm_modules/underscore/1.6.0/underscore.js",
+			"settings":
+			{
+				"buffer_size": 44316,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "src/underscore.js",
 			"settings":
 			{
-				"buffer_size": 4556,
+				"buffer_size": 8611,
 				"line_ending": "Windows"
 			}
 		}
@@ -159,7 +199,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 288.0,
 		"selected_items":
 		[
 			[
@@ -303,6 +343,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"￥",
 			"isFinite",
 			"_wrapped",
 			"nativeKeys",
@@ -412,8 +453,8 @@
 						"selection":
 						[
 							[
-								349,
-								349
+								356,
+								356
 							]
 						],
 						"settings":
@@ -425,7 +466,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -434,15 +475,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 448,
+						"buffer_size": 1455,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								144,
-								144
+								1217,
+								1048
 							]
 						],
 						"settings":
@@ -452,27 +493,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 378.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "src/underscore.js",
+					"file": "spm_modules/underscore/1.6.0/underscore.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4556,
+						"buffer_size": 44316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2543,
-								2543
+								25263,
+								25263
 							]
 						],
 						"settings":
@@ -482,10 +523,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 966.0,
+						"translation.y": 10404.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/underscore.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5740,
+								5740
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2781.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

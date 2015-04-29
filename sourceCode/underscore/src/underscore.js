@@ -50,6 +50,23 @@
 
   _.VERSION = '1.6.0';
 
+  var createAssiger = function(keysFunc, undefinedOnly){
+      return function(obj) {
+          var length = arguments.length;
+          if (length < 2 || obj == null ) return obj;
+          for (var index = 1; index < length; index++){
+               var source = arguments[index],
+                   keys = keysFunc(source),
+                   l = keys.length;
+               for (var i = 0; i < l; i++){
+                    var key = keys[i];
+                    if(!undefinedOnly || obj[key] === void 0) obj[key] = source[key];
+               }           
+          }
+          return obj;
+      }
+  }
+
   
   // 集合方法
   // ----------------
@@ -96,9 +113,115 @@
           } 
       });
       if (!initial ) throw new TypeError(reduceError);
-      return meno; 
+      return memo; 
+  } 
+
+  // reducRight是从右侧开始组合的元素的reduce函数 
+  _.reduceRight = _.foldr = function(obj, iterator, memo, context){
+     var initial = arguments.length > 2;
+     if(obj ==null ) obj = [];
+
+     var length = obj.length;
+     if(length !== +length){
+        var keys = _.keys(obj);
+        length = keys.length;
+     }
+
+     _.each(obj,function(value,index,list){
+        index = keys ? keys[--length] : --length;
+        if (!initial) {
+          memo = obj[index];
+          initial = true;
+        } else {
+          memo = iterator.call(context, memo, obj[index], index, list);
+        }
+     });
+     if (!initial) throw new TypeError(reduceError);
+     return memo; 
   }  
-  
+
+  // 在list中逐项查找,返回第一个通过的元素值;
+  _.find = _.detect = function(obj, predicate, context){
+     var result;
+
+     _.some(obj, function(value, index, list){
+        if (predicate.call(context, value, index, list)){
+            result = value;
+            return true;
+        }
+     });
+     return result;
+  }
+
+ // 在list中逐项查找，返回满足条件的元素值；
+ _.filter = _.select = function(obj, predicate, context){
+    var results = [];
+    if (obj == null) return results;
+    _.each(obj,function(value,index,list) {
+       if(predicate.call(context,value,index,list)) results.push(value);
+    })
+    return results;
+ }
+
+ // 返回list中没通过的元素，与filter相反
+ _.reject = function(obj, predicate, context){
+   return _.filter(obj, _.negate(predicate), context);
+ }
+
+ // 遍lsit中的每一个值，返回一个数组，包含properties所列出的属性的键值对
+ _.where = function(obj, attrs){
+    return _.filter(obj, _.matcher(attrs));
+ }
+
+ // 遍历list,返回匹配properties 参数所列出的所有键值
+ _.findWhere = function(obj, attrs){
+    return _.find(obj, _.matcher(attrs));
+ }
+
+  // list元素的真值检测 返回true , 就中断对list的遍历
+  _.some = _.any = function(obj, predicate, context){
+    predicate || (predicate = _.identity);
+
+    var result = false;
+    if (obj == null) return result;
+    _.each(obj, function(){
+      if(result || (result = predicate.call(context, value, index, list))) return breaker;
+    });
+    return !!result;
+  }
+
+  // 实用函数
+  // ----------------
+
+  // 放弃Underscore的控制变量"_"。返回UnderScore 对象的引用
+  _.noConflict = function(){
+    root._ = previonsUnderscore;
+    return this;
+  }
+
+  // 返回与传入参数的相等的值，相当于数学里的 f(x) = x ，作为默认的迭代器itertor 
+  _.identity = function(value){
+    return value;
+  }  
+
+  // 创建一个函数,这个函数返回相同的值，用来作为_.constant的参数
+  _.constant = function(value){
+    return function(){
+      return value;
+    }
+  }
+
+  // 返回undefined
+  _.noop = function(){};
+
+  // 返回一个新的predicate函数的否定版本
+  _.negate = function(predicate){
+     return function(){
+       return !predicate.apply(this ,arguments);
+     }
+  }
+   
+
 
   // 对象方法
   // ----------------
@@ -115,12 +238,34 @@
     }
     return keys;
   };
-  
 
-  //判断数据，字符，对象是否为空
-  //一个空对象不能枚举自身属性
+  // 返回一个断言函数, 这个函数会给你一个断言可以用来辨别给定的对象是否匹配attrs指定键/值属性.
+  _.matcher = _.matches = function(attrs){
+    attrs = _.extendOwn({}, attrs);
+    return function(obj){
+      return _.isMatch(obj, attrs);
+    }
+  } 
+  
+  // 类似于extend，但只复制自己的属性覆盖到目标对象.
+  _.extendOwn = _.assign = createAssiger(_.keys);
+
+  // properties 中的键和值是否包含在object中
+  _.isMatch = function(object, attrs){
+     var keys = _.keys(attrs), length = keys.length;
+     if (object == null ) return !length;
+     var obj = Object(object);
+     for (var i = 0; i < length; i++ ){
+         var key = keys[i];
+         if (attrs[key] !== obj[key] || !(key in obj)) return false;
+     }
+     return true; 
+  }
+
+
+  // 判断数据，字符，对象是否为空
+  // 一个空对象不能枚举自身属性
   _.isEmpty = function(obj) {
-    console.log(obj)
     if (obj == null) return true;
     if (_.isArray(obj) || _.isString(obj) || _.isArguments(obj)) return obj.length === 0;
     for (var key in obj) {
@@ -185,13 +330,20 @@
   _.has = function(obj, key){
     return hasOwnProperty.call(onj, key);
   }
-
-
-
-  // 实用函数
-  // -------------------
-
-
+  
+  // 函数返回任何传入对象的key属性
+  _.property = function(key){
+    return function(obj){
+      return obj[key];
+    }
+  }
+  
+  // 需要一个对象，返回一个提供的属性的值
+  _.propertyOf = function(obj){
+    return obj == null ? function(){} : function(key) {
+       return obj[key];
+    }
+  }
 
   
   //AMD 规范
