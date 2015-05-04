@@ -4,8 +4,36 @@
 		"selected_items":
 		[
 			[
+				"it",
+				"iterator"
+			],
+			[
+				"isFunc",
+				"isFunction"
+			],
+			[
 				"is",
-				"isMatch"
+				"isObject"
+			],
+			[
+				"arg",
+				"argCount"
+			],
+			[
+				"cer",
+				"createIndexFinder"
+			],
+			[
+				"so",
+				"sortedIndex"
+			],
+			[
+				"iss",
+				"isSorted"
+			],
+			[
+				"in",
+				"interator"
 			],
 			[
 				"ex",
@@ -38,10 +66,6 @@
 			[
 				"ar",
 				"arguments"
-			],
-			[
-				"in",
-				"initial"
 			],
 			[
 				"re",
@@ -172,26 +196,18 @@
 			}
 		},
 		{
-			"file": "src/text.js",
+			"file": "src/underscore.js",
 			"settings":
 			{
-				"buffer_size": 1455,
+				"buffer_size": 14336,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "spm_modules/underscore/1.6.0/underscore.js",
+			"file": "src/text.js",
 			"settings":
 			{
-				"buffer_size": 44316,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/underscore.js",
-			"settings":
-			{
-				"buffer_size": 8611,
+				"buffer_size": 2094,
 				"line_ending": "Windows"
 			}
 		}
@@ -256,6 +272,7 @@
 	],
 	"file_history":
 	[
+		"/E/Github/saveDemo/sourceCode/underscore/src/underscore.js",
 		"/E/Github/saveDemo/sourceCode/underscore/spm_modules/underscore/1.6.0/underscore.js",
 		"/E/Github/saveDemo/sourceCode/underscore/src/text.js",
 		"/E/Github/saveDemo/sourceCode/underscore/package.json",
@@ -328,7 +345,7 @@
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -343,6 +360,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"lookupIterator",
+			"}\n",
+			"Infinity",
+			"property",
+			"iteratee",
+			"        \n",
+			"_",
 			"￥",
 			"isFinite",
 			"_wrapped",
@@ -437,7 +461,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -466,54 +490,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/text.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1455,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1217,
-								1048
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "spm_modules/underscore/1.6.0/underscore.js",
+					"buffer": 1,
+					"file": "src/underscore.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 44316,
+						"buffer_size": 14336,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25263,
-								25263
+								1646,
+								1646
 							]
 						],
 						"settings":
@@ -523,27 +517,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 10404.0,
+						"translation.y": 860.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/underscore.js",
+					"buffer": 2,
+					"file": "src/text.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8611,
+						"buffer_size": 2094,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5740,
-								5740
+								1563,
+								1563
 							]
 						],
 						"settings":
@@ -553,7 +547,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2781.0,
+						"translation.y": 630.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,

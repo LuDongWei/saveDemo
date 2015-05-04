@@ -66,6 +66,50 @@
           return obj;
       }
   }
+  
+  // 一个内部函数生成查找迭代器
+  var lookupIterator = function(value, context){
+      if (value == null) return _.identity;
+      if (!_.isFunction(value)) return _.property(value);
+      if (!context) return value;
+      return function(){
+        return value.apply(context, arguments);
+      }
+  } 
+
+  // 大多数是内部函数生成回调，可以应用到集合中的每个元素。返回所需的结果
+  var cd = function(value, context, argCount){
+      if(value == null) return _.identity;
+      if(_.isFunction(value)) return optimizeCb(value, context, argCount);
+      if(_.isObject(value)) return _.matcher(value);
+      return _.property(value);
+  }
+
+  // 内部函数，返回一个有效的(当前引擎)版本的传入回调,多用其强调功能.
+  var optimizeCb = function(func, context, argCount) {
+    if (context === void 0) return func;
+    switch (argCount == null ? 3 : argCount) {
+      case 1:
+        return function(value) {
+          return func.call(context, value);
+        };
+      case 2:
+        return function(value, other) {
+          return func.call(context, value, other);
+        };
+      case 3:
+        return function(value, index, collection) {
+          return func.call(context, value, index, collection);
+        };
+      case 4:
+        return function(accumulator, value, index, collection) {
+          return func.call(context, accumulator, value, index, collection);
+        };
+    }
+    return function() {
+      return func.apply(context, arguments);
+    };
+  };
 
   
   // 集合方法
@@ -178,6 +222,17 @@
     return _.find(obj, _.matcher(attrs));
  }
 
+ // 如果list中的所有元素通过predicate的真值检测就返回true
+ _.every = _.all = function(obj, predicate, context){
+    predicate || (predicate = _.identity);
+    var result = true;
+    if(obj == null) return result;
+    _.each(obj, function(value, index, list){
+      if(!(result = result && predicate.call(context, value, index, list))) return breaker;
+    });
+    return !!result;
+ }
+
   // list元素的真值检测 返回true , 就中断对list的遍历
   _.some = _.any = function(obj, predicate, context){
     predicate || (predicate = _.identity);
@@ -189,6 +244,139 @@
     });
     return !!result;
   }
+  
+  // 如果list包含指定的value则返回true （使用 === 检测）
+  _.contains = _.include = function(obj, target){
+    if (obj == null ) return false;
+    if (obj.length === +obj.length) return _.indexOf(obj, target) >= 0;
+    return _.some(obj, function(value){
+      return value === target;
+    })
+  }
+   
+  // 在list的每个元素执行方法。
+  _.invoke = function(obj, method){
+    var args = slice.call(arguments, 2);
+    var isFunc = _.isFunction(method);
+    return _.map(obj, function(value){
+        return (isFunc ? method : value[method]).apply(value, args);
+    })
+  } 
+  
+  // map最常使用的用例模型的简化版本，即萃取数组对象中某属性值
+  _.pluck = function(obj, key){
+    return _.map(obj, _.property(key));
+  }
+
+  // 返回list中的最大值。
+  _.max = function(obj, iterator, context){
+    var result = -Infinity, lastComputed = -Infinity,
+        value, computed;
+    if (!iterator && _.isArray(obj)) {
+      for (var i = 0, length = obj.length; i < length; i++) {
+        value = obj[i];
+        if (value > result) {
+          result = value;
+        }
+      }
+    } else {
+      _.each(obj, function(value, index, list) {
+        computed = iterator ? iterator.call(context, value, index, list) : value;
+        if (computed > lastComputed || (computed === -Infinity && result === -Infinity)) {
+          result = value;
+          lastComputed = computed;
+        }
+      });
+    }
+    return result;   
+  }
+
+  // 返回list中的最小值.
+  _.min = function(obj, iterator, context){
+    var result = Infinity, lastComputed = Infinity,
+    value, computed;
+    if(!iterator && _.isArray(obj)){
+      for (var i = 0, length = obj.length ; i < length; i++) {
+         value = obj[i];
+         if(value < result){
+           result = value;
+         }
+      };
+    }else{
+      _.each(obj, function(value, index, list){
+          computed = iterator ? iterator.call(context, value, index, list) : value;
+          if(computed < lastComputed || (computed === Infinity && result === Infinity)){
+             result = value;
+             lastComputed = cmoputed;
+          }
+      })
+    }
+    return result;
+  }
+
+  // 返回一个排序后的list拷贝副本
+
+  // 把一个集合风组为多个集合
+
+
+  // 数组函数
+  // ---------------
+
+  // 返回value在该array中的索引值，如果value不存在array中就返回-1
+  _.indexOf = function(array, item, isSorted){
+    if(array == null ) return -1;
+    var  i = 0, length = array.length;
+    if(isSorted) {
+       if (typeof isSorted == "number"){
+          i = (isSorted < 0 ? Mach.max(0, length + isSorted) : isSorted);
+       } else {
+          i = _.sortedIndex(array, item);
+          return array[i] === item ? i : -1;
+       }
+    }
+    for (; i < length; i++) if (array[i] === item ) return i;
+    return -1;
+  }
+
+
+  // 返回value在该array中的从最后开始的索引值
+  _.lastIndexOf = function(array, item, from){
+    if (array == null ) return -1;
+    var i = from == null ? array.length : from;
+    while (i--) if (array[i] === item) return i;
+    return -1;  
+  }
+
+  function createIndexFinder(dir){
+     return function(array, predicate, context){
+        predicate = cd(predicate, context);
+        var length = array != null && array.length;
+        var index = dir > 0 ? 0 : length - 1;
+        for (; index >= 0 && index < lenght; index += dir){
+            if (predicate(array[index], index, array)) return index;
+        }
+        return -1;
+     }
+  }
+
+  // 类似于 .indexOf 返回第一个索引值，否则返回 -1
+  _.findIndex = createIndexFinder(1);
+
+  // 类似于 .findIndex
+  _.findLastIndex = createIndexFinder(-1);
+
+  // 使用二分查找确定value在list中的位置的序号，value按此序号插入能保持list原有的排序
+  _.sortedIndex = function(array, obj, iterator, context){
+     iterator = lookupIterator(iterator, context);
+    var value = iterator(obj);
+    var low = 0, high = array.length;
+    while (low < high) {
+      var mid = (low + high) >>> 1;
+      iterator(array[mid]) < value ? low = mid + 1 : high = mid;
+    }
+    return low;
+  }
+
 
   // 实用函数
   // ----------------
@@ -345,6 +533,17 @@
     }
   }
 
+  // 实用功能
+  // -------------
+  
+  // 一个重要的内部函数用来生成可应用到集合中每个元素的回调，返回想要的结果 - 无论是等式，任何回调
+  _.iteratee = function(value, context){
+    return cd(value, context, Infinity);
+  } 
+  
+  // 链式语法
+  // ------------- 
+   
   
   //AMD 规范
   if(typeof define === 'function' && define.amd){

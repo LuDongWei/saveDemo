@@ -39,21 +39,36 @@ var _ = require("underscore");
     //     console.log(aa)
     // })
 
-  var listOfPlays = [{
-      title: 'aaa',
-      author: "Shakespeare",
-      year: 1612
-   }, {
-      title: 'bbb',
-      author: "Shakespeare",
-      year: 1611
-   }];
+  // var listOfPlays = [{
+  //     title: 'aaa',
+  //     author: "Shakespeare",
+  //     year: 1612
+  //  }, {
+  //     title: 'bbb',
+  //     author: "Shakespeare",
+  //     year: 1611
+  //  }];
    
   //  console.log(aa)
     // var ready = $.matcher({selected: true, visible: true}); 
 
-   var aabb =  $.where(listOfPlays, {author: "Shakespeare", year: 1611});
+   // var aabb =  $.where(listOfPlays, {author: "Shakespeare", year: 1611});
 
-   console.log(aabb)
+   // console.log(aabb)
 
     // var readyToGoList = _.filter(list, ready);
+
+    // var stooge = [{name : 'moe',age : 40},{name : 'curly',age : 60}];
+
+    // console.log(_.sortedIndex(stooge, {name : 'larry', age : 50}, 'age'));
+
+    // console.log($.sortedIndex(stooge, {name : 'larry', age : 50}, 'age'));
+
+    // var stooges = [{name: 'curly', age: 25}, {name: 'moe', age: 21}, {name: 'larry', age: 23}];
+    
+    // console.log($.iteratee('age'))
+    // console.log($.map(stooges, $.iteratee('age')))
+
+    var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+     
+    console.log(_.max(stooges, function(stooge){ return stooge.age; })) 
