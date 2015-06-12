@@ -69,6 +69,10 @@ var _ = require("underscore");
     // console.log($.iteratee('age'))
     // console.log($.map(stooges, $.iteratee('age')))
 
-    var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+    // var stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
      
-    console.log(_.max(stooges, function(stooge){ return stooge.age; })) 
+    // console.log(_.max(stooges, function(stooge){ return stooge.age; })) 
+
+    var aabb = [1,2,3];
+
+    console.log($.shuffle(aabb))

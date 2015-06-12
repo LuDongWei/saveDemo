@@ -111,6 +111,18 @@
     };
   };
 
+  var group = function(behavior){
+    return function(obj, iterator, context){
+       var result = {};
+       iterator = lookupIterator(iterator, context);
+       _.each(obj, function(value, index){
+           var key = iterator(value, index, obj);
+           behavior(result, value, key);
+       })
+       return result;
+    }
+  }   
+  
   
   // 集合方法
   // ----------------
@@ -315,8 +327,82 @@
   }
 
   // 返回一个排序后的list拷贝副本
+  _.sortBy = function(obj, iterator, context){
+    iterator = lookupIterator(iterator, context);
+    return _.pluck(_.map(obj, function(value, index, list){
+           return {
+             value : value,
+             index : index,
+             criteria : interator(value, index, list),
+           }  
+    }).sort(function(){
+       var a = left.criteria;
+       var b = right.criteria;
+       if( a !== b ){
+          if(a > b || a === void 0) return 1;
+          if(a < b || b === void 0) return -1;
+       }
+    }),'value')    
+  }
 
-  // 把一个集合风组为多个集合
+  // 把一个集合分组为多个集合 
+  _.groupBy = group(function(result, value, key){
+     _.has(result, key) ? result[key].push(value) : result[key] = [value];
+  }) 
+
+  // 给定一个list，返回列表中的每个元素的iterator函数
+  _.indexBy = group(function(result, value, key){
+    result[key] = value;
+  })
+
+  // 排序一个列表组，并且返回各组中的对象的数量的计数
+  _.countBy = group(function(result, value, key){
+    _.has(result, ley) ? result[key]++ : result[key] = 1;
+  })
+  
+  
+  // 返回一个随机乱序的list副本
+  _.shuffle = function(obj){
+    var rand;
+    var index = 0;
+    var shuffled = [];
+    _.each(obj, function(value){
+      rand = _.random(index++);
+      shuffled[index - 1] = shuffled[rand];
+      shuffled[rand] = value;
+    }) 
+    return shuffled;
+  }
+
+  // 从list中产生一个随机样本
+  _.sample = function(obj, n, guard){
+    if (n == null || guard){
+       if(obj.length !== +obj.length ) obj = _.values(obj);
+       return obj[_.random(obj.length - 1)];
+    }
+    return _.shuffled(obj).slice(0, Math.max(0, n));
+  }
+
+  // 把list转换成一个数组
+  _.toArray = function(){
+    if (!obj) return [];
+    if (_.isArray(obj)) return slice.call(obj);
+    if (obj.length === +obj.length) return _.map(obj, _.identity);
+    return _.values(obj);
+  }
+
+  // 返回list的长度
+  _.size = function(){
+
+  }
+
+  // 拆分一个数组为两个数组
+  _.partition = function(){
+
+  }
+  
+
+
 
 
   // 数组函数
@@ -408,6 +494,15 @@
        return !predicate.apply(this ,arguments);
      }
   }
+
+  // 返回min与max之间的随机整数
+  _.random = function(min, max){
+    if (max == null ){
+        max = min;
+        min = 0;
+    } 
+    return min + Math.floor(Math.random()*(max-min+1));
+  }
    
 
 
@@ -426,6 +521,19 @@
     }
     return keys;
   };
+
+  // 返回objects对象的所有的属性值
+  _.values  = function(obj){
+    var keys = _.leys(obj);
+    var length = keys.length;
+    var values = new Array(length);
+
+    for(var i = 0; i < length; i++){
+        values[i] = obj[keys[i]];
+    }
+    return values;
+  } 
+
 
   // 返回一个断言函数, 这个函数会给你一个断言可以用来辨别给定的对象是否匹配attrs指定键/值属性.
   _.matcher = _.matches = function(attrs){
